@@ -226,7 +226,7 @@ Weapon name comparison table (Case Sensitive and No Space):
   padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span style="font-size:15.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
   mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
-  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">狙击步枪</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
+  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">Sniper</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:18">
@@ -274,7 +274,7 @@ Weapon name comparison table (Case Sensitive and No Space):
   padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span style="font-size:15.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
   mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
-  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">散弹枪</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
+  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">ShotGun</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:22">
@@ -368,7 +368,7 @@ Weapon name comparison table (Case Sensitive and No Space):
   padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span style="font-size:15.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
   mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
-  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">手枪</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
+  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">Pistol</span><span lang="EN-US" style="font-size:15.0pt"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:30">
