@@ -1,6 +1,10 @@
 # Titanfall2-SkinTool
 A tool for titanfall2 dds skin.Code not good,lol
 
+Only support that Pilot Weapon;
+
+Remember backup "pc_stream.starpak"(GamePath\r2\paks\Win64\)
+
 <div class="WordSection1" style="layout-grid:15.6pt">
 
 <p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt;
@@ -24,7 +28,7 @@ folder for save texture can be divided into "2048", "1024",
 mso-char-indent-count:0;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US" style="font-size:15.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
 minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
 </span></span></span><!--[endif]--><span lang="EN-US" style="font-size:15.0pt">Texture
-file names should be “FormatName_ Default/ Skin31 (Data not import)_ Texture. DDS
+file names should be “FormatName_ Default_ Texture. DDS
 "<o:p></o:p></span></p>
 
 <p class="MsoNormal" style="margin-left:18.0pt"><span lang="EN-US" style="font-size:15.0pt"><br>
