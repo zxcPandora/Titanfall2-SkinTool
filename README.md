@@ -16,18 +16,9 @@ It can be understood by combination with the Example Skin zip Files in the Examp
 
 Weapon name comparison table (Case Sensitive and No Space):
 
-
+##Weapon name
 |  Weapon Name  | FormatName                      |
+| :---: | -------------------------------- |
 | Assault Rifle |
 | R-201 Carbine  | R201                          |
-| arig  | Animation Rig                    |
-| mdl_  | Model                            |
-| uimg  | UI Image Atlas                   |
-| txtr  | DDS/DXGI Texture                 |
-| shdr  | DXBC compiled shaders            |
-| shds  | Shader sets (for uber shaders?)  |
-| matl  | Material                         |
-| stgs  | SETTINGS... who would've thought |
-| stlt  | Settings layout                  |
-| dtbl  | Data table (CSV kind of thing)   |
-| subt  | Subtitles                        |
+
