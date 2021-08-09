@@ -1,6 +1,8 @@
 # Titanfall2-SkinTool
 A tool for titanfall2 dds skin.Code not good,lol
+
 中文参照"格式要求.docx"，我知道我代码写的很烂:(
+
 1.	The skin should be packaged as a .zip package
 
 2.	The folder for save texture can be divided into "2048", "1024", "512";folder depend on which image resolution is used.
