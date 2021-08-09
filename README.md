@@ -7,7 +7,7 @@ A tool for titanfall2 dds skin.Code not good,lol
 
 3.	Texture file names should be “FormatName_ Default_ Texture. DDS "(Doesn't support Skin31)
     Example: CAR_Default_col.dds(Case Sensitive and No Space!)
-
+    Example DDS skin:https://drive.google.com/file/d/1w07kx7yCClFbJWtNVqNt7jxTcW388OfV/view?usp=sharing
 (PS: Devotion is divided into two parts：the gun body should be “Devotion_ Default_ Col.dds”, and the clip should be “Devotion_ clip_ Default_ col.dds”)
 
 Texture types can be written according to the types analyzed by rpak tool(ao，gls，nml，col，cav，spc，ilm)
