@@ -66,7 +66,7 @@ namespace Titanfall2_SkinTool
         {
             SkinFileSelect.ShowHelp = false;
             SkinFileSelect.InitialDirectory = @"F:\";
-            SkinFileSelect.Filter = rm.GetString("Skin")+"(*.zip)|*.zip";
+            SkinFileSelect.Filter = rm.GetString("Skin") + "(*.zip)|*.zip";
             SkinFileSelect.Title = rm.GetString("OpenFile");
             SkinFileSelect.Multiselect = false;
             SkinFileSelect.RestoreDirectory = true;
@@ -74,7 +74,7 @@ namespace Titanfall2_SkinTool
             {
                 PathText.Text = this.SkinFileSelect.FileName;
                 Array.Clear(ImageCheck, 0, ImageCheck.Length);
-                Array.Clear(FilePath,0,FilePath.Length);
+                Array.Clear(FilePath, 0, FilePath.Length);
 
             }
         }
@@ -82,8 +82,8 @@ namespace Titanfall2_SkinTool
         private void Menu_SettingGamePath_Click(object sender, EventArgs e)
         {
             SkinFileSelect.ShowHelp = false;
-            SkinFileSelect.InitialDirectory = @"F:\"; 
-            SkinFileSelect.Filter = rm.GetString("Game")+"(Titanfall2.exe)|Titanfall2.exe";
+            SkinFileSelect.InitialDirectory = @"F:\";
+            SkinFileSelect.Filter = rm.GetString("Game") + "(Titanfall2.exe)|Titanfall2.exe";
             SkinFileSelect.Title = rm.GetString("OpenFile");
             SkinFileSelect.Multiselect = false;
             SkinFileSelect.RestoreDirectory = true;
@@ -174,19 +174,20 @@ namespace Titanfall2_SkinTool
                 {
                     msg = ex.Message;
                 }
-
+                DDSFolderExist = 0;
                 for (int i = 0; i <= 2; i++)
                 {
-                    DDSFolderExist = 0;
                     if (ImageCheck[i] != null)
-                    { DDSFolderExist++; }
+                    {
+                        DDSFolderExist++;
+                    }
                 }
                 if (DDSFolderExist == 0)
                 {
                     throw new MyException(rm.GetString("FindSkinFailed"));
                 }
 
-                string ExtractPath = filePath + "\\"+ rm.GetString("SaveFolder");
+                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder");
                 if (!Directory.Exists(ExtractPath))
                 {
                     Directory.CreateDirectory(ExtractPath);
@@ -207,7 +208,7 @@ namespace Titanfall2_SkinTool
                     {
                         int folder = 4;
                         //string result = System.Text.RegularExpressions.Regex.Replace(ImageCheck[i], @"[^0-9]+", "");
-                        if(ImageCheck[i].LastIndexOf("\\") - folder == -1)
+                        if (ImageCheck[i].LastIndexOf("\\") - folder == -1)
                         {
                             folder = 3;
                         }
