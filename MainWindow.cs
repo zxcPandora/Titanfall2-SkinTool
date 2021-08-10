@@ -32,7 +32,19 @@ namespace Titanfall2_SkinTool
         public MainWindow()
         {
             InitializeComponent();
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
+
+            String lang = CultureInfo.CurrentUICulture.Name;
+            switch (lang)
+            {
+                case "zh-CN":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+                    this.LanguageChinese.Checked = true;
+                    break;
+                default:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    this.LanguageEnglish.Checked = true;
+                    break;
+            }
             this.label1.Text = rm.GetString("label");
             this.Text = rm.GetString("Form");
             this.Menu_Setting.Text = rm.GetString("MenuSet");
@@ -43,7 +55,6 @@ namespace Titanfall2_SkinTool
             this.LanguageChinese.Text = rm.GetString("Chinese");
             this.LanguageEnglish.Text = rm.GetString("English");
             this.Test.Text = rm.GetString("ImportBtn");
-            this.LanguageChinese.Checked = true;
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
