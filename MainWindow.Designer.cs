@@ -29,6 +29,7 @@ namespace Titanfall2_SkinTool
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.PathText = new System.Windows.Forms.TextBox();
             this.OpenButton = new System.Windows.Forms.Button();
@@ -38,11 +39,11 @@ namespace Titanfall2_SkinTool
             this.Menu_SettingGamePath = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_About = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Author = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Test = new System.Windows.Forms.Button();
             this.ToolLanguageMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageChinese = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageEnglish = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Test = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +104,7 @@ namespace Titanfall2_SkinTool
             // Menu_SettingGamePath
             // 
             this.Menu_SettingGamePath.Name = "Menu_SettingGamePath";
-            this.Menu_SettingGamePath.Size = new System.Drawing.Size(224, 26);
+            this.Menu_SettingGamePath.Size = new System.Drawing.Size(182, 26);
             this.Menu_SettingGamePath.Text = "设置游戏路径";
             this.Menu_SettingGamePath.Click += new System.EventHandler(this.Menu_SettingGamePath_Click);
             // 
@@ -121,6 +122,29 @@ namespace Titanfall2_SkinTool
             this.Menu_Author.Size = new System.Drawing.Size(122, 26);
             this.Menu_Author.Text = "作者";
             this.Menu_Author.Click += new System.EventHandler(this.Menu_Author_Click);
+            // 
+            // ToolLanguageMenu
+            // 
+            this.ToolLanguageMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LanguageChinese,
+            this.LanguageEnglish});
+            this.ToolLanguageMenu.Name = "ToolLanguageMenu";
+            this.ToolLanguageMenu.Size = new System.Drawing.Size(53, 24);
+            this.ToolLanguageMenu.Text = "语言";
+            // 
+            // LanguageChinese
+            // 
+            this.LanguageChinese.Name = "LanguageChinese";
+            this.LanguageChinese.Size = new System.Drawing.Size(122, 26);
+            this.LanguageChinese.Text = "中文";
+            this.LanguageChinese.Click += new System.EventHandler(this.LanguageChinese_Click);
+            // 
+            // LanguageEnglish
+            // 
+            this.LanguageEnglish.Name = "LanguageEnglish";
+            this.LanguageEnglish.Size = new System.Drawing.Size(122, 26);
+            this.LanguageEnglish.Text = "英文";
+            this.LanguageEnglish.Click += new System.EventHandler(this.LanguageEnglish_Click);
             // 
             // textBox1
             // 
@@ -142,29 +166,6 @@ namespace Titanfall2_SkinTool
             this.Test.UseVisualStyleBackColor = true;
             this.Test.Click += new System.EventHandler(this.Test_Click);
             // 
-            // ToolLanguageMenu
-            // 
-            this.ToolLanguageMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LanguageChinese,
-            this.LanguageEnglish});
-            this.ToolLanguageMenu.Name = "ToolLanguageMenu";
-            this.ToolLanguageMenu.Size = new System.Drawing.Size(53, 24);
-            this.ToolLanguageMenu.Text = "语言";
-            // 
-            // LanguageChinese
-            // 
-            this.LanguageChinese.Name = "LanguageChinese";
-            this.LanguageChinese.Size = new System.Drawing.Size(224, 26);
-            this.LanguageChinese.Text = "中文";
-            this.LanguageChinese.Click += new System.EventHandler(this.LanguageChinese_Click);
-            // 
-            // LanguageEnglish
-            // 
-            this.LanguageEnglish.Name = "LanguageEnglish";
-            this.LanguageEnglish.Size = new System.Drawing.Size(224, 26);
-            this.LanguageEnglish.Text = "英文";
-            this.LanguageEnglish.Click += new System.EventHandler(this.LanguageEnglish_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -176,6 +177,7 @@ namespace Titanfall2_SkinTool
             this.Controls.Add(this.PathText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
