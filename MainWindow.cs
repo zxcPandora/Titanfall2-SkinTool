@@ -113,7 +113,7 @@ namespace Titanfall2_SkinTool
 
         private void Menu_Author_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("作者：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool", "关于作者", MessageBoxButtons.OK);
+            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
         }
 
         private void Test_Click(object sender, EventArgs e)
@@ -136,7 +136,7 @@ namespace Titanfall2_SkinTool
                     int lastcheck = 0;
                     int i = 0;
                     int total = 0;
-                    
+
                     foreach (ZipArchiveEntry zav in files)
                     {
                         textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
@@ -200,7 +200,7 @@ namespace Titanfall2_SkinTool
                     throw new MyException(rm.GetString("FindSkinFailed"));
                 }
 
-                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder")+"\\"+Folder;
+                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder") + "\\" + Folder;
                 if (!Directory.Exists(ExtractPath))
                 {
                     Directory.CreateDirectory(ExtractPath);
