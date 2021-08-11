@@ -26,7 +26,7 @@ namespace Titanfall2_SkinTool
         string Folder;
         public string filename = "default";
         int DDSFolderExist = 0;
-        string[,] FilePath = new string[3, 7];
+        string[,] FilePath = new string[3, 8];
         string[] ImageCheck = new string[3];//2为2048x2048,1为1024x1024,0为512x512
         System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
@@ -213,7 +213,7 @@ namespace Titanfall2_SkinTool
                 }
                 catch (Exception ex)
                 {
-                    msg = ex.Message;
+                    MessageBox.Show(ex.Message);
                 }
                 for (int i = 0; i <= 2; i++)
                 {
@@ -264,7 +264,7 @@ namespace Titanfall2_SkinTool
             }
             catch (Exception ex)
             {
-                msg = ex.Message;
+                MessageBox.Show(ex.Message);
             }
             GC.Collect();
         }

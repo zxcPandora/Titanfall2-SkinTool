@@ -37,7 +37,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             //2为2048x2048,1为1024x1024,0为512x512
 
             R101_col[0].name = "col";
-            R101_col[0].seek = 1664880640;
+            R101_col[0].seek = 2257784832;
             R101_col[0].length = 131072;
             R101_col[0].seeklength = 128;
             while (i <= 2)
@@ -51,7 +51,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_nml[0].name = "nml";
-            R101_nml[0].seek = 1667698688;
+            R101_nml[0].seek = 2260602880;
             R101_nml[0].length = 262144;
             R101_nml[0].seeklength = 128;
             while (i <= 2)
@@ -65,7 +65,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_gls[0].name = "gls";
-            R101_gls[0].seek = 1673203712;
+            R101_gls[0].seek = 2266107904;
             R101_gls[0].length = 131072;
             R101_gls[0].seeklength = 128;
             while (i <= 2)
@@ -79,7 +79,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_spc[0].name = "spc";
-            R101_spc[0].seek = 1675956224;
+            R101_spc[0].seek = 2268860416;
             R101_spc[0].length = 131072;
             R101_spc[0].seeklength = 128;
             while (i <= 2)
@@ -93,7 +93,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_ilm[0].name = "ilm";
-            R101_ilm[0].seek = 1678708736;
+            R101_ilm[0].seek = 2271612928;
             R101_ilm[0].length = 131072;
             R101_ilm[0].seeklength = 128;
             while (i <= 2)
@@ -107,7 +107,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_ao[0].name = "ao";
-            R101_ao[0].seek = 1681461248;
+            R101_ao[0].seek = 2274365440;
             R101_ao[0].length = 131072;
             R101_ao[0].seeklength = 128;
             while (i <= 2)
@@ -121,7 +121,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AssaultRifle
             i = 1;
 
             R101_cav[0].name = "cav";
-            R101_cav[0].seek = 1684213760;
+            R101_cav[0].seek = 2277117952;
             R101_cav[0].length = 131072;
             R101_cav[0].seeklength = 128;
             while (i <= 2)

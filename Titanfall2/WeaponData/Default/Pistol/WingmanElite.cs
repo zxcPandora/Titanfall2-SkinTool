@@ -26,7 +26,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
         public WingmanElite()
         {
             int i = 1;
-            //小帮手精英在common(01).rpak
+            //小帮手精英在common(03).rpak
             WingmanElite_col = new ReallyData[3];
             WingmanElite_nml = new ReallyData[3];
             WingmanElite_gls = new ReallyData[3];
@@ -37,7 +37,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             //2为2048x2048,1为1024x1024,0为512x512
 
             WingmanElite_col[0].name = "col";
-            WingmanElite_col[0].seek = 646582272;
+            WingmanElite_col[0].seek = 2285375488;
             WingmanElite_col[0].length = 131072;
             WingmanElite_col[0].seeklength = 128;
             while (i <= 1)
@@ -51,7 +51,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_nml[0].name = "nml";
-            WingmanElite_nml[0].seek = 647303168;
+            WingmanElite_nml[0].seek = 2286096384;
             WingmanElite_nml[0].length = 262144;
             WingmanElite_nml[0].seeklength = 128;
             while (i <= 1)
@@ -65,7 +65,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_gls[0].name = "gls";
-            WingmanElite_gls[0].seek = 648613888;
+            WingmanElite_gls[0].seek = 2287407104;
             WingmanElite_gls[0].length = 131072;
             WingmanElite_gls[0].seeklength = 128;
             while (i <= 1)
@@ -79,7 +79,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_spc[0].name = "spc";
-            WingmanElite_spc[0].seek = 649269248;
+            WingmanElite_spc[0].seek = 2288062464;
             WingmanElite_spc[0].length = 131072;
             WingmanElite_spc[0].seeklength = 128;
             while (i <= 1)
@@ -93,7 +93,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_ilm[0].name = "ilm";
-            WingmanElite_ilm[0].seek = 649924608;
+            WingmanElite_ilm[0].seek = 2288717824;
             WingmanElite_ilm[0].length = 131072;
             WingmanElite_ilm[0].seeklength = 128;
             while (i <= 1)
@@ -107,7 +107,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_ao[0].name = "ao";
-            WingmanElite_ao[0].seek = 650579968;
+            WingmanElite_ao[0].seek = 2289373184;
             WingmanElite_ao[0].length = 131072;
             WingmanElite_ao[0].seeklength = 128;
             while (i <= 1)
@@ -121,7 +121,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Pistol
             i = 1;
 
             WingmanElite_cav[0].name = "cav";
-            WingmanElite_cav[0].seek = 651235328;
+            WingmanElite_cav[0].seek = 2290028544;
             WingmanElite_cav[0].length = 131072;
             WingmanElite_cav[0].seeklength = 128;
             while (i <= 1)
