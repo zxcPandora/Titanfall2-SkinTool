@@ -23,6 +23,7 @@ namespace Titanfall2_SkinTool
         string msg;
         string GamePath;
         string filePath = Environment.CurrentDirectory;
+        string Folder;
         public string filename = "default";
         int DDSFolderExist = 0;
         string[,] FilePath = new string[3, 7];
@@ -84,6 +85,7 @@ namespace Titanfall2_SkinTool
             if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
             {
                 PathText.Text = this.SkinFileSelect.FileName;
+                Folder = Path.GetFileNameWithoutExtension(PathText.Text);
                 Array.Clear(ImageCheck, 0, ImageCheck.Length);
                 Array.Clear(FilePath, 0, FilePath.Length);
 
@@ -134,7 +136,7 @@ namespace Titanfall2_SkinTool
                     int lastcheck = 0;
                     int i = 0;
                     int total = 0;
-
+                    
                     foreach (ZipArchiveEntry zav in files)
                     {
                         textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
@@ -198,7 +200,7 @@ namespace Titanfall2_SkinTool
                     throw new MyException(rm.GetString("FindSkinFailed"));
                 }
 
-                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder");
+                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder")+"\\"+Folder;
                 if (!Directory.Exists(ExtractPath))
                 {
                     Directory.CreateDirectory(ExtractPath);
