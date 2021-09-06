@@ -1,29 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Reflection;
 using System.Resources;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Titanfall2_SkinTool.Titanfall2.WeaponData;
 
 namespace Titanfall2_SkinTool
 {
     public partial class MainWindow : Form
     {
-        string msg;
-        string GamePath;
+        string msg = null;
+        string GamePath = null;
         string filePath = Environment.CurrentDirectory;
-        string Folder;
+        string Folder = null;
+        string SelectedGame = "BUG!";
         public string filename = "default";
         int DDSFolderExist = 0;
         string[,] FilePath = new string[3, 8];
@@ -33,6 +26,11 @@ namespace Titanfall2_SkinTool
         public MainWindow()
         {
             InitializeComponent();
+
+            if (!File.Exists(filePath + "\\Config.xml"))
+            {
+
+            }
 
             String lang = CultureInfo.CurrentUICulture.Name;
             switch (lang)
@@ -59,7 +57,11 @@ namespace Titanfall2_SkinTool
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
-                textBox1.AppendText(rm.GetString("GameLoadSuccess") + "\r\n");
+                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
+                    SelectedGame = "Titanfall2";
+                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe"))
+                    SelectedGame = "APEX";
+                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
             }
             else
             {
@@ -74,7 +76,7 @@ namespace Titanfall2_SkinTool
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             SkinFileSelect.ShowHelp = false;
             SkinFileSelect.InitialDirectory = @"F:\";
@@ -96,16 +98,27 @@ namespace Titanfall2_SkinTool
         {
             SkinFileSelect.ShowHelp = false;
             SkinFileSelect.InitialDirectory = @"F:\";
-            SkinFileSelect.Filter = rm.GetString("Game") + "(Titanfall2.exe)|Titanfall2.exe";
+            SkinFileSelect.Filter = rm.GetString("Game") + "(Titanfall2.exe)|r5apex.exe";//fix
             SkinFileSelect.Title = rm.GetString("OpenFile");
             SkinFileSelect.Multiselect = false;
             SkinFileSelect.RestoreDirectory = true;
             if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
             {
                 GamePath = System.IO.Path.GetDirectoryName(this.SkinFileSelect.FileName);
-
+                switch (System.IO.Path.GetFileName(SkinFileSelect.FileName))
+                {
+                    case "r5apex.exe":
+                        SelectedGame = "APEX";
+                        break;
+                    case "Titanfall2.exe":
+                        SelectedGame = "Titanfall2";
+                        break;
+                    default:
+                        SelectedGame = "BUG!";
+                        break;
+                }
                 File.WriteAllText($"{filePath}\\Path.txt", GamePath);
-                textBox1.AppendText(rm.GetString("GameLoadSuccess") + "\r\n");
+                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
 
                 Console.WriteLine(GamePath);
             }
@@ -120,7 +133,7 @@ namespace Titanfall2_SkinTool
         {
             try
             {
-                if (!File.Exists(GamePath + "\\Titanfall2.exe"))
+                if (!File.Exists(GamePath + "\\r5apex.exe"))//fix
                     throw new MyException(rm.GetString("GameLoadFailed"));
                 if (!File.Exists(PathText.Text) || PathText.Text == "")
                     throw new MyException(rm.GetString("ZipLoadFailed"));
@@ -134,7 +147,6 @@ namespace Titanfall2_SkinTool
                     string lastfilename = "test";
                     int check = 0;
                     int lastcheck = 0;
-                    int i = 0;
                     int total = 0;
 
                     foreach (ZipArchiveEntry zav in files)
@@ -237,13 +249,28 @@ namespace Titanfall2_SkinTool
                             imagecheck = 2;
                         for (int j = 0; FilePath[i, j] != null; j++)
                         {
+                            Int64 toseek = 0;
+                            int tolength = 0;
+                            int totype = 0;
                             //传递数组内容
-                            WeaponDataControl wdc = new WeaponDataControl(FilePath[i, j], imagecheck);
-                            Int64 toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
-                            int tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
-                            int totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                            //需要使用命名对代码进行优化
+                            if (SelectedGame == "APEX")
+                            {
+                                APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(FilePath[i, j], imagecheck);
+                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                            }
+                            else if (SelectedGame == "Titanfall2")
+                            {
+                                Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(FilePath[i, j], imagecheck);
+                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                            }
+
                             string reallypath = ExtractPath + "\\" + ImageCheck[i] + FilePath[i, j];
-                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath);
+                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame);
 
                             Console.WriteLine(reallypath);
                             Console.WriteLine(toseek);

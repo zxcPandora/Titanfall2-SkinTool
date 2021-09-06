@@ -52,6 +52,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APEX\WeaponData\Default\AssaultRifle\Havoc.cs" />
+    <Compile Include="APEX\WeaponData\Default\AssaultRifle\Hemlok.cs" />
+    <Compile Include="APEX\WeaponData\Default\AssaultRifle\R301.cs" />
+    <Compile Include="APEX\WeaponData\Default\AssaultRifle\VK47Flatline.cs" />
+    <Compile Include="APEX\WeaponData\Default\LightMachineGun\Devotion.cs" />
+    <Compile Include="APEX\WeaponData\Default\LightMachineGun\LSTAR.cs" />
+    <Compile Include="APEX\WeaponData\Default\LightMachineGun\Spitfire.cs" />
+    <Compile Include="APEX\WeaponData\Default\Pistol\P2020.cs" />
+    <Compile Include="APEX\WeaponData\Default\Pistol\RE45.cs" />
+    <Compile Include="APEX\WeaponData\Default\Pistol\Wingman.cs" />
+    <Compile Include="APEX\WeaponData\Default\Shotgun\EVA8.cs" />
+    <Compile Include="APEX\WeaponData\Default\Shotgun\Mastiff.cs" />
+    <Compile Include="APEX\WeaponData\Default\Shotgun\Mozambique.cs" />
+    <Compile Include="APEX\WeaponData\Default\Shotgun\Peacekeeper.cs" />
+    <Compile Include="APEX\WeaponData\Default\Sniper\G2A7.cs" />
+    <Compile Include="APEX\WeaponData\Default\Sniper\Kraber.cs" />
+    <Compile Include="APEX\WeaponData\Default\Sniper\Longbow.cs" />
+    <Compile Include="APEX\WeaponData\Default\Sniper\TripleTake.cs" />
+    <Compile Include="APEX\WeaponData\Default\SubmachineGun\Alternator.cs" />
+    <Compile Include="APEX\WeaponData\Default\SubmachineGun\PDW.cs" />
+    <Compile Include="APEX\WeaponData\Default\SubmachineGun\R99.cs" />
+    <Compile Include="APEX\WeaponData\WeaponDataControl.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +115,13 @@
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\CAR.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\R97.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\Volt.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\LeadWall.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PlasmaRailgun.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PredatorCannon.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\SplitterRifle.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\ThermiteLauncher.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\TrackerCannon.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\XO16.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\Archer.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\ChargeRifle.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\MGL.cs" />
@@ -156,5 +185,6 @@
   <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2604,6 +2604,8 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                             FilePath[0, i] = Convert.ToString(thunderbolt.Thunderbolt_cav[imagecheck].seeklength);
                         }
                         break;
+                    default:
+                        break;
                 }
             }
             else if (WeaponName.Contains("Skin31"))

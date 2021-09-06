@@ -74,7 +74,7 @@ namespace Titanfall2_SkinTool
             this.OpenButton.TabIndex = 2;
             this.OpenButton.Text = "...";
             this.OpenButton.UseVisualStyleBackColor = true;
-            this.OpenButton.Click += new System.EventHandler(this.button1_Click);
+            this.OpenButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // SkinFileSelect
             // 

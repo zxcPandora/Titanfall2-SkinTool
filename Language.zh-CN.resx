@@ -130,7 +130,7 @@
     <value>无法加载，此文件是否为规范的皮肤文件？</value>
   </data>
   <data name="Form" xml:space="preserve">
-    <value>泰坦陨落二DDS皮肤工具</value>
+    <value>泰坦陨落二&amp;APEX S3 DDS皮肤工具</value>
   </data>
   <data name="Game" xml:space="preserve">
     <value>游戏程序</value>
@@ -139,7 +139,7 @@
     <value>游戏路径错误或不存在！</value>
   </data>
   <data name="GameLoadSuccess" xml:space="preserve">
-    <value>游戏路径设置成功</value>
+    <value>游戏路径设置成功，当前游戏为：</value>
   </data>
   <data name="ImportBtn" xml:space="preserve">
     <value>导入皮肤</value>

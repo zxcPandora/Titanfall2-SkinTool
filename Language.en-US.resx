@@ -130,7 +130,7 @@
     <value>Unable to load, is this file a standard skin file?</value>
   </data>
   <data name="Form" xml:space="preserve">
-    <value>Titanfall2 DDS Skin Install Tool</value>
+    <value>Titanfall2 &amp; APEX S3 DDS Skin Install Tool</value>
   </data>
   <data name="Game" xml:space="preserve">
     <value>Game Program</value>
@@ -139,7 +139,7 @@
     <value>Game path is wrong or does not exist!</value>
   </data>
   <data name="GameLoadSuccess" xml:space="preserve">
-    <value>Game path set successfully!</value>
+    <value>Game path set successfully!Active Game:</value>
   </data>
   <data name="ImportBtn" xml:space="preserve">
     <value>Import Skin</value>
