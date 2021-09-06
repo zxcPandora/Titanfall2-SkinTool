@@ -7,6 +7,9 @@
 一定要看文档说明！！！仅供学习用途，不鼓励修改原皮以外的皮肤；也不支持在最新版本的APEX官服中使用本工具，封禁警告！！！
 
 
+本工具将永远不会支持修改其他付费皮肤以及传家宝
+
+
 泰坦陨落二千万记得备份游戏目录\r2\paks\Win64里面的pc_stream.starpak这个文件，足足10GB大小！！！！！！！你们不会想重新下载\验证的
 
 
@@ -23,6 +26,9 @@ A tool for titanfall2\APEX S3 dds skin.Code not good,lol
 
 
 Be sure to look at the explain documentation！！！I do NOT encourage change the other skin expect default.Also don't use in the normal APEX!!!!!!!
+
+
+The tool will never support that Heirloom and other skin!!!
 
 
 For Titanfall2,Only support that Pilot Weapon;Remember backup "pc_stream.starpak"(GamePath\r2\paks\Win64\)
