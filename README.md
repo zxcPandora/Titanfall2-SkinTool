@@ -35,3 +35,19 @@ For Titanfall2,Only support that Pilot Weapon;Remember backup "pc_stream.starpak
 
 
 For APEX S3,Support most of Weapon,expect Charge Rifle(Will Update);Remember backup "pc_all.opt.starpak"(GamePath\paks\Win64\)
+
+
+工作计划：
+
+代码优化及格式规范
+
+其他功能实现
+
+
+ToDo:
+
+Code optimization
+
+Format specification
+
+Other function 
