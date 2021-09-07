@@ -98,7 +98,7 @@ namespace Titanfall2_SkinTool
         {
             SkinFileSelect.ShowHelp = false;
             SkinFileSelect.InitialDirectory = @"F:\";
-            SkinFileSelect.Filter = rm.GetString("Game") + "(Titanfall2.exe)|r5apex.exe";//fix
+            SkinFileSelect.Filter = rm.GetString("Game") + "|Titanfall2.exe;r5apex.exe";//fix
             SkinFileSelect.Title = rm.GetString("OpenFile");
             SkinFileSelect.Multiselect = false;
             SkinFileSelect.RestoreDirectory = true;
