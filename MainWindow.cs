@@ -29,7 +29,7 @@ namespace Titanfall2_SkinTool
 
             if (!File.Exists(filePath + "\\Config.xml"))
             {
-
+                //ToDo...
             }
 
             String lang = CultureInfo.CurrentUICulture.Name;
@@ -57,10 +57,12 @@ namespace Titanfall2_SkinTool
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
-                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
+                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe")) { 
                     SelectedGame = "Titanfall2";
-                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe"))
+                }
+                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe")) { 
                     SelectedGame = "APEX";
+                }
                 textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
             }
             else
@@ -133,10 +135,18 @@ namespace Titanfall2_SkinTool
         {
             try
             {
-                if (!File.Exists(GamePath + "\\r5apex.exe"))//fix
+                if (File.Exists(GamePath + "\\r5apex.exe") || File.Exists(GamePath + "\\Titanfall2.exe"))
+                {
+                    //fixed
+                }
+                else
+                {
                     throw new MyException(rm.GetString("GameLoadFailed"));
+                }
                 if (!File.Exists(PathText.Text) || PathText.Text == "")
+                {
                     throw new MyException(rm.GetString("ZipLoadFailed"));
+                }
                 try
                 {
                     // 打开zip文件
@@ -155,7 +165,9 @@ namespace Titanfall2_SkinTool
                         if (zav.Name.Contains(".dds"))
                         {
                             if (check == 1)
+                            {
                                 lastcheck = 1;
+                            }
                             check = 1;
                         }
                         else
@@ -241,12 +253,20 @@ namespace Titanfall2_SkinTool
                         int imagecheck = Convert.ToInt32(result);
                         Console.WriteLine(imagecheck);
 
-                        if (imagecheck == 512)
-                            imagecheck = 0;
-                        if (imagecheck == 1024)
-                            imagecheck = 1;
-                        if (imagecheck == 2048)
-                            imagecheck = 2;
+                        switch (imagecheck)
+                        {
+                            case 512:
+                                imagecheck = 0;
+                                break;
+                            case 1024:
+                                imagecheck = 1;
+                                break;
+                            case 2048:
+                                imagecheck = 2;
+                                break;
+                            default:
+                                throw new MyException("Error!");
+                        }
                         for (int j = 0; FilePath[i, j] != null; j++)
                         {
                             Int64 toseek = 0;
@@ -270,8 +290,8 @@ namespace Titanfall2_SkinTool
                             }
 
                             string reallypath = ExtractPath + "\\" + ImageCheck[i] + FilePath[i, j];
-                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame);
-
+                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame,"Replace");
+                                                                    //ToDo:Change to the Struct
                             Console.WriteLine(reallypath);
                             Console.WriteLine(toseek);
                             Console.WriteLine(tolength);

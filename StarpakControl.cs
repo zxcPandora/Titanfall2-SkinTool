@@ -9,8 +9,8 @@ namespace Titanfall2_SkinTool
 {
     class StarpakControl
     {
-        public StarpakControl(string name, Int64 seek, int length, int type, string GamePath, string SelectedGame)
-        {
+        public StarpakControl(string name, Int64 seek, int length, int type, string GamePath, string SelectedGame,string Action)
+        {                       //ToDo:Change to the Struct
             string FileName = null;
             string ControlPath = null;
             byte[] byData = new byte[length];
@@ -18,7 +18,7 @@ namespace Titanfall2_SkinTool
             {
                 ControlPath = GamePath + "\\r2\\paks\\Win64\\";
                 FileName = "pc_stream.starpak";
-            }//fix
+            }//Fixed
             else if (SelectedGame.Contains("APEX"))
             {
                 ControlPath = GamePath + "\\paks\\Win64\\";
@@ -36,7 +36,7 @@ namespace Titanfall2_SkinTool
                 aFile.Seek(type, SeekOrigin.Begin);
                 aFile.Read(byData, 0, length);
 
-                //fix
+                //Fixed
                 FileStream fswrite = new FileStream(ControlPath + FileName, FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
                 fswrite.Seek(seek, SeekOrigin.Begin);
                 fswrite.Write(byData, 0, length);
