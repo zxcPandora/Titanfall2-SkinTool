@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            LSTAR_col[0].name = "col";
+            LSTAR_col[0].seek = 22470000;
+            LSTAR_col[0].length = 131072;
+            LSTAR_col[0].seeklength = 128;
+
             LSTAR_col[1].name = "col";
             LSTAR_col[1].seek = 7317753856;
             LSTAR_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             LSTAR_col[2].length = LSTAR_col[2 - 1].length * 4;
             LSTAR_col[2].seeklength = 128;
 
+            //nml
+            LSTAR_nml[0].name = "nml";
+            LSTAR_nml[0].seek = 575275008;
+            LSTAR_nml[0].length = 262144;
+            LSTAR_nml[0].seeklength = 128;
 
             LSTAR_nml[1].name = "nml";
             LSTAR_nml[1].seek = 7320375296;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             LSTAR_nml[2].length = LSTAR_nml[2 - 1].length * 4;
             LSTAR_nml[2].seeklength = 128;
 
+            //gls
+            LSTAR_gls[0].name = "gls";
+            LSTAR_gls[0].seek = 575537152;
+            LSTAR_gls[0].length = 131072;
+            LSTAR_gls[0].seeklength = 128;
 
             LSTAR_gls[1].name = "gls";
             LSTAR_gls[1].seek = 7325618176;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             LSTAR_gls[2].length = LSTAR_gls[2 - 1].length * 4;
             LSTAR_gls[2].seeklength = 128;
 
+            //spc
+            LSTAR_spc[0].name = "spc";
+            LSTAR_spc[0].seek = 575668224;
+            LSTAR_spc[0].length = 131072;
+            LSTAR_spc[0].seeklength = 128;
 
             LSTAR_spc[1].name = "spc";
             LSTAR_spc[1].seek = 7328239616;

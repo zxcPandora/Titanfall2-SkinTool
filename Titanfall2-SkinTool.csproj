@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APEX\WeaponData\Default\AssaultRifle\ChargeRifle.cs" />
     <Compile Include="APEX\WeaponData\Default\AssaultRifle\Havoc.cs" />
     <Compile Include="APEX\WeaponData\Default\AssaultRifle\Hemlok.cs" />
     <Compile Include="APEX\WeaponData\Default\AssaultRifle\R301.cs" />

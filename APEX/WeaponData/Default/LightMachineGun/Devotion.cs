@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Devotion_col[0].name = "col";
+            Devotion_col[0].seek = 559849472;
+            Devotion_col[0].length = 131072;
+            Devotion_col[0].seeklength = 128;
+
             Devotion_col[1].name = "col";
             Devotion_col[1].seek = 7199789056;
             Devotion_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Devotion_col[2].length = Devotion_col[2 - 1].length * 4;
             Devotion_col[2].seeklength = 128;
 
+            //nml
+            Devotion_nml[0].name = "nml";
+            Devotion_nml[0].seek = 560046080;
+            Devotion_nml[0].length = 262144;
+            Devotion_nml[0].seeklength = 128;
 
             Devotion_nml[1].name = "nml";
             Devotion_nml[1].seek = 7202410496;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Devotion_nml[2].length = Devotion_nml[2 - 1].length * 4;
             Devotion_nml[2].seeklength = 128;
 
+            //gls
+            Devotion_gls[0].name = "gls";
+            Devotion_gls[0].seek = 560308224;
+            Devotion_gls[0].length = 131072;
+            Devotion_gls[0].seeklength = 128;
 
             Devotion_gls[1].name = "gls";
             Devotion_gls[1].seek = 7207653376;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Devotion_gls[2].length = Devotion_gls[2 - 1].length * 4;
             Devotion_gls[2].seeklength = 128;
 
+            //spc
+            Devotion_spc[0].name = "spc";
+            Devotion_spc[0].seek = 560439296;
+            Devotion_spc[0].length = 131072;
+            Devotion_spc[0].seeklength = 128;
 
             Devotion_spc[1].name = "spc";
             Devotion_spc[1].seek = 7210274816;

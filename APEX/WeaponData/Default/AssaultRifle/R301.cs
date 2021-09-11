@@ -38,6 +38,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
                 R301_cav = new ReallyData[3];*/
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            R301_col[0].name = "col";
+            R301_col[0].seek = 108388352;
+            R301_col[0].length = 131072;
+            R301_col[0].seeklength = 128;
+
             R301_col[1].name = "col";
             R301_col[1].seek = 713232384;
             R301_col[1].length = 524288;
@@ -48,6 +54,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             R301_col[2].length = R301_col[2 - 1].length * 4;
             R301_col[2].seeklength = 128;
 
+            //nml
+            R301_nml[0].name = "nml";
+            R301_nml[0].seek = 108584960;
+            R301_nml[0].length = 262144;
+            R301_nml[0].seeklength = 128;
 
             R301_nml[1].name = "nml";
             R301_nml[1].seek = 715853824;
@@ -59,6 +70,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             R301_nml[2].length = R301_nml[2 - 1].length * 4;
             R301_nml[2].seeklength = 128;
 
+            //gls
+            R301_gls[0].name = "gls";
+            R301_gls[0].seek = 108847104;
+            R301_gls[0].length = 131072;
+            R301_gls[0].seeklength = 128;
 
             R301_gls[1].name = "gls";
             R301_gls[1].seek = 721096704;
@@ -70,6 +86,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             R301_gls[2].length = R301_gls[2 - 1].length * 4;
             R301_gls[2].seeklength = 128;
 
+            //spc
+            R301_spc[0].name = "spc";
+            R301_spc[0].seek = 108978176;
+            R301_spc[0].length = 131072;
+            R301_spc[0].seeklength = 128;
 
             R301_spc[1].name = "spc";
             R301_spc[1].seek = 723718144;

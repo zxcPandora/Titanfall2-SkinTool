@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            G2A7_col[0].name = "col";
+            G2A7_col[0].seek = 244224000;
+            G2A7_col[0].length = 131072;
+            G2A7_col[0].seeklength = 128;
+
             G2A7_col[1].name = "col";
             G2A7_col[1].seek = 2867073024;
             G2A7_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             G2A7_col[2].length = G2A7_col[2 - 1].length * 4;
             G2A7_col[2].seeklength = 128;
 
+            //nml
+            G2A7_nml[0].name = "nml";
+            G2A7_nml[0].seek = 244420608;
+            G2A7_nml[0].length = 262144;
+            G2A7_nml[0].seeklength = 128;
 
             G2A7_nml[1].name = "nml";
             G2A7_nml[1].seek = 2869694464;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             G2A7_nml[2].length = G2A7_nml[2 - 1].length * 4;
             G2A7_nml[2].seeklength = 128;
 
+            //gls
+            G2A7_gls[0].name = "gls";
+            G2A7_gls[0].seek = 244682752;
+            G2A7_gls[0].length = 131072;
+            G2A7_gls[0].seeklength = 128;
 
             G2A7_gls[1].name = "gls";
             G2A7_gls[1].seek = 2874937344;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             G2A7_gls[2].length = G2A7_gls[2 - 1].length * 4;
             G2A7_gls[2].seeklength = 128;
 
+            //spc
+            G2A7_spc[0].name = "spc";
+            G2A7_spc[0].seek = 244813824;
+            G2A7_spc[0].length = 131072;
+            G2A7_spc[0].seeklength = 128;
 
             G2A7_spc[1].name = "spc";
             G2A7_spc[1].seek = 2877558784;

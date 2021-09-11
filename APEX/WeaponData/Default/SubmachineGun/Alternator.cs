@@ -32,6 +32,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
             //col可能有bug
+
+            //col
+            Alternator_col[0].name = "col";
+            Alternator_col[0].seek = 419495936;
+            Alternator_col[0].length = 131072;
+            Alternator_col[0].seeklength = 128;
+
             Alternator_col[1].name = "col";
             Alternator_col[1].seek = 5619978240;
             Alternator_col[1].length = 524288;
@@ -42,6 +49,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             Alternator_col[2].length = Alternator_col[2 - 1].length * 4;
             Alternator_col[2].seeklength = 128;
 
+            //nml
+            Alternator_nml[0].name = "nml";
+            Alternator_nml[0].seek = 419692544;
+            Alternator_nml[0].length = 262144;
+            Alternator_nml[0].seeklength = 128;
 
             Alternator_nml[1].name = "nml";
             Alternator_nml[1].seek = 5622599680;
@@ -53,6 +65,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             Alternator_nml[2].length = Alternator_nml[2 - 1].length * 4;
             Alternator_nml[2].seeklength = 128;
 
+            //gls
+            Alternator_gls[0].name = "gls";
+            Alternator_gls[0].seek = 419954688;
+            Alternator_gls[0].length = 131072;
+            Alternator_gls[0].seeklength = 128;
 
             Alternator_gls[1].name = "gls";
             Alternator_gls[1].seek = 5627842560;
@@ -64,6 +81,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             Alternator_gls[2].length = Alternator_gls[2 - 1].length * 4;
             Alternator_gls[2].seeklength = 128;
 
+            //spc
+            Alternator_spc[0].name = "spc";
+            Alternator_spc[0].seek = 420085760;
+            Alternator_spc[0].length = 131072;
+            Alternator_spc[0].seeklength = 128;
 
             Alternator_spc[1].name = "spc";
             Alternator_spc[1].seek = 5630464000;

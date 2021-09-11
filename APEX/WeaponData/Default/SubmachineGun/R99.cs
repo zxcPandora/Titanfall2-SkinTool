@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            R99_col[0].name = "col";
+            R99_col[0].seek = 648716288;
+            R99_col[0].length = 131072;
+            R99_col[0].seeklength = 128;
+
             R99_col[1].name = "col";
             R99_col[1].seek = 7984779264;
             R99_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             R99_col[2].length = R99_col[2 - 1].length * 4;
             R99_col[2].seeklength = 128;
 
+            //nml
+            R99_nml[0].name = "nml";
+            R99_nml[0].seek = 648912896;
+            R99_nml[0].length = 262144;
+            R99_nml[0].seeklength = 128;
 
             R99_nml[1].name = "nml";
             R99_nml[1].seek = 7987400704;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             R99_nml[2].length = R99_nml[2 - 1].length * 4;
             R99_nml[2].seeklength = 128;
 
+            //gls
+            R99_gls[0].name = "gls";
+            R99_gls[0].seek = 649175040;
+            R99_gls[0].length = 131072;
+            R99_gls[0].seeklength = 128;
 
             R99_gls[1].name = "gls";
             R99_gls[1].seek = 7992643584;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             R99_gls[2].length = R99_gls[2 - 1].length * 4;
             R99_gls[2].seeklength = 128;
 
+            //spc
+            R99_spc[0].name = "spc";
+            R99_spc[0].seek = 649306112;
+            R99_spc[0].length = 131072;
+            R99_spc[0].seeklength = 128;
 
             R99_spc[1].name = "spc";
             R99_spc[1].seek = 7995265024;

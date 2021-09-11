@@ -29,8 +29,14 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             Hemlok_nml = new ReallyData[3];
             Hemlok_gls = new ReallyData[3];
             Hemlok_spc = new ReallyData[3];
-            
+
             //2为2048x2048,1为1024x1024,0为512x512
+
+            //col
+            Hemlok_col[0].name = "col";
+            Hemlok_col[0].seek = 585351168;
+            Hemlok_col[0].length = 131072;
+            Hemlok_col[0].seeklength = 128;
 
             Hemlok_col[1].name = "col";
             Hemlok_col[1].seek = 7431786496;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             Hemlok_col[2].length = Hemlok_col[2 - 1].length * 4;
             Hemlok_col[2].seeklength = 128;
 
+            //nml
+            Hemlok_nml[0].name = "nml";
+            Hemlok_nml[0].seek = 585547776;
+            Hemlok_nml[0].length = 262144;
+            Hemlok_nml[0].seeklength = 128;
 
             Hemlok_nml[1].name = "nml";
             Hemlok_nml[1].seek = 7434407936;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             Hemlok_nml[2].length = Hemlok_nml[2 - 1].length * 4;
             Hemlok_nml[2].seeklength = 128;
 
+            //gls
+            Hemlok_gls[0].name = "gls";
+            Hemlok_gls[0].seek = 585809920;
+            Hemlok_gls[0].length = 131072;
+            Hemlok_gls[0].seeklength = 128;
 
             Hemlok_gls[1].name = "gls";
             Hemlok_gls[1].seek = 7439650816;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             Hemlok_gls[2].length = Hemlok_gls[2 - 1].length * 4;
             Hemlok_gls[2].seeklength = 128;
 
+            //spc
+            Hemlok_spc[0].name = "spc";
+            Hemlok_spc[0].seek = 585940992;
+            Hemlok_spc[0].length = 131072;
+            Hemlok_spc[0].seeklength = 128;
 
             Hemlok_spc[1].name = "spc";
             Hemlok_spc[1].seek = 7442272256;

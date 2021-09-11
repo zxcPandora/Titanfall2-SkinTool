@@ -9,27 +9,40 @@ namespace Titanfall2_SkinTool
 {
     class StarpakControl
     {
-        public StarpakControl(string name, Int64 seek, int length, int type, string GamePath, string SelectedGame,string Action)
+        public StarpakControl(string name, Int64 seek, int length, int type, string GamePath, string SelectedGame, int imagecheck, string Action)
         {                       //ToDo:Change to the Struct
             string FileName = null;
             string ControlPath = null;
             byte[] byData = new byte[length];
-            if (SelectedGame.Contains("Titanfall2"))
+            switch (SelectedGame)
             {
-                ControlPath = GamePath + "\\r2\\paks\\Win64\\";
-                FileName = "pc_stream.starpak";
-            }//Fixed
-            else if (SelectedGame.Contains("APEX"))
-            {
-                ControlPath = GamePath + "\\paks\\Win64\\";
-                FileName = "pc_all.opt.starpak";
+                case "Titanfall2":
+                    ControlPath = GamePath + "\\r2\\paks\\Win64\\";
+                    if (name.Contains("WingmanElite") || name.Contains("R101"))
+                    {
+                        FileName = "pc_stream(03).starpak";
+                    }
+                    else
+                    {
+                        FileName = "pc_stream.starpak";
+                    }
+                    break;
+                //Fixed
+                case "APEX":
+                    ControlPath = GamePath + "\\paks\\Win64\\";
+                    if ((name.Contains("P2020")!=true && name.Contains("RE45") != true && name.Contains("Wingman") != true && name.Contains("Mozambique") != true) && imagecheck == 0)
+                    {
+                        FileName = "pc_all.starpak";
+                    }
+                    else
+                    {
+                        FileName = "pc_all.opt.starpak";
+                    }
+                    break;
+                default:
+                    throw new MyException("Error!");
             }
 
-            if (name.Contains("WingmanElite") || name.Contains("R101"))
-            {
-                ControlPath = GamePath + "\\r2\\paks\\Win64\\";
-                FileName = "pc_stream(03).starpak";
-            }
             try
             {
                 FileStream aFile = new FileStream(name, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

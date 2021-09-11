@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Kraber_col[0].name = "col";
+            Kraber_col[0].seek = 257196032;
+            Kraber_col[0].length = 131072;
+            Kraber_col[0].seeklength = 128;
+
             Kraber_col[1].name = "col";
             Kraber_col[1].seek = 2967015424;
             Kraber_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Kraber_col[2].length = Kraber_col[2 - 1].length * 4;
             Kraber_col[2].seeklength = 128;
 
+            //nml
+            Kraber_nml[0].name = "nml";
+            Kraber_nml[0].seek = 257392640;
+            Kraber_nml[0].length = 262144;
+            Kraber_nml[0].seeklength = 128;
 
             Kraber_nml[1].name = "nml";
             Kraber_nml[1].seek = 2969636864;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Kraber_nml[2].length = Kraber_nml[2 - 1].length * 4;
             Kraber_nml[2].seeklength = 128;
 
+            //gls
+            Kraber_gls[0].name = "gls";
+            Kraber_gls[0].seek = 257654784;
+            Kraber_gls[0].length = 131072;
+            Kraber_gls[0].seeklength = 128;
 
             Kraber_gls[1].name = "gls";
             Kraber_gls[1].seek = 2974879744;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Kraber_gls[2].length = Kraber_gls[2 - 1].length * 4;
             Kraber_gls[2].seeklength = 128;
 
+            //spc
+            Kraber_spc[0].name = "spc";
+            Kraber_spc[0].seek = 257785856;
+            Kraber_spc[0].length = 131072;
+            Kraber_spc[0].seeklength = 128;
 
             Kraber_spc[1].name = "spc";
             Kraber_spc[1].seek = 2977501184;

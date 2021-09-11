@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Peacekeeper_col[0].name = "col";
+            Peacekeeper_col[0].seek = 71254016;
+            Peacekeeper_col[0].length = 131072;
+            Peacekeeper_col[0].seeklength = 128;
+
             Peacekeeper_col[1].name = "col";
             Peacekeeper_col[1].seek = 198840320;
             Peacekeeper_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Peacekeeper_col[2].length = Peacekeeper_col[2 - 1].length * 4;
             Peacekeeper_col[2].seeklength = 128;
 
+            //nml
+            Peacekeeper_nml[0].name = "nml";
+            Peacekeeper_nml[0].seek = 71450624;
+            Peacekeeper_nml[0].length = 262144;
+            Peacekeeper_nml[0].seeklength = 128;
 
             Peacekeeper_nml[1].name = "nml";
             Peacekeeper_nml[1].seek = 201461760;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Peacekeeper_nml[2].length = Peacekeeper_nml[2 - 1].length * 4;
             Peacekeeper_nml[2].seeklength = 128;
 
+            //gls
+            Peacekeeper_gls[0].name = "gls";
+            Peacekeeper_gls[0].seek = 71712768;
+            Peacekeeper_gls[0].length = 131072;
+            Peacekeeper_gls[0].seeklength = 128;
 
             Peacekeeper_gls[1].name = "gls";
             Peacekeeper_gls[1].seek = 206704640;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Peacekeeper_gls[2].length = Peacekeeper_gls[2 - 1].length * 4;
             Peacekeeper_gls[2].seeklength = 128;
 
+            //spc
+            Peacekeeper_spc[0].name = "spc";
+            Peacekeeper_spc[0].seek = 71843840;
+            Peacekeeper_spc[0].length = 131072;
+            Peacekeeper_spc[0].seeklength = 128;
 
             Peacekeeper_spc[1].name = "spc";
             Peacekeeper_spc[1].seek = 209326080;

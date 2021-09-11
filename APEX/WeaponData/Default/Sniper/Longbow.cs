@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Longbow_col[0].name = "col";
+            Longbow_col[0].seek = 256036864;
+            Longbow_col[0].length = 131072;
+            Longbow_col[0].seeklength = 128;
+
             Longbow_col[1].name = "col";
             Longbow_col[1].seek = 2948665344;
             Longbow_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Longbow_col[2].length = Longbow_col[2 - 1].length * 4;
             Longbow_col[2].seeklength = 128;
 
+            //nml
+            Longbow_nml[0].name = "nml";
+            Longbow_nml[0].seek = 256233472;
+            Longbow_nml[0].length = 262144;
+            Longbow_nml[0].seeklength = 128;
 
             Longbow_nml[1].name = "nml";
             Longbow_nml[1].seek = 2951286784;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Longbow_nml[2].length = Longbow_nml[2 - 1].length * 4;
             Longbow_nml[2].seeklength = 128;
 
+            //gls
+            Longbow_gls[0].name = "gls";
+            Longbow_gls[0].seek = 256495616;
+            Longbow_gls[0].length = 131072;
+            Longbow_gls[0].seeklength = 128;
 
             Longbow_gls[1].name = "gls";
             Longbow_gls[1].seek = 2956529664;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Longbow_gls[2].length = Longbow_gls[2 - 1].length * 4;
             Longbow_gls[2].seeklength = 128;
 
+            //spc
+            Longbow_spc[0].name = "spc";
+            Longbow_spc[0].seek = 256626688;
+            Longbow_spc[0].length = 131072;
+            Longbow_spc[0].seeklength = 128;
 
             Longbow_spc[1].name = "spc";
             Longbow_spc[1].seek = 2959151104;

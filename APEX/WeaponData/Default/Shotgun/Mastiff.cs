@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Mastiff_col[0].name = "col";
+            Mastiff_col[0].seek = 602521600;
+            Mastiff_col[0].length = 131072;
+            Mastiff_col[0].seeklength = 128;
+
             Mastiff_col[1].name = "col";
             Mastiff_col[1].seek = 7610044416;
             Mastiff_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mastiff_col[2].length = Mastiff_col[2 - 1].length * 4;
             Mastiff_col[2].seeklength = 128;
 
+            //nml
+            Mastiff_nml[0].name = "nml";
+            Mastiff_nml[0].seek = 602718208;
+            Mastiff_nml[0].length = 262144;
+            Mastiff_nml[0].seeklength = 128;
 
             Mastiff_nml[1].name = "nml";
             Mastiff_nml[1].seek = 7612665856;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mastiff_nml[2].length = Mastiff_nml[2 - 1].length * 4;
             Mastiff_nml[2].seeklength = 128;
 
+            //gls
+            Mastiff_gls[0].name = "gls";
+            Mastiff_gls[0].seek = 602980352;
+            Mastiff_gls[0].length = 131072;
+            Mastiff_gls[0].seeklength = 128;
 
             Mastiff_gls[1].name = "gls";
             Mastiff_gls[1].seek = 7617908736;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mastiff_gls[2].length = Mastiff_gls[2 - 1].length * 4;
             Mastiff_gls[2].seeklength = 128;
 
+            //spc
+            Mastiff_spc[0].name = "spc";
+            Mastiff_spc[0].seek = 603111424;
+            Mastiff_spc[0].length = 131072;
+            Mastiff_spc[0].seeklength = 128;
 
             Mastiff_spc[1].name = "spc";
             Mastiff_spc[1].seek = 7620530176;

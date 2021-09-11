@@ -362,6 +362,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData
                         //需要修复
                         break;
                     //手枪类
+                    //All the pistol need actually fix,fuck the starpak file!!!
                     //没有2048
                     case "P2020":
                         Default.Pistol.P2020 p2020 = new Default.Pistol.P2020();

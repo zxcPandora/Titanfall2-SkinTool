@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            Spitfire_col[0].name = "col";
+            Spitfire_col[0].seek = 567758848;
+            Spitfire_col[0].length = 131072;
+            Spitfire_col[0].seeklength = 128;
+
             Spitfire_col[1].name = "col";
             Spitfire_col[1].seek = 7260082176;
             Spitfire_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Spitfire_col[2].length = Spitfire_col[2 - 1].length * 4;
             Spitfire_col[2].seeklength = 128;
 
+            //nml
+            Spitfire_nml[0].name = "nml";
+            Spitfire_nml[0].seek = 567955456;
+            Spitfire_nml[0].length = 262144;
+            Spitfire_nml[0].seeklength = 128;
 
             Spitfire_nml[1].name = "nml";
             Spitfire_nml[1].seek = 7262703616;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Spitfire_nml[2].length = Spitfire_nml[2 - 1].length * 4;
             Spitfire_nml[2].seeklength = 128;
 
+            //gls
+            Spitfire_gls[0].name = "gls";
+            Spitfire_gls[0].seek = 568217600;
+            Spitfire_gls[0].length = 131072;
+            Spitfire_gls[0].seeklength = 128;
 
             Spitfire_gls[1].name = "gls";
             Spitfire_gls[1].seek = 7267946496;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Spitfire_gls[2].length = Spitfire_gls[2 - 1].length * 4;
             Spitfire_gls[2].seeklength = 128;
 
+            //spc
+            Spitfire_spc[0].name = "spc";
+            Spitfire_spc[0].seek = 568348672;
+            Spitfire_spc[0].length = 131072;
+            Spitfire_spc[0].seeklength = 128;
 
             Spitfire_spc[1].name = "spc";
             Spitfire_spc[1].seek = 7270567936;

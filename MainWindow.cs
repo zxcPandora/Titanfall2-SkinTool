@@ -290,8 +290,8 @@ namespace Titanfall2_SkinTool
                             }
 
                             string reallypath = ExtractPath + "\\" + ImageCheck[i] + FilePath[i, j];
-                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame,"Replace");
-                                                                    //ToDo:Change to the Struct
+                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame,imagecheck,"Replace");
+                                                                    //ToDo:Change to the Struct,still not done that...
                             Console.WriteLine(reallypath);
                             Console.WriteLine(toseek);
                             Console.WriteLine(tolength);

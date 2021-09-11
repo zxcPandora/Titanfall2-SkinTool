@@ -32,6 +32,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //2为2048x2048,1为1024x1024,0为512x512
 
+            //col
+            PDW_col[0].name = "col";
+            PDW_col[0].seek = 637759488;
+            PDW_col[0].length = 131072;
+            PDW_col[0].seeklength = 128;
+
             PDW_col[1].name = "col";
             PDW_col[1].seek = 7906791424;
             PDW_col[1].length = 524288;
@@ -42,6 +48,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             PDW_col[2].length = PDW_col[2 - 1].length * 4;
             PDW_col[2].seeklength = 128;
 
+            //nml
+            PDW_nml[0].name = "nml";
+            PDW_nml[0].seek = 637956096;
+            PDW_nml[0].length = 262144;
+            PDW_nml[0].seeklength = 128;
 
             PDW_nml[1].name = "nml";
             PDW_nml[1].seek = 7909412864;
@@ -53,6 +64,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             PDW_nml[2].length = PDW_nml[2 - 1].length * 4;
             PDW_nml[2].seeklength = 128;
 
+            //gls
+            PDW_gls[0].name = "gls";
+            PDW_gls[0].seek = 638218240;
+            PDW_gls[0].length = 131072;
+            PDW_gls[0].seeklength = 128;
 
             PDW_gls[1].name = "gls";
             PDW_gls[1].seek = 7914655744;
@@ -64,6 +80,11 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             PDW_gls[2].length = PDW_gls[2 - 1].length * 4;
             PDW_gls[2].seeklength = 128;
 
+            //spc
+            PDW_spc[0].name = "spc";
+            PDW_spc[0].seek = 638349312;
+            PDW_spc[0].length = 131072;
+            PDW_spc[0].seeklength = 128;
 
             PDW_spc[1].name = "spc";
             PDW_spc[1].seek = 7917277184;
