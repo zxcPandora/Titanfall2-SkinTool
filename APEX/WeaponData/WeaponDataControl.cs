@@ -1089,6 +1089,54 @@ namespace Titanfall2_SkinTool.APEX.WeaponData
                         }
                         //需要修复
                         break;
+                    case "Volt":
+                        Default.SubmachineGun.Volt volt = new Default.SubmachineGun.Volt();
+                        if (WeaponName.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = volt.Volt_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_col[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = volt.Volt_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_nml[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = volt.Volt_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_gls[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = volt.Volt_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(volt.Volt_spc[imagecheck].seeklength);
+                        }
+                        //需要修复
+                        break;
                     default:
                         break;
                 }

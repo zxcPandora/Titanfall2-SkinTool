@@ -34,6 +34,10 @@ namespace Titanfall2_SkinTool
                     {
                         FileName = "pc_all.starpak";
                     }
+                    else if (name.Contains("Volt"))
+                    {
+                        FileName = "pc_all(02).opt.starpak";
+                    }
                     else if (name.Contains("ChargeRifle"))
                     {
                         FileName = "pc_all(03).opt.starpak";

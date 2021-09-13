@@ -74,6 +74,7 @@
     <Compile Include="APEX\WeaponData\Default\SubmachineGun\Alternator.cs" />
     <Compile Include="APEX\WeaponData\Default\SubmachineGun\PDW.cs" />
     <Compile Include="APEX\WeaponData\Default\SubmachineGun\R99.cs" />
+    <Compile Include="APEX\WeaponData\Default\SubmachineGun\Volt.cs" />
     <Compile Include="APEX\WeaponData\WeaponDataControl.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>

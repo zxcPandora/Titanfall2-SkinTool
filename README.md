@@ -22,6 +22,15 @@ APEX S3版本的千万记得备份游戏目录\paks\Win64里面的pc_all.opt.sta
 (例如我的就是D:\APEX\paks\Win64\pc_all.opt.starpak)
 
 
+APEX S3备份列表：
+
+pc_all.opt.starpak
+
+pc_all(01).opt.starpak
+
+pc_all(02).opt.starpak
+
+
 A tool for titanfall2\APEX S3 dds skin.Code not good,lol
 
 
@@ -34,7 +43,16 @@ The tool will never support that Heirloom and other skin!!!
 For Titanfall2,Only support that Pilot Weapon;Remember backup "pc_stream.starpak"(GamePath\r2\paks\Win64\)
 
 
-For APEX S3,Support most of Weapon,expect Charge Rifle(Will Update);Remember backup "pc_all.opt.starpak"(GamePath\paks\Win64\)
+For APEX S3,Support most of Weapon;Remember backup "pc_all.opt.starpak"(GamePath\paks\Win64\)
+
+
+APEX S3 Backup File：
+
+pc_all.opt.starpak
+
+pc_all(01).opt.starpak
+
+pc_all(02).opt.starpak
 
 
 工作计划：

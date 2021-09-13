@@ -8,8 +8,6 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 {
     class ChargeRifle
     {
-        //Doesn't ready!
-        //还在写
         public struct ReallyData
         {
             public string name;
