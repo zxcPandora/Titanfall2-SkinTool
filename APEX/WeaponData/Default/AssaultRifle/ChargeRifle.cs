@@ -34,13 +34,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             
 
             //col
-            ChargeRifle_col[0].name = "col";
-            ChargeRifle_col[0].seek = 108388352;
-            ChargeRifle_col[0].length = 131072;
-            ChargeRifle_col[0].seeklength = 128;
-
             ChargeRifle_col[1].name = "col";
-            ChargeRifle_col[1].seek = 713232384;
+            ChargeRifle_col[1].seek = 2069893120;
             ChargeRifle_col[1].length = 524288;
             ChargeRifle_col[1].seeklength = 128;
 
@@ -50,13 +45,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             ChargeRifle_col[2].seeklength = 128;
 
             //nml
-            ChargeRifle_nml[0].name = "nml";
-            ChargeRifle_nml[0].seek = 108584960;
-            ChargeRifle_nml[0].length = 262144;
-            ChargeRifle_nml[0].seeklength = 128;
-
             ChargeRifle_nml[1].name = "nml";
-            ChargeRifle_nml[1].seek = 715853824;
+            ChargeRifle_nml[1].seek = 2072121344;
             ChargeRifle_nml[1].length = 1048576;
             ChargeRifle_nml[1].seeklength = 128;
 
@@ -66,13 +56,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             ChargeRifle_nml[2].seeklength = 128;
 
             //gls
-            ChargeRifle_gls[0].name = "gls";
-            ChargeRifle_gls[0].seek = 108847104;
-            ChargeRifle_gls[0].length = 131072;
-            ChargeRifle_gls[0].seeklength = 128;
-
             ChargeRifle_gls[1].name = "gls";
-            ChargeRifle_gls[1].seek = 721096704;
+            ChargeRifle_gls[1].seek = 2077757440;
             ChargeRifle_gls[1].length = 524288;
             ChargeRifle_gls[1].seeklength = 128;
 
@@ -82,13 +67,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             ChargeRifle_gls[2].seeklength = 128;
 
             //spc
-            ChargeRifle_spc[0].name = "spc";
-            ChargeRifle_spc[0].seek = 108978176;
-            ChargeRifle_spc[0].length = 131072;
-            ChargeRifle_spc[0].seeklength = 128;
-
             ChargeRifle_spc[1].name = "spc";
-            ChargeRifle_spc[1].seek = 723718144;
+            ChargeRifle_spc[1].seek = 2080378880;
             ChargeRifle_spc[1].length = 524288;
             ChargeRifle_spc[1].seeklength = 128;
 

@@ -216,6 +216,55 @@ namespace Titanfall2_SkinTool.APEX.WeaponData
                         }
                         //需要修复
                         break;
+                    case "ChargeRifle":
+                        Default.AssaultRifle.ChargeRifle chargerifle = new Default.AssaultRifle.ChargeRifle();
+                        //col，nml，gls，spc，ilm，ao，cav
+                        if (WeaponName.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = chargerifle.ChargeRifle_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_col[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = chargerifle.ChargeRifle_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_nml[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = chargerifle.ChargeRifle_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_gls[imagecheck].seeklength);
+                        }
+                        if (WeaponName.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = chargerifle.ChargeRifle_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(chargerifle.ChargeRifle_spc[imagecheck].seeklength);
+                        }
+                        //需要修复
+                        break;
                     //轻机枪类
                     case "Devotion":
                         Default.LightMachineGun.Devotion devotion = new Default.LightMachineGun.Devotion();
