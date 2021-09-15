@@ -38,8 +38,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mozambique_col[0].seeklength = 128;
 
             Mozambique_col[1].name = "col";
-            Mozambique_col[1].seek = Mozambique_col[2 - 1].seek + Mozambique_col[2 - 1].length;
-            Mozambique_col[1].length = Mozambique_col[2 - 1].length * 4;
+            Mozambique_col[1].seek = Mozambique_col[1 - 1].seek + Mozambique_col[1 - 1].length;
+            Mozambique_col[1].length = Mozambique_col[1 - 1].length * 4;
             Mozambique_col[1].seeklength = 128;
 
 
@@ -49,8 +49,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mozambique_nml[0].seeklength = 128;
 
             Mozambique_nml[1].name = "nml";
-            Mozambique_nml[1].seek = Mozambique_nml[2 - 1].seek + Mozambique_nml[2 - 1].length;
-            Mozambique_nml[1].length = Mozambique_nml[2 - 1].length * 4;
+            Mozambique_nml[1].seek = Mozambique_nml[1 - 1].seek + Mozambique_nml[1 - 1].length;
+            Mozambique_nml[1].length = Mozambique_nml[1 - 1].length * 4;
             Mozambique_nml[1].seeklength = 128;
 
 
@@ -60,8 +60,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mozambique_gls[0].seeklength = 128;
 
             Mozambique_gls[1].name = "gls";
-            Mozambique_gls[1].seek = Mozambique_gls[2 - 1].seek + Mozambique_gls[2 - 1].length;
-            Mozambique_gls[1].length = Mozambique_gls[2 - 1].length * 4;
+            Mozambique_gls[1].seek = Mozambique_gls[1 - 1].seek + Mozambique_gls[1 - 1].length;
+            Mozambique_gls[1].length = Mozambique_gls[1 - 1].length * 4;
             Mozambique_gls[1].seeklength = 128;
 
 
@@ -71,8 +71,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mozambique_spc[0].seeklength = 128;
 
             Mozambique_spc[1].name = "spc";
-            Mozambique_spc[1].seek = Mozambique_spc[2 - 1].seek + Mozambique_spc[2 - 1].length;
-            Mozambique_spc[1].length = Mozambique_spc[2 - 1].length * 4;
+            Mozambique_spc[1].seek = Mozambique_spc[1 - 1].seek + Mozambique_spc[1 - 1].length;
+            Mozambique_spc[1].length = Mozambique_spc[1 - 1].length * 4;
             Mozambique_spc[1].seeklength = 128;
 
 

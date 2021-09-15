@@ -38,8 +38,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             Wingman_col[0].seeklength = 128;
 
             Wingman_col[1].name = "col";
-            Wingman_col[1].seek = Wingman_col[2 - 1].seek + Wingman_col[2 - 1].length;
-            Wingman_col[1].length = Wingman_col[2 - 1].length * 4;
+            Wingman_col[1].seek = Wingman_col[1 - 1].seek + Wingman_col[1 - 1].length;
+            Wingman_col[1].length = Wingman_col[1 - 1].length * 4;
             Wingman_col[1].seeklength = 128;
 
 
@@ -49,8 +49,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             Wingman_nml[0].seeklength = 128;
 
             Wingman_nml[1].name = "nml";
-            Wingman_nml[1].seek = Wingman_nml[2 - 1].seek + Wingman_nml[2 - 1].length;
-            Wingman_nml[1].length = Wingman_nml[2 - 1].length * 4;
+            Wingman_nml[1].seek = Wingman_nml[1 - 1].seek + Wingman_nml[1 - 1].length;
+            Wingman_nml[1].length = Wingman_nml[1 - 1].length * 4;
             Wingman_nml[1].seeklength = 128;
 
 
@@ -60,8 +60,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             Wingman_gls[0].seeklength = 128;
 
             Wingman_gls[1].name = "gls";
-            Wingman_gls[1].seek = Wingman_gls[2 - 1].seek + Wingman_gls[2 - 1].length;
-            Wingman_gls[1].length = Wingman_gls[2 - 1].length * 4;
+            Wingman_gls[1].seek = Wingman_gls[1 - 1].seek + Wingman_gls[1 - 1].length;
+            Wingman_gls[1].length = Wingman_gls[1 - 1].length * 4;
             Wingman_gls[1].seeklength = 128;
 
 
@@ -71,8 +71,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             Wingman_spc[0].seeklength = 128;
 
             Wingman_spc[1].name = "spc";
-            Wingman_spc[1].seek = Wingman_spc[2 - 1].seek + Wingman_spc[2 - 1].length;
-            Wingman_spc[1].length = Wingman_spc[2 - 1].length * 4;
+            Wingman_spc[1].seek = Wingman_spc[1 - 1].seek + Wingman_spc[1 - 1].length;
+            Wingman_spc[1].length = Wingman_spc[1 - 1].length * 4;
             Wingman_spc[1].seeklength = 128;
 
 

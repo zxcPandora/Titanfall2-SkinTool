@@ -38,8 +38,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             P2020_col[0].seeklength = 128;
 
             P2020_col[1].name = "col";
-            P2020_col[1].seek = P2020_col[2 - 1].seek + P2020_col[2 - 1].length;
-            P2020_col[1].length = P2020_col[2 - 1].length * 4;
+            P2020_col[1].seek = P2020_col[1 - 1].seek + P2020_col[1 - 1].length;
+            P2020_col[1].length = P2020_col[1 - 1].length * 4;
             P2020_col[1].seeklength = 128;
 
 
@@ -49,8 +49,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             P2020_nml[0].seeklength = 128;
 
             P2020_nml[1].name = "nml";
-            P2020_nml[1].seek = P2020_nml[2 - 1].seek + P2020_nml[2 - 1].length;
-            P2020_nml[1].length = P2020_nml[2 - 1].length * 4;
+            P2020_nml[1].seek = P2020_nml[1 - 1].seek + P2020_nml[1 - 1].length;
+            P2020_nml[1].length = P2020_nml[1 - 1].length * 4;
             P2020_nml[1].seeklength = 128;
 
 
@@ -60,8 +60,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             P2020_gls[0].seeklength = 128;
 
             P2020_gls[1].name = "gls";
-            P2020_gls[1].seek = P2020_gls[2 - 1].seek + P2020_gls[2 - 1].length;
-            P2020_gls[1].length = P2020_gls[2 - 1].length * 4;
+            P2020_gls[1].seek = P2020_gls[1 - 1].seek + P2020_gls[1 - 1].length;
+            P2020_gls[1].length = P2020_gls[1 - 1].length * 4;
             P2020_gls[1].seeklength = 128;
 
 
@@ -71,8 +71,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             P2020_spc[0].seeklength = 128;
 
             P2020_spc[1].name = "spc";
-            P2020_spc[1].seek = P2020_spc[2 - 1].seek + P2020_spc[2 - 1].length;
-            P2020_spc[1].length = P2020_spc[2 - 1].length * 4;
+            P2020_spc[1].seek = P2020_spc[1 - 1].seek + P2020_spc[1 - 1].length;
+            P2020_spc[1].length = P2020_spc[1 - 1].length * 4;
             P2020_spc[1].seeklength = 128;
 
 

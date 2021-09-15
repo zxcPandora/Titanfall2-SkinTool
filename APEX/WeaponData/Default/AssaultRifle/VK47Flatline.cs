@@ -34,12 +34,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //col
             VK47Flatline_col[0].name = "col";
-            VK47Flatline_col[0].seek = 585351168;
+            VK47Flatline_col[0].seek = 691552256;
             VK47Flatline_col[0].length = 131072;
             VK47Flatline_col[0].seeklength = 128;
 
             VK47Flatline_col[1].name = "col";
-            VK47Flatline_col[1].seek = 7431786496;
+            VK47Flatline_col[1].seek = 8323796992;
             VK47Flatline_col[1].length = 524288;
             VK47Flatline_col[1].seeklength = 128;
 
@@ -50,12 +50,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //nml
             VK47Flatline_nml[0].name = "nml";
-            VK47Flatline_nml[0].seek = 585547776;
+            VK47Flatline_nml[0].seek = 691748864;
             VK47Flatline_nml[0].length = 262144;
             VK47Flatline_nml[0].seeklength = 128;
 
             VK47Flatline_nml[1].name = "nml";
-            VK47Flatline_nml[1].seek = 7434407936;
+            VK47Flatline_nml[1].seek = 8326418432;
             VK47Flatline_nml[1].length = 1048576;
             VK47Flatline_nml[1].seeklength = 128;
 
@@ -66,12 +66,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //gls
             VK47Flatline_gls[0].name = "gls";
-            VK47Flatline_gls[0].seek = 585809920;
+            VK47Flatline_gls[0].seek = 692011008;
             VK47Flatline_gls[0].length = 131072;
             VK47Flatline_gls[0].seeklength = 128;
 
             VK47Flatline_gls[1].name = "gls";
-            VK47Flatline_gls[1].seek = 7439650816;
+            VK47Flatline_gls[1].seek = 8331661312;
             VK47Flatline_gls[1].length = 524288;
             VK47Flatline_gls[1].seeklength = 128;
 
@@ -82,12 +82,12 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //spc
             VK47Flatline_spc[0].name = "spc";
-            VK47Flatline_spc[0].seek = 585940992;
+            VK47Flatline_spc[0].seek = 692142080;
             VK47Flatline_spc[0].length = 131072;
             VK47Flatline_spc[0].seeklength = 128;
 
             VK47Flatline_spc[1].name = "spc";
-            VK47Flatline_spc[1].seek = 7442272256;
+            VK47Flatline_spc[1].seek = 8334282752;
             VK47Flatline_spc[1].length = 524288;
             VK47Flatline_spc[1].seeklength = 128;
 

@@ -38,20 +38,25 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             RE45_col[0].seeklength = 128;
 
             RE45_col[1].name = "col";
-            RE45_col[1].seek = RE45_col[2 - 1].seek + RE45_col[2 - 1].length;
-            RE45_col[1].length = RE45_col[2 - 1].length * 4;
+            RE45_col[1].seek = RE45_col[1 - 1].seek + RE45_col[1 - 1].length;
+            RE45_col[1].length = RE45_col[1 - 1].length * 4;
             RE45_col[1].seeklength = 128;
 
-
+            //nml
             RE45_nml[0].name = "nml";
-            RE45_nml[0].seek = 7772770304;
+            RE45_nml[0].seek = 623087616;
             RE45_nml[0].length = 262144;
             RE45_nml[0].seeklength = 128;
 
             RE45_nml[1].name = "nml";
-            RE45_nml[1].seek = RE45_nml[2 - 1].seek + RE45_nml[2 - 1].length;
-            RE45_nml[1].length = RE45_nml[2 - 1].length * 4;
+            RE45_nml[1].seek = 7772770304;
+            RE45_nml[1].length = 1048576;
             RE45_nml[1].seeklength = 128;
+
+            RE45_nml[2].name = "nml";
+            RE45_nml[2].seek = RE45_nml[2 - 1].seek + RE45_nml[2 - 1].length;
+            RE45_nml[2].length = RE45_nml[2 - 1].length * 4;
+            RE45_nml[2].seeklength = 128;
 
 
             RE45_gls[0].name = "gls";
@@ -60,8 +65,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             RE45_gls[0].seeklength = 128;
 
             RE45_gls[1].name = "gls";
-            RE45_gls[1].seek = RE45_gls[2 - 1].seek + RE45_gls[2 - 1].length;
-            RE45_gls[1].length = RE45_gls[2 - 1].length * 4;
+            RE45_gls[1].seek = RE45_gls[1 - 1].seek + RE45_gls[1 - 1].length;
+            RE45_gls[1].length = RE45_gls[1 - 1].length * 4;
             RE45_gls[1].seeklength = 128;
 
 
@@ -71,8 +76,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Pistol
             RE45_spc[0].seeklength = 128;
 
             RE45_spc[1].name = "spc";
-            RE45_spc[1].seek = RE45_spc[2 - 1].seek + RE45_spc[2 - 1].length;
-            RE45_spc[1].length = RE45_spc[2 - 1].length * 4;
+            RE45_spc[1].seek = RE45_spc[1 - 1].seek + RE45_spc[1 - 1].length;
+            RE45_spc[1].length = RE45_spc[1 - 1].length * 4;
             RE45_spc[1].seeklength = 128;
 
 
