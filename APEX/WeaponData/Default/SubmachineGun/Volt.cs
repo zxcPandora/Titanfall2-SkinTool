@@ -33,7 +33,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //col
             Volt_col[1].name = "col";
-            Volt_col[1].seek = 331550720;
+            Volt_col[1].seek = 331157504;
             Volt_col[1].length = 524288;
             Volt_col[1].seeklength = 128;
 
@@ -55,7 +55,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //gls
             Volt_gls[1].name = "gls";
-            Volt_gls[1].seek = 339415040;
+            Volt_gls[1].seek = 339021824;
             Volt_gls[1].length = 524288;
             Volt_gls[1].seeklength = 128;
 
@@ -66,7 +66,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
 
             //spc
             Volt_spc[1].name = "spc";
-            Volt_spc[1].seek = 342036480;
+            Volt_spc[1].seek = 341643264;
             Volt_spc[1].length = 524288;
             Volt_spc[1].seeklength = 128;
 

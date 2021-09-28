@@ -33,7 +33,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //col
             ChargeRifle_col[1].name = "col";
-            ChargeRifle_col[1].seek = 2069893120;
+            ChargeRifle_col[1].seek = 2069499904;
             ChargeRifle_col[1].length = 524288;
             ChargeRifle_col[1].seeklength = 128;
 
@@ -44,7 +44,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //nml
             ChargeRifle_nml[1].name = "nml";
-            ChargeRifle_nml[1].seek = 2072121344;
+            ChargeRifle_nml[1].seek = 2072121344    ;
             ChargeRifle_nml[1].length = 1048576;
             ChargeRifle_nml[1].seeklength = 128;
 
@@ -55,7 +55,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //gls
             ChargeRifle_gls[1].name = "gls";
-            ChargeRifle_gls[1].seek = 2077757440;
+            ChargeRifle_gls[1].seek = 2077364224;
             ChargeRifle_gls[1].length = 524288;
             ChargeRifle_gls[1].seeklength = 128;
 
@@ -66,7 +66,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
 
             //spc
             ChargeRifle_spc[1].name = "spc";
-            ChargeRifle_spc[1].seek = 2080378880;
+            ChargeRifle_spc[1].seek = 2079985664;
             ChargeRifle_spc[1].length = 524288;
             ChargeRifle_spc[1].seeklength = 128;
 
