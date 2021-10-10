@@ -183,8 +183,7 @@ namespace Titanfall2_SkinTool
                                     lastcheck = 1;
                                 }
                                 check = 1;
-                                lastfilename = zav.FullName;
-                                lastfilename = lastfilename.Replace("/", "\\");
+                                
                             }
                             else
                             {
