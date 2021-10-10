@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] VK47Flatline_col;
         public ReallyData[] VK47Flatline_nml;
         public ReallyData[] VK47Flatline_gls;
         public ReallyData[] VK47Flatline_spc;
-
+        public ReallyData[] VK47Flatline_ao;
+        public ReallyData[] VK47Flatline_cav;
         public VK47Flatline()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             VK47Flatline_nml = new ReallyData[3];
             VK47Flatline_gls = new ReallyData[3];
             VK47Flatline_spc = new ReallyData[3];
-
+            VK47Flatline_ao = new ReallyData[3];
+            VK47Flatline_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             VK47Flatline_spc[2].length = VK47Flatline_spc[2 - 1].length * 4;
             VK47Flatline_spc[2].seeklength = 128;
 
+            //ao
+            VK47Flatline_ao[0].name = "ao";
+            VK47Flatline_ao[0].seek = 692273152;
+            VK47Flatline_ao[0].length = 131072;
+            VK47Flatline_ao[0].seeklength = 128;
 
+            VK47Flatline_ao[1].name = "ao";
+            VK47Flatline_ao[1].seek = 8336904192;
+            VK47Flatline_ao[1].length = 524288;
+            VK47Flatline_ao[1].seeklength = 128;
 
+            VK47Flatline_ao[2].name = "ao";
+            VK47Flatline_ao[2].seek = VK47Flatline_ao[2 - 1].seek + VK47Flatline_ao[2 - 1].length;
+            VK47Flatline_ao[2].length = VK47Flatline_ao[2 - 1].length * 4;
+            VK47Flatline_ao[2].seeklength = 128;
+
+            //cav
+            VK47Flatline_cav[0].name = "cav";
+            VK47Flatline_cav[0].seek = 692404224;
+            VK47Flatline_cav[0].length = 131072;
+            VK47Flatline_cav[0].seeklength = 128;
+
+            VK47Flatline_cav[1].name = "cav";
+            VK47Flatline_cav[1].seek = 8339525632;
+            VK47Flatline_cav[1].length = 524288;
+            VK47Flatline_cav[1].seeklength = 128;
+
+            VK47Flatline_cav[2].name = "cav";
+            VK47Flatline_cav[2].seek = VK47Flatline_cav[2 - 1].seek + VK47Flatline_cav[2 - 1].length;
+            VK47Flatline_cav[2].length = VK47Flatline_cav[2 - 1].length * 4;
+            VK47Flatline_cav[2].seeklength = 128;
         }
     }
 }

@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] EVA8_col;
         public ReallyData[] EVA8_nml;
         public ReallyData[] EVA8_gls;
         public ReallyData[] EVA8_spc;
-
+        public ReallyData[] EVA8_ao;
+        public ReallyData[] EVA8_cav;
         public EVA8()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             EVA8_nml = new ReallyData[3];
             EVA8_gls = new ReallyData[3];
             EVA8_spc = new ReallyData[3];
-
+            EVA8_ao = new ReallyData[3];
+            EVA8_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             EVA8_spc[2].length = EVA8_spc[2 - 1].length * 4;
             EVA8_spc[2].seeklength = 128;
 
+            //ao
+            EVA8_ao[0].name = "ao";
+            EVA8_ao[0].seek = 113401856;
+            EVA8_ao[0].length = 131072;
+            EVA8_ao[0].seeklength = 128;
 
+            EVA8_ao[1].name = "ao";
+            EVA8_ao[1].seek = 781389824;
+            EVA8_ao[1].length = 524288;
+            EVA8_ao[1].seeklength = 128;
 
+            EVA8_ao[2].name = "ao";
+            EVA8_ao[2].seek = EVA8_ao[2 - 1].seek + EVA8_ao[2 - 1].length;
+            EVA8_ao[2].length = EVA8_ao[2 - 1].length * 4;
+            EVA8_ao[2].seeklength = 128;
+
+            //cav
+            EVA8_cav[0].name = "cav";
+            EVA8_cav[0].seek = 113532928;
+            EVA8_cav[0].length = 131072;
+            EVA8_cav[0].seeklength = 128;
+
+            EVA8_cav[1].name = "cav";
+            EVA8_cav[1].seek = 784011264;
+            EVA8_cav[1].length = 524288;
+            EVA8_cav[1].seeklength = 128;
+
+            EVA8_cav[2].name = "cav";
+            EVA8_cav[2].seek = EVA8_cav[2 - 1].seek + EVA8_cav[2 - 1].length;
+            EVA8_cav[2].length = EVA8_cav[2 - 1].length * 4;
+            EVA8_cav[2].seeklength = 128;
         }
     }
 }

@@ -15,12 +15,14 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] Devotion_col;
         public ReallyData[] Devotion_nml;
         public ReallyData[] Devotion_gls;
         public ReallyData[] Devotion_spc;
-
+        public ReallyData[] Devotion_ilm;
+        public ReallyData[] Devotion_ao;
+        public ReallyData[] Devotion_cav;
         public Devotion()
         {
 
@@ -29,7 +31,9 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Devotion_nml = new ReallyData[3];
             Devotion_gls = new ReallyData[3];
             Devotion_spc = new ReallyData[3];
-
+            Devotion_ilm = new ReallyData[3];
+            Devotion_ao = new ReallyData[3];
+            Devotion_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +100,53 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Devotion_spc[2].length = Devotion_spc[2 - 1].length * 4;
             Devotion_spc[2].seeklength = 128;
 
+            //ilm,right?
+            Devotion_ilm[0].name = "ilm";
+            Devotion_ilm[0].seek = 560570368;
+            Devotion_ilm[0].length = 131072;
+            Devotion_ilm[0].seeklength = 128;
 
+            Devotion_ilm[1].name = "ilm";
+            Devotion_ilm[1].seek = 7212896256;
+            Devotion_ilm[1].length = 524288;
+            Devotion_ilm[1].seeklength = 128;
 
+            Devotion_ilm[2].name = "ilm";
+            Devotion_ilm[2].seek = Devotion_ilm[2 - 1].seek + Devotion_ilm[2 - 1].length;
+            Devotion_ilm[2].length = Devotion_ilm[2 - 1].length * 4;
+            Devotion_ilm[2].seeklength = 128;
+
+            //ao
+            Devotion_ao[0].name = "ao";
+            Devotion_ao[0].seek = 560701440;
+            Devotion_ao[0].length = 131072;
+            Devotion_ao[0].seeklength = 128;
+
+            Devotion_ao[1].name = "ao";
+            Devotion_ao[1].seek = 7215517696;
+            Devotion_ao[1].length = 524288;
+            Devotion_ao[1].seeklength = 128;
+
+            Devotion_ao[2].name = "ao";
+            Devotion_ao[2].seek = Devotion_ao[2 - 1].seek + Devotion_ao[2 - 1].length;
+            Devotion_ao[2].length = Devotion_ao[2 - 1].length * 4;
+            Devotion_ao[2].seeklength = 128;
+
+            //cav
+            Devotion_cav[0].name = "cav";
+            Devotion_cav[0].seek = 560832512;
+            Devotion_cav[0].length = 131072;
+            Devotion_cav[0].seeklength = 128;
+
+            Devotion_cav[1].name = "cav";
+            Devotion_cav[1].seek = 7218139136;
+            Devotion_cav[1].length = 524288;
+            Devotion_cav[1].seeklength = 128;
+
+            Devotion_cav[2].name = "cav";
+            Devotion_cav[2].seek = Devotion_cav[2 - 1].seek + Devotion_cav[2 - 1].length;
+            Devotion_cav[2].length = Devotion_cav[2 - 1].length * 4;
+            Devotion_cav[2].seeklength = 128;
         }
     }
 }

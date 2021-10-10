@@ -15,15 +15,16 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] R301_col;
         public ReallyData[] R301_nml;
         public ReallyData[] R301_gls;
         public ReallyData[] R301_spc;
-        //需要修复
-        /*public ReallyData[] R301_ilm;
         public ReallyData[] R301_ao;
-        public ReallyData[] R301_cav;*/
+        public ReallyData[] R301_cav;
+
+        //r301 没有ilm贴图
+        /*public ReallyData[] R301_ilm;*/
         public R301()
         {
             //int i = 1;
@@ -32,10 +33,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             R301_nml = new ReallyData[3];
             R301_gls = new ReallyData[3];
             R301_spc = new ReallyData[3];
-            //需要修复
-            /*R301_ilm = new ReallyData[3];
-                R301_ao = new ReallyData[3];
-                R301_cav = new ReallyData[3];*/
+            R301_ao = new ReallyData[3];
+            R301_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -102,49 +101,39 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             R301_spc[2].length = R301_spc[2 - 1].length * 4;
             R301_spc[2].seeklength = 128;
 
+            //ao
+            R301_ao[0].name = "ao";
+            R301_ao[0].seek = 109109248;
+            R301_ao[0].length = 131072;
+            R301_ao[0].seeklength = 128;
 
-            //需要修复
-            /*R301_ilm[0].name = "ilm";
-                R301_ilm[0].seek = 9524678656;
-                R301_ilm[0].length = 131072;
-                R301_ilm[0].seeklength = 128;
-                while (i <= 2)
-                {
-                    R301_ilm[i].name = "ilm";
-                    R301_ilm[i].seek = R301_ilm[i - 1].seek + R301_ilm[i - 1].length;
-                    R301_ilm[i].length = R301_ilm[i - 1].length * 4;
-                    R301_ilm[i].seeklength = 128;
-                    i++;
-                }
-                i = 1;
+            R301_ao[1].name = "ao";
+            R301_ao[1].seek = 726339584;
+            R301_ao[1].length = 524288;
+            R301_ao[1].seeklength = 128;
 
-                R301_ao[0].name = "ao";
-                R301_ao[0].seek = 9527431168;
-                R301_ao[0].length = 131072;
-                R301_ao[0].seeklength = 128;
-                while (i <= 2)
-                {
-                    R301_ao[i].name = "ao";
-                    R301_ao[i].seek = R301_ao[i - 1].seek + R301_ao[i - 1].length;
-                    R301_ao[i].length = R301_ao[i - 1].length * 4;
-                    R301_ao[i].seeklength = 128;
-                    i++;
-                }
-                i = 1;
+            R301_ao[2].name = "ao";
+            R301_ao[2].seek = R301_ao[2 - 1].seek + R301_ao[2 - 1].length;
+            R301_ao[2].length = R301_ao[2 - 1].length * 4;
+            R301_ao[2].seeklength = 128;
 
-                R301_cav[0].name = "cav";
-                R301_cav[0].seek = 9530183680;
-                R301_cav[0].length = 131072;
-                R301_cav[0].seeklength = 128;
-                while (i <= 2)
-                {
-                    R301_cav[i].name = "cav";
-                    R301_cav[i].seek = R301_cav[i - 1].seek + R301_cav[i - 1].length;
-                    R301_cav[i].length = R301_cav[i - 1].length * 4;
-                    R301_cav[i].seeklength = 128;
-                    i++;
-                }
-                i = 1;*/
+            //cav
+            R301_cav[0].name = "cav";
+            R301_cav[0].seek = 109240320;
+            R301_cav[0].length = 131072;
+            R301_cav[0].seeklength = 128;
+
+            R301_cav[1].name = "cav";
+            R301_cav[1].seek = 728961024;
+            R301_cav[1].length = 524288;
+            R301_cav[1].seeklength = 128;
+
+            R301_cav[2].name = "cav";
+            R301_cav[2].seek = R301_cav[2 - 1].seek + R301_cav[2 - 1].length;
+            R301_cav[2].length = R301_cav[2 - 1].length * 4;
+            R301_cav[2].seeklength = 128;
+
+            //R301没有ilm贴图
         }
     }
 }

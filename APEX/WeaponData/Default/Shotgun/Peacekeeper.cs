@@ -15,12 +15,14 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] Peacekeeper_col;
         public ReallyData[] Peacekeeper_nml;
         public ReallyData[] Peacekeeper_gls;
         public ReallyData[] Peacekeeper_spc;
-
+        public ReallyData[] Peacekeeper_ilm;
+        public ReallyData[] Peacekeeper_ao;
+        public ReallyData[] Peacekeeper_cav;
         public Peacekeeper()
         {
 
@@ -29,7 +31,9 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Peacekeeper_nml = new ReallyData[3];
             Peacekeeper_gls = new ReallyData[3];
             Peacekeeper_spc = new ReallyData[3];
-
+            Peacekeeper_ilm = new ReallyData[3];
+            Peacekeeper_ao = new ReallyData[3];
+            Peacekeeper_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +100,53 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Peacekeeper_spc[2].length = Peacekeeper_spc[2 - 1].length * 4;
             Peacekeeper_spc[2].seeklength = 128;
 
+            //ilm
+            Peacekeeper_ilm[0].name = "ilm";
+            Peacekeeper_ilm[0].seek = 71974912;
+            Peacekeeper_ilm[0].length = 131072;
+            Peacekeeper_ilm[0].seeklength = 128;
 
+            Peacekeeper_ilm[1].name = "ilm";
+            Peacekeeper_ilm[1].seek = 211947520;
+            Peacekeeper_ilm[1].length = 524288;
+            Peacekeeper_ilm[1].seeklength = 128;
 
+            Peacekeeper_ilm[2].name = "ilm";
+            Peacekeeper_ilm[2].seek = Peacekeeper_ilm[2 - 1].seek + Peacekeeper_ilm[2 - 1].length;
+            Peacekeeper_ilm[2].length = Peacekeeper_ilm[2 - 1].length * 4;
+            Peacekeeper_ilm[2].seeklength = 128;
+
+            //ao
+            Peacekeeper_ao[0].name = "ao";
+            Peacekeeper_ao[0].seek = 72105984;
+            Peacekeeper_ao[0].length = 131072;
+            Peacekeeper_ao[0].seeklength = 128;
+
+            Peacekeeper_ao[1].name = "ao";
+            Peacekeeper_ao[1].seek = 214568960;
+            Peacekeeper_ao[1].length = 524288;
+            Peacekeeper_ao[1].seeklength = 128;
+
+            Peacekeeper_ao[2].name = "ao";
+            Peacekeeper_ao[2].seek = Peacekeeper_ao[2 - 1].seek + Peacekeeper_ao[2 - 1].length;
+            Peacekeeper_ao[2].length = Peacekeeper_ao[2 - 1].length * 4;
+            Peacekeeper_ao[2].seeklength = 128;
+
+            //cav
+            Peacekeeper_cav[0].name = "cav";
+            Peacekeeper_cav[0].seek = 72237056;
+            Peacekeeper_cav[0].length = 131072;
+            Peacekeeper_cav[0].seeklength = 128;
+
+            Peacekeeper_cav[1].name = "cav";
+            Peacekeeper_cav[1].seek = 217190400;
+            Peacekeeper_cav[1].length = 524288;
+            Peacekeeper_cav[1].seeklength = 128;
+
+            Peacekeeper_cav[2].name = "cav";
+            Peacekeeper_cav[2].seek = Peacekeeper_cav[2 - 1].seek + Peacekeeper_cav[2 - 1].length;
+            Peacekeeper_cav[2].length = Peacekeeper_cav[2 - 1].length * 4;
+            Peacekeeper_cav[2].seeklength = 128;
         }
     }
 }
