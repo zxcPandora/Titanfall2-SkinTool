@@ -69,7 +69,14 @@ namespace Titanfall2_SkinTool
         {
             if(File.Exists(GetSkinPackRootPath()))
             {
-                File.Delete(GetSkinPackRootPath());
+                try
+                {
+                    File.Delete(GetSkinPackRootPath());
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Error occured while trying to delete the old archive: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
             ZipArchive zipArchive = ZipFile.Open(GetSkinPackRootPath(), ZipArchiveMode.Create);
 
