@@ -349,5 +349,11 @@ namespace Titanfall2_SkinTool
             this.LanguageChinese.Checked = false;
             this.LanguageEnglish.Checked = true;
         }
+
+        private void skinPackMakerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SkinPackMakerWindow window = new SkinPackMakerWindow();
+            window.ShowDialog();
+        }
     }
 }
