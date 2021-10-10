@@ -229,6 +229,7 @@ namespace Titanfall2_SkinTool
                         {
                             textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
                             string FolderResult = zav.FullName.Substring(0, zav.FullName.LastIndexOf(zav.Name));
+                            FolderResult = FolderResult.Replace("/", "\\");
                             string FileResult = zav.Name;
                             if (FolderResult.Contains("512"))
                             {

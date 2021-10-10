@@ -1,18 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F381A90-5816-4B97-A121-BD4B08AE1E75}</ProjectGuid>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Titanfall2_SkinTool</RootNamespace>
-    <AssemblyName>Titanfall2-SkinTool</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -28,208 +18,22 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Magick.NET-Q16-AnyCPU, Version=8.3.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>packages\Magick.NET-Q16-AnyCPU.8.3.3\lib\net20\Magick.NET-Q16-AnyCPU.dll</HintPath>
-    </Reference>
-    <Reference Include="Magick.NET.Core, Version=8.3.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>packages\Magick.NET.Core.8.3.3\lib\net20\Magick.NET.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="APEX\WeaponData\Default\AssaultRifle\ChargeRifle.cs" />
-    <Compile Include="APEX\WeaponData\Default\AssaultRifle\Havoc.cs" />
-    <Compile Include="APEX\WeaponData\Default\AssaultRifle\Hemlok.cs" />
-    <Compile Include="APEX\WeaponData\Default\AssaultRifle\R301.cs" />
-    <Compile Include="APEX\WeaponData\Default\AssaultRifle\VK47Flatline.cs" />
-    <Compile Include="APEX\WeaponData\Default\LightMachineGun\Devotion.cs" />
-    <Compile Include="APEX\WeaponData\Default\LightMachineGun\LSTAR.cs" />
-    <Compile Include="APEX\WeaponData\Default\LightMachineGun\Spitfire.cs" />
-    <Compile Include="APEX\WeaponData\Default\Pistol\P2020.cs" />
-    <Compile Include="APEX\WeaponData\Default\Pistol\RE45.cs" />
-    <Compile Include="APEX\WeaponData\Default\Pistol\Wingman.cs" />
-    <Compile Include="APEX\WeaponData\Default\Shotgun\EVA8.cs" />
-    <Compile Include="APEX\WeaponData\Default\Shotgun\Mastiff.cs" />
-    <Compile Include="APEX\WeaponData\Default\Shotgun\Mozambique.cs" />
-    <Compile Include="APEX\WeaponData\Default\Shotgun\Peacekeeper.cs" />
-    <Compile Include="APEX\WeaponData\Default\Sniper\G2A7.cs" />
-    <Compile Include="APEX\WeaponData\Default\Sniper\Kraber.cs" />
-    <Compile Include="APEX\WeaponData\Default\Sniper\Longbow.cs" />
-    <Compile Include="APEX\WeaponData\Default\Sniper\TripleTake.cs" />
-    <Compile Include="APEX\WeaponData\Default\SubmachineGun\Alternator.cs" />
-    <Compile Include="APEX\WeaponData\Default\SubmachineGun\PDW.cs" />
-    <Compile Include="APEX\WeaponData\Default\SubmachineGun\R99.cs" />
-    <Compile Include="APEX\WeaponData\Default\SubmachineGun\Volt.cs" />
-    <Compile Include="APEX\WeaponData\WeaponDataControl.cs" />
-    <Compile Include="MainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyException.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkinPackMakerWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SkinPackMakerWindow.Designer.cs">
-      <DependentUpon>SkinPackMakerWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StarpakControl.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Archer.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\ChargeRifle.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\MGL.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Thunderbolt.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AssaultRifle\G2A5.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AssaultRifle\HemlokBFR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AssaultRifle\R101.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AssaultRifle\R201.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\AssaultRifle\V47Flatline.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Grenadier\ColdWar.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Grenadier\EPG.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Grenadier\SMR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Grenadier\Softball.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\Devotion.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\LSTAR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\Spitfire.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\Mozambique.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\P2016.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\RE45.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\SmartPistol.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\Wingman.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Pistol\WingmanElite.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Shotgun\EVA8.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Shotgun\Mastiff.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Sniper\DoubleTake.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Sniper\Kraber.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Sniper\LongbowDMR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\Alternator.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\CAR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\R97.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\Volt.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\LeadWall.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PlasmaRailgun.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PredatorCannon.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\SplitterRifle.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\ThermiteLauncher.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\TrackerCannon.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\XO16.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\Archer.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\ChargeRifle.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\MGL.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\Thunderbolt.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AssaultRifle\G2A5.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AssaultRifle\HemlokBFR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AssaultRifle\R101.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AssaultRifle\R201.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\AssaultRifle\V47Flatline.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Grenadier\ColdWar.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Grenadier\EPG.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Grenadier\SMR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Grenadier\Softball.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\LightMachineGun\Devotion.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\LightMachineGun\LSTAR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\LightMachineGun\Spitfire.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\Mozambique.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\P2016.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\RE45.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\SmartPistol.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\Wingman.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Pistol\WingmanElite.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Shotgun\EVA8.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Shotgun\Mastiff.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Sniper\DoubleTake.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Sniper\Kraber.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\Sniper\LongbowDMR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\Alternator.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\CAR.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\R97.cs" />
-    <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\Volt.cs" />
-    <Compile Include="Titanfall2\WeaponData\WeaponDataControl.cs" />
-    <EmbeddedResource Include="Language.en-US.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Language.en-US.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Language.zh-CN.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Language.zh-CN.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="SkinPackMakerWindow.resx">
-      <DependentUpon>SkinPackMakerWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
     <Content Include="MediaResources\texture_not_available.png" />
-    <None Include="Resources\texture_not_available.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -238,5 +42,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <PackageReference Include="BCnEncoder.Net" Version="2.1.0" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="8.3.3" />
+    <PackageReference Include="Magick.NET.Core" Version="8.3.3" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Language.en-US.Designer.cs" />
+    <Compile Remove="Language.zh-CN.Designer.cs" />
+  </ItemGroup>
 </Project>

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCnEncoder.Encoder;
 using ImageMagick;
 using ImageMagick.Formats;
 
@@ -66,20 +67,17 @@ namespace Titanfall2_SkinTool
 
         private void generateSkinPackButton_Click(object sender, EventArgs e)
         {
+            if(File.Exists(GetSkinPackRootPath()))
+            {
+                File.Delete(GetSkinPackRootPath());
+            }
             ZipArchive zipArchive = ZipFile.Open(GetSkinPackRootPath(), ZipArchiveMode.Create);
 
             if(colorPictureBox.Enabled && colorPictureBox.Image != null)
             {
                 MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
                 colorImage.SetCompression(CompressionMethod.DXT1);
-                SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive);
-            }
-
-            if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
-            {
-                MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
-                glossinessImage.SetCompression(CompressionMethod.BC7);
-                SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive);
+                SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
             }
             
             if(specularPictureBox.Enabled && specularPictureBox.Image != null)
@@ -92,23 +90,25 @@ namespace Titanfall2_SkinTool
             if(normalPictureBox.Enabled && normalPictureBox.Image != null)
             {
                 MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
-                normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
-                normalImage.SetCompression(CompressionMethod.BC7);
-                SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive);
+                //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
+                SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
             }
 
+            if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
+            {
+                MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
+                SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+            }
             if(aoPictureBox.Enabled && aoPictureBox.Image != null)
             {
                 MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
-                aoImage.SetCompression(CompressionMethod.BC7);
-                SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive);
+                SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
             }
 
             if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
             {
                 MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
-                cavityImage.SetCompression(CompressionMethod.BC7);
-                SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive);
+                SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
             }
 
             if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
@@ -134,7 +134,7 @@ namespace Titanfall2_SkinTool
             }
         }
 
-        private void SaveTexture(string filename, MagickImage image, ZipArchive archive)
+        private void SaveTexture(string filename, MagickImage image, ZipArchive archive, BCnEncoder.Shared.CompressionFormat compression = BCnEncoder.Shared.CompressionFormat.Rgba)
         {
             int[] sizes = new int[] {
                 2048,
@@ -142,21 +142,33 @@ namespace Titanfall2_SkinTool
                 512
             };
 
-
-            DdsWriteDefines ddsDefines = new DdsWriteDefines();
-            ddsDefines.Mipmaps = 0;
-
-            image.Format = MagickFormat.Dds;
-            image.Settings.SetDefines(ddsDefines);
-
-
             foreach(int size in sizes)
             {
                 ZipArchiveEntry entry = archive.CreateEntry("contents/" + size.ToString() + "/" + filename);
                 using (Stream s = entry.Open())
                 {
                     image.Scale(size, size);
-                    image.Write(s);
+                    if(compression != BCnEncoder.Shared.CompressionFormat.Rgba)
+                    {
+                        image.Format = MagickFormat.Png32;
+                        image.SetCompression(CompressionMethod.NoCompression);
+                        BcEncoder encoder = new BcEncoder();
+                        encoder.OutputOptions.GenerateMipMaps = false;
+                        encoder.OutputOptions.Format = compression;
+                        encoder.OutputOptions.FileFormat = BCnEncoder.Shared.OutputFileFormat.Dds;
+                        encoder.EncodeToStream(image.ToByteArray(MagickFormat.Rgba), size, size, BCnEncoder.Encoder.PixelFormat.Rgba32, s);
+                    }
+                    else
+                    {
+                        DdsWriteDefines ddsDefines = new DdsWriteDefines();
+                        ddsDefines.Compression = DdsCompression.Dxt1;
+                        ddsDefines.Mipmaps = 0;
+
+                        image.Format = MagickFormat.Dds;
+                        image.Settings.SetDefines(ddsDefines);
+
+                        image.Write(s);
+                    }
 
                     s.Flush();
                     s.Close();
@@ -169,8 +181,8 @@ namespace Titanfall2_SkinTool
             MouseEventArgs m = (MouseEventArgs)e;
             PictureBox box = (PictureBox)sender;
 
-            ContextMenu menu = new ContextMenu();
-            menu.MenuItems.Add("Choose...", (object menuSender, EventArgs menuE) =>
+            ContextMenuStrip menu = new ContextMenuStrip();
+            menu.Items.Add("Choose...", null, (object menuSender, EventArgs menuE) =>
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Multiselect = false;
@@ -182,7 +194,7 @@ namespace Titanfall2_SkinTool
                     LoadImageIntoPictureBox(box, dialog.FileName);
                 }
             });
-            menu.MenuItems.Add("Remove", (object menuSender, EventArgs menuE) =>
+            menu.Items.Add("Remove", null, (object menuSender, EventArgs menuE) =>
             {
                 box.Image = null;
             });
