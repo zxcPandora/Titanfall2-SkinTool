@@ -15,7 +15,7 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.AssaultRifle
             public int length;
             public int seeklength;
         }
-        //需要修复
+        //需要修复512分辨率
         public ReallyData[] ChargeRifle_col;
         public ReallyData[] ChargeRifle_nml;
         public ReallyData[] ChargeRifle_gls;

@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] Mastiff_col;
         public ReallyData[] Mastiff_nml;
         public ReallyData[] Mastiff_gls;
         public ReallyData[] Mastiff_spc;
-
+        public ReallyData[] Mastiff_ao;
+        public ReallyData[] Mastiff_cav;
         public Mastiff()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mastiff_nml = new ReallyData[3];
             Mastiff_gls = new ReallyData[3];
             Mastiff_spc = new ReallyData[3];
-
+            Mastiff_ao = new ReallyData[3];
+            Mastiff_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Shotgun
             Mastiff_spc[2].length = Mastiff_spc[2 - 1].length * 4;
             Mastiff_spc[2].seeklength = 128;
 
+            //ao
+            Mastiff_ao[0].name = "ao";
+            Mastiff_ao[0].seek = 603242496;
+            Mastiff_ao[0].length = 131072;
+            Mastiff_ao[0].seeklength = 128;
 
+            Mastiff_ao[1].name = "ao";
+            Mastiff_ao[1].seek = 7623151616;
+            Mastiff_ao[1].length = 524288;
+            Mastiff_ao[1].seeklength = 128;
 
+            Mastiff_ao[2].name = "ao";
+            Mastiff_ao[2].seek = Mastiff_ao[2 - 1].seek + Mastiff_ao[2 - 1].length;
+            Mastiff_ao[2].length = Mastiff_ao[2 - 1].length * 4;
+            Mastiff_ao[2].seeklength = 128;
+
+            //cav
+            Mastiff_cav[0].name = "cav";
+            Mastiff_cav[0].seek = 603373568;
+            Mastiff_cav[0].length = 131072;
+            Mastiff_cav[0].seeklength = 128;
+
+            Mastiff_cav[1].name = "cav";
+            Mastiff_cav[1].seek = 7625773056;
+            Mastiff_cav[1].length = 524288;
+            Mastiff_cav[1].seeklength = 128;
+
+            Mastiff_cav[2].name = "cav";
+            Mastiff_cav[2].seek = Mastiff_cav[2 - 1].seek + Mastiff_cav[2 - 1].length;
+            Mastiff_cav[2].length = Mastiff_cav[2 - 1].length * 4;
+            Mastiff_cav[2].seeklength = 128;
         }
     }
 }

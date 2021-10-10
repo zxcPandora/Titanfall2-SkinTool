@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] PDW_col;
         public ReallyData[] PDW_nml;
         public ReallyData[] PDW_gls;
         public ReallyData[] PDW_spc;
-
+        public ReallyData[] PDW_ao;
+        public ReallyData[] PDW_cav;
         public PDW()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             PDW_nml = new ReallyData[3];
             PDW_gls = new ReallyData[3];
             PDW_spc = new ReallyData[3];
-
+            PDW_ao = new ReallyData[3];
+            PDW_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.SubmachineGun
             PDW_spc[2].length = PDW_spc[2 - 1].length * 4;
             PDW_spc[2].seeklength = 128;
 
+            //ao
+            PDW_ao[0].name = "ao";
+            PDW_ao[0].seek = 638480384;
+            PDW_ao[0].length = 131072;
+            PDW_ao[0].seeklength = 128;
 
+            PDW_ao[1].name = "ao";
+            PDW_ao[1].seek = 7919898624;
+            PDW_ao[1].length = 524288;
+            PDW_ao[1].seeklength = 128;
 
+            PDW_ao[2].name = "ao";
+            PDW_ao[2].seek = PDW_ao[2 - 1].seek + PDW_ao[2 - 1].length;
+            PDW_ao[2].length = PDW_ao[2 - 1].length * 4;
+            PDW_ao[2].seeklength = 128;
+
+            //cav
+            PDW_cav[0].name = "cav";
+            PDW_cav[0].seek = 638611456;
+            PDW_cav[0].length = 131072;
+            PDW_cav[0].seeklength = 128;
+
+            PDW_cav[1].name = "cav";
+            PDW_cav[1].seek = 7922520064;
+            PDW_cav[1].length = 524288;
+            PDW_cav[1].seeklength = 128;
+
+            PDW_cav[2].name = "cav";
+            PDW_cav[2].seek = PDW_cav[2 - 1].seek + PDW_cav[2 - 1].length;
+            PDW_cav[2].length = PDW_cav[2 - 1].length * 4;
+            PDW_cav[2].seeklength = 128;
         }
     }
 }

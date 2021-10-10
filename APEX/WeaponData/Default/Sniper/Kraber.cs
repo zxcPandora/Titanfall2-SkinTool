@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] Kraber_col;
         public ReallyData[] Kraber_nml;
         public ReallyData[] Kraber_gls;
         public ReallyData[] Kraber_spc;
-
+        public ReallyData[] Kraber_ao;
+        public ReallyData[] Kraber_cav;
         public Kraber()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Kraber_nml = new ReallyData[3];
             Kraber_gls = new ReallyData[3];
             Kraber_spc = new ReallyData[3];
-
+            Kraber_ao = new ReallyData[3];
+            Kraber_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Kraber_spc[2].length = Kraber_spc[2 - 1].length * 4;
             Kraber_spc[2].seeklength = 128;
 
+            //ao
+            Kraber_ao[0].name = "ao";
+            Kraber_ao[0].seek = 257916928;
+            Kraber_ao[0].length = 131072;
+            Kraber_ao[0].seeklength = 128;
 
+            Kraber_ao[1].name = "ao";
+            Kraber_ao[1].seek = 2980122624;
+            Kraber_ao[1].length = 524288;
+            Kraber_ao[1].seeklength = 128;
 
+            Kraber_ao[2].name = "ao";
+            Kraber_ao[2].seek = Kraber_ao[2 - 1].seek + Kraber_ao[2 - 1].length;
+            Kraber_ao[2].length = Kraber_ao[2 - 1].length * 4;
+            Kraber_ao[2].seeklength = 128;
+
+            //cav
+            Kraber_cav[0].name = "cav";
+            Kraber_cav[0].seek = 258048000;
+            Kraber_cav[0].length = 131072;
+            Kraber_cav[0].seeklength = 128;
+
+            Kraber_cav[1].name = "cav";
+            Kraber_cav[1].seek = 2982744064;
+            Kraber_cav[1].length = 524288;
+            Kraber_cav[1].seeklength = 128;
+
+            Kraber_cav[2].name = "cav";
+            Kraber_cav[2].seek = Kraber_cav[2 - 1].seek + Kraber_cav[2 - 1].length;
+            Kraber_cav[2].length = Kraber_cav[2 - 1].length * 4;
+            Kraber_cav[2].seeklength = 128;
         }
     }
 }

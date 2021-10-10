@@ -57,10 +57,12 @@ namespace Titanfall2_SkinTool
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
-                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe")) { 
+                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
+                {
                     SelectedGame = "Titanfall2";
                 }
-                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe")) { 
+                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe"))
+                {
                     SelectedGame = "APEX";
                 }
                 textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
@@ -155,53 +157,99 @@ namespace Titanfall2_SkinTool
                     var files = archive.Entries;
                     // 显示列表
                     string lastfilename = "test";
-                    int check = 0;
-                    int lastcheck = 0;
+                    int check = 0;//dds file exist
+                    int lastcheck = 0;//folder
                     int total = 0;
-
+                    int CountCheck = 0;
                     foreach (ZipArchiveEntry zav in files)
                     {
-                        textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
                         if (zav.Name.Contains(".dds"))
                         {
+                            CountCheck++;
+                        }
+                    }
+                    bool FileCount = files.Count != CountCheck;
+                    Console.WriteLine("文件数检查:" + FileCount);
+                    if (FileCount)
+                    {
+                        foreach (ZipArchiveEntry zav in files)
+                        {
+                            textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
+
+                            if (zav.Name.Contains(".dds"))
+                            {
+                                if (check == 1)
+                                {
+                                    lastcheck = 1;
+                                }
+                                check = 1;
+                                lastfilename = zav.FullName;
+                                lastfilename = lastfilename.Replace("/", "\\");
+                            }
+                            else
+                            {
+                                lastfilename = zav.FullName;
+                                lastfilename = lastfilename.Replace("/", "\\");
+                                check = 0;
+                                lastcheck = 0;
+                                total = 0;
+                            }
+                            if (check == 1 && lastcheck == 0)
+                            {
+                                Console.WriteLine(lastfilename);
+
+                            }
                             if (check == 1)
                             {
-                                lastcheck = 1;
-                            }
-                            check = 1;
-                        }
-                        else
-                        {
-                            lastfilename = zav.FullName;
-                            lastfilename = lastfilename.Replace("/", "\\");
-                            check = 0;
-                            lastcheck = 0;
-                            total = 0;
-                        }
-                        if (check == 1 && lastcheck == 0)
-                        {
-                            Console.WriteLine(lastfilename);
+                                if (lastfilename.Contains("512"))
+                                {
+                                    ImageCheck[0] = lastfilename;
+                                    FilePath[0, total] = zav.Name;
+                                }
 
+                                if (lastfilename.Contains("1024"))
+                                {
+                                    ImageCheck[1] = lastfilename;
+                                    FilePath[1, total] = zav.Name;
+                                }
+                                if (lastfilename.Contains("2048"))
+                                {
+                                    ImageCheck[2] = lastfilename;
+                                    FilePath[2, total] = zav.Name;
+                                }
+                                total++;
+                            }
                         }
-                        if (check == 1)
+                    }
+                    else
+                    {
+                        int Count512 = 0;
+                        int Count1024 = 0;
+                        int Count2048 = 0;
+                        foreach (ZipArchiveEntry zav in files)
                         {
-                            if (lastfilename.Contains("512"))
+                            textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
+                            string FolderResult = zav.FullName.Substring(0, zav.FullName.LastIndexOf(zav.Name));
+                            string FileResult = zav.Name;
+                            if (FolderResult.Contains("512"))
                             {
-                                ImageCheck[0] = lastfilename;
-                                FilePath[0, total] = zav.Name;
+                                ImageCheck[0] = FolderResult;
+                                FilePath[0, Count512] = zav.Name;
+                                Count512++;
                             }
 
-                            if (lastfilename.Contains("1024"))
+                            if (FolderResult.Contains("1024"))
                             {
-                                ImageCheck[1] = lastfilename;
-                                FilePath[1, total] = zav.Name;
+                                ImageCheck[1] = FolderResult;
+                                FilePath[1, Count1024] = zav.Name;
+                                Count1024++;
                             }
-                            if (lastfilename.Contains("2048"))
+                            if (FolderResult.Contains("2048"))
                             {
-                                ImageCheck[2] = lastfilename;
-                                FilePath[2, total] = zav.Name;
+                                ImageCheck[2] = FolderResult;
+                                FilePath[2, Count2048] = zav.Name;
+                                Count2048++;
                             }
-                            total++;
                         }
                     }
                     //ZipList.Items = files;
@@ -290,8 +338,8 @@ namespace Titanfall2_SkinTool
                             }
 
                             string reallypath = ExtractPath + "\\" + ImageCheck[i] + FilePath[i, j];
-                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame,imagecheck,"Replace");
-                                                                    //ToDo:Change to the Struct,still not done that...
+                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame, imagecheck, "Replace");
+                            //ToDo:Change to the Struct,still not done that...
                             Console.WriteLine(reallypath);
                             Console.WriteLine(toseek);
                             Console.WriteLine(tolength);

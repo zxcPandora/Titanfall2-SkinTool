@@ -15,12 +15,14 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] G2A7_col;
         public ReallyData[] G2A7_nml;
         public ReallyData[] G2A7_gls;
         public ReallyData[] G2A7_spc;
-
+        public ReallyData[] G2A7_ilm;
+        public ReallyData[] G2A7_ao;
+        public ReallyData[] G2A7_cav;
         public G2A7()
         {
 
@@ -29,7 +31,9 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             G2A7_nml = new ReallyData[3];
             G2A7_gls = new ReallyData[3];
             G2A7_spc = new ReallyData[3];
-
+            G2A7_ilm = new ReallyData[3];
+            G2A7_ao = new ReallyData[3];
+            G2A7_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +100,53 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             G2A7_spc[2].length = G2A7_spc[2 - 1].length * 4;
             G2A7_spc[2].seeklength = 128;
 
+            //ilm
+            G2A7_ilm[0].name = "ilm";
+            G2A7_ilm[0].seek = 244944896;
+            G2A7_ilm[0].length = 131072;
+            G2A7_ilm[0].seeklength = 128;
 
+            G2A7_ilm[1].name = "ilm";
+            G2A7_ilm[1].seek = 2880180224;
+            G2A7_ilm[1].length = 524288;
+            G2A7_ilm[1].seeklength = 128;
 
+            G2A7_ilm[2].name = "ilm";
+            G2A7_ilm[2].seek = G2A7_ilm[2 - 1].seek + G2A7_ilm[2 - 1].length;
+            G2A7_ilm[2].length = G2A7_ilm[2 - 1].length * 4;
+            G2A7_ilm[2].seeklength = 128;
+
+            //ao
+            G2A7_ao[0].name = "ao";
+            G2A7_ao[0].seek = 245075968;
+            G2A7_ao[0].length = 131072;
+            G2A7_ao[0].seeklength = 128;
+
+            G2A7_ao[1].name = "ao";
+            G2A7_ao[1].seek = 2882801664;
+            G2A7_ao[1].length = 524288;
+            G2A7_ao[1].seeklength = 128;
+
+            G2A7_ao[2].name = "ao";
+            G2A7_ao[2].seek = G2A7_ao[2 - 1].seek + G2A7_ao[2 - 1].length;
+            G2A7_ao[2].length = G2A7_ao[2 - 1].length * 4;
+            G2A7_ao[2].seeklength = 128;
+
+            //cav
+            G2A7_cav[0].name = "cav";
+            G2A7_cav[0].seek = 245207040;
+            G2A7_cav[0].length = 131072;
+            G2A7_cav[0].seeklength = 128;
+
+            G2A7_cav[1].name = "cav";
+            G2A7_cav[1].seek = 2885423104;
+            G2A7_cav[1].length = 524288;
+            G2A7_cav[1].seeklength = 128;
+
+            G2A7_cav[2].name = "cav";
+            G2A7_cav[2].seek = G2A7_cav[2 - 1].seek + G2A7_cav[2 - 1].length;
+            G2A7_cav[2].length = G2A7_cav[2 - 1].length * 4;
+            G2A7_cav[2].seeklength = 128;
         }
     }
 }

@@ -15,12 +15,13 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             public int length;
             public int seeklength;
         }
-        //需要修复
+
         public ReallyData[] Longbow_col;
         public ReallyData[] Longbow_nml;
         public ReallyData[] Longbow_gls;
         public ReallyData[] Longbow_spc;
-
+        public ReallyData[] Longbow_ao;
+        public ReallyData[] Longbow_cav;
         public Longbow()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Longbow_nml = new ReallyData[3];
             Longbow_gls = new ReallyData[3];
             Longbow_spc = new ReallyData[3];
-
+            Longbow_ao = new ReallyData[3];
+            Longbow_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.Sniper
             Longbow_spc[2].length = Longbow_spc[2 - 1].length * 4;
             Longbow_spc[2].seeklength = 128;
 
+            //ao
+            Longbow_ao[0].name = "ao";
+            Longbow_ao[0].seek = 666136576;
+            Longbow_ao[0].length = 131072;
+            Longbow_ao[0].seeklength = 128;
 
+            Longbow_ao[1].name = "ao";
+            Longbow_ao[1].seek = 8111919104;
+            Longbow_ao[1].length = 524288;
+            Longbow_ao[1].seeklength = 128;
 
+            Longbow_ao[2].name = "ao";
+            Longbow_ao[2].seek = Longbow_ao[2 - 1].seek + Longbow_ao[2 - 1].length;
+            Longbow_ao[2].length = Longbow_ao[2 - 1].length * 4;
+            Longbow_ao[2].seeklength = 128;
+
+            //cav
+            Longbow_cav[0].name = "cav";
+            Longbow_cav[0].seek = 666267648;
+            Longbow_cav[0].length = 131072;
+            Longbow_cav[0].seeklength = 128;
+
+            Longbow_cav[1].name = "cav";
+            Longbow_cav[1].seek = 8109297664;
+            Longbow_cav[1].length = 524288;
+            Longbow_cav[1].seeklength = 128;
+
+            Longbow_cav[2].name = "cav";
+            Longbow_cav[2].seek = Longbow_cav[2 - 1].seek + Longbow_cav[2 - 1].length;
+            Longbow_cav[2].length = Longbow_cav[2 - 1].length * 4;
+            Longbow_cav[2].seeklength = 128;
         }
     }
 }

@@ -20,7 +20,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
         public ReallyData[] Spitfire_nml;
         public ReallyData[] Spitfire_gls;
         public ReallyData[] Spitfire_spc;
-
+        public ReallyData[] Spitfire_ao;
+        public ReallyData[] Spitfire_cav;
         public Spitfire()
         {
 
@@ -29,7 +30,8 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Spitfire_nml = new ReallyData[3];
             Spitfire_gls = new ReallyData[3];
             Spitfire_spc = new ReallyData[3];
-
+            Spitfire_ao = new ReallyData[3];
+            Spitfire_cav = new ReallyData[3];
             //2为2048x2048,1为1024x1024,0为512x512
 
             //col
@@ -96,8 +98,37 @@ namespace Titanfall2_SkinTool.APEX.WeaponData.Default.LightMachineGun
             Spitfire_spc[2].length = Spitfire_spc[2 - 1].length * 4;
             Spitfire_spc[2].seeklength = 128;
 
+            //ao
+            Spitfire_ao[0].name = "ao";
+            Spitfire_ao[0].seek = 568479744;
+            Spitfire_ao[0].length = 131072;
+            Spitfire_ao[0].seeklength = 128;
 
+            Spitfire_ao[1].name = "ao";
+            Spitfire_ao[1].seek = 7273189376;
+            Spitfire_ao[1].length = 524288;
+            Spitfire_ao[1].seeklength = 128;
 
+            Spitfire_ao[2].name = "ao";
+            Spitfire_ao[2].seek = Spitfire_ao[2 - 1].seek + Spitfire_ao[2 - 1].length;
+            Spitfire_ao[2].length = Spitfire_ao[2 - 1].length * 4;
+            Spitfire_ao[2].seeklength = 128;
+
+            //cav
+            Spitfire_cav[0].name = "cav";
+            Spitfire_cav[0].seek = 568610816;
+            Spitfire_cav[0].length = 131072;
+            Spitfire_cav[0].seeklength = 128;
+
+            Spitfire_cav[1].name = "cav";
+            Spitfire_cav[1].seek = 7275810816;
+            Spitfire_cav[1].length = 524288;
+            Spitfire_cav[1].seeklength = 128;
+
+            Spitfire_cav[2].name = "cav";
+            Spitfire_cav[2].seek = Spitfire_cav[2 - 1].seek + Spitfire_cav[2 - 1].length;
+            Spitfire_cav[2].length = Spitfire_cav[2 - 1].length * 4;
+            Spitfire_cav[2].seeklength = 128;
         }
     }
 }
