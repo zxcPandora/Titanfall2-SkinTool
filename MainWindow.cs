@@ -362,6 +362,23 @@ namespace Titanfall2_SkinTool
                 MessageBox.Show(ex.Message);
             }
             GC.Collect();
+            if(Directory.Exists(rm.GetString("SaveFolder")))
+            {
+                try
+                {
+                    DirectoryInfo tempDir = new DirectoryInfo(rm.GetString("SaveFolder"));
+
+                    foreach(DirectoryInfo dir in tempDir.EnumerateDirectories())
+                    {
+                        dir.Delete(true);
+                    }
+
+                    tempDir.Delete();
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Error occured while trying to delete the temporary files folder: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void LanguageChinese_Click(object sender, EventArgs e)

@@ -67,6 +67,12 @@ namespace Titanfall2_SkinTool
 
         private void generateSkinPackButton_Click(object sender, EventArgs e)
         {
+            if(skinPackPathDialogue.SelectedPath.Length == 0)
+            {
+                MessageBox.Show("Please select a path to save the skinpack!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if(File.Exists(GetSkinPackRootPath()))
             {
                 try
