@@ -35,13 +35,13 @@ namespace Titanfall2_SkinTool
             this.glossinessPictureBox = new System.Windows.Forms.PictureBox();
             this.specularPictureBox = new System.Windows.Forms.PictureBox();
             this.texturesSetGroup = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.normalLabel = new System.Windows.Forms.Label();
+            this.glossinessLabel = new System.Windows.Forms.Label();
+            this.specularLabel = new System.Windows.Forms.Label();
+            this.illuminationLabel = new System.Windows.Forms.Label();
+            this.cavityLabel = new System.Windows.Forms.Label();
+            this.aoLabel = new System.Windows.Forms.Label();
+            this.colorLabel = new System.Windows.Forms.Label();
             this.illuminationPictureBox = new System.Windows.Forms.PictureBox();
             this.cavityPictureBox = new System.Windows.Forms.PictureBox();
             this.aoPictureBox = new System.Windows.Forms.PictureBox();
@@ -50,9 +50,9 @@ namespace Titanfall2_SkinTool
             this.openSkinPackPathSelectButton = new System.Windows.Forms.Button();
             this.skinPackPathTextBox = new System.Windows.Forms.TextBox();
             this.skinNameTextBox = new System.Windows.Forms.TextBox();
-            this.labelx = new System.Windows.Forms.Label();
-            this.pathTextBox = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.assetTypeLabel = new System.Windows.Forms.Label();
+            this.savePathLabel = new System.Windows.Forms.Label();
+            this.skinNameLabel = new System.Windows.Forms.Label();
             this.skinPackPathDialogue = new System.Windows.Forms.FolderBrowserDialog();
             this.generateSkinPackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.colorPictureBox)).BeginInit();
@@ -120,13 +120,13 @@ namespace Titanfall2_SkinTool
             // 
             // texturesSetGroup
             // 
-            this.texturesSetGroup.Controls.Add(this.label7);
-            this.texturesSetGroup.Controls.Add(this.label6);
-            this.texturesSetGroup.Controls.Add(this.label5);
-            this.texturesSetGroup.Controls.Add(this.label8);
-            this.texturesSetGroup.Controls.Add(this.label3);
-            this.texturesSetGroup.Controls.Add(this.label2);
-            this.texturesSetGroup.Controls.Add(this.label4);
+            this.texturesSetGroup.Controls.Add(this.normalLabel);
+            this.texturesSetGroup.Controls.Add(this.glossinessLabel);
+            this.texturesSetGroup.Controls.Add(this.specularLabel);
+            this.texturesSetGroup.Controls.Add(this.illuminationLabel);
+            this.texturesSetGroup.Controls.Add(this.cavityLabel);
+            this.texturesSetGroup.Controls.Add(this.aoLabel);
+            this.texturesSetGroup.Controls.Add(this.colorLabel);
             this.texturesSetGroup.Controls.Add(this.illuminationPictureBox);
             this.texturesSetGroup.Controls.Add(this.cavityPictureBox);
             this.texturesSetGroup.Controls.Add(this.aoPictureBox);
@@ -138,40 +138,40 @@ namespace Titanfall2_SkinTool
             this.texturesSetGroup.Name = "texturesSetGroup";
             this.texturesSetGroup.TabStop = false;
             // 
-            // label7
+            // normalLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.normalLabel, "normalLabel");
+            this.normalLabel.Name = "normalLabel";
             // 
-            // label6
+            // glossinessLabel
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.glossinessLabel, "glossinessLabel");
+            this.glossinessLabel.Name = "glossinessLabel";
             // 
-            // label5
+            // specularLabel
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.specularLabel, "specularLabel");
+            this.specularLabel.Name = "specularLabel";
             // 
-            // label8
+            // illuminationLabel
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.illuminationLabel, "illuminationLabel");
+            this.illuminationLabel.Name = "illuminationLabel";
             // 
-            // label3
+            // cavityLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.cavityLabel, "cavityLabel");
+            this.cavityLabel.Name = "cavityLabel";
             // 
-            // label2
+            // aoLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.aoLabel, "aoLabel");
+            this.aoLabel.Name = "aoLabel";
             // 
-            // label4
+            // colorLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.colorLabel, "colorLabel");
+            this.colorLabel.Name = "colorLabel";
             // 
             // illuminationPictureBox
             // 
@@ -218,9 +218,9 @@ namespace Titanfall2_SkinTool
             this.generalInfoGroup.Controls.Add(this.openSkinPackPathSelectButton);
             this.generalInfoGroup.Controls.Add(this.skinPackPathTextBox);
             this.generalInfoGroup.Controls.Add(this.skinNameTextBox);
-            this.generalInfoGroup.Controls.Add(this.labelx);
-            this.generalInfoGroup.Controls.Add(this.pathTextBox);
-            this.generalInfoGroup.Controls.Add(this.label1);
+            this.generalInfoGroup.Controls.Add(this.assetTypeLabel);
+            this.generalInfoGroup.Controls.Add(this.savePathLabel);
+            this.generalInfoGroup.Controls.Add(this.skinNameLabel);
             resources.ApplyResources(this.generalInfoGroup, "generalInfoGroup");
             this.generalInfoGroup.Name = "generalInfoGroup";
             this.generalInfoGroup.TabStop = false;
@@ -275,20 +275,20 @@ namespace Titanfall2_SkinTool
             resources.ApplyResources(this.skinNameTextBox, "skinNameTextBox");
             this.skinNameTextBox.Name = "skinNameTextBox";
             // 
-            // labelx
+            // assetTypeLabel
             // 
-            resources.ApplyResources(this.labelx, "labelx");
-            this.labelx.Name = "labelx";
+            resources.ApplyResources(this.assetTypeLabel, "assetTypeLabel");
+            this.assetTypeLabel.Name = "assetTypeLabel";
             // 
-            // pathTextBox
+            // savePathLabel
             // 
-            resources.ApplyResources(this.pathTextBox, "pathTextBox");
-            this.pathTextBox.Name = "pathTextBox";
+            resources.ApplyResources(this.savePathLabel, "savePathLabel");
+            this.savePathLabel.Name = "savePathLabel";
             // 
-            // label1
+            // skinNameLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.skinNameLabel, "skinNameLabel");
+            this.skinNameLabel.Name = "skinNameLabel";
             // 
             // skinPackPathDialogue
             // 
@@ -336,19 +336,19 @@ namespace Titanfall2_SkinTool
         private System.Windows.Forms.Button openSkinPackPathSelectButton;
         private System.Windows.Forms.TextBox skinPackPathTextBox;
         private System.Windows.Forms.TextBox skinNameTextBox;
-        private System.Windows.Forms.Label pathTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label savePathLabel;
+        private System.Windows.Forms.Label skinNameLabel;
         private System.Windows.Forms.FolderBrowserDialog skinPackPathDialogue;
         private System.Windows.Forms.ComboBox assetTypeComboBox;
-        private System.Windows.Forms.Label labelx;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label assetTypeLabel;
+        private System.Windows.Forms.Label glossinessLabel;
+        private System.Windows.Forms.Label specularLabel;
+        private System.Windows.Forms.Label colorLabel;
         private System.Windows.Forms.Button generateSkinPackButton;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label normalLabel;
+        private System.Windows.Forms.Label illuminationLabel;
+        private System.Windows.Forms.Label cavityLabel;
+        private System.Windows.Forms.Label aoLabel;
         private System.Windows.Forms.PictureBox illuminationPictureBox;
         private System.Windows.Forms.PictureBox cavityPictureBox;
         private System.Windows.Forms.PictureBox aoPictureBox;

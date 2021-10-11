@@ -7,6 +7,8 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,10 +20,36 @@ namespace Titanfall2_SkinTool
 {
     public partial class SkinPackMakerWindow : Form
     {
+        System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
+
         public SkinPackMakerWindow()
         {
             InitializeComponent();
             DisableAllTextures();
+            
+
+            // LOCALIZATION
+
+            // General Info Group
+            generalInfoGroup.Text = rm.GetString("GeneralInfoGroup");
+            skinNameLabel.Text = rm.GetString("SkinName");
+            assetTypeLabel.Text = rm.GetString("AssetType");
+            savePathLabel.Text = rm.GetString("SavePath");
+
+            // Textures Set Group
+
+            texturesSetGroup.Text = rm.GetString("TexturesSetGroup");
+            colorLabel.Text = rm.GetString("Color");
+            specularLabel.Text = rm.GetString("Specular");
+            glossinessLabel.Text = rm.GetString("Glossinesss");
+            normalLabel.Text = rm.GetString("Normal");
+            aoLabel.Text = rm.GetString("AO");
+            cavityLabel.Text = rm.GetString("Cavity");
+            illuminationLabel.Text = rm.GetString("Illumination");
+
+            // Generate Button
+            generateSkinPackButton.Text = rm.GetString("Generate");
+
         }
 
         private void openSkinPackPathSelectButton_Click(object sender, EventArgs e)
@@ -60,7 +88,8 @@ namespace Titanfall2_SkinTool
                 }
                 catch (OutOfMemoryException exception)
                 {
-                    MessageBox.Show("File is probably not an image (OutOfMemoryException)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    MessageBox.Show(rm.GetString("ImageReadOutOfMem"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -69,7 +98,7 @@ namespace Titanfall2_SkinTool
         {
             if(skinPackPathDialogue.SelectedPath.Length == 0)
             {
-                MessageBox.Show("Please select a path to save the skinpack!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(rm.GetString("SkinPackPathNotSelected"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -80,7 +109,7 @@ namespace Titanfall2_SkinTool
                     File.Delete(GetSkinPackRootPath());
                 } catch(Exception ex)
                 {
-                    MessageBox.Show("Error occured while trying to delete the old archive: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(rm.GetString("CannotDeleteArchive") + ex.Message, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -195,7 +224,7 @@ namespace Titanfall2_SkinTool
             PictureBox box = (PictureBox)sender;
 
             ContextMenuStrip menu = new ContextMenuStrip();
-            menu.Items.Add("Choose...", null, (object menuSender, EventArgs menuE) =>
+            menu.Items.Add(rm.GetString("ContextChoose"), null, (object menuSender, EventArgs menuE) =>
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Multiselect = false;
@@ -207,7 +236,7 @@ namespace Titanfall2_SkinTool
                     LoadImageIntoPictureBox(box, dialog.FileName);
                 }
             });
-            menu.Items.Add("Remove", null, (object menuSender, EventArgs menuE) =>
+            menu.Items.Add(rm.GetString("ContextRemove"), null, (object menuSender, EventArgs menuE) =>
             {
                 box.Image = null;
             });

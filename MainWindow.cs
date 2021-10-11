@@ -54,6 +54,8 @@ namespace Titanfall2_SkinTool
             this.LanguageChinese.Text = rm.GetString("Chinese");
             this.LanguageEnglish.Text = rm.GetString("English");
             this.Test.Text = rm.GetString("ImportBtn");
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
@@ -396,6 +398,8 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = true;
             this.LanguageEnglish.Checked = false;
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
         }
 
         private void LanguageEnglish_Click(object sender, EventArgs e)
@@ -413,6 +417,8 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = false;
             this.LanguageEnglish.Checked = true;
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
         }
 
         private void skinPackMakerToolStripMenuItem_Click(object sender, EventArgs e)

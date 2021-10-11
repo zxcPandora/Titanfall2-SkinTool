@@ -112,19 +112,43 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutAuthor" xml:space="preserve">
     <value>About Author</value>
   </data>
+  <data name="AO" xml:space="preserve">
+    <value>AO</value>
+  </data>
+  <data name="AssetType" xml:space="preserve">
+    <value>Asset Type</value>
+  </data>
+  <data name="CannotDeleteArchive" xml:space="preserve">
+    <value>Error occured while trying to delete the old archive: \n</value>
+  </data>
+  <data name="Cavity" xml:space="preserve">
+    <value>Cavity</value>
+  </data>
   <data name="Chinese" xml:space="preserve">
     <value>Chinese</value>
   </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ContextChoose" xml:space="preserve">
+    <value>Choose...</value>
+  </data>
+  <data name="ContextRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="FindSkinFailed" xml:space="preserve">
     <value>Unable to load, is this file a standard skin file?</value>
@@ -140,6 +164,21 @@
   </data>
   <data name="GameLoadSuccess" xml:space="preserve">
     <value>Game path set successfully!Active Game:</value>
+  </data>
+  <data name="GeneralInfoGroup" xml:space="preserve">
+    <value>General Info</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="Glossinesss" xml:space="preserve">
+    <value>Glossiness</value>
+  </data>
+  <data name="Illumination" xml:space="preserve">
+    <value>Illumination</value>
+  </data>
+  <data name="ImageReadOutOfMem" xml:space="preserve">
+    <value>File is probably not an image (OutOfMemoryException)</value>
   </data>
   <data name="ImportBtn" xml:space="preserve">
     <value>Import Skin</value>
@@ -165,11 +204,17 @@
   <data name="MenuSetPath" xml:space="preserve">
     <value>SetGamePath</value>
   </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Open File</value>
   </data>
   <data name="SaveFolder" xml:space="preserve">
     <value>SkinTemp</value>
+  </data>
+  <data name="SavePath" xml:space="preserve">
+    <value>Save Path</value>
   </data>
   <data name="SetGamePath" xml:space="preserve">
     <value>Please set the game path first.</value>
@@ -177,8 +222,26 @@
   <data name="Skin" xml:space="preserve">
     <value>Skin File</value>
   </data>
+  <data name="SkinName" xml:space="preserve">
+    <value>Skin Name</value>
+  </data>
+  <data name="SkinPackMaker" xml:space="preserve">
+    <value>SkinPack Maker</value>
+  </data>
+  <data name="SkinPackPathNotSelected" xml:space="preserve">
+    <value>Please select a path to save the skinpack!</value>
+  </data>
+  <data name="Specular" xml:space="preserve">
+    <value>Specular</value>
+  </data>
+  <data name="TexturesSetGroup" xml:space="preserve">
+    <value>Textures Set (Drag &amp; Drop / Click)</value>
+  </data>
   <data name="Tip" xml:space="preserve">
     <value>Tip</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Tools</value>
   </data>
   <data name="ZipLoadFailed" xml:space="preserve">
     <value>Compressed package path is wrong or does not exist!</value>

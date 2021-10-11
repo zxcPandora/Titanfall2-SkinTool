@@ -178,226 +178,376 @@
   <data name="&gt;&gt;specularPictureBox.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;normalLabel.Name" xml:space="preserve">
+    <value>normalLabel</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 178</value>
-  </data>
-  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 15</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Normal</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+  <data name="&gt;&gt;normalLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;normalLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;normalLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;glossinessLabel.Name" xml:space="preserve">
+    <value>glossinessLabel</value>
   </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 178</value>
-  </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 15</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Glossiness</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;glossinessLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;glossinessLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;glossinessLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;specularLabel.Name" xml:space="preserve">
+    <value>specularLabel</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 178</value>
-  </data>
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Specular</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;specularLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;specularLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;specularLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;illuminationLabel.Name" xml:space="preserve">
+    <value>illuminationLabel</value>
   </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 363</value>
-  </data>
-  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 15</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Emmision</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;illuminationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;illuminationLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;illuminationLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cavityLabel.Name" xml:space="preserve">
+    <value>cavityLabel</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 363</value>
-  </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 15</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Cavity</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;cavityLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cavityLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cavityLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;aoLabel.Name" xml:space="preserve">
+    <value>aoLabel</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 363</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 15</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>AO</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;aoLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;aoLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;aoLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;colorLabel.Name" xml:space="preserve">
+    <value>colorLabel</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 178</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 15</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;colorLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;colorLabel.Parent" xml:space="preserve">
     <value>texturesSetGroup</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;colorLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;illuminationPictureBox.Name" xml:space="preserve">
+    <value>illuminationPictureBox</value>
+  </data>
+  <data name="&gt;&gt;illuminationPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;illuminationPictureBox.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;illuminationPictureBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cavityPictureBox.Name" xml:space="preserve">
+    <value>cavityPictureBox</value>
+  </data>
+  <data name="&gt;&gt;cavityPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cavityPictureBox.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;cavityPictureBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;aoPictureBox.Name" xml:space="preserve">
+    <value>aoPictureBox</value>
+  </data>
+  <data name="&gt;&gt;aoPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aoPictureBox.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;aoPictureBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="texturesSetGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 186</value>
+  </data>
+  <data name="texturesSetGroup.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="texturesSetGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="texturesSetGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 387</value>
+  </data>
+  <data name="texturesSetGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="texturesSetGroup.Text" xml:space="preserve">
+    <value>Textures Set (Drag &amp;&amp; Drop / Click on rectangle)</value>
+  </data>
+  <data name="&gt;&gt;texturesSetGroup.Name" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;texturesSetGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;texturesSetGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;texturesSetGroup.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="normalLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="normalLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 178</value>
+  </data>
+  <data name="normalLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="normalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 15</value>
+  </data>
+  <data name="normalLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="normalLabel.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="&gt;&gt;normalLabel.Name" xml:space="preserve">
+    <value>normalLabel</value>
+  </data>
+  <data name="&gt;&gt;normalLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;normalLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;normalLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="glossinessLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="glossinessLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="glossinessLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>362, 178</value>
+  </data>
+  <data name="glossinessLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="glossinessLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 15</value>
+  </data>
+  <data name="glossinessLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="glossinessLabel.Text" xml:space="preserve">
+    <value>Glossiness</value>
+  </data>
+  <data name="&gt;&gt;glossinessLabel.Name" xml:space="preserve">
+    <value>glossinessLabel</value>
+  </data>
+  <data name="&gt;&gt;glossinessLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;glossinessLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;glossinessLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="specularLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="specularLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 178</value>
+  </data>
+  <data name="specularLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="specularLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 15</value>
+  </data>
+  <data name="specularLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="specularLabel.Text" xml:space="preserve">
+    <value>Specular</value>
+  </data>
+  <data name="&gt;&gt;specularLabel.Name" xml:space="preserve">
+    <value>specularLabel</value>
+  </data>
+  <data name="&gt;&gt;specularLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;specularLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;specularLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="illuminationLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="illuminationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="illuminationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 363</value>
+  </data>
+  <data name="illuminationLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="illuminationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="illuminationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="illuminationLabel.Text" xml:space="preserve">
+    <value>Emmision</value>
+  </data>
+  <data name="&gt;&gt;illuminationLabel.Name" xml:space="preserve">
+    <value>illuminationLabel</value>
+  </data>
+  <data name="&gt;&gt;illuminationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;illuminationLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;illuminationLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cavityLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cavityLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cavityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 363</value>
+  </data>
+  <data name="cavityLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="cavityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="cavityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cavityLabel.Text" xml:space="preserve">
+    <value>Cavity</value>
+  </data>
+  <data name="&gt;&gt;cavityLabel.Name" xml:space="preserve">
+    <value>cavityLabel</value>
+  </data>
+  <data name="&gt;&gt;cavityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cavityLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;cavityLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="aoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="aoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="aoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 363</value>
+  </data>
+  <data name="aoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="aoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 15</value>
+  </data>
+  <data name="aoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="aoLabel.Text" xml:space="preserve">
+    <value>AO</value>
+  </data>
+  <data name="&gt;&gt;aoLabel.Name" xml:space="preserve">
+    <value>aoLabel</value>
+  </data>
+  <data name="&gt;&gt;aoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aoLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;aoLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="colorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 178</value>
+  </data>
+  <data name="colorLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="colorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="colorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colorLabel.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="&gt;&gt;colorLabel.Name" xml:space="preserve">
+    <value>colorLabel</value>
+  </data>
+  <data name="&gt;&gt;colorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorLabel.Parent" xml:space="preserve">
+    <value>texturesSetGroup</value>
+  </data>
+  <data name="&gt;&gt;colorLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="illuminationPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -490,36 +640,6 @@
   <data name="&gt;&gt;aoPictureBox.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="texturesSetGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 186</value>
-  </data>
-  <data name="texturesSetGroup.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="texturesSetGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="texturesSetGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>635, 387</value>
-  </data>
-  <data name="texturesSetGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="texturesSetGroup.Text" xml:space="preserve">
-    <value>Textures Set (Drag &amp;&amp; Drop / Click on rectangle)</value>
-  </data>
-  <data name="&gt;&gt;texturesSetGroup.Name" xml:space="preserve">
-    <value>texturesSetGroup</value>
-  </data>
-  <data name="&gt;&gt;texturesSetGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;texturesSetGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;texturesSetGroup.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;assetTypeComboBox.Name" xml:space="preserve">
     <value>assetTypeComboBox</value>
   </data>
@@ -568,40 +688,40 @@
   <data name="&gt;&gt;skinNameTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;labelx.Name" xml:space="preserve">
-    <value>labelx</value>
+  <data name="&gt;&gt;assetTypeLabel.Name" xml:space="preserve">
+    <value>assetTypeLabel</value>
   </data>
-  <data name="&gt;&gt;labelx.Type" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelx.Parent" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;labelx.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Name" xml:space="preserve">
-    <value>pathTextBox</value>
+  <data name="&gt;&gt;savePathLabel.Name" xml:space="preserve">
+    <value>savePathLabel</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;skinNameLabel.Name" xml:space="preserve">
+    <value>skinNameLabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="generalInfoGroup.Location" type="System.Drawing.Point, System.Drawing">
@@ -805,97 +925,97 @@
   <data name="&gt;&gt;skinNameTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="labelx.AutoSize" type="System.Boolean, mscorlib">
+  <data name="assetTypeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelx.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="assetTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="labelx.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="assetTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 69</value>
   </data>
-  <data name="labelx.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="assetTypeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="labelx.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="assetTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 15</value>
   </data>
-  <data name="labelx.TabIndex" type="System.Int32, mscorlib">
+  <data name="assetTypeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="labelx.Text" xml:space="preserve">
+  <data name="assetTypeLabel.Text" xml:space="preserve">
     <value>Asset Type</value>
   </data>
-  <data name="&gt;&gt;labelx.Name" xml:space="preserve">
-    <value>labelx</value>
+  <data name="&gt;&gt;assetTypeLabel.Name" xml:space="preserve">
+    <value>assetTypeLabel</value>
   </data>
-  <data name="&gt;&gt;labelx.Type" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelx.Parent" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;labelx.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;assetTypeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pathTextBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="savePathLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="savePathLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 108</value>
   </data>
-  <data name="pathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="savePathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="pathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="savePathLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 15</value>
   </data>
-  <data name="pathTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="savePathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="pathTextBox.Text" xml:space="preserve">
+  <data name="savePathLabel.Text" xml:space="preserve">
     <value>Save Path</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Name" xml:space="preserve">
-    <value>pathTextBox</value>
+  <data name="&gt;&gt;savePathLabel.Name" xml:space="preserve">
+    <value>savePathLabel</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;pathTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;savePathLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="skinNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="skinNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 30</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="skinNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="skinNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 15</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="skinNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="skinNameLabel.Text" xml:space="preserve">
     <value>Skin Name</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;skinNameLabel.Name" xml:space="preserve">
+    <value>skinNameLabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.Parent" xml:space="preserve">
     <value>generalInfoGroup</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;skinNameLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <metadata name="skinPackPathDialogue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
