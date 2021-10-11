@@ -171,6 +171,9 @@
   <data name="Generate" xml:space="preserve">
     <value>Generate</value>
   </data>
+  <data name="GeneratingSkinPack" xml:space="preserve">
+    <value>Generating...</value>
+  </data>
   <data name="Glossinesss" xml:space="preserve">
     <value>Glossiness</value>
   </data>

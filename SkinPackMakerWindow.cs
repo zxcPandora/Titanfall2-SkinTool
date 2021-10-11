@@ -10,6 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BCnEncoder.Encoder;
@@ -96,7 +97,9 @@ namespace Titanfall2_SkinTool
 
         private void generateSkinPackButton_Click(object sender, EventArgs e)
         {
-            if(skinPackPathDialogue.SelectedPath.Length == 0)
+            ProgressForm progressForm = null;
+
+            if (skinPackPathDialogue.SelectedPath.Length == 0)
             {
                 MessageBox.Show(rm.GetString("SkinPackPathNotSelected"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -113,6 +116,15 @@ namespace Titanfall2_SkinTool
                     return;
                 }
             }
+
+            Thread progressThread = new Thread(() =>
+            {
+                progressForm = new ProgressForm(7); // 7 texture slots 
+                progressForm.ShowDialog();
+            }
+            ); // 7 texture slots
+            progressThread.Start();
+
             ZipArchive zipArchive = ZipFile.Open(GetSkinPackRootPath(), ZipArchiveMode.Create);
 
             if(colorPictureBox.Enabled && colorPictureBox.Image != null)
@@ -121,6 +133,8 @@ namespace Titanfall2_SkinTool
                 colorImage.SetCompression(CompressionMethod.DXT1);
                 SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
             }
+
+            progressForm?.AdvanceEntry();
             
             if(specularPictureBox.Enabled && specularPictureBox.Image != null)
             {
@@ -128,6 +142,8 @@ namespace Titanfall2_SkinTool
                 specularImage.SetCompression(CompressionMethod.DXT1);
                 SaveTexture(assetTypeComboBox.Text + "_Default_spc.dds", specularImage, zipArchive);
             }
+
+            progressForm?.AdvanceEntry();
             
             if(normalPictureBox.Enabled && normalPictureBox.Image != null)
             {
@@ -136,22 +152,31 @@ namespace Titanfall2_SkinTool
                 SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
             }
 
+            progressForm?.AdvanceEntry();
+
             if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
             {
                 MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
                 SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
             }
+
+            progressForm?.AdvanceEntry();
+
             if(aoPictureBox.Enabled && aoPictureBox.Image != null)
             {
                 MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
                 SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
             }
 
+            progressForm?.AdvanceEntry();
+
             if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
             {
                 MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
                 SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
             }
+
+            progressForm?.AdvanceEntry();
 
             if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
             {
@@ -160,9 +185,13 @@ namespace Titanfall2_SkinTool
                 SaveTexture(assetTypeComboBox.Text + "_Default_ilm.dds", illuminationImage, zipArchive);
             }
 
+            progressForm?.AdvanceEntry();
+            progressForm?.ForceClose();
+
             zipArchive.Dispose();
         }
 
+       
         private string GetSkinPackRootPath()
         {
             return skinPackPathDialogue.SelectedPath + "\\" + assetTypeComboBox.Text + "_" + skinNameTextBox.Text + ".zip";

@@ -4,6 +4,9 @@
     <Compile Update="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SkinPackMakerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
