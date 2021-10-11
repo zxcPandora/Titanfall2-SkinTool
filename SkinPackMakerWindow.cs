@@ -127,65 +127,73 @@ namespace Titanfall2_SkinTool
 
             ZipArchive zipArchive = ZipFile.Open(GetSkinPackRootPath(), ZipArchiveMode.Create);
 
-            if(colorPictureBox.Enabled && colorPictureBox.Image != null)
+            try
             {
-                MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
-                colorImage.SetCompression(CompressionMethod.DXT1);
-                SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
+                if(colorPictureBox.Enabled && colorPictureBox.Image != null)
+                {
+                    MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
+                    colorImage.SetCompression(CompressionMethod.DXT1);
+                    SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
+                }
+
+                progressForm?.AdvanceEntry();
+                
+                if(specularPictureBox.Enabled && specularPictureBox.Image != null)
+                {
+                    MagickImage specularImage = new MagickImage(ImageToByteArray(specularPictureBox.Image));
+                    specularImage.SetCompression(CompressionMethod.DXT1);
+                    SaveTexture(assetTypeComboBox.Text + "_Default_spc.dds", specularImage, zipArchive);
+                }
+
+                progressForm?.AdvanceEntry();
+                
+                if(normalPictureBox.Enabled && normalPictureBox.Image != null)
+                {
+                    MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
+                    //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
+                    SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
+                }
+
+                progressForm?.AdvanceEntry();
+
+                if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
+                {
+                    MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
+                    SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                }
+
+                progressForm?.AdvanceEntry();
+
+                if(aoPictureBox.Enabled && aoPictureBox.Image != null)
+                {
+                    MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
+                    SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                }
+
+                progressForm?.AdvanceEntry();
+
+                if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
+                {
+                    MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
+                    SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                }
+
+                progressForm?.AdvanceEntry();
+
+                if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
+                {
+                    MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
+                    illuminationImage.SetCompression(CompressionMethod.DXT1);
+                    SaveTexture(assetTypeComboBox.Text + "_Default_ilm.dds", illuminationImage, zipArchive);
+                }
+                progressForm?.AdvanceEntry();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\r\n" + ex.Source, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
 
-            progressForm?.AdvanceEntry();
-            
-            if(specularPictureBox.Enabled && specularPictureBox.Image != null)
-            {
-                MagickImage specularImage = new MagickImage(ImageToByteArray(specularPictureBox.Image));
-                specularImage.SetCompression(CompressionMethod.DXT1);
-                SaveTexture(assetTypeComboBox.Text + "_Default_spc.dds", specularImage, zipArchive);
-            }
 
-            progressForm?.AdvanceEntry();
-            
-            if(normalPictureBox.Enabled && normalPictureBox.Image != null)
-            {
-                MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
-                //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
-                SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
-            }
-
-            progressForm?.AdvanceEntry();
-
-            if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
-            {
-                MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
-                SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
-            }
-
-            progressForm?.AdvanceEntry();
-
-            if(aoPictureBox.Enabled && aoPictureBox.Image != null)
-            {
-                MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
-                SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
-            }
-
-            progressForm?.AdvanceEntry();
-
-            if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
-            {
-                MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
-                SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
-            }
-
-            progressForm?.AdvanceEntry();
-
-            if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
-            {
-                MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
-                illuminationImage.SetCompression(CompressionMethod.DXT1);
-                SaveTexture(assetTypeComboBox.Text + "_Default_ilm.dds", illuminationImage, zipArchive);
-            }
-
-            progressForm?.AdvanceEntry();
             progressForm?.ForceClose();
 
             zipArchive.Dispose();
