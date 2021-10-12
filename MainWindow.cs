@@ -54,6 +54,8 @@ namespace Titanfall2_SkinTool
             this.LanguageChinese.Text = rm.GetString("Chinese");
             this.LanguageEnglish.Text = rm.GetString("English");
             this.Test.Text = rm.GetString("ImportBtn");
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
             if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
             {
                 GamePath = File.ReadAllText($"{filePath}\\Path.txt");
@@ -130,7 +132,7 @@ namespace Titanfall2_SkinTool
 
         private void Menu_Author_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
+            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool\r\nSkinPackMaker:salcodes", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
         }
 
         private void Test_Click(object sender, EventArgs e)
@@ -229,6 +231,7 @@ namespace Titanfall2_SkinTool
                         {
                             textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
                             string FolderResult = zav.FullName.Substring(0, zav.FullName.LastIndexOf(zav.Name));
+                            FolderResult = FolderResult.Replace("/", "\\");
                             string FileResult = zav.Name;
                             if (FolderResult.Contains("512"))
                             {
@@ -361,6 +364,23 @@ namespace Titanfall2_SkinTool
                 MessageBox.Show(ex.Message);
             }
             GC.Collect();
+            if(Directory.Exists(rm.GetString("SaveFolder")))
+            {
+                try
+                {
+                    DirectoryInfo tempDir = new DirectoryInfo(rm.GetString("SaveFolder"));
+
+                    foreach(DirectoryInfo dir in tempDir.EnumerateDirectories())
+                    {
+                        dir.Delete(true);
+                    }
+
+                    tempDir.Delete();
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Error occured while trying to delete the temporary files folder: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void LanguageChinese_Click(object sender, EventArgs e)
@@ -378,6 +398,8 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = true;
             this.LanguageEnglish.Checked = false;
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
         }
 
         private void LanguageEnglish_Click(object sender, EventArgs e)
@@ -395,6 +417,14 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = false;
             this.LanguageEnglish.Checked = true;
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
+        }
+
+        private void skinPackMakerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SkinPackMakerWindow window = new SkinPackMakerWindow();
+            window.ShowDialog();
         }
     }
 }
