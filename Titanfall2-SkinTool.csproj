@@ -29,9 +29,6 @@
     <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.IO.Compression" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
     <Content Include="MediaResources\texture_not_available.png" />
   </ItemGroup>

@@ -87,10 +87,10 @@ namespace Titanfall2_SkinTool
                 {
                     box.Image = Image.FromFile(filepath);
                 }
-                catch (OutOfMemoryException exception)
+                catch (OutOfMemoryException ex)
                 {
 
-                    MessageBox.Show(rm.GetString("ImageReadOutOfMem"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(rm.GetString("ImageReadOutOfMem") + "\r\r" + ex.Message, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
