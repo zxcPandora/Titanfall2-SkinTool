@@ -21,17 +21,22 @@ namespace Titanfall2_SkinTool
 {
     public partial class SkinPackMakerWindow : Form
     {
+        public void SetGame(String SelectedGame)
+        {
+            this.SelectedGame = SelectedGame;
+        }
+        string SelectedGame = null;
         System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
         public SkinPackMakerWindow()
         {
             InitializeComponent();
             DisableAllTextures();
-            
 
             // LOCALIZATION
 
             // General Info Group
+            this.Text = rm.GetString("SkinPackMaker");
             generalInfoGroup.Text = rm.GetString("GeneralInfoGroup");
             skinNameLabel.Text = rm.GetString("SkinName");
             assetTypeLabel.Text = rm.GetString("AssetType");
@@ -51,6 +56,8 @@ namespace Titanfall2_SkinTool
             // Generate Button
             generateSkinPackButton.Text = rm.GetString("Generate");
 
+            // Default Path
+            skinPackPathTextBox.Text= Environment.CurrentDirectory;
         }
 
         private void openSkinPackPathSelectButton_Click(object sender, EventArgs e)

@@ -124,10 +124,10 @@
     <value>AO</value>
   </data>
   <data name="AssetType" xml:space="preserve">
-    <value>Asset Type</value>
+    <value>资源类型</value>
   </data>
   <data name="CannotDeleteArchive" xml:space="preserve">
-    <value>Error occured while trying to delete the old archive: \n</value>
+    <value>尝试删除皮肤缓存时出错: \n</value>
   </data>
   <data name="Cavity" xml:space="preserve">
     <value>Cavity</value>
@@ -139,16 +139,16 @@
     <value>Color</value>
   </data>
   <data name="ContextChoose" xml:space="preserve">
-    <value>Choose...</value>
+    <value>选择图片</value>
   </data>
   <data name="ContextRemove" xml:space="preserve">
-    <value>Remove</value>
+    <value>移除图片</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>英文</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>错误</value>
   </data>
   <data name="FindSkinFailed" xml:space="preserve">
     <value>无法加载，此文件是否为规范的皮肤文件？</value>
@@ -166,13 +166,13 @@
     <value>游戏路径设置成功，当前游戏为：</value>
   </data>
   <data name="GeneralInfoGroup" xml:space="preserve">
-    <value>General Info</value>
+    <value>生成设置</value>
   </data>
   <data name="Generate" xml:space="preserve">
-    <value>Generate</value>
+    <value>生成皮肤包</value>
   </data>
   <data name="GeneratingSkinPack" xml:space="preserve">
-    <value>Generating...</value>
+    <value>生成中...</value>
   </data>
   <data name="Glossinesss" xml:space="preserve">
     <value>Glossiness</value>
@@ -181,7 +181,7 @@
     <value>Illumination</value>
   </data>
   <data name="ImageReadOutOfMem" xml:space="preserve">
-    <value>File is probably not an image (OutOfMemoryException)</value>
+    <value>所选文件可能不是图片（OutOfMemoryException）</value>
   </data>
   <data name="ImportBtn" xml:space="preserve">
     <value>导入皮肤</value>
@@ -217,7 +217,7 @@
     <value>皮肤缓存</value>
   </data>
   <data name="SavePath" xml:space="preserve">
-    <value>Save Path</value>
+    <value>保存路径</value>
   </data>
   <data name="SetGamePath" xml:space="preserve">
     <value>请先设置游戏路径</value>
@@ -226,25 +226,25 @@
     <value>皮肤文件</value>
   </data>
   <data name="SkinName" xml:space="preserve">
-    <value>Skin Name</value>
+    <value>皮肤名称</value>
   </data>
   <data name="SkinPackMaker" xml:space="preserve">
-    <value>SkinPack Maker</value>
+    <value>皮肤打包器</value>
   </data>
   <data name="SkinPackPathNotSelected" xml:space="preserve">
-    <value>Please select a path to save the skinpack!</value>
+    <value>请选择保存皮肤包的路径！</value>
   </data>
   <data name="Specular" xml:space="preserve">
     <value>Specular</value>
   </data>
   <data name="TexturesSetGroup" xml:space="preserve">
-    <value>Textures Set (Drag &amp; Drop / Click)</value>
+    <value>纹理贴图导入 (拖放.png图片 / 右击相关区域)</value>
   </data>
   <data name="Tip" xml:space="preserve">
     <value>提示</value>
   </data>
   <data name="Tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>工具</value>
   </data>
   <data name="ZipLoadFailed" xml:space="preserve">
     <value>压缩包路径错误或不存在！</value>

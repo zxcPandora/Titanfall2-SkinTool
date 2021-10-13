@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Titanfall2_SkinTool
 {
+
     public partial class MainWindow : Form
     {
         string msg = null;
@@ -424,7 +425,10 @@ namespace Titanfall2_SkinTool
         private void skinPackMakerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SkinPackMakerWindow window = new SkinPackMakerWindow();
+            window.SetGame(SelectedGame);
             window.ShowDialog();
         }
+
+       
     }
 }
