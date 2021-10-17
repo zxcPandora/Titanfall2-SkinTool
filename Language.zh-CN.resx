@@ -126,6 +126,75 @@
   <data name="AssetType" xml:space="preserve">
     <value>资源类型</value>
   </data>
+  <data name="Items" xml:space="preserve">
+    <value>R-301卡宾枪</value>
+  </data>
+  <data name="Items1" xml:space="preserve">
+    <value>哈沃克步枪</value>
+  </data>
+  <data name="Items10" xml:space="preserve">
+    <value>L-star轻机枪</value>
+  </data>
+  <data name="Items11" xml:space="preserve">
+    <value>喷火轻机枪</value>
+  </data>
+  <data name="Items12" xml:space="preserve">
+    <value>三重式狙击枪</value>
+  </data>
+  <data name="Items13" xml:space="preserve">
+    <value>克莱伯</value>
+  </data>
+  <data name="Items14" xml:space="preserve">
+    <value>长弓</value>
+  </data>
+  <data name="Items15" xml:space="preserve">
+    <value>G7侦查枪</value>
+  </data>
+  <data name="Items16" xml:space="preserve">
+    <value>EVA8</value>
+  </data>
+  <data name="Items17" xml:space="preserve">
+    <value>獒犬</value>
+  </data>
+  <data name="Items18" xml:space="preserve">
+    <value>和平捍卫者</value>
+  </data>
+  <data name="Items19" xml:space="preserve">
+    <value>莫桑比克</value>
+  </data>
+  <data name="Items2" xml:space="preserve">
+    <value>赫姆洛克突击步枪</value>
+  </data>
+  <data name="Items20" xml:space="preserve">
+    <value>P2020</value>
+  </data>
+  <data name="Items21" xml:space="preserve">
+    <value>RE45</value>
+  </data>
+  <data name="Items22" xml:space="preserve">
+    <value>小帮手</value>
+  </data>
+  <data name="Items3" xml:space="preserve">
+    <value>VK-47平行步枪</value>
+  </data>
+  <data name="Items4" xml:space="preserve">
+    <value>电能步枪</value>
+  </data>
+  <data name="Items5" xml:space="preserve">
+    <value>转换者冲锋枪</value>
+  </data>
+  <data name="Items6" xml:space="preserve">
+    <value>猎兽冲锋枪</value>
+  </data>
+  <data name="Items7" xml:space="preserve">
+    <value>R-99冲锋枪</value>
+  </data>
+  <data name="Items8" xml:space="preserve">
+    <value>电能冲锋枪</value>
+  </data>
+  <data name="Items9" xml:space="preserve">
+    <value>专注轻机枪</value>
+  </data>
   <data name="CannotDeleteArchive" xml:space="preserve">
     <value>尝试删除皮肤缓存时出错: \n</value>
   </data>
@@ -228,6 +297,9 @@
   <data name="SkinName" xml:space="preserve">
     <value>皮肤名称</value>
   </data>
+  <data name="SkinNameNotSet" xml:space="preserve">
+    <value>给皮肤起个名字</value>
+  </data>
   <data name="SkinPackMaker" xml:space="preserve">
     <value>皮肤打包器</value>
   </data>
@@ -238,13 +310,16 @@
     <value>Specular</value>
   </data>
   <data name="TexturesSetGroup" xml:space="preserve">
-    <value>纹理贴图导入 (拖放.png图片 / 右击相关区域)</value>
+    <value>纹理贴图导入 (拖放.png图片 / 点击相关区域)</value>
   </data>
   <data name="Tip" xml:space="preserve">
     <value>提示</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>工具</value>
+  </data>
+  <data name="WeaponNotSet" xml:space="preserve">
+    <value>未选择目标资源类型</value>
   </data>
   <data name="ZipLoadFailed" xml:space="preserve">
     <value>压缩包路径错误或不存在！</value>
@@ -254,5 +329,69 @@
   </data>
   <data name="ZipReadSuccess" xml:space="preserve">
     <value>压缩包读取成功</value>
+  </data>
+  <data name="Items23" xml:space="preserve">
+    <value>R-201卡宾枪</value>
+  </data>
+  <data name="Items24" xml:space="preserve">
+    <value>R-101卡宾枪</value>
+  </data>
+  <data name="Items25" xml:space="preserve">
+    <value>汗洛BF-R</value>
+  </data>
+  <data name="Items26" xml:space="preserve">
+    <value>V-47平行步枪</value>
+  </data>
+  <data name="Items27" xml:space="preserve">
+    <value>G2A5</value>
+  </data>
+  <data name="Items28" xml:space="preserve">
+    <value>CAR</value>
+  </data>
+  <data name="Items29" xml:space="preserve">
+    <value>R-97</value>
+  </data>
+  <data name="Items30" xml:space="preserve">
+    <value>D-2双发狙击步枪</value>
+  </data>
+  <data name="Items31" xml:space="preserve">
+    <value>长弓DMR</value>
+  </data>
+  <data name="Items32" xml:space="preserve">
+    <value>EM-4冷战榴弹枪</value>
+  </data>
+  <data name="Items33" xml:space="preserve">
+    <value>能源炮-1</value>
+  </data>
+  <data name="Items34" xml:space="preserve">
+    <value>响尾蛇飞弹</value>
+  </data>
+  <data name="Items35" xml:space="preserve">
+    <value>R-6P垒球榴弹枪</value>
+  </data>
+  <data name="Items36" xml:space="preserve">
+    <value>P2016</value>
+  </data>
+  <data name="Items37" xml:space="preserve">
+    <value>智慧手枪</value>
+  </data>
+  <data name="Items38" xml:space="preserve">
+    <value>小帮手精英</value>
+  </data>
+  <data name="Items39" xml:space="preserve">
+    <value>射手飞弹</value>
+  </data>
+  <data name="Items40" xml:space="preserve">
+    <value>磁能榴弹发射器</value>
+  </data>
+  <data name="Items41" xml:space="preserve">
+    <value>LG-97雷电炮</value>
+  </data>
+  <data name="Items42" xml:space="preserve">
+    <value>专注轻机枪弹夹</value>
+  </data>
+  <data name="BUG" xml:space="preserve">
+    <value>程序在这里有一个错误；
+请反馈给作者，谢谢！</value>
   </data>
 </root>

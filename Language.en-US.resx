@@ -126,6 +126,75 @@
   <data name="AssetType" xml:space="preserve">
     <value>Asset Type</value>
   </data>
+  <data name="Items" xml:space="preserve">
+    <value>R301</value>
+  </data>
+  <data name="Items1" xml:space="preserve">
+    <value>Havoc</value>
+  </data>
+  <data name="Items10" xml:space="preserve">
+    <value>LSTAR</value>
+  </data>
+  <data name="Items11" xml:space="preserve">
+    <value>Spitfire</value>
+  </data>
+  <data name="Items12" xml:space="preserve">
+    <value>TripleTake</value>
+  </data>
+  <data name="Items13" xml:space="preserve">
+    <value>Kraber</value>
+  </data>
+  <data name="Items14" xml:space="preserve">
+    <value>Longbow</value>
+  </data>
+  <data name="Items15" xml:space="preserve">
+    <value>G2A7</value>
+  </data>
+  <data name="Items16" xml:space="preserve">
+    <value>EVA8</value>
+  </data>
+  <data name="Items17" xml:space="preserve">
+    <value>Mastiff</value>
+  </data>
+  <data name="Items18" xml:space="preserve">
+    <value>Peacekeeper</value>
+  </data>
+  <data name="Items19" xml:space="preserve">
+    <value>Mozambique</value>
+  </data>
+  <data name="Items2" xml:space="preserve">
+    <value>Hemlok</value>
+  </data>
+  <data name="Items20" xml:space="preserve">
+    <value>P2020</value>
+  </data>
+  <data name="Items21" xml:space="preserve">
+    <value>RE45</value>
+  </data>
+  <data name="Items22" xml:space="preserve">
+    <value>Wingman</value>
+  </data>
+  <data name="Items3" xml:space="preserve">
+    <value>VK47Flatline</value>
+  </data>
+  <data name="Items4" xml:space="preserve">
+    <value>ChargeRifle</value>
+  </data>
+  <data name="Items5" xml:space="preserve">
+    <value>Alternator</value>
+  </data>
+  <data name="Items6" xml:space="preserve">
+    <value>PDW</value>
+  </data>
+  <data name="Items7" xml:space="preserve">
+    <value>R99</value>
+  </data>
+  <data name="Items8" xml:space="preserve">
+    <value>Volt</value>
+  </data>
+  <data name="Items9" xml:space="preserve">
+    <value>Devotion</value>
+  </data>
   <data name="CannotDeleteArchive" xml:space="preserve">
     <value>Error occured while trying to delete the old archive: \n</value>
   </data>
@@ -228,6 +297,9 @@
   <data name="SkinName" xml:space="preserve">
     <value>Skin Name</value>
   </data>
+  <data name="SkinNameNotSet" xml:space="preserve">
+    <value>Set a name to the skin?</value>
+  </data>
   <data name="SkinPackMaker" xml:space="preserve">
     <value>SkinPack Maker</value>
   </data>
@@ -246,6 +318,9 @@
   <data name="Tools" xml:space="preserve">
     <value>Tools</value>
   </data>
+  <data name="WeaponNotSet" xml:space="preserve">
+    <value>Please select a asset type</value>
+  </data>
   <data name="ZipLoadFailed" xml:space="preserve">
     <value>Compressed package path is wrong or does not exist!</value>
   </data>
@@ -254,5 +329,69 @@
   </data>
   <data name="ZipReadSuccess" xml:space="preserve">
     <value>Compressed package read success</value>
+  </data>
+  <data name="Items23" xml:space="preserve">
+    <value>R201</value>
+  </data>
+  <data name="Items24" xml:space="preserve">
+    <value>R101</value>
+  </data>
+  <data name="Items25" xml:space="preserve">
+    <value>HemlokBFR</value>
+  </data>
+  <data name="Items26" xml:space="preserve">
+    <value>V47Flatline</value>
+  </data>
+  <data name="Items27" xml:space="preserve">
+    <value>G2A5</value>
+  </data>
+  <data name="Items28" xml:space="preserve">
+    <value>CAR</value>
+  </data>
+  <data name="Items29" xml:space="preserve">
+    <value>R97</value>
+  </data>
+  <data name="Items30" xml:space="preserve">
+    <value>DoubleTake</value>
+  </data>
+  <data name="Items31" xml:space="preserve">
+    <value>LongbowDMR</value>
+  </data>
+  <data name="Items32" xml:space="preserve">
+    <value>ColdWar</value>
+  </data>
+  <data name="Items33" xml:space="preserve">
+    <value>EPG</value>
+  </data>
+  <data name="Items34" xml:space="preserve">
+    <value>SMR</value>
+  </data>
+  <data name="Items35" xml:space="preserve">
+    <value>Softball</value>
+  </data>
+  <data name="Items36" xml:space="preserve">
+    <value>P2016</value>
+  </data>
+  <data name="Items37" xml:space="preserve">
+    <value>SmartPistol</value>
+  </data>
+  <data name="Items38" xml:space="preserve">
+    <value>WingmanElite</value>
+  </data>
+  <data name="Items39" xml:space="preserve">
+    <value>Archer</value>
+  </data>
+  <data name="Items40" xml:space="preserve">
+    <value>MGL</value>
+  </data>
+  <data name="Items41" xml:space="preserve">
+    <value>Thunderbolt</value>
+  </data>
+  <data name="Items42" xml:space="preserve">
+    <value>Devotion clip</value>
+  </data>
+  <data name="BUG" xml:space="preserve">
+    <value>Here's a bug.
+Please report to the author,thx!</value>
   </data>
 </root>

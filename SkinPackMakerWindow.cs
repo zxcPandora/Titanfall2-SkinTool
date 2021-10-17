@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Reflection;
 using System.Resources;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BCnEncoder.Encoder;
 using ImageMagick;
@@ -21,43 +14,17 @@ namespace Titanfall2_SkinTool
 {
     public partial class SkinPackMakerWindow : Form
     {
-        public void SetGame(String SelectedGame)
-        {
-            this.SelectedGame = SelectedGame;
-        }
         string SelectedGame = null;
-        System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
+        string SelectedWeapon = null;
+        ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
-        public SkinPackMakerWindow()
+        public SkinPackMakerWindow(String SelectedGame)
         {
             InitializeComponent();
+            this.SelectedGame = SelectedGame;
+            LanguageSet();
+            LoadWeaponName();
             DisableAllTextures();
-
-            // LOCALIZATION
-
-            // General Info Group
-            this.Text = rm.GetString("SkinPackMaker");
-            generalInfoGroup.Text = rm.GetString("GeneralInfoGroup");
-            skinNameLabel.Text = rm.GetString("SkinName");
-            assetTypeLabel.Text = rm.GetString("AssetType");
-            savePathLabel.Text = rm.GetString("SavePath");
-
-            // Textures Set Group
-
-            texturesSetGroup.Text = rm.GetString("TexturesSetGroup");
-            colorLabel.Text = rm.GetString("Color");
-            specularLabel.Text = rm.GetString("Specular");
-            glossinessLabel.Text = rm.GetString("Glossinesss");
-            normalLabel.Text = rm.GetString("Normal");
-            aoLabel.Text = rm.GetString("AO");
-            cavityLabel.Text = rm.GetString("Cavity");
-            illuminationLabel.Text = rm.GetString("Illumination");
-
-            // Generate Button
-            generateSkinPackButton.Text = rm.GetString("Generate");
-
-            // Default Path
-            skinPackPathTextBox.Text= Environment.CurrentDirectory;
         }
 
         private void openSkinPackPathSelectButton_Click(object sender, EventArgs e)
@@ -88,7 +55,7 @@ namespace Titanfall2_SkinTool
 
         private void LoadImageIntoPictureBox(PictureBox box, string filepath)
         {
-            if(filepath.Length > 0)
+            if (filepath.Length > 0)
             {
                 try
                 {
@@ -106,18 +73,29 @@ namespace Titanfall2_SkinTool
         {
             ProgressForm progressForm = null;
 
-            if (skinPackPathDialogue.SelectedPath.Length == 0)
+            if (skinNameTextBox.Text == null)
+            {
+                MessageBox.Show(rm.GetString("SkinNameNotSet"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (SelectedWeapon == null || assetTypeComboBox.Text == null || assetTypeComboBox.SelectedItem == null)
+            {
+                MessageBox.Show(rm.GetString("WeaponNotSet"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (skinPackPathDialogue.SelectedPath.Length == 0 && skinPackPathTextBox.Text == null)
             {
                 MessageBox.Show(rm.GetString("SkinPackPathNotSelected"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if(File.Exists(GetSkinPackRootPath()))
+            if (File.Exists(GetSkinPackRootPath()))
             {
                 try
                 {
                     File.Delete(GetSkinPackRootPath());
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(rm.GetString("CannotDeleteArchive") + ex.Message, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -136,45 +114,67 @@ namespace Titanfall2_SkinTool
 
             try
             {
-                if(colorPictureBox.Enabled && colorPictureBox.Image != null)
+                if (colorPictureBox.Enabled && colorPictureBox.Image != null)
                 {
                     MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
-                    colorImage.SetCompression(CompressionMethod.DXT1);
-                    SaveTexture(assetTypeComboBox.Text + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
+                    if (SelectedWeapon == "Archer" || SelectedWeapon == "SMR" || SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt"))
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
+                    else
+                    {
+                        colorImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
+                    }
                 }
 
                 progressForm?.AdvanceEntry();
-                
-                if(specularPictureBox.Enabled && specularPictureBox.Image != null)
+
+                if (specularPictureBox.Enabled && specularPictureBox.Image != null)
                 {
                     MagickImage specularImage = new MagickImage(ImageToByteArray(specularPictureBox.Image));
-                    specularImage.SetCompression(CompressionMethod.DXT1);
-                    SaveTexture(assetTypeComboBox.Text + "_Default_spc.dds", specularImage, zipArchive);
+                    if (SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt"))
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
+                    else
+                    {
+                        specularImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive);
+                    }
                 }
 
                 progressForm?.AdvanceEntry();
-                
-                if(normalPictureBox.Enabled && normalPictureBox.Image != null)
+
+                if (normalPictureBox.Enabled && normalPictureBox.Image != null)
                 {
                     MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
                     //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
-                    SaveTexture(assetTypeComboBox.Text + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
+                    SaveTexture(SelectedWeapon + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
                 }
 
                 progressForm?.AdvanceEntry();
 
-                if(glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
+                if (glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
                 {
                     MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
-                    SaveTexture(assetTypeComboBox.Text + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    SaveTexture(SelectedWeapon + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                 }
 
                 progressForm?.AdvanceEntry();
 
-                if(aoPictureBox.Enabled && aoPictureBox.Image != null)
+                if (aoPictureBox.Enabled && aoPictureBox.Image != null)
                 {
                     MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
-                    SaveTexture(assetTypeComboBox.Text + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    if (SelectedGame == "Titanfall2")
+                    {
+                        aoImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive);
+                    }
+                    else
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    }
                 }
 
                 progressForm?.AdvanceEntry();
@@ -182,7 +182,15 @@ namespace Titanfall2_SkinTool
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
                 {
                     MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
-                    SaveTexture(assetTypeComboBox.Text + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    if (SelectedGame == "Titanfall2")
+                    {
+                        cavityImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive);
+                    }
+                    else
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    }
                 }
 
                 progressForm?.AdvanceEntry();
@@ -191,13 +199,14 @@ namespace Titanfall2_SkinTool
                 {
                     MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
-                    SaveTexture(assetTypeComboBox.Text + "_Default_ilm.dds", illuminationImage, zipArchive);
+                    SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
                 }
                 progressForm?.AdvanceEntry();
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\r\n" + ex.Source, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
 
 
@@ -206,10 +215,10 @@ namespace Titanfall2_SkinTool
             zipArchive.Dispose();
         }
 
-       
+
         private string GetSkinPackRootPath()
         {
-            return skinPackPathDialogue.SelectedPath + "\\" + assetTypeComboBox.Text + "_" + skinNameTextBox.Text + ".zip";
+            return skinPackPathTextBox.Text + "\\" + SelectedWeapon + "_" + skinNameTextBox.Text + ".zip";
         }
         private byte[] ImageToByteArray(System.Drawing.Image image)
         {
@@ -228,13 +237,13 @@ namespace Titanfall2_SkinTool
                 512
             };
 
-            foreach(int size in sizes)
+            foreach (int size in sizes)
             {
                 ZipArchiveEntry entry = archive.CreateEntry("contents/" + size.ToString() + "/" + filename);
                 using (Stream s = entry.Open())
                 {
                     image.Scale(size, size);
-                    if(compression != BCnEncoder.Shared.CompressionFormat.Rgba)
+                    if (compression != BCnEncoder.Shared.CompressionFormat.Rgba)
                     {
                         image.Format = MagickFormat.Png32;
                         image.SetCompression(CompressionMethod.NoCompression);
@@ -272,10 +281,10 @@ namespace Titanfall2_SkinTool
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Multiselect = false;
-                dialog.Filter = "PNG (*.png) | *.*";
+                dialog.Filter = "PNG (*.png) | *.png";
 
                 DialogResult res = dialog.ShowDialog();
-                if(res == DialogResult.OK)
+                if (res == DialogResult.OK)
                 {
                     LoadImageIntoPictureBox(box, dialog.FileName);
                 }
@@ -291,65 +300,141 @@ namespace Titanfall2_SkinTool
         private void texturePictureBox_MouseEnter(object sender, EventArgs e)
         {
             PictureBox box = (PictureBox)sender;
-            if(box.Enabled == false)
+            if (box.Enabled == false)
             {
             }
         }
 
         private void assetTypeComboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            SelectedItemChanged();
             DisableAllTextures();
-           switch(assetTypeComboBox.SelectedItem)
+            if (SelectedGame == "APEX")
             {
-                case "RE45":
-                    {
-                        EnableTexture(colorPictureBox);
-                        EnableTexture(normalPictureBox);
-                        EnableTexture(glossinessPictureBox);
-                        EnableTexture(specularPictureBox);
-                        EnableTexture(illuminationPictureBox);
+                switch (SelectedWeapon)
+                {
+                    case "RE45":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            break;
+                        }
+                    case "R301":
+                    case "Hemlok":
+                    case "VK47Flatline":
+                    case "LSTAR":
+                    case "Spitfire":
+                    case "P2020":
+                    case "Wingman":
+                    case "EVA8":
+                    case "Mastiff":
+                    case "Mozambique":
+                    case "Kraber":
+                    case "Longbow":
+                    case "Alternator":
+                    case "PDW":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "Havoc":
+                    case "Devotion":
+                    case "Peacekeeper":
+                    case "G2A7":
+                    case "TripleTake":
+                    case "R99":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    default:
+                        MessageBox.Show(rm.GetString("BUG"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
-                    }
-                case "R301":
-                case "Hemlok":
-                case "VK47Flatline":
-                case "LSTAR":
-                case "Spitfire":
-                case "P2020":
-                case "Wingman":
-                case "EVA8":
-                case "Mastiff":
-                case "Mozambique":
-                case "Kraber":
-                case "Longbow":
-                case "Alternator":
-                case "PDW":
-                    {
-                        EnableTexture(colorPictureBox);
-                        EnableTexture(normalPictureBox);
-                        EnableTexture(glossinessPictureBox);
-                        EnableTexture(specularPictureBox);
-                        EnableTexture(aoPictureBox);
-                        EnableTexture(cavityPictureBox);
-                        break;
-                    }
-                case "Havoc":
-                case "Devotion":
-                case "Peacekeeper":
-                case "G2A7":
-                case "TripleTake":
-                case "R99":
-                    {
-                        EnableTexture(colorPictureBox);
-                        EnableTexture(normalPictureBox);
-                        EnableTexture(glossinessPictureBox);
-                        EnableTexture(specularPictureBox);
-                        EnableTexture(illuminationPictureBox);
-                        EnableTexture(aoPictureBox);
-                        EnableTexture(cavityPictureBox);
-                        break;
-                    }
 
+                }
+            }
+            else if (SelectedGame == "Titanfall2")
+            {
+                switch (SelectedWeapon)
+                {
+                    case "Devotion":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            break;
+                        }
+                    case "Alternator":
+                    case "DoubleTake":
+                    case "LongbowDMR":
+                    case "Mozambique":
+                    case "SMR":
+                    case "Softball":
+                    case "MGL":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "CAR":
+                    case "R97":
+                    case "Volt":
+                    case "Kraber":
+                    case "EVA8":
+                    case "Mastiff":
+                    case "P2016":
+                    case "RE45":
+                    case "SmartPistol":
+                    case "Wingman":
+                    case "WingmanElite":
+                    case "LSTAR":
+                    case "Spitfire":
+                    case "ColdWar":
+                    case "EPG":
+                    case "G2A5":
+                    case "HemlokBFR":
+                    case "R101":
+                    case "R201":
+                    case "V47Flatline":
+                    case "Archer":
+                    case "ChargeRifle":
+                    case "Thunderbolt":
+                    case "Devotion_clip":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    default:
+                        MessageBox.Show(rm.GetString("BUG"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
             }
         }
 
@@ -380,6 +465,286 @@ namespace Titanfall2_SkinTool
         {
             box.Enabled = true;
             box.Image = null;
+        }
+
+        private void LanguageSet()
+        {
+            // LOCALIZATION
+
+            // General Info Group
+            this.Text = rm.GetString("SkinPackMaker");
+            generalInfoGroup.Text = rm.GetString("GeneralInfoGroup");
+            skinNameLabel.Text = rm.GetString("SkinName");
+            assetTypeLabel.Text = rm.GetString("AssetType");
+            savePathLabel.Text = rm.GetString("SavePath");
+
+            // Textures Set Group
+
+            texturesSetGroup.Text = rm.GetString("TexturesSetGroup");
+            colorLabel.Text = rm.GetString("Color");
+            specularLabel.Text = rm.GetString("Specular");
+            glossinessLabel.Text = rm.GetString("Glossinesss");
+            normalLabel.Text = rm.GetString("Normal");
+            aoLabel.Text = rm.GetString("AO");
+            cavityLabel.Text = rm.GetString("Cavity");
+            illuminationLabel.Text = rm.GetString("Illumination");
+
+            // Generate Button
+            generateSkinPackButton.Text = rm.GetString("Generate");
+
+            // Default Path
+            skinPackPathTextBox.Text = Environment.CurrentDirectory;
+        }
+
+        private void LoadWeaponName()
+        {
+            switch (SelectedGame)
+            {
+                case "APEX":
+                    this.assetTypeComboBox.Items.AddRange(new object[] {
+                        rm.GetString("Items"),
+                        rm.GetString("Items1"),
+                        rm.GetString("Items2"),
+                        rm.GetString("Items3"),
+                        rm.GetString("Items4"),
+                        rm.GetString("Items5"),
+                        rm.GetString("Items6"),
+                        rm.GetString("Items7"),
+                        rm.GetString("Items8"),
+                        rm.GetString("Items9"),
+                        rm.GetString("Items10"),
+                        rm.GetString("Items11"),
+                        rm.GetString("Items12"),
+                        rm.GetString("Items13"),
+                        rm.GetString("Items14"),
+                        rm.GetString("Items15"),
+                        rm.GetString("Items16"),
+                        rm.GetString("Items17"),
+                        rm.GetString("Items18"),
+                        rm.GetString("Items19"),
+                        rm.GetString("Items20"),
+                        rm.GetString("Items21"),
+                        rm.GetString("Items22")
+                    });
+                    break;
+                case "Titanfall2":
+                    this.assetTypeComboBox.Items.AddRange(new object[] {
+                        rm.GetString("Items4"),
+                        rm.GetString("Items5"),
+                        rm.GetString("Items8"),
+                        rm.GetString("Items9"),
+                        rm.GetString("Items42"),
+                        rm.GetString("Items10"),
+                        rm.GetString("Items11"),
+                        rm.GetString("Items13"),
+                        rm.GetString("Items16"),
+                        rm.GetString("Items17"),
+                        rm.GetString("Items19"),
+                        rm.GetString("Items21"),
+                        rm.GetString("Items22"),
+                        rm.GetString("Items23"),
+                        rm.GetString("Items24"),
+                        rm.GetString("Items25"),
+                        rm.GetString("Items26"),
+                        rm.GetString("Items27"),
+                        rm.GetString("Items28"),
+                        rm.GetString("Items29"),
+                        rm.GetString("Items30"),
+                        rm.GetString("Items31"),
+                        rm.GetString("Items32"),
+                        rm.GetString("Items33"),
+                        rm.GetString("Items34"),
+                        rm.GetString("Items35"),
+                        rm.GetString("Items36"),
+                        rm.GetString("Items37"),
+                        rm.GetString("Items38"),
+                        rm.GetString("Items39"),
+                        rm.GetString("Items40"),
+                        rm.GetString("Items41"),
+                    });
+                    break;
+                default:
+                    MessageBox.Show(rm.GetString("SetGamePath"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+        }
+
+        private void SelectedItemChanged()
+        {
+            switch (assetTypeComboBox.Text)
+            {
+                //start APEX part
+                case "R301":
+                case "R-301卡宾枪":
+                    SelectedWeapon = "R301";
+                    break;
+                case "Havoc":
+                case "哈沃克步枪":
+                    SelectedWeapon = "Havoc";
+                    break;
+                case "Hemlok":
+                case "赫姆洛克突击步枪":
+                    SelectedWeapon = "Hemlok";
+                    break;
+                case "VK47Flatline":
+                case "VK-47平行步枪":
+                    SelectedWeapon = "VK47Flatline";
+                    break;
+                case "ChargeRifle":
+                case "电能步枪":
+                    SelectedWeapon = "ChargeRifle";
+                    break;
+                case "Alternator":
+                case "转换者冲锋枪":
+                    SelectedWeapon = "Alternator";
+                    break;
+                case "PDW":
+                case "猎兽冲锋枪":
+                    SelectedWeapon = "PDW";
+                    break;
+                case "R99":
+                case "R-99冲锋枪":
+                    SelectedWeapon = "R99";
+                    break;
+                case "Volt":
+                case "电能冲锋枪":
+                    SelectedWeapon = "Volt";
+                    break;
+                case "Devotion":
+                case "专注轻机枪":
+                    SelectedWeapon = "Devotion";
+                    break;
+                case "LSTAR":
+                case "L-star轻机枪":
+                    SelectedWeapon = "LSTAR";
+                    break;
+                case "Spitfire":
+                case "喷火轻机枪":
+                    SelectedWeapon = "Spitfire";
+                    break;
+                case "TripleTake":
+                case "三重式狙击枪":
+                    SelectedWeapon = "TripleTake";
+                    break;
+                case "Kraber":
+                case "克莱伯":
+                    SelectedWeapon = "Kraber";
+                    break;
+                case "Longbow":
+                case "长弓":
+                    SelectedWeapon = "Longbow";
+                    break;
+                case "G2A7":
+                case "G7侦查枪":
+                    SelectedWeapon = "G2A7";
+                    break;
+                case "EVA8":
+                    SelectedWeapon = "EVA8";
+                    break;
+                case "Mastiff":
+                case "獒犬":
+                    SelectedWeapon = "Mastiff";
+                    break;
+                case "Peacekeeper":
+                case "和平捍卫者":
+                    SelectedWeapon = "Peacekeeper";
+                    break;
+                case "Mozambique":
+                case "莫桑比克":
+                    SelectedWeapon = "Mozambique";
+                    break;
+                case "P2020":
+                    SelectedWeapon = "P2020";
+                    break;
+                case "RE45":
+                    SelectedWeapon = "RE45";
+                    break;
+                case "Wingman":
+                case "小帮手":
+                    SelectedWeapon = "Wingman";
+                    break;
+                //Titanfall2 part
+                case "R201":
+                case "R-201卡宾枪":
+                    SelectedWeapon = "R201";
+                    break;
+                case "R101":
+                case "R-101卡宾枪":
+                    SelectedWeapon = "R101";
+                    break;
+                case "HemlokBFR":
+                case "汗洛BF-R":
+                    SelectedWeapon = "HemlokBFR";
+                    break;
+                case "V47Flatline":
+                case "V-47平行步枪":
+                    SelectedWeapon = "V47Flatline";
+                    break;
+                case "G2A5":
+                    SelectedWeapon = "G2A5";
+                    break;
+                case "CAR":
+                    SelectedWeapon = "CAR";
+                    break;
+                case "R97":
+                case "R-97":
+                    SelectedWeapon = "R97";
+                    break;
+                case "DoubleTake":
+                case "D-2双发狙击步枪":
+                    SelectedWeapon = "DoubleTake";
+                    break;
+                case "LongbowDMR":
+                case "长弓DMR":
+                    SelectedWeapon = "LongbowDMR";
+                    break;
+                case "ColdWar":
+                case "EM-4冷战榴弹枪":
+                    SelectedWeapon = "ColdWar";
+                    break;
+                case "EPG":
+                case "能源炮-1":
+                    SelectedWeapon = "EPG";
+                    break;
+                case "SMR":
+                case "响尾蛇飞弹":
+                    SelectedWeapon = "SMR";
+                    break;
+                case "Softball":
+                case "R-6P垒球榴弹枪":
+                    SelectedWeapon = "Softball";
+                    break;
+                case "P2016":
+                    SelectedWeapon = "P2016";
+                    break;
+                case "SmartPistol":
+                case "智慧手枪":
+                    SelectedWeapon = "SmartPistol";
+                    break;
+                case "WingmanElite":
+                case "小帮手精英":
+                    SelectedWeapon = "R301";
+                    break;
+                case "Archer":
+                case "射手飞弹":
+                    SelectedWeapon = "Archer";
+                    break;
+                case "MGL":
+                case "磁能榴弹发射器":
+                    SelectedWeapon = "MGL";
+                    break;
+                case "Thunderbolt":
+                case "LG-97雷电炮":
+                    SelectedWeapon = "Thunderbolt";
+                    break;
+                case "Devotion clip":
+                case "专注轻机枪弹夹":
+                    SelectedWeapon = "Devotion_clip";
+                    break;
+                default:
+                    SelectedWeapon = null;
+                    break;
+            }
         }
     }
 }

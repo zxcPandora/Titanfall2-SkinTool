@@ -22,64 +22,21 @@ namespace Titanfall2_SkinTool
         int DDSFolderExist = 0;
         string[,] FilePath = new string[3, 8];
         string[] ImageCheck = new string[3];//2为2048x2048,1为1024x1024,0为512x512
-        System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
+        ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
         public MainWindow()
         {
             InitializeComponent();
+            Language_Default();
 
             if (!File.Exists(filePath + "\\Config.xml"))
             {
                 //ToDo...
             }
-
-            String lang = CultureInfo.CurrentUICulture.Name;
-            switch (lang)
-            {
-                case "zh-CN":
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-                    this.LanguageChinese.Checked = true;
-                    break;
-                default:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    this.LanguageEnglish.Checked = true;
-                    break;
-            }
-            this.label1.Text = rm.GetString("label");
-            this.Text = rm.GetString("Form");
-            this.Menu_Setting.Text = rm.GetString("MenuSet");
-            this.Menu_SettingGamePath.Text = rm.GetString("MenuSetPath");
-            this.Menu_About.Text = rm.GetString("MenuAbout");
-            this.Menu_Author.Text = rm.GetString("MenuAboutAuthor");
-            this.ToolLanguageMenu.Text = rm.GetString("Language");
-            this.LanguageChinese.Text = rm.GetString("Chinese");
-            this.LanguageEnglish.Text = rm.GetString("English");
-            this.Test.Text = rm.GetString("ImportBtn");
-            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
-            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
-            if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
-            {
-                GamePath = File.ReadAllText($"{filePath}\\Path.txt");
-                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
-                {
-                    SelectedGame = "Titanfall2";
-                }
-                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe"))
-                {
-                    SelectedGame = "APEX";
-                }
-                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
-            }
-            else
-            {
-                textBox1.AppendText(rm.GetString("SetGamePath") + "\r\n");
-            }
         }
 
         private void SkinFileSelect_FileOk(object sender, CancelEventArgs e)
         {
-
-
 
         }
 
@@ -384,6 +341,51 @@ namespace Titanfall2_SkinTool
             }
         }
 
+        private void Language_Default()
+        {
+            String lang = CultureInfo.CurrentUICulture.Name;
+            switch (lang)
+            {
+                case "zh-CN":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+                    this.LanguageChinese.Checked = true;
+                    break;
+                default:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    this.LanguageEnglish.Checked = true;
+                    break;
+            }
+            this.label1.Text = rm.GetString("label");
+            this.Text = rm.GetString("Form");
+            this.Menu_Setting.Text = rm.GetString("MenuSet");
+            this.Menu_SettingGamePath.Text = rm.GetString("MenuSetPath");
+            this.Menu_About.Text = rm.GetString("MenuAbout");
+            this.Menu_Author.Text = rm.GetString("MenuAboutAuthor");
+            this.ToolLanguageMenu.Text = rm.GetString("Language");
+            this.LanguageChinese.Text = rm.GetString("Chinese");
+            this.LanguageEnglish.Text = rm.GetString("English");
+            this.Test.Text = rm.GetString("ImportBtn");
+            this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
+            this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
+            if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
+            {
+                GamePath = File.ReadAllText($"{filePath}\\Path.txt");
+                if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
+                {
+                    SelectedGame = "Titanfall2";
+                }
+                if (System.IO.File.Exists($"{GamePath}\\r5apex.exe"))
+                {
+                    SelectedGame = "APEX";
+                }
+                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
+            }
+            else
+            {
+                textBox1.AppendText(rm.GetString("SetGamePath") + "\r\n");
+            }
+        }
+
         private void LanguageChinese_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
@@ -401,6 +403,7 @@ namespace Titanfall2_SkinTool
             this.LanguageEnglish.Checked = false;
             this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
             this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
+            textBox1.Clear();
         }
 
         private void LanguageEnglish_Click(object sender, EventArgs e)
@@ -420,15 +423,13 @@ namespace Titanfall2_SkinTool
             this.LanguageEnglish.Checked = true;
             this.toolsToolStripMenuItem.Text = rm.GetString("Tools");
             this.skinPackMakerToolStripMenuItem.Text = rm.GetString("SkinPackMaker");
+            textBox1.Clear();
         }
 
         private void skinPackMakerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SkinPackMakerWindow window = new SkinPackMakerWindow();
-            window.SetGame(SelectedGame);
+            SkinPackMakerWindow window = new SkinPackMakerWindow(SelectedGame);
             window.ShowDialog();
         }
-
-       
     }
 }

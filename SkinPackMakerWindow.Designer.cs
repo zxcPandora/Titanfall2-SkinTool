@@ -1,5 +1,4 @@
-﻿
-namespace Titanfall2_SkinTool
+﻿namespace Titanfall2_SkinTool
 {
     partial class SkinPackMakerWindow
     {
@@ -227,31 +226,8 @@ namespace Titanfall2_SkinTool
             // 
             // assetTypeComboBox
             // 
+            this.assetTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.assetTypeComboBox.FormattingEnabled = true;
-            this.assetTypeComboBox.Items.AddRange(new object[] {
-            resources.GetString("assetTypeComboBox.Items"),
-            resources.GetString("assetTypeComboBox.Items1"),
-            resources.GetString("assetTypeComboBox.Items2"),
-            resources.GetString("assetTypeComboBox.Items3"),
-            resources.GetString("assetTypeComboBox.Items4"),
-            resources.GetString("assetTypeComboBox.Items5"),
-            resources.GetString("assetTypeComboBox.Items6"),
-            resources.GetString("assetTypeComboBox.Items7"),
-            resources.GetString("assetTypeComboBox.Items8"),
-            resources.GetString("assetTypeComboBox.Items9"),
-            resources.GetString("assetTypeComboBox.Items10"),
-            resources.GetString("assetTypeComboBox.Items11"),
-            resources.GetString("assetTypeComboBox.Items12"),
-            resources.GetString("assetTypeComboBox.Items13"),
-            resources.GetString("assetTypeComboBox.Items14"),
-            resources.GetString("assetTypeComboBox.Items15"),
-            resources.GetString("assetTypeComboBox.Items16"),
-            resources.GetString("assetTypeComboBox.Items17"),
-            resources.GetString("assetTypeComboBox.Items18"),
-            resources.GetString("assetTypeComboBox.Items19"),
-            resources.GetString("assetTypeComboBox.Items20"),
-            resources.GetString("assetTypeComboBox.Items21"),
-            resources.GetString("assetTypeComboBox.Items22")});
             resources.ApplyResources(this.assetTypeComboBox, "assetTypeComboBox");
             this.assetTypeComboBox.Name = "assetTypeComboBox";
             this.assetTypeComboBox.SelectionChangeCommitted += new System.EventHandler(this.assetTypeComboBox_SelectionChangeCommitted);
