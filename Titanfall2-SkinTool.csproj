@@ -47,9 +47,32 @@
     <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Runtime" Version="4.3.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Language.en-US.Designer.cs" />
     <Compile Remove="Language.zh-CN.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Titanfall2\PilotData\Stim\" />
+    <Folder Include="Titanfall2\PilotData\PhaseShift\" />
+    <Folder Include="Titanfall2\PilotData\HoloPilot\" />
+    <Folder Include="Titanfall2\PilotData\PulseBlade\" />
+    <Folder Include="Titanfall2\PilotData\Grapple\" />
+    <Folder Include="Titanfall2\PilotData\AWall\" />
+    <Folder Include="Titanfall2\PilotData\Cloak\" />
   </ItemGroup>
 </Project>
