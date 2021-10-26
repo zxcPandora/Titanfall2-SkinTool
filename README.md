@@ -9,6 +9,7 @@ Language : ENGLISH | [简体中文](./README.zh-CN.md)
 - [Support Change](#support-change)
 - [Backup File](#backup-file)
 - [ToDo](#todo)
+- [Contribute](#contribute)
 
 ## Preface
 
@@ -33,7 +34,6 @@ Titanfall 2<br>
 APEX S3<br>
 **Path**:GamePath\paks\Win64\
 
-
 ### What files do I need to backup
 
 Titanfall 2:
@@ -57,3 +57,14 @@ Code optimization
 Format specification
 <br>
 Other function 
+
+## Contribute
+Feel free to dive in! [Open an issue](https://github.com/zxcPandora/Titanfall2-SkinTool/issues/new) or submit PRs.
+
+### Contributors
+
+This project exists thanks to all the people who contribute. 
+<a href="https://github.com/zxcPandora/Titanfall2-SkinTool/graphs/contributors"><br>
+  <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
+</a>
