@@ -38,20 +38,16 @@ APEX S3<br>
 
 Titanfall 2:
 <br>
-pc_stream.starpak
-<br>
-pc_stream(03).starpak
+- pc_stream.starpak
+- pc_stream(03).starpak
 <br>
 
 APEX S3:
 <br>
-pc_all.starpak
-<br>
-pc_all.opt.starpak
-<br>
-pc_all(01).opt.starpak
-<br>
-pc_all(02).opt.starpak
+- pc_all.starpak
+- pc_all.opt.starpak
+- pc_all(01).opt.starpak
+- pc_all(02).opt.starpak
 
 
 ## ToDo
