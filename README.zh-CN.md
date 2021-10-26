@@ -9,6 +9,7 @@
 - [支持的操作](#支持的操作)
 - [备份文件](#备份文件)
 - [工作计划](#工作计划)
+- [贡献](#贡献)
 
 ## 前言
 
@@ -58,3 +59,14 @@ APEX S3:
 格式规范
 <br>
 其他功能实现
+
+## 贡献
+欢迎提出建议! [新建一个问题描述](https://github.com/zxcPandora/Titanfall2-SkinTool/issues/new) 或提交推拉请求。
+
+### 贡献者
+
+这个项目的存在要感谢以下所有做出贡献的人：
+<a href="https://github.com/zxcPandora/Titanfall2-SkinTool/graphs/contributors"><br>
+  <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
+</a>
