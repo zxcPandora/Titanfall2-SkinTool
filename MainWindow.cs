@@ -151,9 +151,12 @@ namespace Titanfall2_SkinTool
                     //需要使用命名对代码进行优化
                     if (IsPilot(i))
                     {
-                        Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl();
+                        Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl(i,imagecheck);
+                        toseek = Convert.ToInt64(pdc.Seek);
+                        tolength = Convert.ToInt32(pdc.Length);
+                        totype = Convert.ToInt32(pdc.SeekLength);
                     }
-                    else
+                    else //if(IsWeapon(i))
                     {
                         if (SelectedGame == "APEX")
                         {
@@ -335,6 +338,11 @@ namespace Titanfall2_SkinTool
             ImageName = ImageName.Substring(temp,ImageName.Length-temp);
             switch (ImageName)
             {
+                case "256x128":
+                case "256x256":
+                case "256":
+                    //Big change,I don't want to do it:(
+                    break;
                 case "512x256":
                 case "512x512":
                 case "512":
@@ -364,7 +372,7 @@ namespace Titanfall2_SkinTool
 
         private bool IsPilot(string Name)
         {
-            if (Name.Contains("Stim") || Name.Contains("PhaseShift") || Name.Contains("HoloPilot") || Name.Contains("PulseBlade") || Name.Contains("Grapple") || Name.Contains("AWall") || Name.Contains("Cloak"))
+            if (Name.Contains("Stim_") || Name.Contains("PhaseShift_") || Name.Contains("HoloPilot_") || Name.Contains("PulseBlade_") || Name.Contains("Grapple_") || Name.Contains("AWall_") || Name.Contains("Cloak_") || Name.Contains("Public_"))
             {
                 return true;
             }
