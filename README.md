@@ -17,9 +17,14 @@ Be sure to look at the explain documentation！！！<br>
 The tool will never support that Heirloom and other skin!!!<br>
 I do NOT encourage change the other skin expect default.Also don't use it in the normal APEX!!!!!!!
 
+Format Requierment:<br>
+[APEX S3 Weapon Format](Documents/APEX S3 Weapon Format.docx)<br>
+[TTF2 Weapon Format](Documents/TTF2 Weapon Format.docx)<br>
+[TTF2 Pilot Texture Document](Documents/TTF2 Pilot Texture Document.docx)
+
 ## Support Change
 
-For Titanfall2,Only support that Pilot Weapon;
+For Titanfall2,Only support that Pilot and Pilot Weapon;
 
 
 For APEX S3,Support most of Weapon;
