@@ -20,7 +20,7 @@
 
 格式要求:<br>
 [请优先查看本文件](Documents/请优先查看本文件.txt)<br>
-[APEX S3武器格式要求](Documents/APEX S3武器格式要求.docx)<br>
+[APEX S3武器格式要求](Documents/APEX_S3武器格式要求.docx)<br>
 [泰坦陨落二武器格式要求](Documents/泰坦陨落二武器格式要求.docx)<br>
 [泰坦陨落二铁驭贴图说明文档](Documents/泰坦陨落二铁驭贴图说明文档.docx)
 
