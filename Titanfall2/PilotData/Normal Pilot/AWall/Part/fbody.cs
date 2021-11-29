@@ -62,7 +62,7 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.AWall.Part
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
-                ReallyDatas[i].seeklength = 128;
+                ReallyDatas[i].seeklength = 148;
                 i++;
             }
             Seek = Convert.ToString(ReallyDatas[ImageResolution].seek);
@@ -119,7 +119,7 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.AWall.Part
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
-                ReallyDatas[i].seeklength = 128;
+                ReallyDatas[i].seeklength = 148;
                 i++;
             }
             Seek = Convert.ToString(ReallyDatas[ImageResolution].seek);
