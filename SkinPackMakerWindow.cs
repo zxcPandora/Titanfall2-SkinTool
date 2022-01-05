@@ -723,7 +723,7 @@ namespace Titanfall2_SkinTool
                     break;
                 case "WingmanElite":
                 case "小帮手精英":
-                    SelectedWeapon = "R301";
+                    SelectedWeapon = "WingmanElite";
                     break;
                 case "Archer":
                 case "射手飞弹":
