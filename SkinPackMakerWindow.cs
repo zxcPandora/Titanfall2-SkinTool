@@ -117,7 +117,7 @@ namespace Titanfall2_SkinTool
                 if (colorPictureBox.Enabled && colorPictureBox.Image != null)
                 {
                     MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
-                    if (SelectedWeapon == "Archer" || SelectedWeapon == "SMR" || SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt"))
+                    if (SelectedWeapon == "Archer" || SelectedWeapon == "SMR" || SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt") || SelectedWeapon == "BroadSword" || SelectedWeapon == "ThermiteLauncher")
                     {
                         SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
@@ -133,7 +133,7 @@ namespace Titanfall2_SkinTool
                 if (specularPictureBox.Enabled && specularPictureBox.Image != null)
                 {
                     MagickImage specularImage = new MagickImage(ImageToByteArray(specularPictureBox.Image));
-                    if (SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt"))
+                    if (SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt") || SelectedWeapon == "BroadSword" || SelectedWeapon == "ThermiteLauncher")
                     {
                         SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
@@ -231,18 +231,37 @@ namespace Titanfall2_SkinTool
 
         private void SaveTexture(string filename, MagickImage image, ZipArchive archive, BCnEncoder.Shared.CompressionFormat compression = BCnEncoder.Shared.CompressionFormat.Rgba)
         {
-            int[] sizes = new int[] {
+            int[] WidthSize = new int[] {
+                4096,
                 2048,
                 1024,
                 512
             };
-
-            foreach (int size in sizes)
+            int[] HeightSize = new int[] {
+                4096,
+                2048,
+                1024,
+                512,
+                256
+            };
+            var Info = new MagickImageInfo(image.ToByteArray());
+            //All set to 1 for Titanfall2
+            //I forget about the APEX,but I still remember APEX have that 4096
+            //May be will fix it in the future:D
+            //I found that pilot texture can use it:(
+            int WidthCheck = 1;
+            int HightCheck = 1;
+            if (Info.Width != Info.Height)
             {
-                ZipArchiveEntry entry = archive.CreateEntry("contents/" + size.ToString() + "/" + filename);
+                HightCheck++;
+            }
+            
+            for (int i= WidthCheck, j= HightCheck; i<=3;i++,j++)
+            {
+                ZipArchiveEntry entry = archive.CreateEntry("contents/" + WidthSize[i].ToString() + "/" + filename);
                 using (Stream s = entry.Open())
                 {
-                    image.Scale(size, size);
+                    image.Scale(WidthSize[i], HeightSize[j]);
                     if (compression != BCnEncoder.Shared.CompressionFormat.Rgba)
                     {
                         image.Format = MagickFormat.Png32;
@@ -251,7 +270,7 @@ namespace Titanfall2_SkinTool
                         encoder.OutputOptions.GenerateMipMaps = false;
                         encoder.OutputOptions.Format = compression;
                         encoder.OutputOptions.FileFormat = BCnEncoder.Shared.OutputFileFormat.Dds;
-                        encoder.EncodeToStream(image.ToByteArray(MagickFormat.Rgba), size, size, BCnEncoder.Encoder.PixelFormat.Rgba32, s);
+                        encoder.EncodeToStream(image.ToByteArray(MagickFormat.Rgba), WidthSize[i], HeightSize[j], BCnEncoder.Encoder.PixelFormat.Rgba32, s);
                     }
                     else
                     {
@@ -381,6 +400,15 @@ namespace Titanfall2_SkinTool
                             EnableTexture(aoPictureBox);
                             break;
                         }
+                    case "PredatorCannon":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(aoPictureBox);
+                            break;
+                        }
                     case "Alternator":
                     case "DoubleTake":
                     case "LongbowDMR":
@@ -388,6 +416,10 @@ namespace Titanfall2_SkinTool
                     case "SMR":
                     case "Softball":
                     case "MGL":
+                    case "BroadSword":
+                    case "LeadWall":
+                    case "SplitterRifle":
+                    case "ThermiteLauncher":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -421,6 +453,10 @@ namespace Titanfall2_SkinTool
                     case "ChargeRifle":
                     case "Thunderbolt":
                     case "Devotion_clip":
+                    case "PlasmaRailgun":
+                    case "TrackerCannon":
+                    case "XO16":
+                    case "XO16_clip":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -429,6 +465,11 @@ namespace Titanfall2_SkinTool
                             EnableTexture(illuminationPictureBox);
                             EnableTexture(aoPictureBox);
                             EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "NULL":
+                        {
+                            MessageBox.Show(rm.GetString("SelectNULL"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                         }
                     default:
@@ -529,38 +570,69 @@ namespace Titanfall2_SkinTool
                     break;
                 case "Titanfall2":
                     this.assetTypeComboBox.Items.AddRange(new object[] {
-                        rm.GetString("Items4"),
-                        rm.GetString("Items5"),
-                        rm.GetString("Items8"),
-                        rm.GetString("Items9"),
-                        rm.GetString("Items42"),
-                        rm.GetString("Items10"),
-                        rm.GetString("Items11"),
-                        rm.GetString("Items13"),
-                        rm.GetString("Items16"),
-                        rm.GetString("Items17"),
-                        rm.GetString("Items19"),
-                        rm.GetString("Items21"),
-                        rm.GetString("Items22"),
+                        //突击步枪
+                        rm.GetString("tip1"),
                         rm.GetString("Items23"),
                         rm.GetString("Items24"),
                         rm.GetString("Items25"),
                         rm.GetString("Items26"),
                         rm.GetString("Items27"),
+                        //冲锋枪
+                        rm.GetString("tip2"),
                         rm.GetString("Items28"),
+                        rm.GetString("Items5"),
+                        rm.GetString("Items8"),
                         rm.GetString("Items29"),
+                        //散弹枪
+                        rm.GetString("tip3"),
+                        rm.GetString("Items16"),
+                        rm.GetString("Items17"),
+                        //狙击步枪
+                        rm.GetString("tip4"),
+                        rm.GetString("Items13"),
                         rm.GetString("Items30"),
                         rm.GetString("Items31"),
-                        rm.GetString("Items32"),
-                        rm.GetString("Items33"),
+                        //轻机枪
+                        rm.GetString("tip5"),
+                        rm.GetString("Items11"),
+                        rm.GetString("Items10"),
+                        rm.GetString("Items9"),
+                        rm.GetString("Items42"),
+                        //榴弹枪
+                        rm.GetString("tip6"),
                         rm.GetString("Items34"),
+                        rm.GetString("Items33"),
                         rm.GetString("Items35"),
-                        rm.GetString("Items36"),
-                        rm.GetString("Items37"),
+                        rm.GetString("Items32"),
+                        //主武器手枪
+                        rm.GetString("tip7"),
                         rm.GetString("Items38"),
-                        rm.GetString("Items39"),
+                        rm.GetString("Items19"),
+                        //反泰坦武器
+                        rm.GetString("tip8"),
+                        rm.GetString("Items4"),
                         rm.GetString("Items40"),
                         rm.GetString("Items41"),
+                        rm.GetString("Items39"),
+                        //副武器手枪
+                        rm.GetString("tip9"),
+                        rm.GetString("Items36"),
+                        rm.GetString("Items21"),
+                        rm.GetString("Items22"),
+                        //强化卡
+                        rm.GetString("tip11"),
+                        rm.GetString("Items37"),
+                        //泰坦武器
+                        rm.GetString("tip10"),
+                        rm.GetString("Items48"),
+                        rm.GetString("Items49"),
+                        rm.GetString("Items43"),
+                        rm.GetString("Items44"),
+                        rm.GetString("Items45"),
+                        rm.GetString("Items46"),
+                        rm.GetString("Items47"),
+                        rm.GetString("Items50"),
+                        rm.GetString("Items51"),
                     });
                     break;
                 default:
@@ -741,8 +813,43 @@ namespace Titanfall2_SkinTool
                 case "专注轻机枪弹夹":
                     SelectedWeapon = "Devotion_clip";
                     break;
+                case "Plasma Railgun":
+                case "电浆磁轨炮":
+                    SelectedWeapon = "PlasmaRailgun";
+                    break;
+                case "Predator Cannon":
+                case "猎杀者机炮":
+                    SelectedWeapon = "PredatorCannon";
+                    break;
+                case "T-203 Thermite Launcher":
+                case "T-203 铝热剂发射器":
+                    SelectedWeapon = "ThermiteLauncher";
+                    break;
+                case "40mm Tracker Cannon":
+                case "追踪机炮":
+                    SelectedWeapon = "TrackerCannon";
+                    break;
+                case "Splitter Rifle":
+                case "分裂枪":
+                    SelectedWeapon = "SplitterRifle";
+                    break;
+                case "Broad Sword":
+                case "大剑":
+                    SelectedWeapon = "BroadSword";
+                    break;
+                case "Leadwall":
+                case "天女散花":
+                    SelectedWeapon = "LeadWall";
+                    break;
+                case "XO16":
+                    SelectedWeapon = "XO16";
+                    break;
+                case "XO16 clip":
+                case "XO16弹夹":
+                    SelectedWeapon = "XO16_clip";
+                    break;
                 default:
-                    SelectedWeapon = null;
+                    SelectedWeapon = "NULL";
                     break;
             }
         }

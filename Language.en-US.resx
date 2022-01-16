@@ -394,4 +394,67 @@
     <value>Here's a bug.
 Please report to the author,thx!</value>
   </data>
+  <data name="Items43" xml:space="preserve">
+    <value>Plasma Railgun</value>
+  </data>
+  <data name="Items44" xml:space="preserve">
+    <value>Predator Cannon</value>
+  </data>
+  <data name="Items45" xml:space="preserve">
+    <value>T-203 Thermite Launcher</value>
+  </data>
+  <data name="Items46" xml:space="preserve">
+    <value>40mm Tracker Cannon</value>
+  </data>
+  <data name="Items47" xml:space="preserve">
+    <value>Splitter Rifle</value>
+  </data>
+  <data name="Items48" xml:space="preserve">
+    <value>Broad Sword</value>
+  </data>
+  <data name="Items49" xml:space="preserve">
+    <value>Leadwall</value>
+  </data>
+  <data name="Items50" xml:space="preserve">
+    <value>XO16</value>
+  </data>
+  <data name="Items51" xml:space="preserve">
+    <value>XO16 clip</value>
+  </data>
+  <data name="SelectNULL" xml:space="preserve">
+    <value>Please choose the right option</value>
+  </data>
+  <data name="tip1" xml:space="preserve">
+    <value>---Assault Rifle</value>
+  </data>
+  <data name="tip10" xml:space="preserve">
+    <value>---Titan Weapon</value>
+  </data>
+  <data name="tip11" xml:space="preserve">
+    <value>---Burn Card Weapon</value>
+  </data>
+  <data name="tip2" xml:space="preserve">
+    <value>---Submachine Gun</value>
+  </data>
+  <data name="tip3" xml:space="preserve">
+    <value>---Shotgun</value>
+  </data>
+  <data name="tip4" xml:space="preserve">
+    <value>---Sniper</value>
+  </data>
+  <data name="tip5" xml:space="preserve">
+    <value>---Light Machine Gun</value>
+  </data>
+  <data name="tip6" xml:space="preserve">
+    <value>---Grenadier</value>
+  </data>
+  <data name="tip7" xml:space="preserve">
+    <value>---Primary Pistol</value>
+  </data>
+  <data name="tip8" xml:space="preserve">
+    <value>---Anti-Titan Weapon</value>
+  </data>
+  <data name="tip9" xml:space="preserve">
+    <value>---Secondary Pistol</value>
+  </data>
 </root>

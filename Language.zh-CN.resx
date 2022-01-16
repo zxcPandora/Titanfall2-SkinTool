@@ -394,4 +394,67 @@
     <value>程序在这里有一个错误；
 请反馈给作者，谢谢！</value>
   </data>
+  <data name="Items43" xml:space="preserve">
+    <value>电浆磁轨炮</value>
+  </data>
+  <data name="Items44" xml:space="preserve">
+    <value>猎杀者机炮</value>
+  </data>
+  <data name="Items45" xml:space="preserve">
+    <value>T-203 铝热剂发射器</value>
+  </data>
+  <data name="Items46" xml:space="preserve">
+    <value>追踪机炮</value>
+  </data>
+  <data name="Items47" xml:space="preserve">
+    <value>分裂枪</value>
+  </data>
+  <data name="Items48" xml:space="preserve">
+    <value>大剑</value>
+  </data>
+  <data name="Items49" xml:space="preserve">
+    <value>天女散花</value>
+  </data>
+  <data name="Items50" xml:space="preserve">
+    <value>XO16</value>
+  </data>
+  <data name="Items51" xml:space="preserve">
+    <value>XO16弹夹</value>
+  </data>
+  <data name="SelectNULL" xml:space="preserve">
+    <value>请选择正确的选项！</value>
+  </data>
+  <data name="tip1" xml:space="preserve">
+    <value>---突击步枪</value>
+  </data>
+  <data name="tip10" xml:space="preserve">
+    <value>---泰坦武器</value>
+  </data>
+  <data name="tip11" xml:space="preserve">
+    <value>---强化卡武器</value>
+  </data>
+  <data name="tip2" xml:space="preserve">
+    <value>---冲锋枪</value>
+  </data>
+  <data name="tip3" xml:space="preserve">
+    <value>---散弹枪</value>
+  </data>
+  <data name="tip4" xml:space="preserve">
+    <value>---狙击枪</value>
+  </data>
+  <data name="tip5" xml:space="preserve">
+    <value>---轻机枪</value>
+  </data>
+  <data name="tip6" xml:space="preserve">
+    <value>---榴弹枪</value>
+  </data>
+  <data name="tip7" xml:space="preserve">
+    <value>---主武器手枪</value>
+  </data>
+  <data name="tip8" xml:space="preserve">
+    <value>---反泰坦武器</value>
+  </data>
+  <data name="tip9" xml:space="preserve">
+    <value>---副武器手枪</value>
+  </data>
 </root>
