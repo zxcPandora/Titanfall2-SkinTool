@@ -21,6 +21,7 @@ Format Requierment:<br>
 [APEX S3 Weapon Format](Documents/APEX_S3_Weapon_Format.docx)<br>
 [TTF2 Weapon Format](Documents/TTF2_Weapon_Format.docx)<br>
 [TTF2 Pilot Texture Document](Documents/TTF2_Pilot_Texture_Document.docx)
+[TTF2 Texture name in Legion](Documents/Texture%20name%20in%20Legion.txt)
 
 ## Support Change
 
