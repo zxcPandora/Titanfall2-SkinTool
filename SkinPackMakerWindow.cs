@@ -244,6 +244,7 @@ namespace Titanfall2_SkinTool
                 512,
                 256
             };
+
             var Info = new MagickImageInfo(image.ToByteArray());
             //All set to 1 for Titanfall2
             //I forget about the APEX,but I still remember APEX have that 4096
@@ -251,12 +252,31 @@ namespace Titanfall2_SkinTool
             //I found that pilot texture can use it:(
             int WidthCheck = 1;
             int HightCheck = 1;
+            switch (Info.Width)
+            {
+                case 4096:
+                    WidthCheck = 0;
+                    HightCheck = 0;
+                    break;
+                case 2048:
+                    WidthCheck = 1;
+                    HightCheck = 1;
+                    break;
+                case 1024:
+                    WidthCheck = 2;
+                    HightCheck = 2;
+                    break;
+                case 512:
+                    WidthCheck = 3;
+                    HightCheck = 3;
+                    break;
+            }
             if (Info.Width != Info.Height)
             {
                 HightCheck++;
             }
-            
-            for (int i= WidthCheck, j= HightCheck; i<=3;i++,j++)
+
+            for (int i = WidthCheck, j = HightCheck; i <= 3; i++, j++)
             {
                 ZipArchiveEntry entry = archive.CreateEntry("contents/" + WidthSize[i].ToString() + "/" + filename);
                 using (Stream s = entry.Open())
