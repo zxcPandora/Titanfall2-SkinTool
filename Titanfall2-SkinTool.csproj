@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Titanfall2_SkinTool</RootNamespace>
     <AssemblyName>Titanfall2-SkinTool</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +42,17 @@
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,6 +98,64 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StarpakControl.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\AWall.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\gauntlet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Cloak.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\cards.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\gauntlet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\ghillie.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Cloak\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Grapple.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\gauntlet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Grapple\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\HoloPilot.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\HoloPilot\Part\viewhand.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\hair.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\Part\viewhand.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PhaseShift\PhaseShift.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\gauntlet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\helmet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\PulseBlade\PulseBlade.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\fbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\fgear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\fjumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\gauntlet.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\gear.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\head.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\jumpkit.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Part\mbody.cs" />
+    <Compile Include="Titanfall2\PilotData\Normal Pilot\Stim\Stim.cs" />
+    <Compile Include="Titanfall2\PilotData\PilotDataControl.cs" />
+    <Compile Include="Titanfall2\PilotData\Public Data\Part\head.cs" />
+    <Compile Include="Titanfall2\PilotData\Public Data\Part\skeleton.cs" />
+    <Compile Include="Titanfall2\PilotData\Public Data\Public.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Archer.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\ChargeRifle.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\MGL.cs" />
@@ -117,13 +187,14 @@
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\CAR.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\R97.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\Volt.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\LeadWall.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PlasmaRailgun.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PredatorCannon.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\SplitterRifle.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\ThermiteLauncher.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\TrackerCannon.cs" />
-    <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\XO16.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\BroadSword.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\LeadWall.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\PlasmaRailgun.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\PredatorCannon.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\SplitterRifle.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\ThermiteLauncher.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\TrackerCannon.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Titan\XO16.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\Archer.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\ChargeRifle.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\AntiTitan\MGL.cs" />
@@ -156,6 +227,7 @@
     <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\R97.cs" />
     <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\Volt.cs" />
     <Compile Include="Titanfall2\WeaponData\WeaponDataControl.cs" />
+    <Compile Include="Titanfall2\WeaponData\WeaponDataControl.cs" />
     <EmbeddedResource Include="Language.en-US.resx" />
     <EmbeddedResource Include="Language.zh-CN.resx" />
     <EmbeddedResource Include="MainWindow.resx">
@@ -169,6 +241,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

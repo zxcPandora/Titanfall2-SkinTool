@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
 using System.Resources;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -19,19 +21,198 @@ namespace Titanfall2_SkinTool
         string SelectedGame = "BUG!";
         public string filename = "default";
         int DDSFolderExist = 0;
-        string[,] FilePath = new string[3, 8];
-        string[] ImageCheck = new string[3];//2为2048x2048,1为1024x1024,0为512x512
+
         System.Resources.ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
         public MainWindow()
         {
             InitializeComponent();
+            Language_Default();
 
             if (!File.Exists(filePath + "\\Config.xml"))
             {
                 //ToDo...
             }
+        }
 
+        private void SkinFileSelect_FileOk(object sender, CancelEventArgs e)
+        {
+
+
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            SkinFileSelect.ShowHelp = false;
+            SkinFileSelect.InitialDirectory = @"F:\";
+            SkinFileSelect.Filter = rm.GetString("Skin") + "(*.zip)|*.zip";
+            SkinFileSelect.Title = rm.GetString("OpenFile");
+            SkinFileSelect.Multiselect = false;
+            SkinFileSelect.RestoreDirectory = true;
+            if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
+            {
+                PathText.Text = this.SkinFileSelect.FileName;
+                Folder = Path.GetFileNameWithoutExtension(PathText.Text);
+            }
+        }
+
+        private void Menu_SettingGamePath_Click(object sender, EventArgs e)
+        {
+            SkinFileSelect.ShowHelp = false;
+            SkinFileSelect.InitialDirectory = @"F:\";
+            SkinFileSelect.Filter = rm.GetString("Game") + "|Titanfall2.exe;r5apex.exe";//fix
+            SkinFileSelect.Title = rm.GetString("OpenFile");
+            SkinFileSelect.Multiselect = false;
+            SkinFileSelect.RestoreDirectory = true;
+            if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
+            {
+                GamePath = System.IO.Path.GetDirectoryName(this.SkinFileSelect.FileName);
+                switch (System.IO.Path.GetFileName(SkinFileSelect.FileName))
+                {
+                    case "r5apex.exe":
+                        SelectedGame = "APEX";
+                        break;
+                    case "Titanfall2.exe":
+                        SelectedGame = "Titanfall2";
+                        break;
+                    default:
+                        SelectedGame = "BUG!";
+                        break;
+                }
+                File.WriteAllText($"{filePath}\\Path.txt", GamePath);
+                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
+
+                Console.WriteLine(GamePath);
+            }
+        }
+
+        private void Menu_Author_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
+        }
+
+        private void Test_Click(object sender, EventArgs e)
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            try
+            {
+                if (File.Exists(GamePath + "\\r5apex.exe") || File.Exists(GamePath + "\\Titanfall2.exe"))
+                {
+                    //fixed
+                }
+                else
+                {
+                    throw new MyException(rm.GetString("GameLoadFailed"));
+                }
+                if (!File.Exists(PathText.Text) || PathText.Text == "")
+                {
+                    throw new MyException(rm.GetString("ZipLoadFailed"));
+                }
+
+                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder") + "\\" + Folder;
+                if (!Directory.Exists(ExtractPath))
+                {
+                    Directory.CreateDirectory(ExtractPath);
+                }
+                try
+                {
+                    ZipFile.ExtractToDirectory(PathText.Text, ExtractPath, Encoding.GetEncoding("GBK"));
+                    textBox1.AppendText(rm.GetString("ZipLoadSuccess") + "\r\n");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                //Testing new way to save dds
+                List<string> FileList = new List<string>();
+                FindSkinFiles(ExtractPath, FileList, ".dds");
+
+                foreach (var i in FileList)
+                    Console.WriteLine(i);
+
+                DDSFolderExist = FileList.Count;
+                if (DDSFolderExist == 0)
+                {
+                    throw new MyException(rm.GetString("FindSkinFailed"));
+                }
+
+                foreach (var i in FileList)
+                {
+                    int FolderLength = ExtractPath.Length;
+                    String FileString = i.Substring(FolderLength);
+                    int imagecheck = ImageCheck(i);
+                    //stop now,the following code has not been adapted
+                    Int64 toseek = 0;
+                    int tolength = 0;
+                    int totype = 0;
+                    //传递数组内容
+                    //需要使用命名对代码进行优化
+                    if (IsPilot(i))
+                    {
+                        Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl(i, imagecheck);
+                        toseek = Convert.ToInt64(pdc.Seek);
+                        tolength = Convert.ToInt32(pdc.Length);
+                        totype = Convert.ToInt32(pdc.SeekLength);
+                    }
+                    else
+                    {
+                        if (SelectedGame == "APEX")
+                        {
+                            APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                            tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                            totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                        }
+                        else if (SelectedGame == "Titanfall2")
+                        {
+                            Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                            tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                            totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                        }
+                    }
+                    StarpakControl sc = new StarpakControl(i, toseek, tolength, totype, GamePath, SelectedGame, imagecheck, "Replace");
+                    //ToDo:Change to the Struct,still not done that...
+                }
+
+                FileList.Clear();
+                msg = rm.GetString("InstallSuccess");
+                textBox1.AppendText(msg + "\r\n");
+                MessageBox.Show(msg, rm.GetString("Tip"), MessageBoxButtons.OK);
+            }
+            catch (MyException myException)
+            {
+                MessageBox.Show(myException.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            GC.Collect();
+            if (Directory.Exists(rm.GetString("SaveFolder")))
+            {
+                try
+                {
+                    DirectoryInfo tempDir = new DirectoryInfo(rm.GetString("SaveFolder"));
+
+                    foreach (DirectoryInfo dir in tempDir.EnumerateDirectories())
+                    {
+                        dir.Delete(true);
+                    }
+
+                    tempDir.Delete();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error occured while trying to delete the temporary files folder: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Language_Default()
+        {
             String lang = CultureInfo.CurrentUICulture.Name;
             switch (lang)
             {
@@ -73,296 +254,6 @@ namespace Titanfall2_SkinTool
             }
         }
 
-        private void SkinFileSelect_FileOk(object sender, CancelEventArgs e)
-        {
-
-
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            SkinFileSelect.ShowHelp = false;
-            SkinFileSelect.InitialDirectory = @"F:\";
-            SkinFileSelect.Filter = rm.GetString("Skin") + "(*.zip)|*.zip";
-            SkinFileSelect.Title = rm.GetString("OpenFile");
-            SkinFileSelect.Multiselect = false;
-            SkinFileSelect.RestoreDirectory = true;
-            if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
-            {
-                PathText.Text = this.SkinFileSelect.FileName;
-                Folder = Path.GetFileNameWithoutExtension(PathText.Text);
-                Array.Clear(ImageCheck, 0, ImageCheck.Length);
-                Array.Clear(FilePath, 0, FilePath.Length);
-
-            }
-        }
-
-        private void Menu_SettingGamePath_Click(object sender, EventArgs e)
-        {
-            SkinFileSelect.ShowHelp = false;
-            SkinFileSelect.InitialDirectory = @"F:\";
-            SkinFileSelect.Filter = rm.GetString("Game") + "|Titanfall2.exe;r5apex.exe";//fix
-            SkinFileSelect.Title = rm.GetString("OpenFile");
-            SkinFileSelect.Multiselect = false;
-            SkinFileSelect.RestoreDirectory = true;
-            if (this.SkinFileSelect.ShowDialog() == DialogResult.OK)
-            {
-                GamePath = System.IO.Path.GetDirectoryName(this.SkinFileSelect.FileName);
-                switch (System.IO.Path.GetFileName(SkinFileSelect.FileName))
-                {
-                    case "r5apex.exe":
-                        SelectedGame = "APEX";
-                        break;
-                    case "Titanfall2.exe":
-                        SelectedGame = "Titanfall2";
-                        break;
-                    default:
-                        SelectedGame = "BUG!";
-                        break;
-                }
-                File.WriteAllText($"{filePath}\\Path.txt", GamePath);
-                textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
-
-                Console.WriteLine(GamePath);
-            }
-        }
-
-        private void Menu_Author_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
-        }
-
-        private void Test_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists(GamePath + "\\r5apex.exe") || File.Exists(GamePath + "\\Titanfall2.exe"))
-                {
-                    //fixed
-                }
-                else
-                {
-                    throw new MyException(rm.GetString("GameLoadFailed"));
-                }
-                if (!File.Exists(PathText.Text) || PathText.Text == "")
-                {
-                    throw new MyException(rm.GetString("ZipLoadFailed"));
-                }
-                try
-                {
-                    // 打开zip文件
-                    ZipArchive archive = ZipFile.OpenRead(PathText.Text);
-                    // 获取文件列表
-                    var files = archive.Entries;
-                    // 显示列表
-                    string lastfilename = "test";
-                    int check = 0;//dds file exist
-                    int lastcheck = 0;//folder
-                    int total = 0;
-                    int CountCheck = 0;
-                    foreach (ZipArchiveEntry zav in files)
-                    {
-                        if (zav.Name.Contains(".dds"))
-                        {
-                            CountCheck++;
-                        }
-                    }
-                    bool FileCount = files.Count != CountCheck;
-                    Console.WriteLine("文件数检查:" + FileCount);
-                    if (FileCount)
-                    {
-                        foreach (ZipArchiveEntry zav in files)
-                        {
-                            textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
-
-                            if (zav.Name.Contains(".dds"))
-                            {
-                                if (check == 1)
-                                {
-                                    lastcheck = 1;
-                                }
-                                check = 1;
-                                
-                            }
-                            else
-                            {
-                                lastfilename = zav.FullName;
-                                lastfilename = lastfilename.Replace("/", "\\");
-                                check = 0;
-                                lastcheck = 0;
-                                total = 0;
-                            }
-                            if (check == 1 && lastcheck == 0)
-                            {
-                                Console.WriteLine(lastfilename);
-
-                            }
-                            if (check == 1)
-                            {
-                                if (lastfilename.Contains("512"))
-                                {
-                                    ImageCheck[0] = lastfilename;
-                                    FilePath[0, total] = zav.Name;
-                                }
-
-                                if (lastfilename.Contains("1024"))
-                                {
-                                    ImageCheck[1] = lastfilename;
-                                    FilePath[1, total] = zav.Name;
-                                }
-                                if (lastfilename.Contains("2048"))
-                                {
-                                    ImageCheck[2] = lastfilename;
-                                    FilePath[2, total] = zav.Name;
-                                }
-                                total++;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        int Count512 = 0;
-                        int Count1024 = 0;
-                        int Count2048 = 0;
-                        foreach (ZipArchiveEntry zav in files)
-                        {
-                            textBox1.AppendText(zav.FullName.Replace("/", "\\") + "\r\n");
-                            string FolderResult = zav.FullName.Substring(0, zav.FullName.LastIndexOf(zav.Name));
-                            string FileResult = zav.Name;
-                            if (FolderResult.Contains("512"))
-                            {
-                                ImageCheck[0] = FolderResult;
-                                FilePath[0, Count512] = zav.Name;
-                                Count512++;
-                            }
-
-                            if (FolderResult.Contains("1024"))
-                            {
-                                ImageCheck[1] = FolderResult;
-                                FilePath[1, Count1024] = zav.Name;
-                                Count1024++;
-                            }
-                            if (FolderResult.Contains("2048"))
-                            {
-                                ImageCheck[2] = FolderResult;
-                                FilePath[2, Count2048] = zav.Name;
-                                Count2048++;
-                            }
-                        }
-                    }
-                    //ZipList.Items = files;
-                    textBox1.AppendText(rm.GetString("ZipReadSuccess") + "\r\n");
-                }
-                catch (Exception ex)
-                {
-                    msg = ex.Message;
-                }
-                DDSFolderExist = 0;
-                for (int i = 0; i <= 2; i++)
-                {
-                    if (ImageCheck[i] != null)
-                    {
-                        DDSFolderExist++;
-                    }
-                }
-                if (DDSFolderExist == 0)
-                {
-                    throw new MyException(rm.GetString("FindSkinFailed"));
-                }
-
-                string ExtractPath = filePath + "\\" + rm.GetString("SaveFolder") + "\\" + Folder;
-                if (!Directory.Exists(ExtractPath))
-                {
-                    Directory.CreateDirectory(ExtractPath);
-                }
-                try
-                {
-                    ZipFile.ExtractToDirectory(PathText.Text, ExtractPath);
-                    //textBox1.AppendText(ExtractPath+"\\"+filename + "\r\n");
-                    textBox1.AppendText(rm.GetString("ZipLoadSuccess") + "\r\n");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                for (int i = 0; i <= 2; i++)
-                {
-                    if (ImageCheck[i] != null)
-                    {
-                        int folder = 4;
-                        //string result = System.Text.RegularExpressions.Regex.Replace(ImageCheck[i], @"[^0-9]+", "");
-                        if (ImageCheck[i].LastIndexOf("\\") - folder == -1)
-                        {
-                            folder = 3;
-                        }
-                        string result = ImageCheck[i].Substring((ImageCheck[i].LastIndexOf("\\") - folder)).Replace("\\", "");
-                        int imagecheck = Convert.ToInt32(result);
-                        Console.WriteLine(imagecheck);
-
-                        switch (imagecheck)
-                        {
-                            case 512:
-                                imagecheck = 0;
-                                break;
-                            case 1024:
-                                imagecheck = 1;
-                                break;
-                            case 2048:
-                                imagecheck = 2;
-                                break;
-                            default:
-                                throw new MyException("Error!");
-                        }
-                        for (int j = 0; FilePath[i, j] != null; j++)
-                        {
-                            Int64 toseek = 0;
-                            int tolength = 0;
-                            int totype = 0;
-                            //传递数组内容
-                            //需要使用命名对代码进行优化
-                            if (SelectedGame == "APEX")
-                            {
-                                APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(FilePath[i, j], imagecheck);
-                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
-                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
-                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
-                            }
-                            else if (SelectedGame == "Titanfall2")
-                            {
-                                Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(FilePath[i, j], imagecheck);
-                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
-                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
-                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
-                            }
-
-                            string reallypath = ExtractPath + "\\" + ImageCheck[i] + FilePath[i, j];
-                            StarpakControl sc = new StarpakControl(reallypath, toseek, tolength, totype, GamePath, SelectedGame, imagecheck, "Replace");
-                            //ToDo:Change to the Struct,still not done that...
-                            Console.WriteLine(reallypath);
-                            Console.WriteLine(toseek);
-                            Console.WriteLine(tolength);
-                            Console.WriteLine(totype);
-                            Console.WriteLine(GamePath);
-                        }
-                    }
-
-                }
-                msg = rm.GetString("InstallSuccess");
-                textBox1.AppendText(msg + "\r\n");
-                MessageBox.Show(msg, rm.GetString("Tip"), MessageBoxButtons.OK);
-            }
-            catch (MyException myException)
-            {
-                MessageBox.Show(myException.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            GC.Collect();
-        }
-
         private void LanguageChinese_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
@@ -395,6 +286,81 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = false;
             this.LanguageEnglish.Checked = true;
+        }
+
+        private void FindSkinFiles(string FolderPath, List<string> FileList, string FileExtention)
+        {
+            try
+            {
+                DirectoryInfo di = new DirectoryInfo(FolderPath);
+                FileSystemInfo[] fi = di.GetFileSystemInfos();
+                foreach (var i in fi)
+                {
+                    if (i is DirectoryInfo)
+                    {
+                        FindSkinFiles(i.FullName, FileList, FileExtention);
+                    }
+                    else
+                    {
+                        if (i.Extension == FileExtention)
+                        {
+                            FileList.Add(i.FullName);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private int ImageCheck(String ImageName)
+        {
+            int result = -1;
+            int temp = ImageName.LastIndexOf("\\");
+            ImageName = ImageName.Substring(0, temp);
+            temp = ImageName.LastIndexOf("\\") + 1;
+            ImageName = ImageName.Substring(temp, ImageName.Length - temp);
+            switch (ImageName)
+            {
+                case "512x256":
+                case "512x512":
+                case "512":
+                    result = 0;
+                    break;
+                case "1024x512":
+                case "1024x1024":
+                case "1024":
+                    result = 1;
+                    break;
+                case "2048x1024":
+                case "2048x2048":
+                case "2048":
+                    result = 2;
+                    break;
+                case "4096x2048":
+                case "4096x4096":
+                case "4096":
+                    result = 3;
+                    break;
+                default:
+                    result = -1;
+                    break;
+            }
+            return result;
+        }
+
+        private bool IsPilot(string Name)
+        {
+            if (Name.Contains("Stim_") || Name.Contains("PhaseShift_") || Name.Contains("HoloPilot_") || Name.Contains("PulseBlade_") || Name.Contains("Grapple_") || Name.Contains("AWall_") || Name.Contains("Cloak_") || Name.Contains("Public_"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
