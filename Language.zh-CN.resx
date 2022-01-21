@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,134 +59,158 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="AboutAuthor" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AboutAuthor" xml:space="preserve">
     <value>关于作者</value>
   </data>
-  <data name="Chinese" xml:space="preserve">
+	<data name="Chinese" xml:space="preserve">
     <value>中文</value>
   </data>
-  <data name="English" xml:space="preserve">
+	<data name="English" xml:space="preserve">
     <value>英文</value>
   </data>
-  <data name="FindSkinFailed" xml:space="preserve">
+	<data name="FindSkinFailed" xml:space="preserve">
     <value>无法加载，此文件是否为规范的皮肤文件？</value>
   </data>
-  <data name="Form" xml:space="preserve">
+	<data name="Form" xml:space="preserve">
     <value>泰坦陨落二&amp;APEX S3 DDS皮肤工具</value>
   </data>
-  <data name="Game" xml:space="preserve">
+	<data name="Game" xml:space="preserve">
     <value>游戏程序</value>
   </data>
-  <data name="GameLoadFailed" xml:space="preserve">
+	<data name="GameLoadFailed" xml:space="preserve">
     <value>游戏路径错误或不存在！</value>
   </data>
-  <data name="GameLoadSuccess" xml:space="preserve">
+	<data name="GameLoadSuccess" xml:space="preserve">
     <value>游戏路径设置成功，当前游戏为：</value>
   </data>
-  <data name="ImportBtn" xml:space="preserve">
+	<data name="GeneratingSkinPack" xml:space="preserve">
+    <value>生成中...</value>
+  </data>
+	<data name="ImportBtn" xml:space="preserve">
     <value>导入皮肤</value>
   </data>
-  <data name="InstallSuccess" xml:space="preserve">
+	<data name="InstallSuccess" xml:space="preserve">
     <value>皮肤安装成功</value>
   </data>
-  <data name="label" xml:space="preserve">
+	<data name="label" xml:space="preserve">
     <value>皮肤文件:</value>
   </data>
-  <data name="Language" xml:space="preserve">
+	<data name="Language" xml:space="preserve">
     <value>语言</value>
   </data>
-  <data name="MenuAbout" xml:space="preserve">
+	<data name="MenuAbout" xml:space="preserve">
     <value>关于</value>
   </data>
-  <data name="MenuAboutAuthor" xml:space="preserve">
+	<data name="MenuAboutAuthor" xml:space="preserve">
     <value>作者</value>
   </data>
-  <data name="MenuSet" xml:space="preserve">
+	<data name="MenuSet" xml:space="preserve">
     <value>设置</value>
   </data>
-  <data name="MenuSetPath" xml:space="preserve">
+	<data name="MenuSetPath" xml:space="preserve">
     <value>设置游戏路径</value>
   </data>
-  <data name="OpenFile" xml:space="preserve">
+	<data name="OpenFile" xml:space="preserve">
     <value>打开文件</value>
   </data>
-  <data name="SaveFolder" xml:space="preserve">
+	<data name="SaveFolder" xml:space="preserve">
     <value>皮肤缓存</value>
   </data>
-  <data name="SetGamePath" xml:space="preserve">
+	<data name="SetGamePath" xml:space="preserve">
     <value>请先设置游戏路径</value>
   </data>
-  <data name="Skin" xml:space="preserve">
+	<data name="Skin" xml:space="preserve">
     <value>皮肤文件</value>
   </data>
-  <data name="Tip" xml:space="preserve">
+	<data name="Tip" xml:space="preserve">
     <value>提示</value>
   </data>
-  <data name="ZipLoadFailed" xml:space="preserve">
+	<data name="ZipLoadFailed" xml:space="preserve">
     <value>压缩包路径错误或不存在！</value>
   </data>
-  <data name="ZipLoadSuccess" xml:space="preserve">
+	<data name="ZipLoadSuccess" xml:space="preserve">
     <value>压缩包加载成功</value>
   </data>
-  <data name="ZipReadSuccess" xml:space="preserve">
+	<data name="ZipReadSuccess" xml:space="preserve">
     <value>压缩包读取成功</value>
+  </data>
+	<data name="ProgressBarText" xml:space="preserve">
+    <value>进度：</value>
+  </data>
+	<data name="Downloading" xml:space="preserve">
+    <value>下载中...</value>
+  </data>
+	<data name="GeneratingSkinPack" xml:space="preserve">
+    <value>生成中...</value>
+  </data>
+	<data name="AutoUpdate" xml:space="preserve">
+    <value>自动升级</value>
+  </data>
+	<data name="DownloadSuccess" xml:space="preserve">
+    <value>新版本已经下载至程序根目录，请前往更新！</value>
+  </data>
+	<data name="UpdateText" xml:space="preserve">
+    <value>新版本已经发布</value>
+  </data>
+	<data name="UpdateText2" xml:space="preserve">
+    <value>你想要下载版本升级吗?</value>
   </data>
 </root>

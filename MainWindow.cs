@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
+using System.Net.Http;
 using System.Reflection;
 using System.Resources;
 using System.Text;
@@ -80,9 +81,9 @@ namespace Titanfall2_SkinTool
                         SelectedGame = "BUG!";
                         break;
                 }
-                File.WriteAllText($"{filePath}\\Path.txt", GamePath);
+                Properties.Settings.Default.GamePath = GamePath;
+                Properties.Settings.Default.Save();
                 textBox1.AppendText(rm.GetString("GameLoadSuccess") + SelectedGame + "\r\n");
-
                 Console.WriteLine(GamePath);
             }
         }
@@ -213,17 +214,25 @@ namespace Titanfall2_SkinTool
 
         private void Language_Default()
         {
-            String lang = CultureInfo.CurrentUICulture.Name;
-            switch (lang)
+            if (Properties.Settings.Default.Language == null || Properties.Settings.Default.Language.Length == 0)
+            {
+                Properties.Settings.Default.Language = CultureInfo.CurrentUICulture.Name;
+                Properties.Settings.Default.Save();
+            }
+            switch (Properties.Settings.Default.Language)
             {
                 case "zh-CN":
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.Language);
                     this.LanguageChinese.Checked = true;
                     break;
                 default:
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
                     this.LanguageEnglish.Checked = true;
                     break;
+            }
+            if (Properties.Settings.Default.AutoUpdate == true)
+            {
+                this.Menu_AutoUpdate.Checked = true;
             }
             this.label1.Text = rm.GetString("label");
             this.Text = rm.GetString("Form");
@@ -235,9 +244,10 @@ namespace Titanfall2_SkinTool
             this.LanguageChinese.Text = rm.GetString("Chinese");
             this.LanguageEnglish.Text = rm.GetString("English");
             this.Test.Text = rm.GetString("ImportBtn");
-            if (System.IO.File.Exists($"{filePath}\\Path.txt") == true)
+            this.Menu_AutoUpdate.Text = rm.GetString("AutoUpdate");
+            if (Properties.Settings.Default.GamePath != null && Properties.Settings.Default.GamePath.Length != 0)
             {
-                GamePath = File.ReadAllText($"{filePath}\\Path.txt");
+                GamePath = Properties.Settings.Default.GamePath;
                 if (System.IO.File.Exists($"{GamePath}\\Titanfall2.exe"))
                 {
                     SelectedGame = "Titanfall2";
@@ -252,10 +262,15 @@ namespace Titanfall2_SkinTool
             {
                 textBox1.AppendText(rm.GetString("SetGamePath") + "\r\n");
             }
+
         }
 
         private void LanguageChinese_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.AutoUpdate == true)
+            {
+                this.Menu_AutoUpdate.Checked = true;
+            }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
             this.label1.Text = rm.GetString("label");
             this.Text = rm.GetString("Form");
@@ -269,10 +284,19 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = true;
             this.LanguageEnglish.Checked = false;
+            this.Menu_AutoUpdate.Text = rm.GetString("AutoUpdate");
+            Properties.Settings.Default.Language = "zh-CN";
+            Properties.Settings.Default.Save();
+            textBox1.Clear();
+            textBox1.AppendText(rm.GetString("Language") + ":" + rm.GetString("Chinese") + "\r\n");
         }
 
         private void LanguageEnglish_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.AutoUpdate == true)
+            {
+                this.Menu_AutoUpdate.Checked = true;
+            }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
             this.label1.Text = rm.GetString("label");
             this.Text = rm.GetString("Form");
@@ -286,6 +310,104 @@ namespace Titanfall2_SkinTool
             this.Test.Text = rm.GetString("ImportBtn");
             this.LanguageChinese.Checked = false;
             this.LanguageEnglish.Checked = true;
+            this.Menu_AutoUpdate.Text = rm.GetString("AutoUpdate");
+            Properties.Settings.Default.Language = "en-US";
+            Properties.Settings.Default.Save();
+            textBox1.Clear();
+            textBox1.AppendText(rm.GetString("Language") + ":" + rm.GetString("English") + "\r\n");
+        }
+
+        private void VersionCheck()
+        {
+            HttpClient httpClient = new HttpClient();
+            String Uri = "https://api.github.com/repos/zxcPandora/Titanfall2-SkinTool/releases/latest";
+            String Header = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36";
+            httpClient.DefaultRequestHeaders.Add("user-agent", Header);
+            string resultStr = null;
+            try
+            {
+                var response = httpClient.GetStringAsync(Uri);
+                resultStr = response.Result;
+            }
+            catch (HttpRequestException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            string sub = "tag_name";
+            int index = 0;
+            index = resultStr.IndexOf(sub, index);
+            string TagVersion = resultStr.Substring(index + 12, 6);
+            if (TagVersion.CompareTo(Properties.Settings.Default.Version) != 0)
+            {
+                DialogResult msgresult = MessageBox.Show(rm.GetString("UpdateText") + "\n" + rm.GetString("UpdateText2"), rm.GetString("AutoUpdate"), MessageBoxButtons.YesNo);
+                if (msgresult == DialogResult.Yes)
+                {
+                    string language = Properties.Settings.Default.Language;
+                    string filename = null;
+                    switch (language)
+                    {
+                        case "zh-CN":
+                            filename = "SkinTool-User-CHS.zip";
+                            break;
+                        case "en-US":
+                            filename = "SkinTool-User-ENG.zip";
+                            break;
+                        default:
+                            filename = "SkinTool-User-ENG.zip";
+                            break;
+                    }
+                    Download(filename, TagVersion);
+                }
+            }
+        }
+
+        private void Download(string filename, string version)
+        {
+            ProgressForm progressForm = null;
+            try
+            {
+                string URL = "https://github.com/zxcPandora/Titanfall2-SkinTool/releases/download/" + version + "/" + filename;
+                System.Net.HttpWebRequest Myrq = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(URL);
+                System.Net.HttpWebResponse myrp = (System.Net.HttpWebResponse)Myrq.GetResponse();
+                int totalBytes = (int)myrp.ContentLength;
+                Console.WriteLine(totalBytes);
+
+                Thread progressThread = new Thread(() =>
+                {
+                    progressForm = new ProgressForm(totalBytes, "Download");
+                    progressForm.ShowDialog();
+                }
+            );
+
+                progressThread.Start();
+
+                System.IO.Stream st = myrp.GetResponseStream();
+                System.IO.Stream so = new System.IO.FileStream(filename, System.IO.FileMode.Create);
+                int totalDownloadedByte = 0;
+                byte[] by = new byte[1024];
+                int osize = st.Read(by, 0, (int)by.Length);
+                while (osize > 0)
+                {
+                    totalDownloadedByte = osize + totalDownloadedByte;
+
+                    so.Write(by, 0, osize);
+
+                    osize = st.Read(by, 0, (int)by.Length);
+
+                    progressForm?.AdvanceEntry(totalDownloadedByte);
+
+                    Console.WriteLine(totalDownloadedByte);
+
+                }
+                so.Close();
+                st.Close();
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+            progressForm?.ForceClose();
+            MessageBox.Show(rm.GetString("DownloadSuccess"), rm.GetString("Tip"), MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
         }
 
         private void FindSkinFiles(string FolderPath, List<string> FileList, string FileExtention)
@@ -360,6 +482,30 @@ namespace Titanfall2_SkinTool
             else
             {
                 return false;
+            }
+        }
+
+        private void MainWindow_OnShown(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.AutoUpdate == true)
+            {
+                VersionCheck();
+            }
+        }
+
+        private void Menu_AutoUpdate_Click(object sender, EventArgs e)
+        {
+            if (this.Menu_AutoUpdate.Checked == true)
+            {
+                Properties.Settings.Default.AutoUpdate = false;
+                this.Menu_AutoUpdate.Checked = false;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.AutoUpdate = true;
+                this.Menu_AutoUpdate.Checked = true;
+                Properties.Settings.Default.Save();
             }
         }
     }

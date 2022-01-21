@@ -37,6 +37,7 @@ namespace Titanfall2_SkinTool
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.Menu_Setting = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_SettingGamePath = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_AutoUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_About = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Author = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolLanguageMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +97,8 @@ namespace Titanfall2_SkinTool
             // Menu_Setting
             // 
             this.Menu_Setting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Menu_SettingGamePath});
+            this.Menu_SettingGamePath,
+            this.Menu_AutoUpdate});
             this.Menu_Setting.Name = "Menu_Setting";
             this.Menu_Setting.Size = new System.Drawing.Size(53, 24);
             this.Menu_Setting.Text = "设置";
@@ -107,6 +109,13 @@ namespace Titanfall2_SkinTool
             this.Menu_SettingGamePath.Size = new System.Drawing.Size(182, 26);
             this.Menu_SettingGamePath.Text = "设置游戏路径";
             this.Menu_SettingGamePath.Click += new System.EventHandler(this.Menu_SettingGamePath_Click);
+            //
+            // Menu_AutoUpdate
+            // 
+            this.Menu_AutoUpdate.Name = "Menu_AutoUpdate";
+            this.Menu_AutoUpdate.Size = new System.Drawing.Size(224, 26);
+            this.Menu_AutoUpdate.Text = "自动升级";
+            this.Menu_AutoUpdate.Click += new System.EventHandler(this.Menu_AutoUpdate_Click);
             // 
             // Menu_About
             // 
@@ -181,7 +190,9 @@ namespace Titanfall2_SkinTool
             this.MainMenuStrip = this.Menu;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "泰坦陨落二皮肤工具";
+            this.Shown += new System.EventHandler(this.MainWindow_OnShown);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);
@@ -205,6 +216,7 @@ namespace Titanfall2_SkinTool
         private System.Windows.Forms.ToolStripMenuItem ToolLanguageMenu;
         private System.Windows.Forms.ToolStripMenuItem LanguageChinese;
         private System.Windows.Forms.ToolStripMenuItem LanguageEnglish;
+        private System.Windows.Forms.ToolStripMenuItem Menu_AutoUpdate;
     }
 }
 
