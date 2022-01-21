@@ -233,7 +233,7 @@ namespace Titanfall2_SkinTool
                     this.LanguageEnglish.Checked = true;
                     break;
             }
-            if (Properties.Settings.Default.AutoUpdate)
+            if (Properties.Settings.Default.AutoUpdate==true)
             {
                 this.Menu_AutoUpdate.Checked = true;
             }
@@ -272,7 +272,7 @@ namespace Titanfall2_SkinTool
 
         private void LanguageChinese_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.AutoUpdate)
+            if (Properties.Settings.Default.AutoUpdate ==true)
             {
                 this.Menu_AutoUpdate.Checked = true;
             }
@@ -300,7 +300,7 @@ namespace Titanfall2_SkinTool
 
         private void LanguageEnglish_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.AutoUpdate)
+            if (Properties.Settings.Default.AutoUpdate == true)
             {
                 this.Menu_AutoUpdate.Checked = true;
             }
@@ -507,7 +507,7 @@ namespace Titanfall2_SkinTool
 
         private void MainWindow_OnShown(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.AutoUpdate)
+            if (Properties.Settings.Default.AutoUpdate == true)
             {
                 VersionCheck();
             }
@@ -515,14 +515,16 @@ namespace Titanfall2_SkinTool
 
         private void Menu_AutoUpdate_Click(object sender, EventArgs e)
         {
-            if (this.Menu_AutoUpdate.Checked)
+            if (this.Menu_AutoUpdate.Checked == true)
             {
-                Properties.Settings.Default.AutoUpdate = true;
+                Properties.Settings.Default.AutoUpdate = false;
+                this.Menu_AutoUpdate.Checked = false;
                 Properties.Settings.Default.Save();
             }
             else
             {
-                Properties.Settings.Default.AutoUpdate = false;
+                Properties.Settings.Default.AutoUpdate = true;
+                this.Menu_AutoUpdate.Checked = true;
                 Properties.Settings.Default.Save();
             }
         }
