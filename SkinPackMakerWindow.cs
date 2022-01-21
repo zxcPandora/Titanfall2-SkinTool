@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.IO.Compression;
@@ -16,6 +17,7 @@ namespace Titanfall2_SkinTool
     {
         string SelectedGame = null;
         string SelectedWeapon = null;
+        int ImageNumber = 0;
         ResourceManager rm = new ResourceManager("Titanfall2_SkinTool.Language", Assembly.GetExecutingAssembly());
 
         public SkinPackMakerWindow(String SelectedGame)
@@ -104,16 +106,20 @@ namespace Titanfall2_SkinTool
 
             Thread progressThread = new Thread(() =>
             {
-                progressForm = new ProgressForm(7); // 7 texture slots 
+                progressForm = new ProgressForm(ImageNumber,"SkinPack");
+                
                 progressForm.ShowDialog();
+
             }
-            ); // 7 texture slots
+            );
+
             progressThread.Start();
 
             ZipArchive zipArchive = ZipFile.Open(GetSkinPackRootPath(), ZipArchiveMode.Create);
 
             try
             {
+                int i = 0;
                 if (colorPictureBox.Enabled && colorPictureBox.Image != null)
                 {
                     MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
@@ -128,7 +134,7 @@ namespace Titanfall2_SkinTool
                     }
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i+3);
 
                 if (specularPictureBox.Enabled && specularPictureBox.Image != null)
                 {
@@ -144,7 +150,7 @@ namespace Titanfall2_SkinTool
                     }
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
 
                 if (normalPictureBox.Enabled && normalPictureBox.Image != null)
                 {
@@ -153,7 +159,7 @@ namespace Titanfall2_SkinTool
                     SaveTexture(SelectedWeapon + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
 
                 if (glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
                 {
@@ -161,7 +167,7 @@ namespace Titanfall2_SkinTool
                     SaveTexture(SelectedWeapon + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
 
                 if (aoPictureBox.Enabled && aoPictureBox.Image != null)
                 {
@@ -177,7 +183,7 @@ namespace Titanfall2_SkinTool
                     }
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
 
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
                 {
@@ -193,7 +199,7 @@ namespace Titanfall2_SkinTool
                     }
                 }
 
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
 
                 if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
                 {
@@ -201,7 +207,7 @@ namespace Titanfall2_SkinTool
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
                     SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
                 }
-                progressForm?.AdvanceEntry();
+                progressForm?.AdvanceEntry(i + 3);
             }
             catch (Exception ex)
             {
@@ -326,6 +332,7 @@ namespace Titanfall2_SkinTool
                 if (res == DialogResult.OK)
                 {
                     LoadImageIntoPictureBox(box, dialog.FileName);
+                    ImageNumber += 3;
                 }
             });
             menu.Items.Add(rm.GetString("ContextRemove"), null, (object menuSender, EventArgs menuE) =>
@@ -348,6 +355,7 @@ namespace Titanfall2_SkinTool
         {
             SelectedItemChanged();
             DisableAllTextures();
+            ImageNumber = 0;
             if (SelectedGame == "APEX")
             {
                 switch (SelectedWeapon)

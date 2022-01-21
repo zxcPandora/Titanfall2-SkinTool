@@ -240,9 +240,6 @@
   <data name="Generate" xml:space="preserve">
     <value>生成皮肤包</value>
   </data>
-  <data name="GeneratingSkinPack" xml:space="preserve">
-    <value>生成中...</value>
-  </data>
   <data name="Glossinesss" xml:space="preserve">
     <value>Glossiness</value>
   </data>
@@ -456,5 +453,26 @@
   </data>
   <data name="tip9" xml:space="preserve">
     <value>---副武器手枪</value>
+  </data>
+  <data name="ProgressBarText" xml:space="preserve">
+    <value>进度：</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>下载中...</value>
+  </data>
+  <data name="GeneratingSkinPack" xml:space="preserve">
+    <value>生成中...</value>
+  </data>
+  <data name="AutoUpdate" xml:space="preserve">
+    <value>自动升级</value>
+  </data>
+  <data name="DownloadSuccess" xml:space="preserve">
+    <value>新版本已经下载至程序根目录，请前往更新！</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>新版本已经发布</value>
+  </data>
+  <data name="UpdateText2" xml:space="preserve">
+    <value>你想要下载版本升级吗?</value>
   </data>
 </root>

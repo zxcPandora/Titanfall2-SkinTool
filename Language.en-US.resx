@@ -240,9 +240,6 @@
   <data name="Generate" xml:space="preserve">
     <value>Generate</value>
   </data>
-  <data name="GeneratingSkinPack" xml:space="preserve">
-    <value>Generating...</value>
-  </data>
   <data name="Glossinesss" xml:space="preserve">
     <value>Glossiness</value>
   </data>
@@ -274,7 +271,7 @@
     <value>Set</value>
   </data>
   <data name="MenuSetPath" xml:space="preserve">
-    <value>SetGamePath</value>
+    <value>Set Game Path</value>
   </data>
   <data name="Normal" xml:space="preserve">
     <value>Normal</value>
@@ -456,5 +453,26 @@ Please report to the author,thx!</value>
   </data>
   <data name="tip9" xml:space="preserve">
     <value>---Secondary Pistol</value>
+  </data>
+  <data name="ProgressBarText" xml:space="preserve">
+    <value>Progress：</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading...</value>
+  </data>
+  <data name="GeneratingSkinPack" xml:space="preserve">
+    <value>Generating...</value>
+  </data>
+  <data name="AutoUpdate" xml:space="preserve">
+    <value>Auto Update</value>
+  </data>
+  <data name="DownloadSuccess" xml:space="preserve">
+    <value>The new version has been downloaded to the program root directory, please go to update!</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>A new version has been released</value>
+  </data>
+  <data name="UpdateText2" xml:space="preserve">
+    <value>Do you want to download the update?</value>
   </data>
 </root>

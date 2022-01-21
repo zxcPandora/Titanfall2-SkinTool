@@ -21,25 +21,46 @@ namespace Titanfall2_SkinTool
         private int TotalEntries = 0, Entries = 0;
         bool isClosing = false;
 
-        public ProgressForm(int totalEntries)
+        public ProgressForm(int totalEntries,string title)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             TotalEntries = totalEntries;
+            this.progressBar.Maximum= (int)totalEntries;
+            switch (title)
+            {
+                case "Download":
+                    TitleLabel.Text = rm.GetString("Downloading");
+                    ProgressBarText.Text = rm.GetString("ProgressBarText");
+                    break;
+                case "SkinPack":
+                    TitleLabel.Text = rm.GetString("GeneratingSkinPack");
+                    ProgressBarText.Text = rm.GetString("ProgressBarText");
+                    break;
+            }
         }
 
         private void ProgressMessage_Load(object sender, EventArgs e)
         {
-            generatingLabel.Text = rm.GetString("GeneratingSkinPack");
+            
         }
 
-        public void AdvanceEntry()
+        public void AdvanceEntry(int number)
         {
-            Entries++;
-            Action SetProgress = delegate { progressBar.Value = Entries * 100 / TotalEntries; };
+            Entries= number;
+
+            Console.WriteLine("TestEntries:" + Entries);
+            Console.WriteLine("Testnumber:" + number);
+            Console.WriteLine("Test:"+ TotalEntries);
+
+            Action SetProgress = delegate { progressBar.Value = Entries; };
+            Action Display= delegate { ProgressBarText.Text = rm.GetString("ProgressBarText") + ((int)Math.Round((double)Entries * 100 / (double)TotalEntries, 2)).ToString() + "%"; };
+
             progressBar.Invoke(SetProgress);
-
+            ProgressBarText.Invoke(Display);
+           
             Action CloseForm = delegate { this.Close(); };
-
+            
             if (Entries == TotalEntries)
             {
                 Thread.Sleep(500);
@@ -55,7 +76,7 @@ namespace Titanfall2_SkinTool
         public void ForceClose()
         {
             if (isClosing == true) return;
-
+            
             Action CloseForm = delegate { this.Close(); };
             Thread.Sleep(500);
             this.Invoke(CloseForm);
