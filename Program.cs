@@ -62,9 +62,10 @@ namespace Titanfall2_SkinTool
                     wait = o.Wait;
                     Action<string> messageHandler = o.Verbose ? m => { Console.WriteLine(m); } : m => { };
 
-                    messageHandler($"GamePath={o.GamePath}");
-                    messageHandler($"InputFiles=[{string.Join(", ", o.InputFiles)}]");
-                    messageHandler($"Verbos={o.Verbose}");
+                    // debug: print args
+                    // messageHandler($"GamePath={o.GamePath}");
+                    // messageHandler($"InputFiles=[{string.Join(", ", o.InputFiles)}]");
+                    // messageHandler($"Verbos={o.Verbose}");
 
                     try
                     {
@@ -73,7 +74,6 @@ namespace Titanfall2_SkinTool
                         foreach (string file in o.InputFiles)
                         {
                             messageHandler(Path.GetFileNameWithoutExtension(file));
-
                             tool.InstallSkin(file);
                         }
                     }
@@ -86,7 +86,7 @@ namespace Titanfall2_SkinTool
                 }).WithNotParsed(_ =>
                 {
                     // argument parsing failed -> print error
-                    Console.Error.WriteLine($"Parsing options failed. See above for more information or use --help to get help.");
+                    Console.Error.WriteLine($"Parsing options failed. See above for more information on how to use.");
                     wait = true; // let user see error
                 });
 
