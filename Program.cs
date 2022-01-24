@@ -19,8 +19,8 @@ namespace Titanfall2_SkinTool
         [Option('v', "verbose", Required = false, HelpText = "Enable verbose logging")]
         public bool Verbose { get; set; }
 
-        [Option('w', "wait", Required = false, HelpText = "Wait for user input before closing console window")]
-        public bool Wait { get; set; }
+        [Option('q', "quit", Required = false, HelpText = "Don't wait for user interaction before closing console window")]
+        public bool Quit { get; set; }
     }
 
     static class Program
@@ -37,29 +37,31 @@ namespace Titanfall2_SkinTool
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             if (0 < args.Length)
             {
                 // args -> is commandline
-                CommandlineMain(args);
+                return CommandlineMain(args);
             }
             else
             {
                 // no args -> default windowed application
                 UiMain();
+                return 0;
             }
         }
 
-        static void CommandlineMain(string[] args)
+        static int CommandlineMain(string[] args)
         {
             bool wait = false;
+            int code = 0; // 0 = succes; -1 = install failed; -2 = invalid arguments
             AllocConsole();
 
             CommandLine.Parser.Default.ParseArguments<Options>(args)
                 .WithParsed(o =>
                 {
-                    wait = o.Wait;
+                    wait = !o.Quit;
                     Action<string> messageHandler = o.Verbose ? m => { Console.WriteLine(m); } : m => { };
 
                     // debug: print args
@@ -73,14 +75,14 @@ namespace Titanfall2_SkinTool
 
                         foreach (string file in o.InputFiles)
                         {
-                            messageHandler(Path.GetFileNameWithoutExtension(file));
                             tool.InstallSkin(file);
                         }
                     }
                     catch (Exception ex)   // Catches MyException as well
                     {
                         Console.Error.WriteLine(ex.ToString());
-                        wait = true; // let user see error
+                        wait = true; // let user see 
+                        code = -1;
                     }
 
                 }).WithNotParsed(_ =>
@@ -88,6 +90,7 @@ namespace Titanfall2_SkinTool
                     // argument parsing failed -> print error
                     Console.Error.WriteLine($"Parsing options failed. See above for more information on how to use.");
                     wait = true; // let user see error
+                    code = -2;
                 });
 
             // maybe wait for user input before closing
@@ -96,6 +99,8 @@ namespace Titanfall2_SkinTool
                 Console.Write("Press any key to exit...");
                 Console.Read();
             }
+            
+            return code;
         }
 
         static void UiMain()

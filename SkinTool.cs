@@ -62,7 +62,9 @@ namespace Titanfall2_SkinTool
 
         public void InstallSkin(string skinPath)
         {
-            messageHandler($"Install skin {skinPath}");
+            Exception error = null;
+
+            messageHandler($"Install skin {Path.GetFileNameWithoutExtension(skinPath)}");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             try
             {
@@ -168,10 +170,15 @@ namespace Titanfall2_SkinTool
                     }
                     catch (Exception ex)
                     {
-                        // redirect
-                        throw new MyException("Error occured while trying to delete the temporary files folder: \n" + ex.Message);
+                        // rethrow; also dont throw from finally directly (at least thats what vs says)
+                        error = new MyException("Error occured while trying to delete the temporary files folder: \n" + ex.Message);
                     }
                 }
+            }
+
+            if (error != null)
+            {
+                throw error;
             }
         }
 
