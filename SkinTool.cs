@@ -62,6 +62,7 @@ namespace Titanfall2_SkinTool
 
         public void InstallSkin(string skinPath)
         {
+            messageHandler($"Install skin {skinPath}");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             try
             {
