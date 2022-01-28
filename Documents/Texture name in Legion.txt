@@ -1,0 +1,59 @@
+Welcome report the mistake
+-Assault rifle
+r-101 - "r101"
+r-201 - "r101_skin31"
+Hemlok - "hemlok_bfr_ar"
+G2 - "g2a4"
+Flatline - "vinson_rifle"
+
+-SMG
+CAR - "car_smg"
+Alternator - "alternator"
+Volt - "hemlock_smg"
+r97 - "r97_cn"
+
+-Shotgun
+EVA-8 - "eva8_stgn"
+Mastiff - "mastiff_stgn"
+
+-Sniper
+Kraber - "kraber_sr"
+Doubletake - "doubletake"
+DMR - "longbow_dmr"
+
+-LMG
+Spitfire - "spitfire_lmg"
+L-Star - "lstar"
+Devotion - "hemlok_br"
+
+-Grenadier
+Sidewinder - "smr"
+EPG - "epg"
+Softball - "Softball_at_skin01"
+Cold War - "Pulse_lmg"
+
+-Primary Pistol
+Wingman elite - "wingman_pstl"
+Mozambique - "pstl_sa3"
+
+-AT-weapon
+Charge rifle - "charge_rifle_at"
+MGL - "mgl_at"
+Thunderbolt - "Arc_Launcher"
+Archer - "archer_at"
+
+-Secondary Pistol
+P2016 - "p2011_pstl"
+RE-45 - "re45"
+Wingman - "b3_wingman"
+
+-Titan Weapon
+Plasma Railgun - "plasma_railgun"
+Predator Cannon - "predator_titan"
+T-203 Thermite Launcher - "thermite_launcher"
+40mm Tracker Cannon - "titan_40mm"
+Splitter Rifle - "titan_particle_accelerator"
+Broad Sword - "titan_sword_01"
+Leadwall - "triple_threat"
+XO-16 - "xo16_shorty_titan"
+XO-16's clip - "xo16_a2_titan"

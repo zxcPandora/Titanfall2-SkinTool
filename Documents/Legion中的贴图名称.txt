@@ -1,0 +1,58 @@
+-突击步枪
+R-101卡宾枪 - "r101"
+R-201卡宾枪 - "r101_skin31"
+R-101卡宾枪 - "hemlok_bfr_ar"
+G2A5 - "g2a4"
+V-47平行步枪 - "vinson_rifle"
+
+-冲锋枪
+CAR - "car_smg"
+转换者冲锋枪 - "alternator"
+电能冲锋枪 - "hemlock_smg"
+R-97 - "r97_cn"
+
+-散弹枪
+EVA-8自动- "eva8_stgn"
+獒犬散弹枪 - "mastiff_stgn"
+
+-狙击步枪
+克莱博-AP狙击步枪 - "kraber_sr"
+喷火枪 - "doubletake"
+长弓DMR - "longbow_dmr"
+
+-轻机枪
+喷火枪 - "spitfire_lmg"
+L-Star - "lstar"
+X-55专注冲锋枪 - "hemlok_br"
+
+-榴弹枪
+响尾蛇飞弹 - "smr"
+能源炮-1 - "epg"
+R-6P垒球榴弹枪 - "Softball_at_skin01"
+獒犬散弹枪 - "Pulse_lmg"
+
+-主武器手枪
+小帮手精英 - "wingman_pstl"
+SA-3莫桑比克 - "pstl_sa3"
+
+-反泰坦武器
+电能步枪 - "charge_rifle_at"
+磁能榴弹发射器 - "mgl_at"
+LG-97雷电炮 - "Arc_Launcher"
+射手飞弹 - "archer_at"
+
+-副武器手枪
+汉蒙P2016 - "p2011_pstl"
+RE-45自动 - "re45"
+B3小帮手 - "b3_wingman"
+
+-泰坦武器
+电浆磁轨炮 - "plasma_railgun"
+猎杀者机炮 - "predator_titan"
+T-203 铝热剂发射器 - "thermite_launcher"
+40MM追踪机炮 - "titan_40mm"
+分裂枪 - "titan_particle_accelerator"
+大剑 - "titan_sword_01"
+天女散花 - "triple_threat"
+XO-16 - "xo16_shorty_titan"
+XO-16的弹夹 - "xo16_a2_titan"
