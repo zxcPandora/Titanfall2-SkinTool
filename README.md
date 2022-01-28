@@ -7,6 +7,7 @@ Language : ENGLISH | [简体中文](./README.zh-CN.md)
 
 - [Preface](#preface)
 - [Support Change](#support-change)
+- [Command line](#command-line)
 - [Backup File](#backup-file)
 - [ToDo](#todo)
 - [Contribute](#contribute)
@@ -25,10 +26,24 @@ Format Requierment:<br>
 
 ## Support Change
 
-For Titanfall2,Only support that Pilot and Pilot Weapon;
+For Titanfall2,Support that Pilot Skin,Pilot Weapon and Titan Weapon;
 
 
 For APEX S3,Support most of Weapon;
+
+## Command line
+
+Arguments are: <game_path> <skin_zip_path> [<skin_zip_path>] [-verbose]? [-quit]?
+
+Optional parameters:
+
+--v, -verbose (flag): Print some stuff
+
+--q, -quit (flag): Close console after install is complete without waiting for user action
+
+Simple example:
+
+Titanfall2-SkinTool.exe "C:\Program Files (x86)\Steam\steamapps\common\Titanfall2\Titanfall2.exe" "C:\Users\whothis\Downloads\KraberSkin.zip" "C:\Users\whothis\Downloads\CarSkin.zip" --q
 
 ## Backup File
 
@@ -58,8 +73,6 @@ APEX S3:
 
 ## ToDo
 
-Code optimization
-<br>
 Format specification
 <br>
 Other function 
@@ -73,4 +86,5 @@ This project exists thanks to all the people who contribute.
 <a href="https://github.com/zxcPandora/Titanfall2-SkinTool/graphs/contributors"><br>
   <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/18683538?v=4" width="128" height="128">
 </a>

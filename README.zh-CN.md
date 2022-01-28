@@ -7,6 +7,7 @@
 
 - [前言](#前言)
 - [支持的操作](#支持的操作)
+- [控制台版本](#控制台版本)
 - [备份文件](#备份文件)
 - [工作计划](#工作计划)
 - [贡献](#贡献)
@@ -27,10 +28,23 @@
 
 ## 支持的操作
 
-泰坦陨落二部分目前仅支持铁驭及其武器;
+泰坦陨落二部分目前支持铁驭皮肤、铁驭武器、泰坦武器;
 
 
 APEX S3版本支持绝大部分武器;
+
+## 控制台版本
+参数： <游戏路径> <皮肤压缩包路径> [<更多的皮肤压缩包路径>] [-verbose]? [-quit]?
+
+可选参数：
+
+--v, -verbose : 打印更多信息
+
+--q, -quit : 安装完成后关闭控制台，无需等待用户确认
+
+示例:
+
+Titanfall2-SkinTool.exe "C:\Program Files (x86)\Steam\steamapps\common\Titanfall2\Titanfall2.exe" "C:\Users\whothis\Downloads\KraberSkin.zip" "C:\Users\whothis\Downloads\CarSkin.zip" --q
 
 ## 备份文件
 
@@ -61,8 +75,6 @@ APEX S3:
 
 ## 工作计划
 
-代码优化
-<br>
 格式规范
 <br>
 其他功能实现
@@ -76,4 +88,5 @@ APEX S3:
 <a href="https://github.com/zxcPandora/Titanfall2-SkinTool/graphs/contributors"><br>
   <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/18683538?v=4" width="128" height="128">
 </a>
