@@ -105,12 +105,12 @@ namespace Titanfall2_SkinTool
                 tool.InstallSkin(PathText.Text);
 
                 // success
-                msg = "Install succes!";
+                msg = rm.GetString("InstallSuccess");
             }
             catch (Exception ex)   // Catches MyException as well
             {
                 // failed
-                msg = "Install failed: " + ex.Message;
+                msg = rm.GetString("InstallFailed") + ex.Message;
             }
 
             // info popup

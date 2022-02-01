@@ -475,4 +475,22 @@ Please report to the author,thx!</value>
   <data name="UpdateText2" xml:space="preserve">
     <value>Do you want to download the update?</value>
   </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>Invalid game path：</value>
+  </data>
+  <data name="Items52" xml:space="preserve">
+    <value>Pilot Sword</value>
+  </data>
+  <data name="Items53" xml:space="preserve">
+    <value>Kunai</value>
+  </data>
+  <data name="tip12" xml:space="preserve">
+    <value>---Melee</value>
+  </data>
+  <data name="InstallFailed" xml:space="preserve">
+    <value>Install Failed,The reason is:</value>
+  </data>
+  <data name="tip13" xml:space="preserve">
+    <value>---Marksman</value>
+  </data>
 </root>

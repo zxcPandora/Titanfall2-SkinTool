@@ -475,4 +475,22 @@
   <data name="UpdateText2" xml:space="preserve">
     <value>你想要下载版本升级吗?</value>
   </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>无效的路径：</value>
+  </data>
+  <data name="Items52" xml:space="preserve">
+    <value>铁驭剑</value>
+  </data>
+  <data name="Items53" xml:space="preserve">
+    <value>苦无</value>
+  </data>
+  <data name="tip12" xml:space="preserve">
+    <value>---近战武器</value>
+  </data>
+  <data name="tip13" xml:space="preserve">
+    <value>---神射手</value>
+  </data>
+  <data name="InstallFailed" xml:space="preserve">
+    <value>安装失败，原因为：</value>
+  </data>
 </root>

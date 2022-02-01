@@ -91,6 +91,14 @@ namespace Titanfall2_SkinTool
                 return;
             }
 
+            if (colorPictureBox.Image == null && specularPictureBox.Image == null && normalPictureBox.Image == null &&
+                glossinessPictureBox.Image == null && aoPictureBox.Image == null && cavityPictureBox.Image == null &&
+                illuminationPictureBox.Image == null)
+            {
+                MessageBox.Show(rm.GetString("ImageReadOutOfMem"), rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (File.Exists(GetSkinPackRootPath()))
             {
                 try
@@ -106,8 +114,8 @@ namespace Titanfall2_SkinTool
 
             Thread progressThread = new Thread(() =>
             {
-                progressForm = new ProgressForm(ImageNumber,"SkinPack");
-                
+                progressForm = new ProgressForm(ImageNumber, "SkinPack");
+
                 progressForm.ShowDialog();
 
             }
@@ -132,9 +140,8 @@ namespace Titanfall2_SkinTool
                         colorImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
                     }
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i+3);
 
                 if (specularPictureBox.Enabled && specularPictureBox.Image != null)
                 {
@@ -148,26 +155,23 @@ namespace Titanfall2_SkinTool
                         specularImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive);
                     }
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i + 3);
 
                 if (normalPictureBox.Enabled && normalPictureBox.Image != null)
                 {
                     MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
                     //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
                     SaveTexture(SelectedWeapon + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i + 3);
 
                 if (glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
                 {
                     MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
                     SaveTexture(SelectedWeapon + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i + 3);
 
                 if (aoPictureBox.Enabled && aoPictureBox.Image != null)
                 {
@@ -181,9 +185,8 @@ namespace Titanfall2_SkinTool
                     {
                         SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                     }
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i + 3);
 
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
                 {
@@ -197,24 +200,22 @@ namespace Titanfall2_SkinTool
                     {
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                     }
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-
-                progressForm?.AdvanceEntry(i + 3);
 
                 if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
                 {
                     MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
                     SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
+                    progressForm?.AdvanceEntry(i + 3);
                 }
-                progressForm?.AdvanceEntry(i + 3);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\r\n" + ex.Source, rm.GetString("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
 
             progressForm?.ForceClose();
 
@@ -429,6 +430,8 @@ namespace Titanfall2_SkinTool
                             break;
                         }
                     case "PredatorCannon":
+                    case "Sword":
+                    case "Kunai":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -571,29 +574,43 @@ namespace Titanfall2_SkinTool
             {
                 case "APEX":
                     this.assetTypeComboBox.Items.AddRange(new object[] {
+                        //突击步枪
+                        rm.GetString("tip1"),
                         rm.GetString("Items"),
                         rm.GetString("Items1"),
                         rm.GetString("Items2"),
                         rm.GetString("Items3"),
-                        rm.GetString("Items4"),
+                        //冲锋枪
+                        rm.GetString("tip2"),
                         rm.GetString("Items5"),
                         rm.GetString("Items6"),
                         rm.GetString("Items7"),
                         rm.GetString("Items8"),
-                        rm.GetString("Items9"),
+                        //轻机枪
+                        rm.GetString("tip5"),
                         rm.GetString("Items10"),
                         rm.GetString("Items11"),
+                        rm.GetString("Items9"),
+                        //神射手
+                        rm.GetString("tip13"),
                         rm.GetString("Items12"),
+                        rm.GetString("Items15"),
+                        //狙击枪
+                        rm.GetString("tip4"),
                         rm.GetString("Items13"),
                         rm.GetString("Items14"),
-                        rm.GetString("Items15"),
+                        rm.GetString("Items4"),
+                        //散弹枪
+                        rm.GetString("tip3"),
                         rm.GetString("Items16"),
                         rm.GetString("Items17"),
                         rm.GetString("Items18"),
                         rm.GetString("Items19"),
+                        //手枪
+                        rm.GetString("tip9"),
                         rm.GetString("Items20"),
                         rm.GetString("Items21"),
-                        rm.GetString("Items22")
+                        rm.GetString("Items22"),
                     });
                     break;
                 case "Titanfall2":
@@ -661,6 +678,10 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items47"),
                         rm.GetString("Items50"),
                         rm.GetString("Items51"),
+                        //近战武器
+                        rm.GetString("tip12"),
+                        rm.GetString("Items52"),
+                        rm.GetString("Items53"),
                     });
                     break;
                 default:
@@ -875,6 +896,14 @@ namespace Titanfall2_SkinTool
                 case "XO16 clip":
                 case "XO16弹夹":
                     SelectedWeapon = "XO16_clip";
+                    break;
+                case "Pilot Sword":
+                case "铁驭剑":
+                    SelectedWeapon = "Sword";
+                    break;
+                case "Kunai":
+                case "苦无":
+                    SelectedWeapon = "Kunai";
                     break;
                 default:
                     SelectedWeapon = "NULL";
