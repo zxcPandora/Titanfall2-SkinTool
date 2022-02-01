@@ -56,3 +56,7 @@ T-203 铝热剂发射器 - "thermite_launcher"
 天女散花 - "triple_threat"
 XO-16 - "xo16_shorty_titan"
 XO-16的弹夹 - "xo16_a2_titan"
+
+-近战武器
+铁驭剑 - "bolo_sword_01"
+苦无 - "kunai_shuriken"

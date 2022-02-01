@@ -1,5 +1,0 @@
-泰坦陨落二千万记得备份游戏目录\r2\paks\Win64里面的pc_stream.starpak这个文件，足足10GB大小！！！！！！！你们不会想重新下载\验证的
-例如我的就是E:\Program Files (x86)\Origin Games\Titanfall2\r2\paks\Win64\pc_stream.starpak
-
-APEX S3版本的千万记得备份游戏目录\paks\Win64里面的pc_all.opt.starpak这个文件，足足18.8GB大小！！！！！！！你们不会想重新下载的
-例如我的就是D:\APEX\paks\Win64\pc_all.opt.starpak

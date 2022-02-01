@@ -1,4 +1,3 @@
-Welcome report the mistake
 -Assault rifle
 r-101 - "r101"
 r-201 - "r101_skin31"
@@ -57,3 +56,7 @@ Broad Sword - "titan_sword_01"
 Leadwall - "triple_threat"
 XO-16 - "xo16_shorty_titan"
 XO-16's clip - "xo16_a2_titan"
+
+-Melee
+Pilot Sword - "bolo_sword_01"
+Kunai - "kunai_shuriken"

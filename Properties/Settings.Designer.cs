@@ -8,81 +8,62 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Titanfall2_SkinTool.Properties
-{
-
-
+namespace Titanfall2_SkinTool.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
             }
         }
-
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.4.0")]
-        public string Version
-        {
-            get
-            {
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.5.1")]
+        public string Version {
+            get {
                 return ((string)(this["Version"]));
             }
-            set
-            {
-                this["Version"] = value;
-            }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Language
-        {
-            get
-            {
+        public string Language {
+            get {
                 return ((string)(this["Language"]));
             }
-            set
-            {
+            set {
                 this["Language"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string GamePath
-        {
-            get
-            {
+        public string GamePath {
+            get {
                 return ((string)(this["GamePath"]));
             }
-            set
-            {
+            set {
                 this["GamePath"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool AutoUpdate
-        {
-            get
-            {
+        public bool AutoUpdate {
+            get {
                 return ((bool)(this["AutoUpdate"]));
             }
-            set
-            {
+            set {
                 this["AutoUpdate"] = value;
             }
         }

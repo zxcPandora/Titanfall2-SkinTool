@@ -3186,6 +3186,127 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                             FilePath[0, i] = Convert.ToString(xo16.XO16_cav[imagecheck].seeklength);
                         }
                         break;
+                    //近战武器
+                    case "Sword":
+                        Default.Melee.Sword sword = new Default.Melee.Sword();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = sword.Sword_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = sword.Sword_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = sword.Sword_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = sword.Sword_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_spc[imagecheck].seeklength);
+                        }
+                        //铁驭剑没有ilm贴图
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = sword.Sword_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(sword.Sword_ao[imagecheck].seeklength);
+                        }
+                        //铁驭剑没有cav贴图
+                        break;
+                    case "Kunai":
+                        Default.Melee.Kunai kunai = new Default.Melee.Kunai();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = kunai.Kunai_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = kunai.Kunai_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = kunai.Kunai_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = kunai.Kunai_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_spc[imagecheck].seeklength);
+                        }
+                        //苦无没有ilm贴图
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = kunai.Kunai_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(kunai.Kunai_ao[imagecheck].seeklength);
+                        }
+                        //苦无没有cav贴图
+                        break;
                     default:
                         throw new MyException("BUG!" + "\n" + "Unable to load, is this file a standard skin file?");
                         break;

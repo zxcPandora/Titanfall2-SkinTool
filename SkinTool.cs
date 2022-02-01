@@ -43,7 +43,7 @@ namespace Titanfall2_SkinTool
                     selectedGame = "Titanfall2";
                     break;
                 default:
-                    throw new MyException($"Invalid game path {gamePath}");
+                    throw new MyException($"{rm.GetString("SetGamePath")}\r\n{gamePath}");
             }
         }
 
@@ -64,7 +64,7 @@ namespace Titanfall2_SkinTool
         {
             Exception error = null;
 
-            messageHandler($"Install skin {Path.GetFileNameWithoutExtension(skinPath)}");
+            messageHandler($"{rm.GetString("ImportBtn")}: {Path.GetFileNameWithoutExtension(skinPath)}");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             try
             {
@@ -123,6 +123,7 @@ namespace Titanfall2_SkinTool
                     //需要使用命名对代码进行优化
                     if (IsPilot(i))
                     {
+                        //this didn't need recode
                         Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl(i, imagecheck);
                         toseek = Convert.ToInt64(pdc.Seek);
                         tolength = Convert.ToInt32(pdc.Length);
@@ -132,6 +133,7 @@ namespace Titanfall2_SkinTool
                     {
                         if (selectedGame == "APEX")
                         {
+                            //Need to recode apex weapon part
                             APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(i, imagecheck);
                             toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
                             tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
@@ -139,6 +141,7 @@ namespace Titanfall2_SkinTool
                         }
                         else if (selectedGame == "Titanfall2")
                         {
+                            //Need to recode ttf2 weapon part
                             Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(i, imagecheck);
                             toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
                             tolength = Convert.ToInt32(wdc.FilePath[0, 2]);

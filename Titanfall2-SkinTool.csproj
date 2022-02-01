@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Titanfall2_SkinTool</RootNamespace>
     <AssemblyName>Titanfall2-SkinTool</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-	<LangVersion>preview</LangVersion>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -125,6 +125,11 @@
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="SkinTool.cs" />
     <Compile Include="StarpakControl.cs" />
     <Compile Include="Titanfall2\PilotData\Normal Pilot\AWall\AWall.cs" />
@@ -201,6 +206,8 @@
     <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\Devotion.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\LSTAR.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\LightMachineGun\Spitfire.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Melee\Kunai.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\Melee\Sword.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Pistol\Mozambique.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Pistol\P2016.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Pistol\RE45.cs" />
@@ -257,8 +264,12 @@
     <Compile Include="Titanfall2\WeaponData\Skin31\SubmachineGun\Volt.cs" />
     <Compile Include="Titanfall2\WeaponData\WeaponDataControl.cs" />
     <Compile Include="Titanfall2\WeaponData\WeaponDataControl.cs" />
-    <EmbeddedResource Include="Language.en-US.resx" />
-    <EmbeddedResource Include="Language.zh-CN.resx" />
+    <EmbeddedResource Include="Language.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +286,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Documents\APEX_S3_Weapon_Format.docx" />
     <None Include="Documents\APEX_S3武器格式要求.docx" />
     <None Include="Documents\TTF2_Pilot_Texture_Document.docx" />
@@ -291,11 +303,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="README.md" />
     <None Include="README.zh-CN.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
