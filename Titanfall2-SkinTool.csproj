@@ -71,7 +71,4 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if not exist $(TargetDir)\lib (md $(TargetDir)\lib)&#xD;&#xA;move /y $(TargetDir)*.dll $(TargetDir)\lib\&#xD;&#xA;move /y $(TargetDir)\lib\Titanfall2-SkinTool.dll $(TargetDir)&#xD;&#xA;" />
-  </Target>
 </Project>
