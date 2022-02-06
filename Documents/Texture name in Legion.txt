@@ -1,6 +1,6 @@
 -Assault rifle
-r-101 - "r101"
-r-201 - "r101_skin31"
+r-101 - "r101_sfp"(In "common(03).rpak")
+r-201 - "r101"
 Hemlok - "hemlok_bfr_ar"
 G2 - "g2a4"
 Flatline - "vinson_rifle"
@@ -45,6 +45,9 @@ Archer - "archer_at"
 P2016 - "p2011_pstl"
 RE-45 - "re45"
 Wingman - "b3_wingman"
+
+-Burn Card Weapon
+Smart Pistol - "Smart_Pistol_MK6"
 
 -Titan Weapon
 Plasma Railgun - "plasma_railgun"

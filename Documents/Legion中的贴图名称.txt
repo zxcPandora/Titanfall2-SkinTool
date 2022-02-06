@@ -1,6 +1,6 @@
 -突击步枪
-R-101卡宾枪 - "r101"
-R-201卡宾枪 - "r101_skin31"
+R-101卡宾枪 - "r101_sfp"(在common(03).rpak)
+R-201卡宾枪 - "r101"
 R-101卡宾枪 - "hemlok_bfr_ar"
 G2A5 - "g2a4"
 V-47平行步枪 - "vinson_rifle"
@@ -45,6 +45,9 @@ LG-97雷电炮 - "Arc_Launcher"
 汉蒙P2016 - "p2011_pstl"
 RE-45自动 - "re45"
 B3小帮手 - "b3_wingman"
+
+-强化卡武器
+智慧手枪 - "Smart_Pistol_MK6"
 
 -泰坦武器
 电浆磁轨炮 - "plasma_railgun"
