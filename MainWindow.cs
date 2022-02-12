@@ -252,19 +252,20 @@ namespace Titanfall2_SkinTool
 
             string tag = "tag_name";
             string updatelog = "body";
-            string end = "target_commitish";
-            string end2 = "reactions";
+            string tempStr = "";
             int index = 0;
             int index2 = 0;
             index = resultStr.IndexOf(tag, index);
-            index2 = resultStr.IndexOf(end, index2);
-            string TagVersion = resultStr.Substring(index + 12, index2 - (index + 18));
+            tempStr = resultStr.Substring(index + 12, resultStr.Length - (index + 18));
+            index2 = tempStr.IndexOf("\"", index2);
+            string TagVersion = tempStr.Substring(0, index2);
 
             index = 0;
             index2 = 0;
             index = resultStr.IndexOf(updatelog, index);
-            index2 = resultStr.IndexOf(end2, index2);
-            string log = resultStr.Substring(index + 8, index2 - (index + 14));
+            tempStr = resultStr.Substring(index + 8, resultStr.Length - (index + 14));
+            index2 = tempStr.IndexOf("\"", index2);
+            string log = tempStr.Substring(0, index2);
             log = log.Replace("\\r", "\r").Replace("\\n", "\n");
             if (TagVersion.CompareTo(Properties.Settings.Default.Version) != 0)
             {
