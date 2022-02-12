@@ -63,3 +63,7 @@ XO-16's clip - "xo16_a2_titan"
 -Melee
 Pilot Sword - "bolo_sword_01"
 Kunai - "kunai_shuriken"
+
+-Titan cockpit(You should understand it in combination with documents <TTF2_Titan_Texture_Document.docx>)
+Cockpit - "titan_cockpit"
+Console - "ajax_cockpit_console_pov"

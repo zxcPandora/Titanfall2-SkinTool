@@ -493,4 +493,16 @@
   <data name="InstallFailed" xml:space="preserve">
     <value>安装失败，原因为：</value>
   </data>
+  <data name="GenerateSuccess" xml:space="preserve">
+    <value>生成成功！</value>
+  </data>
+  <data name="Items54" xml:space="preserve">
+    <value>驾驶舱</value>
+  </data>
+  <data name="Items55" xml:space="preserve">
+    <value>控制台</value>
+  </data>
+  <data name="tip14" xml:space="preserve">
+    <value>---泰坦</value>
+  </data>
 </root>

@@ -493,4 +493,16 @@ Please report to the author,thx!</value>
   <data name="tip13" xml:space="preserve">
     <value>---Marksman</value>
   </data>
+  <data name="GenerateSuccess" xml:space="preserve">
+    <value>Generate Success！</value>
+  </data>
+  <data name="Items54" xml:space="preserve">
+    <value>Cockpit</value>
+  </data>
+  <data name="Items55" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="tip14" xml:space="preserve">
+    <value>---Titan</value>
+  </data>
 </root>

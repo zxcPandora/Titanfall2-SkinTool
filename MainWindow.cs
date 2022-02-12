@@ -93,7 +93,12 @@ namespace Titanfall2_SkinTool
 
         private void Menu_Author_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\nDiscord：zxcPandora#1581\r\nBilibili：极度分裂的潘多拉\r\nWeaponData:MrSteyk's Tool\r\nSkinPackMaker:salcodes", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
+            MessageBox.Show(rm.GetString("MenuAboutAuthor") + "：zxcPandora\r\n" +
+                "Bilibili：极度分裂的潘多拉\r\n" +
+                "WeaponData:MrSteyk's Tool\r\n" +
+                "Main author:zxcPandora#1581(Discord)\r\n" +
+                "SkinPack:sal#3261(Discord)\r\n" +
+                "CommandLine:KanjiuAkuma(Github)", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
         }
 
         private void Test_Click(object sender, EventArgs e)
@@ -244,13 +249,26 @@ namespace Titanfall2_SkinTool
             {
                 MessageBox.Show(e.Message);
             }
-            string sub = "tag_name";
+
+            string tag = "tag_name";
+            string updatelog = "body";
+            string end = "target_commitish";
+            string end2 = "reactions";
             int index = 0;
-            index = resultStr.IndexOf(sub, index);
-            string TagVersion = resultStr.Substring(index + 12, 6);
+            int index2 = 0;
+            index = resultStr.IndexOf(tag, index);
+            index2 = resultStr.IndexOf(end, index2);
+            string TagVersion = resultStr.Substring(index + 12, index2 - (index + 18));
+
+            index = 0;
+            index2 = 0;
+            index = resultStr.IndexOf(updatelog, index);
+            index2 = resultStr.IndexOf(end2, index2);
+            string log = resultStr.Substring(index + 8, index2 - (index + 14));
+            log = log.Replace("\\r", "\r").Replace("\\n", "\n");
             if (TagVersion.CompareTo(Properties.Settings.Default.Version) != 0)
             {
-                DialogResult msgresult = MessageBox.Show(rm.GetString("UpdateText")+"\n"+ rm.GetString("UpdateText2"), rm.GetString("AutoUpdate"), MessageBoxButtons.YesNo);
+                DialogResult msgresult = MessageBox.Show(rm.GetString("UpdateText")+"\r\n"+ rm.GetString("UpdateText2")+"\r\n"+log, rm.GetString("AutoUpdate"), MessageBoxButtons.YesNo);
                 if (msgresult == DialogResult.Yes)
                 {
                     string language = Properties.Settings.Default.Language;

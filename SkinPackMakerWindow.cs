@@ -53,6 +53,7 @@ namespace Titanfall2_SkinTool
 
             string filepath = files[0];
             LoadImageIntoPictureBox(box, filepath);
+            ImageNumber += 3;
         }
 
         private void LoadImageIntoPictureBox(PictureBox box, string filepath)
@@ -140,7 +141,8 @@ namespace Titanfall2_SkinTool
                         colorImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Rgba);
                     }
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (specularPictureBox.Enabled && specularPictureBox.Image != null)
@@ -155,7 +157,8 @@ namespace Titanfall2_SkinTool
                         specularImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive);
                     }
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (normalPictureBox.Enabled && normalPictureBox.Image != null)
@@ -163,14 +166,16 @@ namespace Titanfall2_SkinTool
                     MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
                     //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
                     SaveTexture(SelectedWeapon + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
                 {
                     MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
                     SaveTexture(SelectedWeapon + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (aoPictureBox.Enabled && aoPictureBox.Image != null)
@@ -185,7 +190,8 @@ namespace Titanfall2_SkinTool
                     {
                         SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                     }
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
@@ -200,7 +206,8 @@ namespace Titanfall2_SkinTool
                     {
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
                     }
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
 
                 if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
@@ -208,8 +215,11 @@ namespace Titanfall2_SkinTool
                     MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
                     SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
-                    progressForm?.AdvanceEntry(i + 3);
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
                 }
+
+                MessageBox.Show(rm.GetString("GenerateSuccess"), rm.GetString("Generate"), MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
@@ -682,6 +692,11 @@ namespace Titanfall2_SkinTool
                         rm.GetString("tip12"),
                         rm.GetString("Items52"),
                         rm.GetString("Items53"),
+                        //泰坦
+                        //Need add new panel for both titan and pilot
+                        /*rm.GetString("tip14"),
+                        rm.GetString("Items54"),
+                        rm.GetString("Items55"),*/
                     });
                     break;
                 default:
@@ -904,6 +919,14 @@ namespace Titanfall2_SkinTool
                 case "Kunai":
                 case "苦无":
                     SelectedWeapon = "Kunai";
+                    break;
+                case "Cockpit":
+                case "驾驶舱":
+                    SelectedWeapon = "Cockpit";
+                    break;
+                case "Console":
+                case "控制台":
+                    SelectedWeapon = "Console";
                     break;
                 default:
                     SelectedWeapon = "NULL";
