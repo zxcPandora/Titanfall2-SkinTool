@@ -249,24 +249,25 @@ namespace Titanfall2_SkinTool
             {
                 MessageBox.Show(e.Message);
             }
-
+            
             string tag = "tag_name";
             string updatelog = "body";
             string tempStr = "";
             int index = 0;
             int index2 = 0;
             index = resultStr.IndexOf(tag, index);
-            tempStr = resultStr.Substring(index + 12, resultStr.Length - (index + 18));
+            tempStr = resultStr.Substring(index + 12, resultStr.Length - (index+12));
             index2 = tempStr.IndexOf("\"", index2);
             string TagVersion = tempStr.Substring(0, index2);
 
             index = 0;
             index2 = 0;
             index = resultStr.IndexOf(updatelog, index);
-            tempStr = resultStr.Substring(index + 8, resultStr.Length - (index + 14));
+            tempStr = resultStr.Substring(index + 8, resultStr.Length - (index + 8));
             index2 = tempStr.IndexOf("\"", index2);
             string log = tempStr.Substring(0, index2);
             log = log.Replace("\\r", "\r").Replace("\\n", "\n");
+
             if (TagVersion.CompareTo(Properties.Settings.Default.Version) != 0)
             {
                 DialogResult msgresult = MessageBox.Show(rm.GetString("UpdateText")+"\r\n"+ rm.GetString("UpdateText2")+"\r\n"+log, rm.GetString("AutoUpdate"), MessageBoxButtons.YesNo);
