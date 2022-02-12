@@ -63,3 +63,7 @@ XO-16的弹夹 - "xo16_a2_titan"
 -近战武器
 铁驭剑 - "bolo_sword_01"
 苦无 - "kunai_shuriken"
+
+-泰坦驾驶舱(你应该结合泰坦陨落二泰坦贴图说明文档.docx理解)
+驾驶舱 - "titan_cockpit"
+控制台 - "ajax_cockpit_console_pov"

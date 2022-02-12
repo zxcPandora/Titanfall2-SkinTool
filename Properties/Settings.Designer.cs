@@ -25,7 +25,7 @@ namespace Titanfall2_SkinTool.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.5.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.5.2")]
         public string Version {
             get {
                 return ((string)(this["Version"]));

@@ -179,12 +179,9 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                 }
                 return;
             }
-            string s = WeaponName;
-            int toname = s.LastIndexOf("\\")+1;
-            string str = s.Substring(toname, s.Length - toname);
-            toname = str.IndexOf("_");
-            string temp = str.Substring(toname, str.Length - toname);
-            s = str.Replace(temp, "");
+            string[] name = GlobalFunAndVar.GetTextureName(WeaponName);
+            string str = name[0];
+            string s = name[1];
             if (str.Contains("Default"))
             {
                 switch (s)

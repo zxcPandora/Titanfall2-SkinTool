@@ -23,6 +23,45 @@ namespace Titanfall2_SkinTool
         public bool Quit { get; set; }
     }
 
+    public static class GlobalFunAndVar
+    {
+        public static int GetTextureType(string Name)
+        {
+            if (Name != null && Name.Length == 0)
+            {
+                return 0;
+            }
+            if (Name.Contains("Stim_") || Name.Contains("PhaseShift_") || Name.Contains("HoloPilot_")
+            || Name.Contains("PulseBlade_") || Name.Contains("Grapple_") || Name.Contains("AWall_")
+            || Name.Contains("Cloak_") || Name.Contains("Pilot_"))
+            {
+                return 2;
+            }
+            else if (Name.Contains("Titan_"))
+            {
+                return 3;
+            }
+            else
+            {
+                return 1;
+            }
+
+        }
+
+        public static string[] GetTextureName(string name)
+        {
+            string[] s = new string[3];
+            int toname = name.LastIndexOf("\\") + 1;
+            string str = name.Substring(toname, name.Length - toname);
+            toname = str.IndexOf("_");
+            string temp = str.Substring(toname, str.Length - toname);
+            s[0] = str;
+            s[1] = str.Replace(temp, "");
+            s[2] = temp;
+            return s;
+        }
+    }
+
     static class Program
     {
         /// <summary>

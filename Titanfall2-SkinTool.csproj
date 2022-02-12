@@ -190,6 +190,11 @@
     <Compile Include="Titanfall2\PilotData\Public Data\Part\head.cs" />
     <Compile Include="Titanfall2\PilotData\Public Data\Part\skeleton.cs" />
     <Compile Include="Titanfall2\PilotData\Public Data\Public.cs" />
+    <Compile Include="Titanfall2\TitanData\Public Data\Cockpit\Cockpit.cs" />
+    <Compile Include="Titanfall2\TitanData\Public Data\Cockpit\Console.cs" />
+    <Compile Include="Titanfall2\TitanData\Public Data\Cockpit\Screen.cs" />
+    <Compile Include="Titanfall2\TitanData\Public Data\Public.cs" />
+    <Compile Include="Titanfall2\TitanData\TitanDataControl.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Archer.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\ChargeRifle.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\MGL.cs" />

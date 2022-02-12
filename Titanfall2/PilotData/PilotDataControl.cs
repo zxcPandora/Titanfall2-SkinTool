@@ -13,12 +13,10 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData
         public string SeekLength { get; private set; }
         public PilotDataControl(string PilotName, int imagecheck)
         {
-            string s = PilotName;
-            int toname = s.LastIndexOf("\\") + 1;
-            string str = s.Substring(toname, s.Length - toname);
-            toname = str.IndexOf("_");
-            string temp = str.Substring(toname, str.Length - toname);
-            s = str.Replace(temp, "");
+            string[] name = GlobalFunAndVar.GetTextureName(PilotName);
+            string str = name[0];
+            string s = name[1];
+            string temp = name[2];
             if (str.Contains("Stim_") || str.Contains("PhaseShift_") || str.Contains("HoloPilot_") || str.Contains("PulseBlade_") || str.Contains("Grapple_") || str.Contains("AWall_") || str.Contains("Cloak_") || str.Contains("Public_"))
             {
                 switch (s)

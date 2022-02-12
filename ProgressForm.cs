@@ -49,9 +49,9 @@ namespace Titanfall2_SkinTool
         {
             Entries= number;
 
-            Console.WriteLine("TestEntries:" + Entries);
-            Console.WriteLine("Testnumber:" + number);
-            Console.WriteLine("Test:"+ TotalEntries);
+            //Console.WriteLine("TestEntries:" + Entries);
+            //Console.WriteLine("Testnumber:" + number);
+            //Console.WriteLine("Test:"+ TotalEntries);
 
             Action SetProgress = delegate { progressBar.Value = Entries; };
             Action Display= delegate { ProgressBarText.Text = rm.GetString("ProgressBarText") + ((int)Math.Round((double)Entries * 100 / (double)TotalEntries, 2)).ToString() + "%"; };

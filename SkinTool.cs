@@ -121,32 +121,41 @@ namespace Titanfall2_SkinTool
                     int totype = 0;
                     //传递数组内容
                     //需要使用命名对代码进行优化
-                    if (IsPilot(i))
+                    switch (GlobalFunAndVar.GetTextureType(i))
                     {
-                        //this didn't need recode
-                        Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl(i, imagecheck);
-                        toseek = Convert.ToInt64(pdc.Seek);
-                        tolength = Convert.ToInt32(pdc.Length);
-                        totype = Convert.ToInt32(pdc.SeekLength);
-                    }
-                    else //if(IsWeapon(i))
-                    {
-                        if (selectedGame == "APEX")
-                        {
-                            //Need to recode apex weapon part
-                            APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(i, imagecheck);
-                            toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
-                            tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
-                            totype = Convert.ToInt32(wdc.FilePath[0, 3]);
-                        }
-                        else if (selectedGame == "Titanfall2")
-                        {
-                            //Need to recode ttf2 weapon part
-                            Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(i, imagecheck);
-                            toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
-                            tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
-                            totype = Convert.ToInt32(wdc.FilePath[0, 3]);
-                        }
+                        case 1://Weapon
+                            //Need to recode weapon part
+                            if (selectedGame == "APEX")
+                            {
+                                APEX.WeaponData.WeaponDataControl wdc = new APEX.WeaponData.WeaponDataControl(i, imagecheck);
+                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                            }
+                            else if (selectedGame == "Titanfall2")
+                            {
+                                Titanfall2.WeaponData.WeaponDataControl wdc = new Titanfall2.WeaponData.WeaponDataControl(i, imagecheck);
+                                toseek = Convert.ToInt64(wdc.FilePath[0, 1]);
+                                tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
+                                totype = Convert.ToInt32(wdc.FilePath[0, 3]);
+                            }
+                            break;
+                        case 2://Pilot
+                            //this didn't need recode
+                            Titanfall2.PilotData.PilotDataControl pdc = new Titanfall2.PilotData.PilotDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(pdc.Seek);
+                            tolength = Convert.ToInt32(pdc.Length);
+                            totype = Convert.ToInt32(pdc.SeekLength);
+                            break;
+                        case 3://Titan
+                            Titanfall2.TitanData.TitanDataControl tdc = new Titanfall2.TitanData.TitanDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(tdc.Seek);
+                            tolength = Convert.ToInt32(tdc.Length);
+                            totype = Convert.ToInt32(tdc.SeekLength);
+                            break;
+                        default:
+                            throw new MyException(rm.GetString("FindSkinFailed"));
+                            break;
                     }
                     StarpakControl sc = new StarpakControl(i, toseek, tolength, totype, gamePath, selectedGame, imagecheck, "Replace");
                     //ToDo:Change to the Struct,still not done that...
