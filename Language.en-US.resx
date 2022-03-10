@@ -505,4 +505,34 @@ Please report to the author,thx!</value>
   <data name="tip14" xml:space="preserve">
     <value>---Titan</value>
   </data>
+  <data name="Items56" xml:space="preserve">
+    <value>AcogSight clip</value>
+  </data>
+  <data name="Items57" xml:space="preserve">
+    <value>AogSight clip</value>
+  </data>
+  <data name="Items58" xml:space="preserve">
+    <value>Hcog clip</value>
+  </data>
+  <data name="Items59" xml:space="preserve">
+    <value>HoloReflexSight clip</value>
+  </data>
+  <data name="Items60" xml:space="preserve">
+    <value>ProScreen clip</value>
+  </data>
+  <data name="Items61" xml:space="preserve">
+    <value>SniperScope clip</value>
+  </data>
+  <data name="Items62" xml:space="preserve">
+    <value>SniperScopeX4 clip</value>
+  </data>
+  <data name="Items63" xml:space="preserve">
+    <value>Supressor clip</value>
+  </data>
+  <data name="Items64" xml:space="preserve">
+    <value>ThreatScope clip</value>
+  </data>
+  <data name="Items65" xml:space="preserve">
+    <value>ThreatScopeSniper clip</value>
+  </data>
 </root>
