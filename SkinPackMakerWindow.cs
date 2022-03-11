@@ -461,6 +461,11 @@ namespace Titanfall2_SkinTool
                     case "LeadWall":
                     case "SplitterRifle":
                     case "ThermiteLauncher":
+                    case "AcogSight":
+                    case "AogSight":
+                    case "SniperScope":
+                    case "SniperScopeX4":
+                    case "ThreatScopeSniper":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -468,6 +473,23 @@ namespace Titanfall2_SkinTool
                             EnableTexture(specularPictureBox);
                             EnableTexture(aoPictureBox);
                             EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "HoloReflexSight":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            break;
+                        }
+                    case "Supressor":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(aoPictureBox);
                             break;
                         }
                     case "CAR":
@@ -498,6 +520,9 @@ namespace Titanfall2_SkinTool
                     case "TrackerCannon":
                     case "XO16":
                     case "XO16_clip":
+                    case "Hcog":
+                    case "ProScreen":
+                    case "ThreatScope":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -692,6 +717,18 @@ namespace Titanfall2_SkinTool
                         rm.GetString("tip12"),
                         rm.GetString("Items52"),
                         rm.GetString("Items53"),
+                        //附件
+                        rm.GetString("tip15"),
+                        rm.GetString("Items56"),
+                        rm.GetString("Items57"),
+                        rm.GetString("Items58"),
+                        rm.GetString("Items59"),
+                        rm.GetString("Items60"),
+                        rm.GetString("Items61"),
+                        rm.GetString("Items62"),
+                        rm.GetString("Items63"),
+                        rm.GetString("Items64"),
+                        rm.GetString("Items65"),
                         //泰坦
                         //Need add new panel for both titan and pilot
                         /*rm.GetString("tip14"),
@@ -928,6 +965,46 @@ namespace Titanfall2_SkinTool
                 case "控制台":
                     SelectedWeapon = "Console";
                     break;
+                case "AcogSight":
+                case "阿科视线":
+                    SelectedWeapon = "AcogSight";
+                    break;
+                case "AogSight":
+                case "奥格视线":
+                    SelectedWeapon = "AogSight";
+                    break;
+                case "Hcog":
+                case "全息瞄准镜":
+                    SelectedWeapon = "Hcog";
+                    break;
+                case "HoloReflexSight":
+                case "全息反射瞄准器":
+                    SelectedWeapon = "HoloReflexSight";
+                    break;
+                case "ProScreen":
+                case "专业屏幕":
+                    SelectedWeapon = "ProScreen";
+                    break;
+                case "SniperScope":
+                case "狙击镜":
+                    SelectedWeapon = "SniperScope";
+                    break;
+                case "SniperScopeX4":
+                case "狙击镜X4":
+                    SelectedWeapon = "SniperScopeX4";
+                    break;
+                case "Supressor":
+                case "抑制器":
+                    SelectedWeapon = "Supressor";
+                    break;
+                case "ThreatScope":
+                case "威胁范围":
+                    SelectedWeapon = "ThreatScope";
+                    break;
+                case "ThreatScopeSniper":
+                case "威胁范围狙击手":
+                    SelectedWeapon = "ThreatScopeSniper";
+                    break;  
                 default:
                     SelectedWeapon = "NULL";
                     break;

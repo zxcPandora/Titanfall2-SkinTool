@@ -505,4 +505,37 @@
   <data name="tip14" xml:space="preserve">
     <value>---泰坦</value>
   </data>
+  <data name="tip15" xml:space="preserve">
+    <value>---附件</value>
+  </data>
+    <data name="Items56" xml:space="preserve">
+    <value>阿科视线</value>
+  </data>
+  <data name="Items57" xml:space="preserve">
+    <value>奥格视线</value>
+  </data>
+  <data name="Items58" xml:space="preserve">
+    <value>全息瞄准镜</value>
+  </data>
+  <data name="Items59" xml:space="preserve">
+    <value>全息反射瞄准器</value>
+  </data>
+  <data name="Items60" xml:space="preserve">
+    <value>专业屏幕</value>
+  </data>
+  <data name="Items61" xml:space="preserve">
+    <value>狙击镜</value>
+  </data>
+  <data name="Items62" xml:space="preserve">
+    <value>狙击镜X4</value>
+  </data>
+  <data name="Items63" xml:space="preserve">
+    <value>抑制器</value>
+  </data>
+  <data name="Items64" xml:space="preserve">
+    <value>威胁范围</value>
+  </data>
+  <data name="Items65" xml:space="preserve">
+    <value>威胁范围狙击手</value>
+  </data>
 </root>

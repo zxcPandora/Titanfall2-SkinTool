@@ -505,6 +505,9 @@ Please report to the author,thx!</value>
   <data name="tip14" xml:space="preserve">
     <value>---Titan</value>
   </data>
+  <data name="tip15" xml:space="preserve">
+    <value>---Attachment</value>
+  </data>
   <data name="Items56" xml:space="preserve">
     <value>AcogSight clip</value>
   </data>
