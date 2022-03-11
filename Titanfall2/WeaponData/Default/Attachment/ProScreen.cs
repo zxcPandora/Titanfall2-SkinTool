@@ -25,7 +25,6 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         public ReallyData[] ProScreen_cav;
         public ProScreen()
         {
-            int i = 1;
 
             ProScreen_col = new ReallyData[3];
             ProScreen_nml = new ReallyData[3];
