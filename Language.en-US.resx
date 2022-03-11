@@ -509,33 +509,33 @@ Please report to the author,thx!</value>
     <value>---Attachment</value>
   </data>
   <data name="Items56" xml:space="preserve">
-    <value>AcogSight clip</value>
+    <value>AcogSight</value>
   </data>
   <data name="Items57" xml:space="preserve">
-    <value>AogSight clip</value>
+    <value>AogSight</value>
   </data>
   <data name="Items58" xml:space="preserve">
-    <value>Hcog clip</value>
+    <value>Hcog</value>
   </data>
   <data name="Items59" xml:space="preserve">
-    <value>HoloReflexSight clip</value>
+    <value>HoloReflexSight</value>
   </data>
   <data name="Items60" xml:space="preserve">
-    <value>ProScreen clip</value>
+    <value>ProScreen</value>
   </data>
   <data name="Items61" xml:space="preserve">
-    <value>SniperScope clip</value>
+    <value>SniperScope</value>
   </data>
   <data name="Items62" xml:space="preserve">
-    <value>SniperScopeX4 clip</value>
+    <value>SniperScopeX4</value>
   </data>
   <data name="Items63" xml:space="preserve">
-    <value>Supressor clip</value>
+    <value>Supressor</value>
   </data>
   <data name="Items64" xml:space="preserve">
-    <value>ThreatScope clip</value>
+    <value>ThreatScope</value>
   </data>
   <data name="Items65" xml:space="preserve">
-    <value>ThreatScopeSniper clip</value>
+    <value>ThreatScopeSniper</value>
   </data>
 </root>
