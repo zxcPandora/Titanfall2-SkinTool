@@ -538,4 +538,28 @@ Please report to the author,thx!</value>
   <data name="Items65" xml:space="preserve">
     <value>ThreatScopeSniper</value>
   </data>
+  <data name="tip16" xml:space="preserve">
+    <value>---TitanSkins</value>
+  </data>
+  <data name="Items66" xml:space="preserve">
+    <value>ION</value>
+  </data>
+  <data name="Items67" xml:space="preserve">
+    <value>Legion</value>
+  </data>
+  <data name="Items68" xml:space="preserve">
+    <value>Scorch</value>
+  </data>
+  <data name="Items69" xml:space="preserve">
+    <value>Northstar</value>
+  </data>
+  <data name="Items70" xml:space="preserve">
+    <value>Ronin</value>
+  </data>
+  <data name="Items71" xml:space="preserve">
+    <value>Tone</value>
+  </data>
+  <data name="Items72" xml:space="preserve">
+    <value>NoNe</value>
+  </data>
 </root>

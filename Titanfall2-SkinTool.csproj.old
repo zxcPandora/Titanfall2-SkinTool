@@ -157,6 +157,12 @@
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\CAR.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\R97.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\SubmachineGun\Volt.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\ION.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Legion.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Scorch.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Northstar.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Ronin.cs" />
+    <Compile Include="Titanfall2\WeaponData\Default\AntiTitan\Tone.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\LeadWall.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PlasmaRailgun.cs" />
     <Compile Include="Titanfall2\WeaponData\Default\Titan%28ToDo%29\PredatorCannon.cs" />

@@ -134,6 +134,7 @@ namespace Titanfall2_SkinTool
                     MagickImage colorImage = new MagickImage(ImageToByteArray(colorPictureBox.Image));
                     if (SelectedWeapon == "Archer" || SelectedWeapon == "SMR" || SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt") || SelectedWeapon == "BroadSword" || SelectedWeapon == "ThermiteLauncher")
                     {
+                        //program not responding
                         SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
                     else
@@ -150,6 +151,7 @@ namespace Titanfall2_SkinTool
                     MagickImage specularImage = new MagickImage(ImageToByteArray(specularPictureBox.Image));
                     if (SelectedWeapon == "DoubleTake" || (SelectedGame == "Titanfall2" && SelectedWeapon == "Volt") || SelectedWeapon == "BroadSword" || SelectedWeapon == "ThermiteLauncher")
                     {
+                        //program not responding
                         SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
                     else
@@ -186,6 +188,10 @@ namespace Titanfall2_SkinTool
                         aoImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive);
                     }
+                    else if (SelectedGame == "Titanfall2" && SelectedWeapon == "Northstar")//program not responding
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
                     else
                     {
                         SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
@@ -202,6 +208,29 @@ namespace Titanfall2_SkinTool
                         cavityImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive);
                     }
+                    else if (SelectedGame == "Titanfall2" && SelectedWeapon == "Northstar")//program not responding
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
+                    else
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    }
+                    i += 3;
+                    progressForm?.AdvanceEntry(i);
+                }
+                if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
+                {
+                    MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
+                    if (SelectedGame == "Titanfall2")
+                    {
+                        cavityImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive);
+                    }
+                    else if (SelectedGame == "Titanfall2" && SelectedWeapon == "Northstar")//program not responding
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
                     else
                     {
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
@@ -210,11 +239,18 @@ namespace Titanfall2_SkinTool
                     progressForm?.AdvanceEntry(i);
                 }
 
-                if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
+                 if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
                 {
                     MagickImage illuminationImage = new MagickImage(ImageToByteArray(illuminationPictureBox.Image));
+                    if (SelectedWeapon == "Northstar" || SelectedWeapon == "ION")//program not responding
+                    {
+                        SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
+                    }
+                    else
+					{
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
                     SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
+					}
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
@@ -492,6 +528,40 @@ namespace Titanfall2_SkinTool
                             EnableTexture(aoPictureBox);
                             break;
                         }
+                        
+                    case "ION":
+                    case "Ronin":
+                        {
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "Northstar":
+                        {
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            break;
+                        }
+                        
+                    //case "ION":
+                    case "Legion":
+                    case "Scorch":
+                    //case "Northstar":
+                    //case "Ronin":
+                    case "Tone":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
                     case "CAR":
                     case "R97":
                     case "Volt":
@@ -717,7 +787,7 @@ namespace Titanfall2_SkinTool
                         rm.GetString("tip12"),
                         rm.GetString("Items52"),
                         rm.GetString("Items53"),
-                        //附件
+                        //武器附件
                         rm.GetString("tip15"),
                         rm.GetString("Items56"),
                         rm.GetString("Items57"),
@@ -729,6 +799,14 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items63"),
                         rm.GetString("Items64"),
                         rm.GetString("Items65"),
+                        rm.GetString("tip16"),
+                        rm.GetString("Items66"),
+                        rm.GetString("Items67"),
+                        rm.GetString("Items68"),
+                        rm.GetString("Items69"),
+                        rm.GetString("Items70"),
+                        rm.GetString("Items71"),
+                        rm.GetString("Items72"),
                         //泰坦
                         //Need add new panel for both titan and pilot
                         /*rm.GetString("tip14"),
@@ -1005,6 +1083,30 @@ namespace Titanfall2_SkinTool
                 case "威胁范围狙击手":
                     SelectedWeapon = "ThreatScopeSniper";
                     break;  
+                case "ION":
+                case "离子":
+                    SelectedWeapon = "ION";
+                    break;  
+                case "Legion":
+                case "军团":
+                    SelectedWeapon = "Legion";
+                    break;  
+                case "Scorch":
+                case "烧焦":
+                    SelectedWeapon = "Scorch";
+                    break;  
+                case "Northstar":
+                case "北极星":
+                    SelectedWeapon = "Northstar";
+                    break; 
+                case "Ronin":
+                case "浪人":
+                    SelectedWeapon = "Ronin";
+                    break; 
+                case "Tone":
+                case "语气":
+                    SelectedWeapon = "Tone";
+                    break; 
                 default:
                     SelectedWeapon = "NULL";
                     break;

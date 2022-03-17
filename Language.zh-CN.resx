@@ -506,7 +506,7 @@
     <value>---泰坦</value>
   </data>
   <data name="tip15" xml:space="preserve">
-    <value>---附件</value>
+    <value>---武器附件</value>
   </data>
     <data name="Items56" xml:space="preserve">
     <value>阿科视线</value>
@@ -537,5 +537,26 @@
   </data>
   <data name="Items65" xml:space="preserve">
     <value>威胁范围狙击手</value>
+  </data>
+  <data name="Items66" xml:space="preserve">
+    <value>离子</value>
+  </data>
+  <data name="Items67" xml:space="preserve">
+    <value>军团</value>
+  </data>
+  <data name="Items68" xml:space="preserve">
+    <value>烧焦</value>
+  </data>
+  <data name="Items69" xml:space="preserve">
+    <value>北极星</value>
+  </data>
+  <data name="Items70" xml:space="preserve">
+    <value>浪人</value>
+  </data>
+  <data name="Items71" xml:space="preserve">
+    <value>语气</value>
+  </data>
+  <data name="Items72" xml:space="preserve">
+    <value>NoNe</value>
   </data>
 </root>
