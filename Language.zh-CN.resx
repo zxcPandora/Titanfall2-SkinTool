@@ -538,6 +538,9 @@
   <data name="Items65" xml:space="preserve">
     <value>威胁范围狙击手</value>
   </data>
+  <data name="tip16" xml:space="preserve">
+    <value>---泰坦皮肤</value>
+  </data>
   <data name="Items66" xml:space="preserve">
     <value>离子</value>
   </data>
@@ -557,6 +560,27 @@
     <value>语气</value>
   </data>
   <data name="Items72" xml:space="preserve">
-    <value>NoNe</value>
+    <value>君主</value>
   </data>
+  <data name="tip17" xml:space="preserve">
+    <value>---Prime泰坦皮肤</value>
+  </data>
+ <data name="Items73" xml:space="preserve">
+   <value>Prime离子</value>
+ </data>
+   <data name="Items74" xml:space="preserve">
+   <value>Prime军团</value>
+ </data>
+   <data name="Items75" xml:space="preserve">
+   <value>Prime北极星</value>
+ </data>
+   <data name="Items76" xml:space="preserve">
+   <value>Prime浪人</value>
+ </data>
+   <data name="Items77" xml:space="preserve">
+   <value>Prime烧焦</value>
+ </data>
+   <data name="Items78" xml:space="preserve">
+   <value>Prime语气</value>
+ </data>
 </root>

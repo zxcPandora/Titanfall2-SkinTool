@@ -3920,6 +3920,573 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                             FilePath[0, i] = Convert.ToString(tone.Tone_cav[imagecheck].seeklength);
                         }
                         break;
+                        //Cant find find HeX code for normal, ilm and cav map because it blank images
+                    case "Monarch":
+                        Default.AntiTitan.Monarch monarch = new Default.AntiTitan.Monarch();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_col[imagecheck].seeklength);
+                        }
+                        /*
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_nml[imagecheck].seeklength);
+                        }
+                        */
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_spc[imagecheck].seeklength);
+                        }
+                        /*
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ilm[imagecheck].seeklength);
+                        }
+                        */
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_ao[imagecheck].seeklength);
+                        }
+                        /*
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = monarch.Monarch_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(monarch.Monarch_cav[imagecheck].seeklength);
+                        }
+                        */
+                        break;
+                    case "PrimeLegion":
+                        Default.AntiTitan.PrimeLegion primelegion = new Default.AntiTitan.PrimeLegion();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primelegion.PrimeLegion_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primelegion.PrimeLegion_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "PrimeNorthstar":
+                        Default.AntiTitan.PrimeNorthstar primenorthstar = new Default.AntiTitan.PrimeNorthstar();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primenorthstar.PrimeNorthstar_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primenorthstar.PrimeNorthstar_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "PrimeION":
+                        Default.AntiTitan.PrimeION primeion = new Default.AntiTitan.PrimeION();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeion.PrimeION_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeion.PrimeION_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "PrimeRonin":
+                        Default.AntiTitan.PrimeRonin primeronin = new Default.AntiTitan.PrimeRonin();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primeronin.PrimeRonin_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primeronin.PrimeRonin_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "PrimeScorch":
+                        Default.AntiTitan.PrimeScorch primescorch = new Default.AntiTitan.PrimeScorch();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primescorch.PrimeScorch_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primescorch.PrimeScorch_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "PrimeTone":
+                        Default.AntiTitan.PrimeTone primetone = new Default.AntiTitan.PrimeTone();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primetone.PrimeTone_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primetone.PrimeTone_cav[imagecheck].seeklength);
+                        }
+                        break;
                     case "LeadWall":
                         Default.Titan.LeadWall leadwall = new Default.Titan.LeadWall();
                         if (str.Contains("col"))

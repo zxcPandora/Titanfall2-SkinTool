@@ -560,6 +560,27 @@ Please report to the author,thx!</value>
     <value>Tone</value>
   </data>
   <data name="Items72" xml:space="preserve">
-    <value>NoNe</value>
+    <value>Monarch</value>
   </data>
+  <data name="tip17" xml:space="preserve">
+    <value>---PrimeTitanSkins</value>
+  </data>
+ <data name="Items73" xml:space="preserve">
+   <value>PrimeION</value>
+ </data>
+   <data name="Items74" xml:space="preserve">
+   <value>PrimeLegion</value>
+ </data>
+   <data name="Items75" xml:space="preserve">
+   <value>PrimeNorthstar</value>
+ </data>
+   <data name="Items76" xml:space="preserve">
+   <value>PrimeRonin</value>
+ </data>
+   <data name="Items77" xml:space="preserve">
+   <value>PrimeScorch</value>
+ </data>
+   <data name="Items78" xml:space="preserve">
+   <value>PrimeTone</value>
+ </data>
 </root>

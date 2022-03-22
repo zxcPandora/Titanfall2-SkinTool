@@ -552,6 +552,13 @@ namespace Titanfall2_SkinTool
                     //case "Northstar":
                     //case "Ronin":
                     case "Tone":
+                    case "Monarch":
+                    case "PrimeION":
+                    case "PrimeLegion":
+                    case "PrimeNorthstar":
+                    case "PrimeRonin":
+                    case "PrimeScorch":
+                    case "PrimeTone":
                         {
                             EnableTexture(colorPictureBox);
                             EnableTexture(normalPictureBox);
@@ -799,6 +806,7 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items63"),
                         rm.GetString("Items64"),
                         rm.GetString("Items65"),
+                        //泰坦皮肤
                         rm.GetString("tip16"),
                         rm.GetString("Items66"),
                         rm.GetString("Items67"),
@@ -807,6 +815,14 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items70"),
                         rm.GetString("Items71"),
                         rm.GetString("Items72"),
+                        //Prime泰坦皮肤
+                        rm.GetString("tip17"),
+                        rm.GetString("Items73"),
+                        rm.GetString("Items74"),
+                        rm.GetString("Items75"),
+                        rm.GetString("Items76"),
+                        rm.GetString("Items77"),
+                        rm.GetString("Items78"),
                         //泰坦
                         //Need add new panel for both titan and pilot
                         /*rm.GetString("tip14"),
@@ -1107,6 +1123,34 @@ namespace Titanfall2_SkinTool
                 case "语气":
                     SelectedWeapon = "Tone";
                     break; 
+                case "Monarch":
+                case "君主":
+                    SelectedWeapon = "Monarch";
+                    break;
+                case "PrimeLegion":
+                case "Prime军团":
+                    SelectedWeapon = "PrimeLegion";
+                    break;
+                case "PrimeNorthstar":
+                case "Prime北极星":
+                    SelectedWeapon = "PrimeNorthstar";
+                    break;
+                case "PrimeION":
+                case "Prime离子":
+                    SelectedWeapon = "PrimeION";
+                    break;
+                case "PrimeRonin":
+                case "Prime浪人":
+                    SelectedWeapon = "PrimeRonin";
+                    break;
+                case "PrimeScorch":
+                case "Prime烧焦":
+                    SelectedWeapon = "PrimeScorch";
+                    break;
+                case "PrimeTone":
+                case "Prime语气":
+                    SelectedWeapon = "PrimeTone";
+                    break;
                 default:
                     SelectedWeapon = "NULL";
                     break;
