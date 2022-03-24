@@ -297,7 +297,7 @@ namespace Titanfall2_SkinTool
             ProgressForm progressForm = null;
             try
             {
-                string URL = "https://github.com/zxcPandora/Titanfall2-SkinTool/releases/download/" + version + "/" + filename;
+                string URL = "https://github.com/Strykus/Titanfall2-SkinTool/releases/download/" + version + "/" + filename;
                 System.Net.HttpWebRequest Myrq = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(URL);
                 System.Net.HttpWebResponse myrp = (System.Net.HttpWebResponse)Myrq.GetResponse();
                 int totalBytes = (int)myrp.ContentLength;
