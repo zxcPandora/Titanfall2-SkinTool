@@ -236,7 +236,7 @@ namespace Titanfall2_SkinTool
         private void VersionCheck()
         {
             HttpClient httpClient = new HttpClient();
-            String Uri = "https://api.github.com/repos/zxcPandora/Titanfall2-SkinTool/releases/latest";
+            String Uri = "https://api.github.com/repos/Strykus/Titanfall2-SkinTool/releases/latest";
             String Header = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36";
             httpClient.DefaultRequestHeaders.Add("user-agent", Header);
             string resultStr = null;
