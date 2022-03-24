@@ -3440,7 +3440,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         //Titan Skins泰坦皮肤
                         //ION 在 col,spc 中有 BC7U
                     case "ION":
-                        Default.AntiTitan.ION ion = new Default.AntiTitan.ION();
+                        Default.TitanSkins.ION ion = new Default.TitanSkins.ION();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3520,7 +3520,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Legion":
-                        Default.AntiTitan.Legion legion = new Default.AntiTitan.Legion();
+                        Default.TitanSkins.Legion legion = new Default.TitanSkins.Legion();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3600,7 +3600,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Scorch":
-                        Default.AntiTitan.Scorch scorch = new Default.AntiTitan.Scorch();
+                        Default.TitanSkins.Scorch scorch = new Default.TitanSkins.Scorch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3681,7 +3681,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         break;
                         //Northstar 在 col,spc,ilm,ao,cav 中有 BC7U
                     case "Northstar":
-                        Default.AntiTitan.Northstar northstar = new Default.AntiTitan.Northstar();
+                        Default.TitanSkins.Northstar northstar = new Default.TitanSkins.Northstar();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3761,7 +3761,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Ronin":
-                        Default.AntiTitan.Ronin ronin = new Default.AntiTitan.Ronin();
+                        Default.TitanSkins.Ronin ronin = new Default.TitanSkins.Ronin();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3841,7 +3841,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Tone":
-                        Default.AntiTitan.Tone tone = new Default.AntiTitan.Tone();
+                        Default.TitanSkins.Tone tone = new Default.TitanSkins.Tone();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3922,7 +3922,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         break;
                         //Cant find find HeX code for normal, ilm and cav map because it blank images
                     case "Monarch":
-                        Default.AntiTitan.Monarch monarch = new Default.AntiTitan.Monarch();
+                        Default.TitanSkins.Monarch monarch = new Default.TitanSkins.Monarch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4008,7 +4008,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         */
                         break;
                     case "PrimeLegion":
-                        Default.AntiTitan.PrimeLegion primelegion = new Default.AntiTitan.PrimeLegion();
+                        Default.TitanSkins.PrimeLegion primelegion = new Default.TitanSkins.PrimeLegion();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4088,7 +4088,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeNorthstar":
-                        Default.AntiTitan.PrimeNorthstar primenorthstar = new Default.AntiTitan.PrimeNorthstar();
+                        Default.TitanSkins.PrimeNorthstar primenorthstar = new Default.TitanSkins.PrimeNorthstar();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4168,7 +4168,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeION":
-                        Default.AntiTitan.PrimeION primeion = new Default.AntiTitan.PrimeION();
+                        Default.TitanSkins.PrimeION primeion = new Default.TitanSkins.PrimeION();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4248,7 +4248,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeRonin":
-                        Default.AntiTitan.PrimeRonin primeronin = new Default.AntiTitan.PrimeRonin();
+                        Default.TitanSkins.PrimeRonin primeronin = new Default.TitanSkins.PrimeRonin();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4328,7 +4328,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeScorch":
-                        Default.AntiTitan.PrimeScorch primescorch = new Default.AntiTitan.PrimeScorch();
+                        Default.TitanSkins.PrimeScorch primescorch = new Default.TitanSkins.PrimeScorch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4408,7 +4408,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeTone":
-                        Default.AntiTitan.PrimeTone primetone = new Default.AntiTitan.PrimeTone();
+                        Default.TitanSkins.PrimeTone primetone = new Default.TitanSkins.PrimeTone();
                         if (str.Contains("col"))
                         {
                             int i = 0;

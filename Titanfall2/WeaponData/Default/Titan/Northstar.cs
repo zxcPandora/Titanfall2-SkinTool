@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.AntiTitan
+namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Titan
 {
     class Northstar
     {

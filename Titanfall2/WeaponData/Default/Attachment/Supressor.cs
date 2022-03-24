@@ -27,13 +27,13 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         {
             int i = 1;
 
-            Supressor_col = new ReallyData[3];
-            Supressor_nml = new ReallyData[3];
-            Supressor_gls = new ReallyData[3];
-            Supressor_spc = new ReallyData[3];
-            Supressor_ao = new ReallyData[3];
-            //Supressor_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            Supressor_col = new ReallyData[2];
+            Supressor_nml = new ReallyData[2];
+            Supressor_gls = new ReallyData[2];
+            Supressor_spc = new ReallyData[2];
+            Supressor_ao = new ReallyData[2];
+            //Supressor_cav = new ReallyData[2];
+            //1为1024x1024,0为512x512
 
             Supressor_col[0].name = "col";
             Supressor_col[0].seek = 8800768000;

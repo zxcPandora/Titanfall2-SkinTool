@@ -27,14 +27,14 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         {
             int i = 1;
 
-            ThreatScope_col = new ReallyData[3];
-            ThreatScope_nml = new ReallyData[3];
-            ThreatScope_gls = new ReallyData[3];
-            ThreatScope_spc = new ReallyData[3];
-            ThreatScope_ilm = new ReallyData[3];
-            ThreatScope_ao = new ReallyData[3];
-            ThreatScope_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            ThreatScope_col = new ReallyData[2];
+            ThreatScope_nml = new ReallyData[2];
+            ThreatScope_gls = new ReallyData[2];
+            ThreatScope_spc = new ReallyData[2];
+            ThreatScope_ilm = new ReallyData[2];
+            ThreatScope_ao = new ReallyData[2];
+            ThreatScope_cav = new ReallyData[2];
+            //1为1024x1024,0为512x512
 
             ThreatScope_col[0].name = "col";
             ThreatScope_col[0].seek = 9371389952;

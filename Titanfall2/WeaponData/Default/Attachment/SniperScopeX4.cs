@@ -27,13 +27,13 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         {
             int i = 1;
 
-            SniperScopeX4_col = new ReallyData[3];
-            SniperScopeX4_nml = new ReallyData[3];
-            SniperScopeX4_gls = new ReallyData[3];
-            SniperScopeX4_spc = new ReallyData[3];
-            SniperScopeX4_ao = new ReallyData[3];
-            SniperScopeX4_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            SniperScopeX4_col = new ReallyData[2];
+            SniperScopeX4_nml = new ReallyData[2];
+            SniperScopeX4_gls = new ReallyData[2];
+            SniperScopeX4_spc = new ReallyData[2];
+            SniperScopeX4_ao = new ReallyData[2];
+            SniperScopeX4_cav = new ReallyData[2];
+            //1为1024x1024,0为512x512
 
             SniperScopeX4_col[0].name = "col";
             SniperScopeX4_col[0].seek = 9456586752;

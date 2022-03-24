@@ -27,13 +27,13 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         {
             int i = 1;
 
-            HoloReflexSight_col = new ReallyData[3];
-            HoloReflexSight_nml = new ReallyData[3];
-            HoloReflexSight_gls = new ReallyData[3];
-            HoloReflexSight_spc = new ReallyData[3];
-            //HoloReflexSight_ao = new ReallyData[3];
-            //HoloReflexSight_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            HoloReflexSight_col = new ReallyData[2];
+            HoloReflexSight_nml = new ReallyData[2];
+            HoloReflexSight_gls = new ReallyData[2];
+            HoloReflexSight_spc = new ReallyData[2];
+            //HoloReflexSight_ao = new ReallyData[2];
+            //HoloReflexSight_cav = new ReallyData[2];
+            //1为1024x1024,0为512x512
 
             HoloReflexSight_col[0].name = "col";
             HoloReflexSight_col[0].seek = 9386659840;

@@ -27,13 +27,13 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         {
             int i = 1;
 
-            AcogSight_col = new ReallyData[3];
-            AcogSight_nml = new ReallyData[3];
-            AcogSight_gls = new ReallyData[3];
-            AcogSight_spc = new ReallyData[3];
-            AcogSight_ao = new ReallyData[3];
-            AcogSight_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            AcogSight_col = new ReallyData[2];
+            AcogSight_nml = new ReallyData[2];
+            AcogSight_gls = new ReallyData[2];
+            AcogSight_spc = new ReallyData[2];
+            AcogSight_ao = new ReallyData[2];
+            AcogSight_cav = new ReallyData[2];
+            //1为1024x1024,0为512x512
 
             AcogSight_col[0].name = "col";
             AcogSight_col[0].seek = 8780386304;

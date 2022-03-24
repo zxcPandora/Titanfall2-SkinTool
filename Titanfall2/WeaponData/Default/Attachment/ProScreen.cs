@@ -26,14 +26,14 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData.Default.Attachment
         public ProScreen()
         {
 
-            ProScreen_col = new ReallyData[3];
-            ProScreen_nml = new ReallyData[3];
-            ProScreen_gls = new ReallyData[3];
-            ProScreen_spc = new ReallyData[3];
-            ProScreen_ilm = new ReallyData[3];
-            ProScreen_ao = new ReallyData[3];
-            ProScreen_cav = new ReallyData[3];
-            //2为2048x2048,1为1024x1024,0为512x512
+            ProScreen_col = new ReallyData[1];
+            ProScreen_nml = new ReallyData[1];
+            ProScreen_gls = new ReallyData[1];
+            ProScreen_spc = new ReallyData[1];
+            ProScreen_ilm = new ReallyData[1];
+            ProScreen_ao = new ReallyData[1];
+            ProScreen_cav = new ReallyData[1];
+            //0为512x512
 
             ProScreen_col[0].name = "col";
             ProScreen_col[0].seek = 9395638272;
