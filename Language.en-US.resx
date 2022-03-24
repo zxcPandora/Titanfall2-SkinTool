@@ -505,4 +505,82 @@ Please report to the author,thx!</value>
   <data name="tip14" xml:space="preserve">
     <value>---Titan</value>
   </data>
+  <data name="tip15" xml:space="preserve">
+    <value>---Attachment</value>
+  </data>
+  <data name="Items56" xml:space="preserve">
+    <value>AcogSight</value>
+  </data>
+  <data name="Items57" xml:space="preserve">
+    <value>AogSight</value>
+  </data>
+  <data name="Items58" xml:space="preserve">
+    <value>Hcog</value>
+  </data>
+  <data name="Items59" xml:space="preserve">
+    <value>HoloReflexSight</value>
+  </data>
+  <data name="Items60" xml:space="preserve">
+    <value>ProScreen</value>
+  </data>
+  <data name="Items61" xml:space="preserve">
+    <value>SniperScope</value>
+  </data>
+  <data name="Items62" xml:space="preserve">
+    <value>SniperScopeX4</value>
+  </data>
+  <data name="Items63" xml:space="preserve">
+    <value>Supressor</value>
+  </data>
+  <data name="Items64" xml:space="preserve">
+    <value>ThreatScope</value>
+  </data>
+  <data name="Items65" xml:space="preserve">
+    <value>ThreatScopeSniper</value>
+  </data>
+  <data name="tip16" xml:space="preserve">
+    <value>---TitanSkins</value>
+  </data>
+  <data name="Items66" xml:space="preserve">
+    <value>ION</value>
+  </data>
+  <data name="Items67" xml:space="preserve">
+    <value>Legion</value>
+  </data>
+  <data name="Items68" xml:space="preserve">
+    <value>Scorch</value>
+  </data>
+  <data name="Items69" xml:space="preserve">
+    <value>Northstar</value>
+  </data>
+  <data name="Items70" xml:space="preserve">
+    <value>Ronin</value>
+  </data>
+  <data name="Items71" xml:space="preserve">
+    <value>Tone</value>
+  </data>
+  <data name="Items72" xml:space="preserve">
+    <value>Monarch</value>
+  </data>
+  <data name="tip17" xml:space="preserve">
+    <value>---PrimeTitanSkins</value>
+  </data>
+ <data name="Items73" xml:space="preserve">
+   <value>PrimeION</value>
+ </data>
+   <data name="Items74" xml:space="preserve">
+   <value>PrimeLegion</value>
+ </data>
+   <data name="Items75" xml:space="preserve">
+   <value>PrimeNorthstar</value>
+ </data>
+   <data name="Items76" xml:space="preserve">
+   <value>PrimeRonin</value>
+ </data>
+   <data name="Items77" xml:space="preserve">
+   <value>PrimeScorch</value>
+ </data>
+   <data name="Items78" xml:space="preserve">
+   <value>PrimeTone</value>
+ </data>
 </root>
