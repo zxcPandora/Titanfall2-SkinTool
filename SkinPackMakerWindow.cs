@@ -137,6 +137,11 @@ namespace Titanfall2_SkinTool
                         //program not responding
                         SaveTexture(SelectedWeapon + "_Default_col.dds", colorImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
+                    else if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                        colorImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_col.dds", colorImage, zipArchive);
+                    }
                     else
                     {
                         colorImage.SetCompression(CompressionMethod.DXT1);
@@ -154,6 +159,11 @@ namespace Titanfall2_SkinTool
                         //program not responding
                         SaveTexture(SelectedWeapon + "_Default_spc.dds", specularImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
+                    else if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                        specularImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_spc.dds", specularImage, zipArchive);
+                    }
                     else
                     {
                         specularImage.SetCompression(CompressionMethod.DXT1);
@@ -167,7 +177,14 @@ namespace Titanfall2_SkinTool
                 {
                     MagickImage normalImage = new MagickImage(ImageToByteArray(normalPictureBox.Image));
                     //normalImage.Level(new Percentage(100), new Percentage(0), Channels.RGB);
+                    if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                    SaveTexture(SelectedWeapon + "_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
+                    }
+                    else
+                    {
                     SaveTexture(SelectedWeapon + "_Default_nml.dds", normalImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc5);
+                    }
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
@@ -175,7 +192,14 @@ namespace Titanfall2_SkinTool
                 if (glossinessPictureBox.Enabled && glossinessPictureBox.Image != null)
                 {
                     MagickImage glossinessImage = new MagickImage(ImageToByteArray(glossinessPictureBox.Image));
+                     if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {  
+                        SaveTexture(SelectedWeapon + "_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    }
+                    else
+                    {
                     SaveTexture(SelectedWeapon + "_Default_gls.dds", glossinessImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
+                    }
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
@@ -183,7 +207,12 @@ namespace Titanfall2_SkinTool
                 if (aoPictureBox.Enabled && aoPictureBox.Image != null)
                 {
                     MagickImage aoImage = new MagickImage(ImageToByteArray(aoPictureBox.Image));
-                    if (SelectedGame == "Titanfall2")
+                    if(SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                        aoImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_ao.dds", aoImage, zipArchive);
+                    }
+                    else if (SelectedGame == "Titanfall2")
                     {
                         aoImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_ao.dds", aoImage, zipArchive);
@@ -203,15 +232,22 @@ namespace Titanfall2_SkinTool
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
                 {
                     MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
-                    if (SelectedGame == "Titanfall2")
+                    if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                        cavityImage.SetCompression(CompressionMethod.DXT1);
+                        SaveTexture(SelectedWeapon + "_cav.dds", cavityImage, zipArchive);
+                    }
+                    else if (SelectedGame == "Titanfall2")
                     {
                         cavityImage.SetCompression(CompressionMethod.DXT1);
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive);
                     }
+                    /*
                     else if (SelectedGame == "Titanfall2" && SelectedWeapon == "Northstar")//program not responding
                     {
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
+                    */
                     else
                     {
                         SaveTexture(SelectedWeapon + "_Default_cav.dds", cavityImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc4);
@@ -219,6 +255,7 @@ namespace Titanfall2_SkinTool
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
+                /*
                 if (cavityPictureBox.Enabled && cavityPictureBox.Image != null)
                 {
                     MagickImage cavityImage = new MagickImage(ImageToByteArray(cavityPictureBox.Image));
@@ -238,6 +275,7 @@ namespace Titanfall2_SkinTool
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
+                */
 
                  if (illuminationPictureBox.Enabled && illuminationPictureBox.Image != null)
                 {
@@ -246,6 +284,12 @@ namespace Titanfall2_SkinTool
                     {
                         SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive, BCnEncoder.Shared.CompressionFormat.Bc7);
                     }
+                    else if (SelectedWeapon == "PhaseShift_fbody" || SelectedWeapon == "PhaseShift_gear" || SelectedWeapon == "PhaseShift_helmet" || SelectedWeapon == "PhaseShift_jumpkit" || SelectedWeapon == "PhaseShift_hair" || SelectedWeapon == "PhaseShift_viewhand" || SelectedWeapon == "PhaseShift_mbody" || SelectedWeapon == "Grapple_fbody" || SelectedWeapon == "Grapple_gear" || SelectedWeapon == "Grapple_helmet" || SelectedWeapon == "Grapple_jumpkit" || SelectedWeapon == "Grapple_gauntlet" || SelectedWeapon == "Grapple_mbody" || SelectedWeapon == "PulseBlade_fbody" || SelectedWeapon == "PulseBlade_gear" || SelectedWeapon == "PulseBlade_helmet" || SelectedWeapon == "PulseBlade_jumpkit" || SelectedWeapon == "PulseBlade_gauntlet" || SelectedWeapon == "PulseBlade_mbody" || SelectedWeapon == "HoloPilot_fbody" || SelectedWeapon == "HoloPilot_gear" || SelectedWeapon == "HoloPilot_helmet" || SelectedWeapon == "HoloPilot_jumpkit" || SelectedWeapon == "HoloPilot_viewhands" || SelectedWeapon == "HoloPilot_mbody" || SelectedWeapon == "Cloak_fbody" || SelectedWeapon == "Cloak_gear" || SelectedWeapon == "Cloak_helmet" || SelectedWeapon == "Cloak_jumpkit" || SelectedWeapon == "Cloak_gauntlet" || SelectedWeapon == "Cloak_mbody" || SelectedWeapon == "Cloak_ghillie" || SelectedWeapon == "AWall_fbody" || SelectedWeapon == "AWall_gear" || SelectedWeapon == "AWall_helmet" || SelectedWeapon == "AWall_jumpkit" || SelectedWeapon == "AWall_gauntlet" || SelectedWeapon == "AWall_mbody" || SelectedWeapon == "Stim_fbody" || SelectedWeapon == "Stim_gear" || SelectedWeapon == "Stim_fgear" || SelectedWeapon == "Stim_head" || SelectedWeapon == "Stim_jumpkit" || SelectedWeapon == "Stim_fjumpkit" || SelectedWeapon == "Stim_gauntlet" || SelectedWeapon == "Stim_mbody")
+                    {
+                    illuminationImage.SetCompression(CompressionMethod.DXT1);
+                    SaveTexture(SelectedWeapon + "_ilm.dds", illuminationImage, zipArchive);
+                    }
+
                     else
 					{
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
@@ -528,7 +572,7 @@ namespace Titanfall2_SkinTool
                             EnableTexture(aoPictureBox);
                             break;
                         }
-                        
+                        //Titans
                     case "ION":
                     case "Ronin":
                         {
@@ -545,7 +589,7 @@ namespace Titanfall2_SkinTool
                             EnableTexture(glossinessPictureBox);
                             break;
                         }
-                        
+                        //Titans with all default compression
                     //case "ION":
                     case "Legion":
                     case "Scorch":
@@ -567,6 +611,78 @@ namespace Titanfall2_SkinTool
                             EnableTexture(illuminationPictureBox);
                             EnableTexture(aoPictureBox);
                             EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                        //pilot parts
+                    //PhaseShift
+                    case "PhaseShift_fbody":
+                    case "PhaseShift_mbody":
+                    case "PhaseShift_hair":
+                    case "PhaseShift_jumpkit":
+                    case "PhaseShift_gear":
+                    case "PhaseShift_helmet": 
+                    case "PhaseShift_viewhand":
+                    //Grapple
+                    case "Grapple_fbody":
+                    case "Grapple_mbody":
+                    case "Grapple_jumpkit":
+                    case "Grapple_gear":
+                    case "Grapple_helmet": 
+                    case "Grapple_gauntlet":
+                    //Pulse
+                    case "PulseBlade_fbody":
+                    case "PulseBlade_mbody":
+                    case "PulseBlade_jumpkit":
+                    case "PulseBlade_gear":
+                    case "PulseBlade_helmet": 
+                    case "PulseBlade_gauntlet":
+                    //HoloPilot
+                    case "HoloPilot_fbody":
+                    case "HoloPilot_mbody":
+                    case "HoloPilot_jumpkit":
+                    case "HoloPilot_gear":
+                    case "HoloPilot_helmet": 
+                    case "HoloPilot_viewhands":
+                    //CloakPilot
+                    case "Cloak_fbody":
+                    case "Cloak_mbody":
+                    case "Cloak_jumpkit":
+                    case "Cloak_gear":
+                    case "Cloak_helmet": 
+                    case "Cloak_gauntlet":
+                    case "Cloak_ghillie":
+					//StimPilot
+                    case "Stim_fbody":
+                    case "Stim_mbody":
+                    case "Stim_jumpkit":
+					case "Stim_fjumpkit":
+                    case "Stim_gear":
+					case "Stim_fgear":
+                    case "Stim_head": 
+                    case "Stim_gauntlet":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            EnableTexture(illuminationPictureBox);
+                            EnableTexture(aoPictureBox);
+                            EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                        //Wall+Pilot
+                        //Textures that are not showing here using BC7U aka DX10
+                    case "AWall_fbody":
+                    case "AWall_mbody":
+                    case "AWall_jumpkit":
+                    case "AWall_gear":
+                    case "AWall_helmet": 
+                    case "AWall_gauntlet":
+                    case "AWall_ghillie":
+                        {
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(illuminationPictureBox);
                             break;
                         }
                     case "CAR":
@@ -823,6 +939,65 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items76"),
                         rm.GetString("Items77"),
                         rm.GetString("Items78"),
+                        //PhaseShiftPilot Parts
+                        rm.GetString("tip18"),
+                        rm.GetString("Items79"),
+                        rm.GetString("Items80"),
+                        rm.GetString("Items81"),
+                        rm.GetString("Items82"),
+                        rm.GetString("Items83"),
+                        rm.GetString("Items84"),
+                        rm.GetString("Items85"),
+                        //GrapplePilot Parts
+                        rm.GetString("tip19"),
+                        rm.GetString("Items86"),
+                        rm.GetString("Items87"),
+                        rm.GetString("Items88"),
+                        rm.GetString("Items89"),
+                        rm.GetString("Items90"),
+                        rm.GetString("Items91"),
+                        //PulsePilot Parts
+                        rm.GetString("tip20"),
+                        rm.GetString("Items92"),
+                        rm.GetString("Items93"),
+                        rm.GetString("Items94"),
+                        rm.GetString("Items95"),
+                        rm.GetString("Items96"),
+                        rm.GetString("Items97"),
+                        //HoloPilot Parts
+                        rm.GetString("tip21"),
+                        rm.GetString("Items98"),
+                        rm.GetString("Items99"),
+                        rm.GetString("Items100"),
+                        rm.GetString("Items101"),
+                        rm.GetString("Items102"),
+                        rm.GetString("Items103"),
+                        //CloakPilot Parts
+                        rm.GetString("tip22"),
+                        rm.GetString("Items104"),
+                        rm.GetString("Items105"),
+                        rm.GetString("Items106"),
+                        rm.GetString("Items107"),
+                        rm.GetString("Items108"),
+                        rm.GetString("Items109"),
+						rm.GetString("Items110"),
+                        //Wall+Pilot Parts
+                        rm.GetString("tip23"),
+                        rm.GetString("Items111"),
+                        rm.GetString("Items112"),
+                        rm.GetString("Items113"),
+                        rm.GetString("Items114"),
+                        rm.GetString("Items115"),
+                        rm.GetString("Items116"),
+                        //StimPilot Parts
+                        rm.GetString("tip24"),
+                        rm.GetString("Items117"),
+                        rm.GetString("Items118"),
+                        rm.GetString("Items119"),
+                        rm.GetString("Items120"),
+                        rm.GetString("Items121"),
+                        rm.GetString("Items122"),
+                        rm.GetString("Items123"),
                         //泰坦
                         //Need add new panel for both titan and pilot
                         /*rm.GetString("tip14"),
@@ -1150,6 +1325,144 @@ namespace Titanfall2_SkinTool
                 case "PrimeTone":
                 case "Prime语气":
                     SelectedWeapon = "PrimeTone";
+                    break;
+                case "PhaseShift_fbody":
+                    SelectedWeapon = "PhaseShift_fbody";
+                    break;
+                case "PhaseShift_mbody":
+                    SelectedWeapon = "PhaseShift_mbody";
+                    break;
+                case "PhaseShift_hair":
+                    SelectedWeapon = "PhaseShift_hair";
+                    break;
+                case "PhaseShift_gear":
+                    SelectedWeapon = "PhaseShift_gear";
+                    break;
+                case "PhaseShift_jumpkit": 
+                    SelectedWeapon = "PhaseShift_jumpkit";
+                    break;
+                case "PhaseShift_helmet": 
+                    SelectedWeapon = "PhaseShift_helmet";
+                    break;
+                case "PhaseShift_viewhand":
+                    SelectedWeapon = "PhaseShift_viewhand";
+                    break;
+                case "Grapple_fbody":
+                    SelectedWeapon = "Grapple_fbody";
+                    break;
+                case "Grapple_mbody":
+                    SelectedWeapon = "Grapple_mbody";
+                    break;
+                case "Grapple_gauntlet":
+                    SelectedWeapon = "Grapple_gauntlet";
+                    break;
+                case "Grapple_gear":
+                    SelectedWeapon = "Grapple_gear";
+                    break;
+                case "Grapple_jumpkit": 
+                    SelectedWeapon = "Grapple_jumpkit";
+                    break;
+                case "Grapple_helmet": 
+                    SelectedWeapon = "Grapple_helmet";
+                    break;
+                case "PulseBlade_fbody":
+                    SelectedWeapon = "PulseBlade_fbody";
+                    break;
+                case "PulseBlade_mbody":
+                    SelectedWeapon = "PulseBlade_mbody";
+                    break;
+                case "PulseBlade_gauntlet":
+                    SelectedWeapon = "PulseBlade_gauntlet";
+                    break;
+                case "PulseBlade_gear":
+                    SelectedWeapon = "PulseBlade_gear";
+                    break;
+                case "PulseBlade_jumpkit": 
+                    SelectedWeapon = "PulseBlade_jumpkit";
+                    break;
+                case "PulseBlade_helmet": 
+                    SelectedWeapon = "PulseBlade_helmet";
+                    break;
+                case "HoloPilot_fbody":
+                    SelectedWeapon = "HoloPilot_fbody";
+                    break;
+                case "HoloPilot_mbody":
+                    SelectedWeapon = "HoloPilot_mbody";
+                    break;
+                case "HoloPilot_viewhands":
+                    SelectedWeapon = "HoloPilot_viewhands";
+                    break;
+                case "HoloPilot_gear":
+                    SelectedWeapon = "HoloPilot_gear";
+                    break;
+                case "HoloPilot_jumpkit": 
+                    SelectedWeapon = "HoloPilot_jumpkit";
+                    break;
+                case "HoloPilot_helmet": 
+                    SelectedWeapon = "HoloPilot_helmet";
+                    break;
+                case "Cloak_fbody":
+                    SelectedWeapon = "Cloak_fbody";
+                    break;
+                case "Cloak_mbody":
+                    SelectedWeapon = "Cloak_mbody";
+                    break;
+                case "Cloak_gauntlet":
+                    SelectedWeapon = "Cloak_gauntlet";
+                    break;
+                case "Cloak_gear":
+                    SelectedWeapon = "Cloak_gear";
+                    break;
+                case "Cloak_jumpkit": 
+                    SelectedWeapon = "Cloak_jumpkit";
+                    break;
+                case "Cloak_helmet": 
+                    SelectedWeapon = "Cloak_helmet";
+                    break;
+                case "Cloak_ghillie": 
+                    SelectedWeapon = "Cloak_ghillie";
+                    break;
+                case "AWall_fbody":
+                    SelectedWeapon = "AWall_fbody";
+                    break;
+                case "AWall_mbody":
+                    SelectedWeapon = "AWall_mbody";
+                    break;
+                case "AWall_gauntlet":
+                    SelectedWeapon = "AWall_gauntlet";
+                    break;
+                case "AWall_gear":
+                    SelectedWeapon = "AWall_gear";
+                    break;
+                case "AWall_jumpkit": 
+                    SelectedWeapon = "AWall_jumpkit";
+                    break;
+                case "AWall_helmet": 
+                    SelectedWeapon = "AWall_helmet";
+                    break;
+                case "Stim_fbody":
+                    SelectedWeapon = "Stim_fbody";
+                    break;
+                case "Stim_mbody":
+                    SelectedWeapon = "Stim_mbody";
+                    break;
+                case "Stim_gauntlet":
+                    SelectedWeapon = "Stim_gauntlet";
+                    break;
+                case "Stim_gear":
+                    SelectedWeapon = "Stim_gear";
+                    break;
+                case "Stim_fgear":
+                    SelectedWeapon = "Stim_fgear";
+                    break;
+                case "Stim_jumpkit": 
+                    SelectedWeapon = "Stim_jumpkit";
+                    break;
+                case "Stim_fjumpkit": 
+                    SelectedWeapon = "Stim_fjumpkit";
+                    break;
+                case "Stim_head": 
+                    SelectedWeapon = "Stim_head";
                     break;
                 default:
                     SelectedWeapon = "NULL";
