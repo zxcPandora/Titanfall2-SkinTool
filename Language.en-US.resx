@@ -721,25 +721,25 @@ Please report to the author,thx!</value>
    <data name="Items117" xml:space="preserve">
    <value>Stim_fbody</value>
  </data>
-   <data name="Items112" xml:space="preserve">
+   <data name="Items118" xml:space="preserve">
    <value>Stim_mbody</value>
  </data>
-   <data name="Items118" xml:space="preserve">
+   <data name="Items119" xml:space="preserve">
    <value>Stim_jumpkit</value>
  </data>
-   <data name="Items119" xml:space="preserve">
+   <data name="Items120" xml:space="preserve">
    <value>Stim_fjumpkit</value>
  </data>
-   <data name="Items120" xml:space="preserve">
+   <data name="Items121" xml:space="preserve">
    <value>Stim_gear</value>
  </data>
-   <data name="Items121" xml:space="preserve">
+   <data name="Items122" xml:space="preserve">
    <value>Stim_fgear</value>
  </data>
-   <data name="Items122" xml:space="preserve">
+   <data name="Items123" xml:space="preserve">
    <value>Stim_head</value>
  </data>
-   <data name="Items123" xml:space="preserve">
+   <data name="Items124" xml:space="preserve">
    <value>Stim_gauntlet</value>
  </data>
 </root>
