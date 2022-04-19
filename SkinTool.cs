@@ -140,6 +140,15 @@ namespace Titanfall2_SkinTool
                                 tolength = Convert.ToInt32(wdc.FilePath[0, 2]);
                                 totype = Convert.ToInt32(wdc.FilePath[0, 3]);
                             }
+                            /*
+                            else if (selectedGame == "Titanfall2")
+                            {
+                            Titanfall2.TitanSkinData.TitanSkinDataControl tsdc = new Titanfall2.TitanSkinData.TitanSkinDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(tsdc.FilePath[0, 1]);
+                            tolength = Convert.ToInt32(tsdc.FilePath[0, 2]);
+                            totype = Convert.ToInt32(tsdc.FilePath[0, 3]);
+                            }
+                            */
                             break;
                         case 2://Pilot
                             //this didn't need recode
@@ -154,6 +163,14 @@ namespace Titanfall2_SkinTool
                             tolength = Convert.ToInt32(tdc.Length);
                             totype = Convert.ToInt32(tdc.SeekLength);
                             break;
+                            /*
+                        case 4://TitanSkin
+                            Titanfall2.TitanSkinData.TitanSkinDataControl tsdc = new Titanfall2.TitanSkinData.TitanSkinDataControl(i, imagecheck);
+                            toseek = Convert.ToInt64(tsdc.FilePath[0, 1]);
+                            tolength = Convert.ToInt32(tsdc.FilePath[0, 2]);
+                            totype = Convert.ToInt32(tsdc.FilePath[0, 3]);
+                            break;
+                            */
                         default:
                             throw new MyException(rm.GetString("FindSkinFailed"));
                             break;
