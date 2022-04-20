@@ -9,6 +9,7 @@ Language : ENGLISH | [简体中文](./README.zh-CN.md)
 - [Support Change](#support-change)
 - [Command line](#command-line)
 - [Backup File](#backup-file)
+- [Issue](#issue)
 - [ToDo](#todo)
 - [Contribute](#contribute)
 
@@ -71,9 +72,17 @@ APEX S3:
 - pc_all(02).opt.starpak
 
 
+## Issue
+Hard Coding
+Data Storage
+Compression for BC7U overloading CPU
+
+
 ## ToDo
 
 Format specification
+<br>
+Custom import
 <br>
 Other function 
 
