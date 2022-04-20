@@ -95,7 +95,8 @@ namespace Titanfall2_SkinTool
                 "WeaponData:MrSteyk's Tool\r\n" +
                 "Main author:zxcPandora#1581(Discord)\r\n" +
                 "SkinPack:sal#3261(Discord)\r\n" +
-                "CommandLine:KanjiuAkuma(Github)", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
+                "CommandLine:KanjiuAkuma(Github)\r\n" +
+                "Attachments/Titans&Prime Titans Skin:Strykus(Github)", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
         }
 
         private void Test_Click(object sender, EventArgs e)
