@@ -98,7 +98,8 @@ namespace Titanfall2_SkinTool
                 "WeaponData:MrSteyk's Tool\r\n" +
                 "Main author:zxcPandora#1581(Discord)\r\n" +
                 "SkinPack:sal#3261(Discord)\r\n" +
-                "CommandLine:KanjiuAkuma(Github)", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
+                "CommandLine:KanjiuAkuma(Github)\r\n"+
+                "Attachments/Titans&Prime Titans Skin:Strykus(Github)", rm.GetString("AboutAuthor"), MessageBoxButtons.OK);
         }
 
         private void Test_Click(object sender, EventArgs e)
@@ -236,7 +237,7 @@ namespace Titanfall2_SkinTool
         private void VersionCheck()
         {
             HttpClient httpClient = new HttpClient();
-            String Uri = "https://api.github.com/repos/Strykus/Titanfall2-SkinTool/releases/latest";
+            String Uri = "https://api.github.com/repos/zxcPandora/Titanfall2-SkinTool/releases/latest";
             String Header = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36";
             httpClient.DefaultRequestHeaders.Add("user-agent", Header);
             string resultStr = null;
@@ -297,7 +298,7 @@ namespace Titanfall2_SkinTool
             ProgressForm progressForm = null;
             try
             {
-                string URL = "https://github.com/Strykus/Titanfall2-SkinTool/releases/download/" + version + "/" + filename;
+                string URL = "https://github.com/zxcPandora/Titanfall2-SkinTool/releases/download/" + version + "/" + filename;
                 System.Net.HttpWebRequest Myrq = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(URL);
                 System.Net.HttpWebResponse myrp = (System.Net.HttpWebResponse)Myrq.GetResponse();
                 int totalBytes = (int)myrp.ContentLength;

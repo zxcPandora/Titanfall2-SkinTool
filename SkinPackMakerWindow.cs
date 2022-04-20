@@ -1235,23 +1235,23 @@ namespace Titanfall2_SkinTool
                     SelectedWeapon = "Console";
                     break;
                 case "AcogSight":
-                case "阿科视线":
+                case "ACOG视镜":
                     SelectedWeapon = "AcogSight";
                     break;
                 case "AogSight":
-                case "奥格视线":
+                case "进阶视镜":
                     SelectedWeapon = "AogSight";
                     break;
                 case "Hcog":
-                case "全息瞄准镜":
+                case "全像进阶战斗视镜":
                     SelectedWeapon = "Hcog";
                     break;
                 case "HoloReflexSight":
-                case "全息反射瞄准器":
+                case "全像视镜":
                     SelectedWeapon = "HoloReflexSight";
                     break;
                 case "ProScreen":
-                case "专业屏幕":
+                case "击杀计数器":
                     SelectedWeapon = "ProScreen";
                     break;
                 case "SniperScope":
@@ -1259,19 +1259,19 @@ namespace Titanfall2_SkinTool
                     SelectedWeapon = "SniperScope";
                     break;
                 case "SniperScopeX4":
-                case "狙击镜X4":
+                case "4倍狙击镜":
                     SelectedWeapon = "SniperScopeX4";
                     break;
                 case "Supressor":
-                case "抑制器":
+                case "消音器":
                     SelectedWeapon = "Supressor";
                     break;
                 case "ThreatScope":
-                case "威胁范围":
+                case "主武器威胁视镜":
                     SelectedWeapon = "ThreatScope";
                     break;
                 case "ThreatScopeSniper":
-                case "威胁范围狙击手":
+                case "狙击步枪威胁视镜":
                     SelectedWeapon = "ThreatScopeSniper";
                     break;  
                 case "ION":
@@ -1283,7 +1283,7 @@ namespace Titanfall2_SkinTool
                     SelectedWeapon = "Legion";
                     break;  
                 case "Scorch":
-                case "烧焦":
+                case "烈焰":
                     SelectedWeapon = "Scorch";
                     break;  
                 case "Northstar":
@@ -1295,173 +1295,219 @@ namespace Titanfall2_SkinTool
                     SelectedWeapon = "Ronin";
                     break; 
                 case "Tone":
-                case "语气":
+                case "强力":
                     SelectedWeapon = "Tone";
                     break; 
                 case "Monarch":
-                case "君主":
+                case "帝王":
                     SelectedWeapon = "Monarch";
                     break;
                 case "PrimeLegion":
-                case "Prime军团":
+                case "至尊军团":
                     SelectedWeapon = "PrimeLegion";
                     break;
                 case "PrimeNorthstar":
-                case "Prime北极星":
+                case "至尊北极星":
                     SelectedWeapon = "PrimeNorthstar";
                     break;
                 case "PrimeION":
-                case "Prime离子":
+                case "至尊离子":
                     SelectedWeapon = "PrimeION";
                     break;
                 case "PrimeRonin":
-                case "Prime浪人":
+                case "至尊浪人":
                     SelectedWeapon = "PrimeRonin";
                     break;
                 case "PrimeScorch":
-                case "Prime烧焦":
+                case "至尊烈焰":
                     SelectedWeapon = "PrimeScorch";
                     break;
                 case "PrimeTone":
-                case "Prime语气":
+                case "至尊强力":
                     SelectedWeapon = "PrimeTone";
                     break;
                 case "PhaseShift_fbody":
+                case "相位铁驭_女性身体":
                     SelectedWeapon = "PhaseShift_fbody";
                     break;
                 case "PhaseShift_mbody":
+                case "相位铁驭_男性身体":
                     SelectedWeapon = "PhaseShift_mbody";
                     break;
                 case "PhaseShift_hair":
+                case "相位铁驭_头发":
                     SelectedWeapon = "PhaseShift_hair";
                     break;
                 case "PhaseShift_gear":
+                case "相位铁驭_配件":
                     SelectedWeapon = "PhaseShift_gear";
                     break;
-                case "PhaseShift_jumpkit": 
+                case "PhaseShift_jumpkit":
+                case "相位铁驭_跳跃装置":
                     SelectedWeapon = "PhaseShift_jumpkit";
                     break;
-                case "PhaseShift_helmet": 
+                case "PhaseShift_helmet":
+                case "相位铁驭_头盔":
                     SelectedWeapon = "PhaseShift_helmet";
                     break;
                 case "PhaseShift_viewhand":
+                case "相位铁驭_手部":
                     SelectedWeapon = "PhaseShift_viewhand";
                     break;
                 case "Grapple_fbody":
+                case "钩爪铁驭_女性身体":
                     SelectedWeapon = "Grapple_fbody";
                     break;
                 case "Grapple_mbody":
+                case "钩爪铁驭_男性身体":
                     SelectedWeapon = "Grapple_mbody";
                     break;
                 case "Grapple_gauntlet":
+                case "钩爪铁驭_手套":
                     SelectedWeapon = "Grapple_gauntlet";
                     break;
                 case "Grapple_gear":
+                case "钩爪铁驭_配件":
                     SelectedWeapon = "Grapple_gear";
                     break;
-                case "Grapple_jumpkit": 
+                case "Grapple_jumpkit":
+                case "钩爪铁驭_跳跃装置":
                     SelectedWeapon = "Grapple_jumpkit";
                     break;
-                case "Grapple_helmet": 
+                case "Grapple_helmet":
+                case "钩爪铁驭_头盔":
                     SelectedWeapon = "Grapple_helmet";
                     break;
                 case "PulseBlade_fbody":
+                case "脉冲刀铁驭_女性身体":
                     SelectedWeapon = "PulseBlade_fbody";
                     break;
                 case "PulseBlade_mbody":
+                case "脉冲刀铁驭_男性身体":
                     SelectedWeapon = "PulseBlade_mbody";
                     break;
                 case "PulseBlade_gauntlet":
+                case "脉冲刀铁驭_手套":
                     SelectedWeapon = "PulseBlade_gauntlet";
                     break;
                 case "PulseBlade_gear":
+                case "脉冲刀铁驭_配件":
                     SelectedWeapon = "PulseBlade_gear";
                     break;
-                case "PulseBlade_jumpkit": 
+                case "PulseBlade_jumpkit":
+                case "脉冲刀铁驭_跳跃装置":
                     SelectedWeapon = "PulseBlade_jumpkit";
                     break;
-                case "PulseBlade_helmet": 
+                case "PulseBlade_helmet":
+                case "脉冲刀铁驭_头盔":
                     SelectedWeapon = "PulseBlade_helmet";
                     break;
                 case "HoloPilot_fbody":
+                case "幻影铁驭_女性身体":
                     SelectedWeapon = "HoloPilot_fbody";
                     break;
                 case "HoloPilot_mbody":
+                case "幻影铁驭_男性身体":
                     SelectedWeapon = "HoloPilot_mbody";
                     break;
                 case "HoloPilot_viewhands":
+                case "幻影铁驭_手部":
                     SelectedWeapon = "HoloPilot_viewhands";
                     break;
                 case "HoloPilot_gear":
+                case "幻影铁驭_配件":
                     SelectedWeapon = "HoloPilot_gear";
                     break;
-                case "HoloPilot_jumpkit": 
+                case "HoloPilot_jumpkit":
+                case "幻影铁驭_跳跃装置":
                     SelectedWeapon = "HoloPilot_jumpkit";
                     break;
-                case "HoloPilot_helmet": 
+                case "HoloPilot_helmet":
+                case "幻影铁驭_头盔":
                     SelectedWeapon = "HoloPilot_helmet";
                     break;
                 case "Cloak_fbody":
+                case "隐身铁驭_女性身体":
                     SelectedWeapon = "Cloak_fbody";
                     break;
                 case "Cloak_mbody":
+                case "隐身铁驭_男性身体":
                     SelectedWeapon = "Cloak_mbody";
                     break;
                 case "Cloak_gauntlet":
+                case "隐身铁驭_手套":
                     SelectedWeapon = "Cloak_gauntlet";
                     break;
                 case "Cloak_gear":
+                case "隐身铁驭_配件":
                     SelectedWeapon = "Cloak_gear";
                     break;
-                case "Cloak_jumpkit": 
+                case "Cloak_jumpkit":
+                case "隐身铁驭_跳跃装置":
                     SelectedWeapon = "Cloak_jumpkit";
                     break;
-                case "Cloak_helmet": 
+                case "Cloak_helmet":
+                case "隐身铁驭_头盔":
                     SelectedWeapon = "Cloak_helmet";
                     break;
-                case "Cloak_ghillie": 
+                case "Cloak_ghillie":
+                case "隐身铁驭_吉利服":
                     SelectedWeapon = "Cloak_ghillie";
                     break;
                 case "AWall_fbody":
+                case "A盾铁驭_女性身体":
                     SelectedWeapon = "AWall_fbody";
                     break;
                 case "AWall_mbody":
+                case "A盾铁驭_男性身体":
                     SelectedWeapon = "AWall_mbody";
                     break;
                 case "AWall_gauntlet":
+                case "A盾铁驭_手套":
                     SelectedWeapon = "AWall_gauntlet";
                     break;
                 case "AWall_gear":
+                case "A盾铁驭_配件":
                     SelectedWeapon = "AWall_gear";
                     break;
-                case "AWall_jumpkit": 
+                case "AWall_jumpkit":
+                case "A盾铁驭_跳跃装置":
                     SelectedWeapon = "AWall_jumpkit";
                     break;
-                case "AWall_helmet": 
+                case "AWall_helmet":
+                case "A盾铁驭_头盔":
                     SelectedWeapon = "AWall_helmet";
                     break;
                 case "Stim_fbody":
+                case "兴奋剂铁驭_女性身体":
                     SelectedWeapon = "Stim_fbody";
                     break;
                 case "Stim_mbody":
+                case "兴奋剂铁驭_男性身体":
                     SelectedWeapon = "Stim_mbody";
                     break;
                 case "Stim_gauntlet":
+                case "兴奋剂铁驭_手套":
                     SelectedWeapon = "Stim_gauntlet";
                     break;
                 case "Stim_gear":
+                case "兴奋剂铁驭_男性配件":
                     SelectedWeapon = "Stim_gear";
                     break;
                 case "Stim_fgear":
+                case "兴奋剂铁驭_女性配件":
                     SelectedWeapon = "Stim_fgear";
                     break;
-                case "Stim_jumpkit": 
+                case "Stim_jumpkit":
+                case "兴奋剂铁驭_男性跳跃装置":
                     SelectedWeapon = "Stim_jumpkit";
                     break;
-                case "Stim_fjumpkit": 
+                case "Stim_fjumpkit":
+                case "兴奋剂铁驭_女性跳跃装置":
                     SelectedWeapon = "Stim_fjumpkit";
                     break;
-                case "Stim_head": 
+                case "Stim_head":
+                case "兴奋剂铁驭_头部":
                     SelectedWeapon = "Stim_head";
                     break;
                 default:

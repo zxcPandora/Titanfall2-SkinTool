@@ -508,35 +508,35 @@
   <data name="tip15" xml:space="preserve">
     <value>---武器附件</value>
   </data>
-    <data name="Items56" xml:space="preserve">
-    <value>阿科视线</value>
+  <data name="Items56" xml:space="preserve">
+    <value>ACOG视镜</value>
   </data>
   <data name="Items57" xml:space="preserve">
-    <value>奥格视线</value>
+    <value>进阶视镜</value>
   </data>
   <data name="Items58" xml:space="preserve">
-    <value>全息瞄准镜</value>
+    <value>全像进阶战斗视镜</value>
   </data>
   <data name="Items59" xml:space="preserve">
-    <value>全息反射瞄准器</value>
+    <value>全像视镜</value>
   </data>
   <data name="Items60" xml:space="preserve">
-    <value>专业屏幕</value>
+    <value>击杀计数器</value>
   </data>
   <data name="Items61" xml:space="preserve">
     <value>狙击镜</value>
   </data>
   <data name="Items62" xml:space="preserve">
-    <value>狙击镜X4</value>
+    <value>4倍狙击镜</value>
   </data>
   <data name="Items63" xml:space="preserve">
-    <value>抑制器</value>
+    <value>消音器</value>
   </data>
   <data name="Items64" xml:space="preserve">
-    <value>威胁范围</value>
+    <value>主武器威胁视镜</value>
   </data>
   <data name="Items65" xml:space="preserve">
-    <value>威胁范围狙击手</value>
+    <value>狙击步枪威胁视镜</value>
   </data>
   <data name="tip16" xml:space="preserve">
     <value>---泰坦皮肤</value>
@@ -548,7 +548,7 @@
     <value>军团</value>
   </data>
   <data name="Items68" xml:space="preserve">
-    <value>烧焦</value>
+    <value>烈焰</value>
   </data>
   <data name="Items69" xml:space="preserve">
     <value>北极星</value>
@@ -557,189 +557,189 @@
     <value>浪人</value>
   </data>
   <data name="Items71" xml:space="preserve">
-    <value>语气</value>
+    <value>强力</value>
   </data>
   <data name="Items72" xml:space="preserve">
-    <value>君主</value>
+    <value>帝王</value>
   </data>
   <data name="tip17" xml:space="preserve">
-    <value>---Prime泰坦皮肤</value>
+    <value>---至尊泰坦皮肤</value>
   </data>
- <data name="Items73" xml:space="preserve">
-   <value>Prime离子</value>
- </data>
-   <data name="Items74" xml:space="preserve">
-   <value>Prime军团</value>
- </data>
-   <data name="Items75" xml:space="preserve">
-   <value>Prime北极星</value>
- </data>
-   <data name="Items76" xml:space="preserve">
-   <value>Prime浪人</value>
- </data>
-   <data name="Items77" xml:space="preserve">
-   <value>Prime烧焦</value>
- </data>
-   <data name="Items78" xml:space="preserve">
-   <value>Prime语气</value>
- </data>
-   <data name="tip18" xml:space="preserve">
-    <value>---PhaseShiftPilotParts</value>
+  <data name="Items73" xml:space="preserve">
+    <value>至尊离子</value>
   </data>
-   <data name="Items79" xml:space="preserve">
-   <value>PhaseShift_fbody</value>
- </data>
-   <data name="Items80" xml:space="preserve">
-   <value>PhaseShift_mbody</value>
- </data>
-   <data name="Items81" xml:space="preserve">
-   <value>PhaseShift_hair</value>
- </data>
-   <data name="Items82" xml:space="preserve">
-   <value>PhaseShift_jumpkit</value>
- </data>
-   <data name="Items83" xml:space="preserve">
-   <value>PhaseShift_gear</value>
- </data>
-   <data name="Items84" xml:space="preserve">
-   <value>PhaseShift_helmet</value>
- </data>
-   <data name="Items85" xml:space="preserve">
-   <value>PhaseShift_viewhand</value>
- </data>
-   <data name="tip19" xml:space="preserve">
-    <value>---GrapplePilotParts</value>
+  <data name="Items74" xml:space="preserve">
+    <value>至尊军团</value>
   </data>
-   <data name="Items86" xml:space="preserve">
-   <value>Grapple_fbody</value>
- </data>
-   <data name="Items87" xml:space="preserve">
-   <value>Grapple_mbody</value>
- </data>
-   <data name="Items88" xml:space="preserve">
-   <value>Grapple_jumpkit</value>
- </data>
-   <data name="Items89" xml:space="preserve">
-   <value>Grapple_gear</value>
- </data>
-   <data name="Items90" xml:space="preserve">
-   <value>Grapple_helmet</value>
- </data>
-   <data name="Items91" xml:space="preserve">
-   <value>Grapple_gauntlet</value>
- </data>
-   <data name="tip20" xml:space="preserve">
-    <value>---PulseBladeParts</value>
+  <data name="Items75" xml:space="preserve">
+    <value>至尊北极星</value>
   </data>
-   <data name="Items92" xml:space="preserve">
-   <value>PulseBlade_fbody</value>
- </data>
-   <data name="Items93" xml:space="preserve">
-   <value>PulseBlade_mbody</value>
- </data>
-   <data name="Items94" xml:space="preserve">
-   <value>PulseBlade_jumpkit</value>
- </data>
-   <data name="Items95" xml:space="preserve">
-   <value>PulseBlade_gear</value>
- </data>
-   <data name="Items96" xml:space="preserve">
-   <value>PulseBlade_helmet</value>
- </data>
-   <data name="Items97" xml:space="preserve">
-   <value>PulseBlade_gauntlet</value>
- </data>
-   <data name="tip21" xml:space="preserve">
-    <value>---HoloPilotParts</value>
+  <data name="Items76" xml:space="preserve">
+    <value>至尊浪人</value>
   </data>
-   <data name="Items98" xml:space="preserve">
-   <value>HoloPilot_fbody</value>
- </data>
-   <data name="Items99" xml:space="preserve">
-   <value>HoloPilot_mbody</value>
- </data>
-   <data name="Items100" xml:space="preserve">
-   <value>HoloPilot_jumpkit</value>
- </data>
-   <data name="Items101" xml:space="preserve">
-   <value>HoloPilot_gear</value>
- </data>
-   <data name="Items102" xml:space="preserve">
-   <value>HoloPilot_helmet</value>
- </data>
-   <data name="Items103" xml:space="preserve">
-   <value>HoloPilot_viewhands</value>
- </data>
-   <data name="tip22" xml:space="preserve">
-    <value>---CloakParts</value>
+  <data name="Items77" xml:space="preserve">
+    <value>至尊烈焰</value>
   </data>
-   <data name="Items104" xml:space="preserve">
-   <value>Cloak_fbody</value>
- </data>
-   <data name="Items105" xml:space="preserve">
-   <value>Cloak_mbody</value>
- </data>
-   <data name="Items106" xml:space="preserve">
-   <value>Cloak_jumpkit</value>
- </data>
-   <data name="Items107" xml:space="preserve">
-   <value>Cloak_gear</value>
- </data>
-   <data name="Items108" xml:space="preserve">
-   <value>Cloak_helmet</value>
- </data>
-   <data name="Items109" xml:space="preserve">
-   <value>Cloak_gauntlet</value>
- </data>
-    <data name="Items110" xml:space="preserve">
-   <value>Cloak_ghillie</value>
- </data>
-   <data name="tip23" xml:space="preserve">
-    <value>---AWallParts</value>
+  <data name="Items78" xml:space="preserve">
+    <value>至尊强力</value>
   </data>
-   <data name="Items111" xml:space="preserve">
-   <value>AWall_fbody</value>
- </data>
-   <data name="Items112" xml:space="preserve">
-   <value>AWall_mbody</value>
- </data>
-   <data name="Items113" xml:space="preserve">
-   <value>AWall_jumpkit</value>
- </data>
-   <data name="Items114" xml:space="preserve">
-   <value>AWall_gear</value>
- </data>
-   <data name="Items115" xml:space="preserve">
-   <value>AWall_helmet</value>
- </data>
-   <data name="Items116" xml:space="preserve">
-   <value>AWall_gauntlet</value>
- </data>
-   <data name="tip24" xml:space="preserve">
-    <value>---StimParts</value>
+  <data name="tip18" xml:space="preserve">
+    <value>---相位铁驭</value>
   </data>
-   <data name="Items117" xml:space="preserve">
-   <value>Stim_fbody</value>
- </data>
-   <data name="Items118" xml:space="preserve">
-   <value>Stim_mbody</value>
- </data>
-   <data name="Items119" xml:space="preserve">
-   <value>Stim_jumpkit</value>
- </data>
-   <data name="Items120" xml:space="preserve">
-   <value>Stim_fjumpkit</value>
- </data>
-   <data name="Items121" xml:space="preserve">
-   <value>Stim_gear</value>
- </data>
-   <data name="Items122" xml:space="preserve">
-   <value>Stim_fgear</value>
- </data>
-   <data name="Items123" xml:space="preserve">
-   <value>Stim_head</value>
- </data>
-   <data name="Items124" xml:space="preserve">
-   <value>Stim_gauntlet</value>
- </data>
+  <data name="Items79" xml:space="preserve">
+    <value>相位铁驭_女性身体</value>
+  </data>
+  <data name="Items80" xml:space="preserve">
+    <value>相位铁驭_男性身体</value>
+  </data>
+  <data name="Items81" xml:space="preserve">
+    <value>相位铁驭_头发</value>
+  </data>
+  <data name="Items82" xml:space="preserve">
+    <value>相位铁驭_跳跃装置</value>
+  </data>
+  <data name="Items83" xml:space="preserve">
+    <value>相位铁驭_配件</value>
+  </data>
+  <data name="Items84" xml:space="preserve">
+    <value>相位铁驭_头盔</value>
+  </data>
+  <data name="Items85" xml:space="preserve">
+    <value>相位铁驭_手部</value>
+  </data>
+  <data name="tip19" xml:space="preserve">
+    <value>---钩爪铁驭</value>
+  </data>
+  <data name="Items86" xml:space="preserve">
+    <value>钩爪铁驭_女性身体</value>
+  </data>
+  <data name="Items87" xml:space="preserve">
+    <value>钩爪铁驭_男性身体</value>
+  </data>
+  <data name="Items88" xml:space="preserve">
+    <value>钩爪铁驭_跳跃装置</value>
+  </data>
+  <data name="Items89" xml:space="preserve">
+    <value>钩爪铁驭_配件</value>
+  </data>
+  <data name="Items90" xml:space="preserve">
+    <value>钩爪铁驭_头盔</value>
+  </data>
+  <data name="Items91" xml:space="preserve">
+    <value>钩爪铁驭_手套</value>
+  </data>
+  <data name="tip20" xml:space="preserve">
+    <value>---脉冲刀铁驭</value>
+  </data>
+  <data name="Items92" xml:space="preserve">
+    <value>脉冲刀铁驭_女性身体</value>
+  </data>
+  <data name="Items93" xml:space="preserve">
+    <value>脉冲刀铁驭_男性身体</value>
+  </data>
+  <data name="Items94" xml:space="preserve">
+    <value>脉冲刀铁驭_跳跃装置</value>
+  </data>
+  <data name="Items95" xml:space="preserve">
+    <value>脉冲刀铁驭_配件</value>
+  </data>
+  <data name="Items96" xml:space="preserve">
+    <value>脉冲刀铁驭_头盔</value>
+  </data>
+  <data name="Items97" xml:space="preserve">
+    <value>脉冲刀铁驭_手套</value>
+  </data>
+  <data name="tip21" xml:space="preserve">
+    <value>---幻影铁驭</value>
+  </data>
+  <data name="Items98" xml:space="preserve">
+    <value>幻影铁驭_女性身体</value>
+  </data>
+  <data name="Items99" xml:space="preserve">
+    <value>幻影铁驭_男性身体</value>
+  </data>
+  <data name="Items100" xml:space="preserve">
+    <value>幻影铁驭_跳跃装置</value>
+  </data>
+  <data name="Items101" xml:space="preserve">
+    <value>幻影铁驭_配件</value>
+  </data>
+  <data name="Items102" xml:space="preserve">
+    <value>幻影铁驭_头盔</value>
+  </data>
+  <data name="Items103" xml:space="preserve">
+    <value>幻影铁驭_手部</value>
+  </data>
+  <data name="tip22" xml:space="preserve">
+    <value>---隐身铁驭</value>
+  </data>
+  <data name="Items104" xml:space="preserve">
+    <value>隐身铁驭_女性身体</value>
+  </data>
+  <data name="Items105" xml:space="preserve">
+    <value>隐身铁驭_男性身体</value>
+  </data>
+  <data name="Items106" xml:space="preserve">
+    <value>隐身铁驭_跳跃装置</value>
+  </data>
+  <data name="Items107" xml:space="preserve">
+    <value>隐身铁驭_配件</value>
+  </data>
+  <data name="Items108" xml:space="preserve">
+    <value>隐身铁驭_头盔</value>
+  </data>
+  <data name="Items109" xml:space="preserve">
+    <value>隐身铁驭_手套</value>
+  </data>
+  <data name="Items110" xml:space="preserve">
+    <value>隐身铁驭_吉利服</value>
+  </data>
+  <data name="tip23" xml:space="preserve">
+    <value>---A盾铁驭</value>
+  </data>
+  <data name="Items111" xml:space="preserve">
+    <value>A盾铁驭_女性身体</value>
+  </data>
+  <data name="Items112" xml:space="preserve">
+    <value>A盾铁驭_男性身体</value>
+  </data>
+  <data name="Items113" xml:space="preserve">
+    <value>A盾铁驭_跳跃装置</value>
+  </data>
+  <data name="Items114" xml:space="preserve">
+    <value>A盾铁驭_配件</value>
+  </data>
+  <data name="Items115" xml:space="preserve">
+    <value>A盾铁驭_头盔</value>
+  </data>
+  <data name="Items116" xml:space="preserve">
+    <value>A盾铁驭_手套</value>
+  </data>
+  <data name="tip24" xml:space="preserve">
+    <value>---兴奋剂铁驭</value>
+  </data>
+  <data name="Items117" xml:space="preserve">
+    <value>兴奋剂铁驭_女性身体</value>
+  </data>
+  <data name="Items118" xml:space="preserve">
+    <value>兴奋剂铁驭_男性身体</value>
+  </data>
+  <data name="Items119" xml:space="preserve">
+    <value>兴奋剂铁驭_男性跳跃装置</value>
+  </data>
+  <data name="Items120" xml:space="preserve">
+    <value>兴奋剂铁驭_女性跳跃装置</value>
+  </data>
+  <data name="Items121" xml:space="preserve">
+    <value>兴奋剂铁驭_男性配件</value>
+  </data>
+  <data name="Items122" xml:space="preserve">
+    <value>兴奋剂铁驭_女性配件</value>
+  </data>
+  <data name="Items123" xml:space="preserve">
+    <value>兴奋剂铁驭_头部</value>
+  </data>
+  <data name="Items124" xml:space="preserve">
+    <value>兴奋剂铁驭_手套</value>
+  </data>
 </root>
