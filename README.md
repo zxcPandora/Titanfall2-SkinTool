@@ -73,9 +73,9 @@ APEX S3:
 
 
 ## Issue
-Hard Coding
-Data Storage
-Compression for BC7U overloading CPU
+Hard Coding<br>
+Data Storage<br>
+Compression for BC7U overloading CPU<br>
 
 
 ## ToDo
