@@ -9,6 +9,7 @@ Language : ENGLISH | [简体中文](./README.zh-CN.md)
 - [Support Change](#support-change)
 - [Command line](#command-line)
 - [Backup File](#backup-file)
+- [Issue](#issue)
 - [ToDo](#todo)
 - [Contribute](#contribute)
 
@@ -71,9 +72,17 @@ APEX S3:
 - pc_all(02).opt.starpak
 
 
+## Issue
+Hard Coding
+Data Storage
+Compression for BC7U overloading CPU
+
+
 ## ToDo
 
 Format specification
+<br>
+Custom import
 <br>
 Other function 
 
@@ -87,4 +96,5 @@ This project exists thanks to all the people who contribute.
   <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18683538?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/37307454?v=4" width="128" height="128">
 </a>

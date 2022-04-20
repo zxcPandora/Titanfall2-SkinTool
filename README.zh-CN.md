@@ -9,6 +9,7 @@
 - [支持的操作](#支持的操作)
 - [控制台版本](#控制台版本)
 - [备份文件](#备份文件)
+- [问题](#问题)
 - [工作计划](#工作计划)
 - [贡献](#贡献)
 
@@ -73,11 +74,19 @@ APEX S3:
 - pc_all(02).opt.starpak
 
 
+## 问题
+硬编码
+数据存储
+压缩BC7U格式图片时可能会使CPU超载
+
+
 ## 工作计划
 
-格式规范
+代码规范
 <br>
-其他功能实现
+自定义导入
+<br>
+更多功能 
 
 ## 贡献
 欢迎提出建议! [新建一个问题描述](https://github.com/zxcPandora/Titanfall2-SkinTool/issues/new) 或提交推拉请求。
@@ -89,4 +98,5 @@ APEX S3:
   <img src="https://avatars.githubusercontent.com/u/81985226?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18037145?v=4" width="128" height="128">
   <img src="https://avatars.githubusercontent.com/u/18683538?v=4" width="128" height="128">
+  <img src="https://avatars.githubusercontent.com/u/37307454?v=4" width="128" height="128">
 </a>
