@@ -58,11 +58,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void colData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1218121728;
             ReallyDatas[0].length = 65536;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
@@ -77,11 +77,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void nmlData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1223692288;
             ReallyDatas[0].length = 131072;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
@@ -96,11 +96,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void glsData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1234833408;
             ReallyDatas[0].length = 65536;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
@@ -115,11 +115,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void spcData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1240403968;
             ReallyDatas[0].length = 65536;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
@@ -153,11 +153,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void aoData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1245974528;
             ReallyDatas[0].length = 65536;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
@@ -172,11 +172,11 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData.Normal_Pilot.PhaseShift.Part
         private void cavData(int ImageResolution)
         {
             int i = 1;
-            ReallyData[] ReallyDatas = new ReallyData[3];
+            ReallyData[] ReallyDatas = new ReallyData[4];
             ReallyDatas[0].seek = 1251545088;
             ReallyDatas[0].length = 65536;
             ReallyDatas[0].seeklength = 128;
-            while (i <= 2)
+            while (i <= 3)
             {
                 ReallyDatas[i].seek = ReallyDatas[i - 1].seek + ReallyDatas[i - 1].length;
                 ReallyDatas[i].length = ReallyDatas[i - 1].length * 4;
