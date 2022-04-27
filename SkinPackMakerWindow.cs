@@ -998,6 +998,7 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items121"),
                         rm.GetString("Items122"),
                         rm.GetString("Items123"),
+                        rm.GetString("Items124"),
                         //泰坦
                         //Need add new panel for both titan and pilot
                         /*rm.GetString("tip14"),
