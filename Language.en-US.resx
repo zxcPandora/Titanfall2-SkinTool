@@ -742,4 +742,16 @@ Please report to the author,thx!</value>
    <data name="Items124" xml:space="preserve">
    <value>Stim_gauntlet</value>
  </data>
+   <data name="tip25" xml:space="preserve">
+    <value>---JackCooperParts</value>
+  </data>
+   <data name="Items125" xml:space="preserve">
+   <value>JackHandL</value>
+ </data>
+   <data name="Items126" xml:space="preserve">
+   <value>JackHandR</value>
+ </data>
+  <data name="Items127" xml:space="preserve">
+    <value>PrimeSword</value>
+  </data>
 </root>

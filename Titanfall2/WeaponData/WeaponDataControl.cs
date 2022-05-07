@@ -3437,10 +3437,58 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                             FilePath[0, i] = Convert.ToString(broadsword.BroadSword_cav[imagecheck].seeklength);
                         }
                         break;
+                        //no ilm,ao,cav
+                    case "PrimeSword":
+                        Default.Titan.PrimeSword primesword = new Default.Titan.PrimeSword();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primesword.PrimeSword_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primesword.PrimeSword_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primesword.PrimeSword_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = primesword.PrimeSword_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(primesword.PrimeSword_spc[imagecheck].seeklength);
+                        }
+                        break;
                         //Titan Skins泰坦皮肤
                         //ION 在 col,spc 中有 BC7U
                     case "ION":
-                        Default.TitanSkins.ION ion = new Default.TitanSkins.ION();
+                        Default.AntiTitan.ION ion = new Default.AntiTitan.ION();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3520,7 +3568,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Legion":
-                        Default.TitanSkins.Legion legion = new Default.TitanSkins.Legion();
+                        Default.AntiTitan.Legion legion = new Default.AntiTitan.Legion();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3600,7 +3648,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Scorch":
-                        Default.TitanSkins.Scorch scorch = new Default.TitanSkins.Scorch();
+                        Default.AntiTitan.Scorch scorch = new Default.AntiTitan.Scorch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3681,7 +3729,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         break;
                         //Northstar 在 col,spc,ilm,ao,cav 中有 BC7U
                     case "Northstar":
-                        Default.TitanSkins.Northstar northstar = new Default.TitanSkins.Northstar();
+                        Default.AntiTitan.Northstar northstar = new Default.AntiTitan.Northstar();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3761,7 +3809,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Ronin":
-                        Default.TitanSkins.Ronin ronin = new Default.TitanSkins.Ronin();
+                        Default.AntiTitan.Ronin ronin = new Default.AntiTitan.Ronin();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3841,7 +3889,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "Tone":
-                        Default.TitanSkins.Tone tone = new Default.TitanSkins.Tone();
+                        Default.AntiTitan.Tone tone = new Default.AntiTitan.Tone();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -3922,7 +3970,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         break;
                         //Cant find find HeX code for normal, ilm and cav map because it blank images
                     case "Monarch":
-                        Default.TitanSkins.Monarch monarch = new Default.TitanSkins.Monarch();
+                        Default.AntiTitan.Monarch monarch = new Default.AntiTitan.Monarch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4008,7 +4056,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         */
                         break;
                     case "PrimeLegion":
-                        Default.TitanSkins.PrimeLegion primelegion = new Default.TitanSkins.PrimeLegion();
+                        Default.AntiTitan.PrimeLegion primelegion = new Default.AntiTitan.PrimeLegion();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4088,7 +4136,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeNorthstar":
-                        Default.TitanSkins.PrimeNorthstar primenorthstar = new Default.TitanSkins.PrimeNorthstar();
+                        Default.AntiTitan.PrimeNorthstar primenorthstar = new Default.AntiTitan.PrimeNorthstar();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4168,7 +4216,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeION":
-                        Default.TitanSkins.PrimeION primeion = new Default.TitanSkins.PrimeION();
+                        Default.AntiTitan.PrimeION primeion = new Default.AntiTitan.PrimeION();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4248,7 +4296,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeRonin":
-                        Default.TitanSkins.PrimeRonin primeronin = new Default.TitanSkins.PrimeRonin();
+                        Default.AntiTitan.PrimeRonin primeronin = new Default.AntiTitan.PrimeRonin();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4328,7 +4376,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeScorch":
-                        Default.TitanSkins.PrimeScorch primescorch = new Default.TitanSkins.PrimeScorch();
+                        Default.AntiTitan.PrimeScorch primescorch = new Default.AntiTitan.PrimeScorch();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4408,7 +4456,7 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                     case "PrimeTone":
-                        Default.TitanSkins.PrimeTone primetone = new Default.TitanSkins.PrimeTone();
+                        Default.AntiTitan.PrimeTone primetone = new Default.AntiTitan.PrimeTone();
                         if (str.Contains("col"))
                         {
                             int i = 0;
@@ -4485,6 +4533,100 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                             FilePath[0, i] = Convert.ToString(primetone.PrimeTone_cav[imagecheck].length);
                             i++;
                             FilePath[0, i] = Convert.ToString(primetone.PrimeTone_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "JackHandL":
+                        Default.JackParts.JackHandL jackhandl = new Default.JackParts.JackHandL();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("nml"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_nml[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_nml[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_nml[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_nml[imagecheck].seeklength);
+                        }
+                        if (str.Contains("gls"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_gls[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_gls[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_gls[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_gls[imagecheck].seeklength);
+                        }
+                        if (str.Contains("spc"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_spc[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_spc[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_spc[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_spc[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ilm[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ao"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_ao[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ao[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ao[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_ao[imagecheck].seeklength);
+                        }
+                        if (str.Contains("cav"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandl.JackHandL_cav[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_cav[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_cav[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandl.JackHandL_cav[imagecheck].seeklength);
+                        }
+                        break;
+                    case "JackHandR":
+                        Default.JackParts.JackHandR jackhandr = new Default.JackParts.JackHandR();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = jackhandr.JackHandR_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandr.JackHandR_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandr.JackHandR_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(jackhandr.JackHandR_col[imagecheck].seeklength);
                         }
                         break;
                     case "LeadWall":
