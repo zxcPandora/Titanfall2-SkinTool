@@ -26,7 +26,7 @@ namespace Titanfall2_SkinTool
                     {
                         FileName = "pc_stream(07).starpak";
                     }
-                    else if (name.Contains("PrimeTone") || name.Contains("PrimeRonin_Default_ilm"))
+                    else if (name.Contains("PrimeTone") || name.Contains("PrimeRonin_Default_ilm") || name.Contains("PrimeSword"))
                     {
                         FileName = "pc_stream(05).starpak";
                     }

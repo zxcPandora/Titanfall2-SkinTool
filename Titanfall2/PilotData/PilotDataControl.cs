@@ -17,7 +17,7 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData
             string str = name[0];
             string s = name[1];
             string temp = name[2];
-            if (str.Contains("Stim_") || str.Contains("PhaseShift_") || str.Contains("HoloPilot_") || str.Contains("PulseBlade_") || str.Contains("Grapple_") || str.Contains("AWall_") || str.Contains("Cloak_") || str.Contains("Pilot_"))
+            if (str.Contains("Stim_") || str.Contains("PhaseShift_") || str.Contains("HoloPilot_") || str.Contains("PulseBlade_") || str.Contains("Grapple_") || str.Contains("AWall_") || str.Contains("Cloak_") || str.Contains("Pilot_") || str.Contains("Jack_"))
             {
                 switch (s)
                 {
@@ -76,6 +76,12 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData
                         Seek = PublicData.Seek;
                         Length = PublicData.Length;
                         SeekLength = PublicData.SeekLength;
+                        break;
+                    case "Jack":
+                        Normal_Pilot.Jack.Jack jack = new Normal_Pilot.Jack.Jack(temp, imagecheck);
+                        Seek = jack.Seek;
+                        Length = jack.Length;
+                        SeekLength = jack.SeekLength;
                         break;
                     default:
                         throw new MyException("BUG!"+"\n"+"Error Pilot Name.");
