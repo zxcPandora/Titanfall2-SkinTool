@@ -23,15 +23,6 @@ namespace Titanfall2_SkinTool.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.8.3")]
-        public string Version {
-            get {
-                return ((string)(this["Version"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -65,6 +56,15 @@ namespace Titanfall2_SkinTool.Properties {
             }
             set {
                 this["AutoUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.8.4")]
+        public string Version {
+            get {
+                return ((string)(this["Version"]));
             }
         }
     }
