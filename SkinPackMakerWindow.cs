@@ -29,6 +29,174 @@ namespace Titanfall2_SkinTool
             DisableAllTextures();
         }
 
+        /// <summary>
+        /// Test feature
+        /// </summary>
+        /// 
+
+        /*
+         * The code is becoming garbage;
+         * I should Dynamically generate tabs and use SQLite. Q_Q
+         * If finished these features,program will beccome v1.0? LOL
+        
+        class SqLiteHelper
+        private SQLiteConnection dbConnection;
+        private SQLiteCommand dbCommand;
+        private SQLiteDataReader dataReader;
+
+        Label l = new Label();
+        l.Location = new Point(493, 72);
+        l.Text = "测试aaaaaaaaaaaaaaaaaaaaaaaaaa";
+            l.Name = "L1";
+            l.AutoSize = true;
+            l.Parent = this;
+            this.Controls.Add(l);
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TabPage tab;
+            for (int i = 0; i <= 10; i++)
+            {
+                tab = new TabPage();
+                //((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+                int tabcount = this.tabControl1.TabCount + 1;
+                tab.Name =
+                tab.Text = "TestTabPage" + tabcount;
+                tab.Padding = new Padding(3);
+                tab.UseVisualStyleBackColor = true;
+                if (i != 0)
+                {
+                    AddPictureToTabPage(tab, "Color");
+                    AddPictureToTabPage(tab, "Test");
+                }
+                this.tabControl1.Controls.Add(tab);
+                //((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            }
+
+            TabControl tt = new TabControl();
+            tt.SuspendLayout();
+            //((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            tt.Name = "ATestTabPage";
+            tt.SelectedIndex = 0;
+            tt.Dock = DockStyle.Fill;
+            tt.ResumeLayout(false);
+            tab = new TabPage();
+            //((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            tab.Text = "CCTestTabPage";
+            tab.Padding = new Padding(3);
+            tab.UseVisualStyleBackColor = true;
+            tt.Controls.Add(tab);
+            tabControl1.Controls[2].Controls.Add(tt);
+            for (int k = 0; k < this.Controls.Count; k++)
+            {
+                MessageBox.Show("[控件 " + k + " ]名称：" + this.Controls[k].Text + ",内容：" + this.Controls[k].Name);
+                if (this.Controls[k].Name.Equals("control"))
+                    MessageBox.Show(this.Controls[k].Text);
+            }
+            MessageBox.Show(this.Controls.Count.ToString());
+            for (int j = 0; j < tabControl1.Controls[2].Controls.Count; j++)
+            {
+                //MessageBox.Show(tabControl1.Controls[2].Controls[j].Name+ ","+(((PictureBox)tabControl1.Controls[2].Controls[j]).Image==null?"空":"非空"+"\n"));
+            }
+            MessageBox.Show(tabControl1.Controls[2].Controls[0].Name);
+        }
+
+        private void AddPictureToTabPage(TabPage tabPage, String Name)
+        {
+            PictureBox pictureBox = new PictureBox();
+            pictureBox.Location = new System.Drawing.Point(73, 39);
+            pictureBox.Name = Name;
+            pictureBox.Size = new System.Drawing.Size(125, 62);
+            pictureBox.TabIndex = 0;
+            pictureBox.TabStop = false;
+            pictureBox.AllowDrop = true;
+            pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBox.Name = "testPictureBox";
+            pictureBox.TabStop = false;
+            pictureBox.Click += new System.EventHandler(this.texturePictureBox_NClick);
+            pictureBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.texturePictureBox_DragDrop);
+            pictureBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.texturePictureBox_DragEnter);
+            pictureBox.DoubleClick += new System.EventHandler(this.texturePictureBox_NClick);
+            pictureBox.MouseEnter += new System.EventHandler(this.texturePictureBox_MouseEnter);
+            tabPage.Controls.Add(pictureBox);
+        }
+
+        private void texturePictureBox_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Link;
+        }
+
+        private void texturePictureBox_DragDrop(object sender, DragEventArgs e)
+        {
+            PictureBox box = (PictureBox)sender;
+            PictureBoxDragEvent(box, e);
+        }
+
+        private void PictureBoxDragEvent(PictureBox box, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files) Console.WriteLine(file);
+
+            string filepath = files[0];
+            LoadImageIntoPictureBox(box, filepath);
+            //ImageNumber += 3;
+        }
+
+        private void LoadImageIntoPictureBox(PictureBox box, string filepath)
+        {
+            if (filepath.Length > 0)
+            {
+                try
+                {
+                    box.Image = Image.FromFile(filepath);
+                }
+                catch (OutOfMemoryException ex)
+                {
+
+                    MessageBox.Show("Error" + "\r\r" + ex.Message, "No way", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void texturePictureBox_NClick(object sender, EventArgs e)
+        {
+            MouseEventArgs m = (MouseEventArgs)e;
+            PictureBox box = (PictureBox)sender;
+
+            ContextMenuStrip menu = new ContextMenuStrip();
+            menu.Items.Add("Error2", null, (object menuSender, EventArgs menuE) =>
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Multiselect = false;
+                dialog.Filter = "PNG (*.png) | *.png";
+
+                DialogResult res = dialog.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    LoadImageIntoPictureBox(box, dialog.FileName);
+                    //ImageNumber += 3;
+                }
+            });
+            menu.Items.Add("Error3", null, (object menuSender, EventArgs menuE) =>
+            {
+                box.Image = null;
+            });
+
+            menu.Show(box, m.Location);
+        }
+
+        private void texturePictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            PictureBox box = (PictureBox)sender;
+            if (box.Enabled == false)
+            {
+            }
+        }
+        */
+
+
+
+
         private void openSkinPackPathSelectButton_Click(object sender, EventArgs e)
         {
             DialogResult result = skinPackPathDialogue.ShowDialog();
@@ -1548,12 +1716,15 @@ namespace Titanfall2_SkinTool
                     break;
                     */
                 case "JackHandL":
+                case "杰克_左手手套":
                     SelectedWeapon = "JackHandL";
                     break;
                 case "JackHandR":
+                case "杰克_右手手套":
                     SelectedWeapon = "JackHandR";
                     break;
                 case "PrimeSword":
+                case "至尊浪人剑":
                     SelectedWeapon = "PrimeSword";
                     break;
                 default:
