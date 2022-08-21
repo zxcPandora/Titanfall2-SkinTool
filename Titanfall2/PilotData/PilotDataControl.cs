@@ -17,13 +17,13 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData
             string str = name[0];
             string s = name[1];
             string temp = name[2];
-            if (str.Contains("Stim_") || str.Contains("PhaseShift_") || str.Contains("HoloPilot_") || str.Contains("PulseBlade_") || str.Contains("Grapple_") || str.Contains("AWall_") || str.Contains("Cloak_") || str.Contains("Public_"))
+            if (str.Contains("Stim_") || str.Contains("PhaseShift_") || str.Contains("HoloPilot_") || str.Contains("PulseBlade_") || str.Contains("Grapple_") || str.Contains("AWall_") || str.Contains("Cloak_") || str.Contains("Pilot_") || str.Contains("Jack_"))
             {
                 switch (s)
                 {
                     //兴奋剂铁驭
                     case "Stim":
-                        Normal_Pilot.Stim.Stim stim = new Normal_Pilot.Stim.Stim(temp,imagecheck);
+                        Normal_Pilot.Stim.Stim stim = new Normal_Pilot.Stim.Stim(temp, imagecheck);
                         Seek = stim.Seek;
                         Length = stim.Length;
                         SeekLength = stim.SeekLength;
@@ -69,16 +69,22 @@ namespace Titanfall2_SkinTool.Titanfall2.PilotData
                         Seek = cloak.Seek;
                         Length = cloak.Length;
                         SeekLength = cloak.SeekLength;
-                        break; 
+                        break;
                     //公共部分
-                    case "Public":
+                    case "Pilot":
                         Public_Data.Public PublicData = new Public_Data.Public(temp, imagecheck);
                         Seek = PublicData.Seek;
                         Length = PublicData.Length;
                         SeekLength = PublicData.SeekLength;
                         break;
+                    case "Jack":
+                        Normal_Pilot.Jack.Jack jack = new Normal_Pilot.Jack.Jack(temp, imagecheck);
+                        Seek = jack.Seek;
+                        Length = jack.Length;
+                        SeekLength = jack.SeekLength;
+                        break;
                     default:
-                        throw new MyException("BUG!"+"\n"+"Error Pilot Name.");
+                        throw new MyException("BUG!" + "\n" + "Error Pilot Name.");
                 }
             }
             else
