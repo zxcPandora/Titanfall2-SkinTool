@@ -1401,7 +1401,7 @@ namespace Titanfall2_SkinTool
                     SelectedWeapon = "SplitterRifle";
                     break;
                 case "Broad Sword":
-                case "大剑":
+                case "浪人大剑":
                     SelectedWeapon = "BroadSword";
                     break;
                 case "Leadwall":
