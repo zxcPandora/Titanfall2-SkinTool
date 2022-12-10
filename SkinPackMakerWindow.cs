@@ -641,6 +641,14 @@ namespace Titanfall2_SkinTool
                     case "Kraber":
                     case "Longbow":
                     case "Alternator":
+                    case "ChargeRifle":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            break;
+                        }
                     case "PDW":
                         {
                             EnableTexture(colorPictureBox);
