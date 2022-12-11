@@ -619,6 +619,14 @@ namespace Titanfall2_SkinTool
             {
                 switch (SelectedWeapon)
                 {
+                    case "ChargeRifle":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(normalPictureBox);
+                            EnableTexture(glossinessPictureBox);
+                            EnableTexture(specularPictureBox);
+                            break;
+                        }
                     case "RE45":
                         {
                             EnableTexture(colorPictureBox);
@@ -641,14 +649,6 @@ namespace Titanfall2_SkinTool
                     case "Kraber":
                     case "Longbow":
                     case "Alternator":
-                    case "ChargeRifle":
-                        {
-                            EnableTexture(colorPictureBox);
-                            EnableTexture(normalPictureBox);
-                            EnableTexture(glossinessPictureBox);
-                            EnableTexture(specularPictureBox);
-                            break;
-                        }
                     case "PDW":
                         {
                             EnableTexture(colorPictureBox);
