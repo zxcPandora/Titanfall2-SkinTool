@@ -5261,7 +5261,6 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         break;
                     default:
                         throw new MyException("BUG!" + "\n" + "Unable to load, is this file a standard skin file?");
-                        break;
                 }
             }
             else if (WeaponName.Contains("Skin31"))

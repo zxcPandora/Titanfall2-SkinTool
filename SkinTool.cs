@@ -5,6 +5,7 @@ using System.IO.Compression;
 using System.Reflection;
 using System.Resources;
 using System.Text;
+using System.Text.Json;
 
 /// <summary>
 /// Basically pulled all the needed functions from MainWindow.cs
@@ -97,7 +98,15 @@ namespace Titanfall2_SkinTool
 
                 //Testing new way to save dds
                 List<string> FileList = new List<string>();
-                FindSkinFiles(ExtractPath, FileList, ".dds");
+                FindSkinFiles(ExtractPath, FileList, ".json");
+
+                if (FileList.Count != 0)
+                {
+                    string json = JsonSerializer.Serialize(FileList[0]);
+                }
+
+                List<string> ImageFileList = new List<string>();
+                FindSkinFiles(ExtractPath, ImageFileList, ".dds");
 
                 // ToDo: assumed those are debug logs and disabled them.
                 //       (Do mess up output when using command line version)
@@ -105,13 +114,13 @@ namespace Titanfall2_SkinTool
                 //    Console.WriteLine(i);
 
 
-                int DDSFolderExist = FileList.Count;
+                int DDSFolderExist = ImageFileList.Count;
                 if (DDSFolderExist == 0)
                 {
                     throw new MyException(rm.GetString("FindSkinFailed"));
                 }
 
-                foreach (var i in FileList)
+                foreach (var i in ImageFileList)
                 {
                     int FolderLength = ExtractPath.Length;
                     String FileString = i.Substring(FolderLength);
@@ -173,7 +182,6 @@ namespace Titanfall2_SkinTool
                             */
                         default:
                             throw new MyException(rm.GetString("FindSkinFailed"));
-                            break;
                     }
                     StarpakControl sc = new StarpakControl(i, toseek, tolength, totype, gamePath, selectedGame, imagecheck, "Replace");
                     //ToDo:Change to the Struct,still not done that...
@@ -280,6 +288,63 @@ namespace Titanfall2_SkinTool
             return result;
         }
 
+        public class Utf8ReaderFromFile
+        {
+            /*
+            {
+                "FileName":"test/1.dds",
+                "Width":"2048",
+                "Height":"2048",
+                "HexOffest":"true",
+                "Offest":"10000000000000",
+                "Length":"1000"
 
+                //Option(ToDo)
+                //Helpful for save to the database and quicky install the same skin
+                //"TextureName":"car_smg"
+                //"TextureTypr":"Cav"
+                //"TextureFormat":"DXT1"
+
+                //Extra(ToDo)
+                //"AutoReSize":"true"
+                //"EndWidth":"1"
+                //"EndHeight":"1"
+            } 
+             */
+            private static ReadOnlySpan<byte> Utf8Bom => new byte[] { 0xEF, 0xBB, 0xBF };
+
+            public static void Run(string fileName)
+            {
+                ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
+
+                // Read past the UTF-8 BOM bytes if a BOM exists.
+                if (jsonReadOnlySpan.StartsWith(Utf8Bom))
+                {
+                    jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
+                }
+
+                int count = 0;
+                int total = 0;
+
+                Utf8JsonReader reader = new Utf8JsonReader(jsonReadOnlySpan);
+
+                while (reader.Read())
+                {
+                    JsonTokenType tokenType = reader.TokenType;
+
+                    switch (tokenType)
+                    {
+                        case JsonTokenType.StartObject:
+                            total++;
+                            break;
+                        case JsonTokenType.PropertyName:
+                            string name = JsonTokenType.PropertyName.ToString();
+                            reader.Read();
+                            string value = reader.GetString();
+                            break;
+                    }
+                }
+            }
+        }
     }
 }
