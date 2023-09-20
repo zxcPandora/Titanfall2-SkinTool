@@ -51,35 +51,32 @@ namespace Titanfall2_SkinTool
         } 
         */
 
-        public class Utf8ReaderFromFile
+        private static ReadOnlySpan<byte> Utf8Bom => new byte[] { 0xEF, 0xBB, 0xBF };
+
+        public static List<JsonInfo> ReadJson(string fileName)
         {
-            private static ReadOnlySpan<byte> Utf8Bom => new byte[] { 0xEF, 0xBB, 0xBF };
+            List<JsonInfo> fileList = new List<JsonInfo>();
+            ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
 
-            public static void Run(string fileName)
+            // Read past the UTF-8 BOM bytes if a BOM exists.
+            if (jsonReadOnlySpan.StartsWith(Utf8Bom))
             {
-                List<JsonInfo> t = new List<JsonInfo>();
-                ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
+                jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
+            }
 
-                // Read past the UTF-8 BOM bytes if a BOM exists.
-                if (jsonReadOnlySpan.StartsWith(Utf8Bom))
-                {
-                    jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
-                }
+            JsonInfo info = new JsonInfo();
+            Utf8JsonReader reader = new Utf8JsonReader(jsonReadOnlySpan);
 
-                int count = 0;
-                int total = 0;
-                JsonInfo info = new JsonInfo();
-
-                Utf8JsonReader reader = new Utf8JsonReader(jsonReadOnlySpan);
-
+            //Do this try-catch for throw json error
+            try
+            {
                 while (reader.Read())
                 {
                     JsonTokenType tokenType = reader.TokenType;
-
                     switch (tokenType)
                     {
-                        case JsonTokenType.StartObject:
-                            total++;
+                        case JsonTokenType.EndObject:
+                            fileList.Add(info);
                             break;
                         case JsonTokenType.PropertyName:
                             string name = reader.GetString();
@@ -138,8 +135,20 @@ namespace Titanfall2_SkinTool
                     }
                 }
             }
+            catch (Exception e)
+            {
+                throw new MyException("Error json file: \n" + e.Message);
+            }
+            return fileList;
+        }
 
+        public static void write()
+        {
+            JsonWriterOptions options = new JsonWriterOptions() { Indented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+            MemoryStream stream = new MemoryStream();
+            Utf8JsonWriter writer = new Utf8JsonWriter(stream, options);
 
+            writer.WriteStartObject();
         }
     }
 }
