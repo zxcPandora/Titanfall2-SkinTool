@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression;
-using System.Reflection;
-using System.Resources;
 using System.Text;
 using System.Text.Json;
-using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace Titanfall2_SkinTool
 {
@@ -142,13 +139,103 @@ namespace Titanfall2_SkinTool
             return fileList;
         }
 
-        public static void write()
+        public static void WriteJson(List<JsonInfo> infoList, string path)
         {
             JsonWriterOptions options = new JsonWriterOptions() { Indented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
             MemoryStream stream = new MemoryStream();
             Utf8JsonWriter writer = new Utf8JsonWriter(stream, options);
 
-            writer.WriteStartObject();
+            writer.WriteStartArray();
+
+            foreach (JsonInfo info in infoList)
+            {
+                writer.WriteStartObject();
+                if (!string.IsNullOrEmpty(info.fileName))
+                {
+                    writer.WriteString("FileName", info.fileName);
+                }
+                if (ValiNumber(info.width.ToString()))
+                {
+                    writer.WriteNumber("Width", info.width);
+                }
+                if (ValiNumber(info.height.ToString()))
+                {
+                    writer.WriteNumber("Height", info.height);
+                }
+                if (ValidBool(info.hexOffest.ToString()))
+                {
+                    writer.WriteBoolean("HexOffest", info.hexOffest);
+                    switch (info.hexOffest)
+                    {
+                        case true:
+                            //translate to hex,todo
+                            if (ValiNumber(info.offest.ToString()))
+                            {
+                                writer.WriteNumber("Offest", info.offest);
+                            }
+                            break;
+                        case false:
+                            if (ValiNumber(info.offest.ToString()))
+                            {
+                                writer.WriteNumber("Offest", info.offest);
+                            }
+                            break;
+                    }
+                }
+                if (ValiNumber(info.length.ToString()))
+                {
+                    writer.WriteNumber("Length", info.length);
+                }
+                if (!string.IsNullOrEmpty(info.textureName))
+                {
+                    writer.WriteString("TextureName", info.textureName);
+                }
+                if (!string.IsNullOrEmpty(info.textureType))
+                {
+                    writer.WriteString("TextureType", info.textureType);
+                }
+                if (!string.IsNullOrEmpty(info.textureFormat))
+                {
+                    writer.WriteString("TextureFormat", info.textureFormat);
+                }
+                if (ValidBool(info.autoReSize.ToString()))
+                {
+                    writer.WriteBoolean("AutoReSize", info.autoReSize);
+                }
+                if (ValiNumber(info.endWidth.ToString()))
+                {
+                    writer.WriteNumber("EndWidth", info.endWidth);
+                }
+                if (ValiNumber(info.endHeight.ToString()))
+                {
+                    writer.WriteNumber("EndHeight", info.endHeight);
+                }
+                writer.WriteEndObject();
+            }
+
+            writer.WriteEndArray();
+            writer.Flush();
+
+            string json = Encoding.UTF8.GetString(stream.ToArray());
+            File.WriteAllText(path, json);
+        }
+
+        static private bool ValiNumber(string str)
+        {
+            Regex regex = new Regex("^([1-9][0-9]*)$");
+            Match match = regex.Match(str);
+            if (match.Success)
+                return true;
+            else
+                return false;
+        }
+
+        static private bool ValidBool(string str)
+        {
+            if (bool.TryParse(str, out _))
+                return true;
+            else
+                return false;
         }
     }
 }
